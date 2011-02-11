@@ -18,6 +18,7 @@
 		28C286E10D94DF7D0034E888 /* MainThreadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* MainThreadView.m */; };
 		28D3F202112F7DC200FD0661 /* Newsgroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */; };
 		4D8D406B1304554A0033E9E7 /* GPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D406A130455490033E9E7 /* GPDataController.m */; };
+		4DB0B61F1305C14600B24E54 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DB0B61E1305C14600B24E54 /* TestData.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D8D4069130455490033E9E7 /* GPDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDataController.h; sourceTree = "<group>"; };
 		4D8D406A130455490033E9E7 /* GPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDataController.m; sourceTree = "<group>"; };
+		4DB0B61E1305C14600B24E54 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsgroup-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsgroup-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				2899E55F0DE3E45000AC0155 /* MainThreadView.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Newsgroup-Info.plist */,
+				4DB0B61E1305C14600B24E54 /* TestData.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2899E5600DE3E45000AC0155 /* MainThreadView.xib in Resources */,
+				4DB0B61F1305C14600B24E54 /* TestData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

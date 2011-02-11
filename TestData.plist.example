@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<dict>
+		<key>email</key>
+		<string>jkubicek@gmail.com</string>
+		<key>handle</key>
+		<string>Kubi</string>
+		<key>name</key>
+		<string>Jim Kubicek</string>
+	</dict>
+	<key>Posts</key>
+	<array>
+		<dict>
+			<key>body</key>
+			<string>This is a body.</string>
+			<key>isRead</key>
+			<false/>
+			<key>subject</key>
+			<string>This is a subject</string>
+			<key>timestamp</key>
+			<date>2011-02-11T19:14:04Z</date>
+		</dict>
+	</array>
+</dict>
+</plist>
