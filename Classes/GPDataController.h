@@ -13,6 +13,7 @@
 
     @private
     NSManagedObjectContext *context_;
+    NSManagedObjectModel *model_;
     
 }
 

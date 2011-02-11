@@ -15,6 +15,7 @@
 
 // Private properties
 @property (retain, nonatomic) NSManagedObjectContext *context;
+@property (retain, nonatomic) NSManagedObjectModel *model;
 
 @end
 
@@ -27,6 +28,7 @@ static GPDataController *sharedDataController = nil;
 #pragma mark Properties
 
 @synthesize context = context_;
+@synthesize model = model_;
 
 #pragma mark -
 #pragma mark Instance Methods
@@ -51,7 +53,11 @@ static GPDataController *sharedDataController = nil;
     [managedObjectContext setPersistentStoreCoordinator:persistentStoreCoordinator];
 
     self.context = managedObjectContext;
+    self.model = managedObjectModel;
+    
     [managedObjectModel release];
+    [managedObjectContext release];
+    [persistentStoreCoordinator release];
 }
 
 #pragma mark Begin and End Fetching
@@ -66,7 +72,44 @@ static GPDataController *sharedDataController = nil;
     NSString *testDataPath = [[NSBundle mainBundle] pathForResource:@"TestData" ofType:@"plist"];
     NSDictionary *testDict = [NSDictionary dictionaryWithContentsOfFile:testDataPath];
     
-    s
+    // Setup the author
+    NSDictionary *author = [testDict objectForKey:@"Author"];
+    
+    NSEntityDescription *userEntity = [[self.model entitiesByName] objectForKey:@"User"];
+    NSManagedObject *userObject = [[NSManagedObject alloc] initWithEntity:userEntity insertIntoManagedObjectContext:self.context];
+    
+    [userObject setValue:[author objectForKey:@"email"] forKey:@"email"];
+    [userObject setValue:[author objectForKey:@"name"] forKey:@"name"];
+    [userObject setValue:[author objectForKey:@"handle"] forKey:@"handle"];
+    
+    
+    // Setup the threads
+    NSDictionary *thread = [[testDict objectForKey:@"Threads"] objectAtIndex:0];
+    NSEntityDescription *threadEntity = [[self.model entitiesByName] objectForKey:@"Thread"];
+    NSManagedObject *threadObject = [[NSManagedObject alloc] initWithEntity:threadEntity insertIntoManagedObjectContext:self.context];
+    
+    [threadObject setValue:[thread objectForKey:@"subject"] forKey:@"subject"];
+    [threadObject setValue:[thread objectForKey:@"timestamp"] forKey:@"timestamp"];
+    [threadObject setValue:userObject forKey:@"author"];
+    
+    // Setup the posts
+    NSArray *posts = [testDict objectForKey:@"Posts"];
+    
+    NSEntityDescription *postEntity = [[self.model entitiesByName] objectForKey:@"Post"];
+    for (NSDictionary *post in posts) {
+        NSManagedObject *postObject = [[NSManagedObject alloc] initWithEntity:postEntity insertIntoManagedObjectContext:self.context];
+        
+        [postObject setValue:[post objectForKey:@"body"] forKey:@"body"];
+        [postObject setValue:[post objectForKey:@"isRead"] forKey:@"isRead"];
+        [postObject setValue:[post objectForKey:@"subject"] forKey:@"subject"];
+        [postObject setValue:[post objectForKey:@"timestamp"] forKey:@"timestamp"];
+        [postObject setValue:userObject forKey:@"author"];
+        [postObject setValue:threadObject forKey:@"thread"];
+    }
+ 
+    NSLog(@"%@", [self.context insertedObjects]);
+
+    [self.context save:nil];
 }
 
 - (void)stopFetching {
