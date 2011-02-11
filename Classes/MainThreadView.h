@@ -1,9 +1,9 @@
 //
-//  RootViewController.h
+//  MainThreadView.h
 //  Newsgroup
 //
 //  Created by Jim Kubicek on 2/10/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Jim Kubicek. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
