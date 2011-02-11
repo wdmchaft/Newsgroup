@@ -109,7 +109,7 @@ static GPDataController *sharedDataController = nil;
  
     NSLog(@"%@", [self.context insertedObjects]);
 
-    [self.context save:nil];
+    //[self.context save:nil];
 }
 
 - (void)stopFetching {
