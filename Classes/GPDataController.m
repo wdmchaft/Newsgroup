@@ -57,11 +57,16 @@ static GPDataController *sharedDataController = nil;
 #pragma mark Begin and End Fetching
 
 - (BOOL)isFetching {
+    // Since we're loading data from a plist synchronously, we're never actually "fetching"
     return NO;
 }
 
 - (void)startFetching {
     
+    NSString *testDataPath = [[NSBundle mainBundle] pathForResource:@"TestData" ofType:@"plist"];
+    NSDictionary *testDict = [NSDictionary dictionaryWithContentsOfFile:testDataPath];
+    
+    s
 }
 
 - (void)stopFetching {
