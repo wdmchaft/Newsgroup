@@ -9,6 +9,7 @@
 #import "GPDataController.h"
 #import "GPUser.h"
 #import "GPThread.h"
+#import "GPPost.h"
 
 @interface GPDataController()
 
@@ -97,16 +98,16 @@ static GPDataController *sharedDataController = nil;
     // Setup the posts
     NSArray *posts = [testDict objectForKey:@"Posts"];
     
-    NSEntityDescription *postEntity = [[self.model entitiesByName] objectForKey:@"Post"];
+    NSEntityDescription *postEntity = [[self.model entitiesByName] objectForKey:[GPPost entityName]];
     for (NSDictionary *post in posts) {
-        NSManagedObject *postObject = [[NSManagedObject alloc] initWithEntity:postEntity insertIntoManagedObjectContext:self.context];
+        GPPost *postObject = [[GPPost alloc] initWithEntity:postEntity insertIntoManagedObjectContext:self.context];
         
-        [postObject setValue:[post objectForKey:@"body"] forKey:@"body"];
-        [postObject setValue:[post objectForKey:@"isRead"] forKey:@"isRead"];
-        [postObject setValue:[post objectForKey:@"subject"] forKey:@"subject"];
-        [postObject setValue:[post objectForKey:@"timestamp"] forKey:@"timestamp"];
-        [postObject setValue:user forKey:@"author"];
-        [postObject setValue:thread forKey:@"thread"];
+        postObject.body = [post objectForKey:@"body"];
+        postObject.isRead = [post objectForKey:@"isRead"];
+        postObject.subject = [post objectForKey:@"subject"];
+        postObject.timestamp = [post objectForKey:@"timestamp"];
+        postObject.author = user;
+        postObject.thread = thread;
     }
  
     NSLog(@"%@", [self.context insertedObjects]);
