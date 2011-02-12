@@ -19,6 +19,9 @@
 		28D3F202112F7DC200FD0661 /* Newsgroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */; };
 		4D8D406B1304554A0033E9E7 /* GPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D406A130455490033E9E7 /* GPDataController.m */; };
 		4DB0B61F1305C14600B24E54 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DB0B61E1305C14600B24E54 /* TestData.plist */; };
+		4DB0B6B81306026600B24E54 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
+		4DB0B6C71306063600B24E54 /* GPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6C61306063600B24E54 /* GPUser.m */; };
+		4DB0B6E513060B3F00B24E54 /* GPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6E413060B3F00B24E54 /* GPThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,12 @@
 		4D8D4069130455490033E9E7 /* GPDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDataController.h; sourceTree = "<group>"; };
 		4D8D406A130455490033E9E7 /* GPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDataController.m; sourceTree = "<group>"; };
 		4DB0B61E1305C14600B24E54 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
+		4DB0B6B61306026600B24E54 /* GPPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPost.h; sourceTree = "<group>"; };
+		4DB0B6B71306026600B24E54 /* GPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPost.m; sourceTree = "<group>"; };
+		4DB0B6C51306063600B24E54 /* GPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUser.h; sourceTree = "<group>"; };
+		4DB0B6C61306063600B24E54 /* GPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUser.m; sourceTree = "<group>"; };
+		4DB0B6E313060B3F00B24E54 /* GPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPThread.h; sourceTree = "<group>"; };
+		4DB0B6E413060B3F00B24E54 /* GPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPThread.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsgroup-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsgroup-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +75,12 @@
 				1D3623250D0F684500981E51 /* NewsgroupAppDelegate.m */,
 				4D8D4069130455490033E9E7 /* GPDataController.h */,
 				4D8D406A130455490033E9E7 /* GPDataController.m */,
+				4DB0B6B61306026600B24E54 /* GPPost.h */,
+				4DB0B6B71306026600B24E54 /* GPPost.m */,
+				4DB0B6C51306063600B24E54 /* GPUser.h */,
+				4DB0B6C61306063600B24E54 /* GPUser.m */,
+				4DB0B6E313060B3F00B24E54 /* GPThread.h */,
+				4DB0B6E413060B3F00B24E54 /* GPThread.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -190,6 +205,9 @@
 				28C286E10D94DF7D0034E888 /* MainThreadView.m in Sources */,
 				28D3F202112F7DC200FD0661 /* Newsgroup.xcdatamodeld in Sources */,
 				4D8D406B1304554A0033E9E7 /* GPDataController.m in Sources */,
+				4DB0B6B81306026600B24E54 /* GPPost.m in Sources */,
+				4DB0B6C71306063600B24E54 /* GPUser.m in Sources */,
+				4DB0B6E513060B3F00B24E54 /* GPThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

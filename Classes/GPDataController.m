@@ -7,6 +7,8 @@
 //
 
 #import "GPDataController.h"
+#import "GPUser.h"
+#import "GPThread.h"
 
 @interface GPDataController()
 
@@ -75,22 +77,22 @@ static GPDataController *sharedDataController = nil;
     // Setup the author
     NSDictionary *author = [testDict objectForKey:@"Author"];
     
-    NSEntityDescription *userEntity = [[self.model entitiesByName] objectForKey:@"User"];
-    NSManagedObject *userObject = [[NSManagedObject alloc] initWithEntity:userEntity insertIntoManagedObjectContext:self.context];
+    NSEntityDescription *userEntity = [[self.model entitiesByName] objectForKey:[GPUser entityName]];
+    GPUser *user = [[GPUser alloc] initWithEntity:userEntity insertIntoManagedObjectContext:self.context];
     
-    [userObject setValue:[author objectForKey:@"email"] forKey:@"email"];
-    [userObject setValue:[author objectForKey:@"name"] forKey:@"name"];
-    [userObject setValue:[author objectForKey:@"handle"] forKey:@"handle"];
+    user.email = [author objectForKey:@"email"];
+    user.name = [author objectForKey:@"name"];
+    user.handle = [author objectForKey:@"handle"];
     
     
     // Setup the threads
-    NSDictionary *thread = [[testDict objectForKey:@"Threads"] objectAtIndex:0];
-    NSEntityDescription *threadEntity = [[self.model entitiesByName] objectForKey:@"Thread"];
-    NSManagedObject *threadObject = [[NSManagedObject alloc] initWithEntity:threadEntity insertIntoManagedObjectContext:self.context];
+    NSDictionary *threadDict = [[testDict objectForKey:@"Threads"] objectAtIndex:0];
+    NSEntityDescription *threadEntity = [[self.model entitiesByName] objectForKey:[GPThread entityName]];
+    GPThread *thread = [[GPThread alloc] initWithEntity:threadEntity insertIntoManagedObjectContext:self.context];
     
-    [threadObject setValue:[thread objectForKey:@"subject"] forKey:@"subject"];
-    [threadObject setValue:[thread objectForKey:@"timestamp"] forKey:@"timestamp"];
-    [threadObject setValue:userObject forKey:@"author"];
+    thread.subject = [threadDict objectForKey:@"subject"];
+    thread.timestamp = [threadDict objectForKey:@"timestamp"];
+    thread.author = user;
     
     // Setup the posts
     NSArray *posts = [testDict objectForKey:@"Posts"];
@@ -103,8 +105,8 @@ static GPDataController *sharedDataController = nil;
         [postObject setValue:[post objectForKey:@"isRead"] forKey:@"isRead"];
         [postObject setValue:[post objectForKey:@"subject"] forKey:@"subject"];
         [postObject setValue:[post objectForKey:@"timestamp"] forKey:@"timestamp"];
-        [postObject setValue:userObject forKey:@"author"];
-        [postObject setValue:threadObject forKey:@"thread"];
+        [postObject setValue:user forKey:@"author"];
+        [postObject setValue:thread forKey:@"thread"];
     }
  
     NSLog(@"%@", [self.context insertedObjects]);
