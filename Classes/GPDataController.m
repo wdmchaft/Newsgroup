@@ -7,9 +7,6 @@
 //
 
 #import "GPDataController.h"
-#import "GPUser.h"
-#import "GPThread.h"
-#import "GPPost.h"
 
 @interface GPDataController()
 

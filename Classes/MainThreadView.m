@@ -28,8 +28,13 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[managedObject valueForKey:@"timestamp"] description];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+    
+    GPThread *thread = (GPThread *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = thread.subject;
+    cell.detailTextLabel.text = [dateFormatter stringFromDate:thread.timestamp];
 }
 
 
@@ -38,6 +43,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Set the view title
+    self.title = @"Newsgroup";
+    
+    // Fetch all our threads
     NSFetchedResultsController *fetchedResults = [[GPDataController sharedDataController] allThreads];
     fetchedResults.delegate = self;
     
@@ -75,7 +84,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Configure the cell.
