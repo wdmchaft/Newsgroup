@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+@class GPDataController;
+
+#define APP_DELEGATE ((NewsgroupAppDelegate *)[UIApplication sharedApplication].delegate)
 
 @interface NewsgroupAppDelegate : NSObject <UIApplicationDelegate> {
     
@@ -16,8 +19,9 @@
 }
 
 // Properties
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) GPDataController *dataController;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+@property (nonatomic, retain) IBOutlet UIWindow *window;
 
 // Utility Methods
 - (NSURL *)applicationDocumentsDirectory;

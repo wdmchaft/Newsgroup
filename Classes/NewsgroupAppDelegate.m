@@ -13,8 +13,9 @@
 
 @implementation NewsgroupAppDelegate
 
-@synthesize window;
+@synthesize dataController;
 @synthesize navigationController;
+@synthesize window;
 
 
 #pragma mark -
@@ -26,13 +27,17 @@
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
 
-    [[GPDataController sharedDataController] startFetching];
+    GPDataController *dc = [[GPDataController alloc] init];
+    [dc startFetching];
+    self.dataController = dc;
+    [dc release];
     
     return YES;
 }
 
 - (void)dealloc {
     
+    [dataController release];
     [navigationController release];
     [window release];
     [super dealloc];

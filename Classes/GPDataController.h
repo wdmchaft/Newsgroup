@@ -21,9 +21,6 @@
     
 }
 
-// Get the shared data controller
-+ (GPDataController *)sharedDataController;
-
 // Begin and end fetching
 - (BOOL)isFetching;
 - (void)startFetching;

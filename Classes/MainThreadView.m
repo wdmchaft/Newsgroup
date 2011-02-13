@@ -8,6 +8,7 @@
 
 #import "MainThreadView.h"
 #import "GPDataController.h"
+#import "NewsgroupAppDelegate.h"
 
 @interface MainThreadView ()
 
@@ -47,7 +48,7 @@
     self.title = @"Newsgroup";
     
     // Fetch all our threads
-    NSFetchedResultsController *fetchedResults = [[GPDataController sharedDataController] allThreads];
+    NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController allThreads];
     fetchedResults.delegate = self;
     
     NSError *error = nil;

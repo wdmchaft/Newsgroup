@@ -22,7 +22,16 @@
 
 @implementation GPDataController
 
-static GPDataController *sharedDataController = nil;
+#pragma mark -
+#pragma mark Object lifecycle
+
+- (id)init {
+    if ((self = [super init])) {
+        [self setupDataController];
+    }
+    
+    return self;
+}
 
 #pragma mark -
 #pragma mark Properties
@@ -145,48 +154,5 @@ static GPDataController *sharedDataController = nil;
         
     return [aFetchedResultsController autorelease];
 }
-
-#pragma mark -
-#pragma mark Object lifecycle methods
-
-+ (GPDataController *)sharedDataController
-{
-    if (sharedDataController == nil) {
-        sharedDataController = [[super allocWithZone:NULL] init];
-        [sharedDataController setupDataController];
-    }
-    return sharedDataController;
-}
-
-+ (id)allocWithZone:(NSZone *)zone
-{
-    return [[self sharedDataController] retain];
-}
-
-- (id)copyWithZone:(NSZone *)zone
-{
-    return self;
-}
-
-- (id)retain
-{
-    return self;
-}
-
-- (NSUInteger)retainCount
-{
-    return NSUIntegerMax;  //denotes an object that cannot be released
-}
-
-- (void)release
-{
-    //do nothing
-}
-
-- (id)autorelease
-{
-    return self;
-}
-
 
 @end
