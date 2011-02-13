@@ -22,6 +22,11 @@
 		4DB0B6B81306026600B24E54 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
 		4DB0B6C71306063600B24E54 /* GPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6C61306063600B24E54 /* GPUser.m */; };
 		4DB0B6E513060B3F00B24E54 /* GPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6E413060B3F00B24E54 /* GPThread.m */; };
+		4DF2D27B13083D9500C8AB3A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */; };
+		4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		4DF2D27E13083DB600C8AB3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		4DF2D29313083EF600C8AB3A /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,10 @@
 		4DB0B6C61306063600B24E54 /* GPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUser.m; sourceTree = "<group>"; };
 		4DB0B6E313060B3F00B24E54 /* GPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPThread.h; sourceTree = "<group>"; };
 		4DB0B6E413060B3F00B24E54 /* GPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPThread.m; sourceTree = "<group>"; };
+		4DF2D25413083D3300C8AB3A /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = Frameworks/GHUnitIOS.framework; sourceTree = "<group>"; };
+		4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Tests-Info.plist"; path = "Test Classes/Tests-Info.plist"; sourceTree = "<group>"; };
+		4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GHUnitIOSTestMain.m; path = "Test Classes/GHUnitIOSTestMain.m"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsgroup-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsgroup-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +69,17 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF2D25213083D3300C8AB3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF2D27B13083D9500C8AB3A /* GHUnitIOS.framework in Frameworks */,
+				4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */,
+				4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */,
+				4DF2D27E13083DB600C8AB3A /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* Newsgroup.app */,
+				4DF2D25413083D3300C8AB3A /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +122,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				4DF2D28213083E2F00C8AB3A /* Tests */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -133,8 +155,18 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 				28860BE40F44EE6400985440 /* CoreData.framework */,
+				4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DF2D28213083E2F00C8AB3A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
+				4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +187,23 @@
 			name = Newsgroup;
 			productName = Newsgroup;
 			productReference = 1D6058910D05DD3D006BFB54 /* Newsgroup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DF2D25313083D3300C8AB3A /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DF2D25913083D3400C8AB3A /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				4DF2D25013083D3300C8AB3A /* Resources */,
+				4DF2D25113083D3300C8AB3A /* Sources */,
+				4DF2D25213083D3300C8AB3A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 4DF2D25413083D3300C8AB3A /* Tests.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -178,6 +227,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* Newsgroup */,
+				4DF2D25313083D3300C8AB3A /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -190,6 +240,13 @@
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2899E5600DE3E45000AC0155 /* MainThreadView.xib in Resources */,
 				4DB0B61F1305C14600B24E54 /* TestData.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DF2D25013083D3300C8AB3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +268,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DF2D25113083D3300C8AB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DF2D29313083EF600C8AB3A /* GHUnitIOSTestMain.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -219,6 +284,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -233,11 +302,76 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Newsgroup_Prefix.pch;
 				INFOPLIST_FILE = "Newsgroup-Info.plist";
 				PRODUCT_NAME = Newsgroup;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DF2D25713083D3400C8AB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Test Classes/Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tests;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4DF2D25813083D3400C8AB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				INFOPLIST_FILE = "Test Classes/Tests-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+					"-framework",
+					Foundation,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tests;
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -305,6 +439,15 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DF2D25913083D3400C8AB3A /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DF2D25713083D3400C8AB3A /* Debug */,
+				4DF2D25813083D3400C8AB3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
