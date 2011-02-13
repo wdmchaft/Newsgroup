@@ -23,6 +23,8 @@
 		4DB0B6B81306026600B24E54 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
 		4DB0B6C71306063600B24E54 /* GPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6C61306063600B24E54 /* GPUser.m */; };
 		4DB0B6E513060B3F00B24E54 /* GPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6E413060B3F00B24E54 /* GPThread.m */; };
+		4DC10CEB130879A000944A20 /* TestGPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10CEA130879A000944A20 /* TestGPDataController.m */; };
+		4DC10CF71308863F00944A20 /* Test Database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4DC10CF61308863F00944A20 /* Test Database.sqlite */; };
 		4DF2D27B13083D9500C8AB3A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */; };
 		4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -55,6 +57,9 @@
 		4DB0B6C61306063600B24E54 /* GPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUser.m; sourceTree = "<group>"; };
 		4DB0B6E313060B3F00B24E54 /* GPThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPThread.h; sourceTree = "<group>"; };
 		4DB0B6E413060B3F00B24E54 /* GPThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPThread.m; sourceTree = "<group>"; };
+		4DC10CD0130858DB00944A20 /* GPDataController+PrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GPDataController+PrivateHeader.h"; sourceTree = "<group>"; };
+		4DC10CEA130879A000944A20 /* TestGPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestGPDataController.m; path = "Test Classes/TestGPDataController.m"; sourceTree = "<group>"; };
+		4DC10CF61308863F00944A20 /* Test Database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Test Database.sqlite"; path = "Test Classes/Test Database.sqlite"; sourceTree = "<group>"; };
 		4DF2D25413083D3300C8AB3A /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = Frameworks/GHUnitIOS.framework; sourceTree = "<group>"; };
 		4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Tests-Info.plist"; path = "Test Classes/Tests-Info.plist"; sourceTree = "<group>"; };
@@ -98,12 +103,13 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				28C286DF0D94DF7D0034E888 /* MainThreadView.h */,
-				28C286E00D94DF7D0034E888 /* MainThreadView.m */,
 				1D3623240D0F684500981E51 /* NewsgroupAppDelegate.h */,
 				1D3623250D0F684500981E51 /* NewsgroupAppDelegate.m */,
+				28C286DF0D94DF7D0034E888 /* MainThreadView.h */,
+				28C286E00D94DF7D0034E888 /* MainThreadView.m */,
 				4D8D4069130455490033E9E7 /* GPDataController.h */,
 				4D8D406A130455490033E9E7 /* GPDataController.m */,
+				4DC10CD0130858DB00944A20 /* GPDataController+PrivateHeader.h */,
 				4DB0B6B61306026600B24E54 /* GPPost.h */,
 				4DB0B6B71306026600B24E54 /* GPPost.m */,
 				4DB0B6C51306063600B24E54 /* GPUser.h */,
@@ -174,8 +180,10 @@
 		4DF2D28213083E2F00C8AB3A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4DC10CF61308863F00944A20 /* Test Database.sqlite */,
 				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
 				4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */,
+				4DC10CEA130879A000944A20 /* TestGPDataController.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -271,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC10CF71308863F00944A20 /* Test Database.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DF2D29313083EF600C8AB3A /* GHUnitIOSTestMain.m in Sources */,
+				4DC10CEB130879A000944A20 /* TestGPDataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

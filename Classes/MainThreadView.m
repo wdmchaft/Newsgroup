@@ -35,7 +35,7 @@
     
     GPThread *thread = (GPThread *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = thread.subject;
-    cell.detailTextLabel.text = [dateFormatter stringFromDate:thread.timestamp];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.author.handle, [dateFormatter stringFromDate:thread.timestamp]];
 }
 
 
@@ -97,7 +97,7 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
+    
 }
 
 #pragma mark Fetched results controller delegate

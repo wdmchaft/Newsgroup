@@ -7,11 +7,12 @@
 //
 
 #import "GPDataController.h"
+#import "GPDataController+PrivateHeader.h"
 
 @interface GPDataController()
 
 // Private methods
-- (void)setupDataController;
+- (void)setupWithURL:(NSURL *)url;
 
 // Private properties
 @property (retain, nonatomic) NSManagedObjectContext *context;
@@ -26,11 +27,24 @@
 #pragma mark Object lifecycle
 
 - (id)init {
-    if ((self = [super init])) {
-        [self setupDataController];
-    }
     
+    NSURL *storeURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"Newsgroup.sqlite"];
+    
+    return [self initWithStoreURL:storeURL];
+}
+
+- (id)initWithStoreURL:(NSURL *)url {
+    if ((self = [super init])) {
+        [self setupWithURL:url];
+    }
     return self;
+}
+
+- (void)dealloc {
+    [context_ release];
+    [model_ release];
+    
+    [super dealloc];
 }
 
 #pragma mark -
@@ -42,10 +56,8 @@
 #pragma mark -
 #pragma mark Instance Methods
 
-- (void)setupDataController {
-    
-    NSURL *storeURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"Newsgroup.sqlite"];
-    
+- (void)setupWithURL:(NSURL *)url {
+        
     NSError *error = nil;
     
     NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"Newsgroup" ofType:@"momd"];
@@ -53,7 +65,7 @@
     NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL]; 
     
     NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
-    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:nil error:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
