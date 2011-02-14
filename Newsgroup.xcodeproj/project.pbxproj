@@ -30,6 +30,7 @@
 		4DC10D1E13089CE000944A20 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
 		4DC10D2713089CFF00944A20 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
 		4DC10D2813089CFF00944A20 /* GPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6C61306063600B24E54 /* GPUser.m */; };
+		4DC10D5113093EA700944A20 /* Newsgroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */; };
 		4DF2D27B13083D9500C8AB3A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */; };
 		4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -313,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC10D5113093EA700944A20 /* Newsgroup.xcdatamodeld in Sources */,
 				4DC10D2713089CFF00944A20 /* GPPost.m in Sources */,
 				4DC10D2813089CFF00944A20 /* GPUser.m in Sources */,
 				4DC10D0713089B9400944A20 /* GPDataController.m in Sources */,

@@ -12,7 +12,6 @@
 @interface GPDataController()
 
 // Private methods
-- (void)setupWithURL:(NSURL *)url;
 
 // Private properties
 @property (retain, nonatomic) NSManagedObjectContext *context;
@@ -24,18 +23,47 @@
 @implementation GPDataController
 
 #pragma mark -
+#pragma mark Class Methods
+
++ (NSURL *)defaultManagedObjectModelURL {
+    return [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Newsgroup" ofType:@"momd"]];
+}
+
+#pragma mark -
 #pragma mark Object lifecycle
 
 - (id)init {
     
     NSURL *storeURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"Newsgroup.sqlite"];
     
-    return [self initWithStoreURL:storeURL];
+    NSURL *modelURL = [GPDataController defaultManagedObjectModelURL];
+    
+    return [self initWithModelURL:modelURL andStoreURL:storeURL];
 }
 
-- (id)initWithStoreURL:(NSURL *)url {
+- (id)initWithModelURL:(NSURL *)modelURL andStoreURL:(NSURL *)storeURL {
     if ((self = [super init])) {
-        [self setupWithURL:url];
+        
+        NSError *error = nil;
+        
+        NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL]; 
+        
+        NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
+        if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            abort();
+        }
+        
+        NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] init];
+        [managedObjectContext setPersistentStoreCoordinator:persistentStoreCoordinator];
+        
+        self.context = managedObjectContext;
+        self.model = managedObjectModel;
+        
+        [managedObjectModel release];
+        [managedObjectContext release];
+        [persistentStoreCoordinator release];
+        
     }
     return self;
 }
@@ -56,30 +84,6 @@
 #pragma mark -
 #pragma mark Instance Methods
 
-- (void)setupWithURL:(NSURL *)url {
-        
-    NSError *error = nil;
-    
-    NSString *modelPath = [[NSBundle mainBundle] pathForResource:@"Newsgroup" ofType:@"momd"];
-    NSURL *modelURL = [NSURL fileURLWithPath:modelPath];
-    NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL]; 
-    
-    NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
-    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:nil error:&error]) {
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
-    
-    NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] init];
-    [managedObjectContext setPersistentStoreCoordinator:persistentStoreCoordinator];
-
-    self.context = managedObjectContext;
-    self.model = managedObjectModel;
-    
-    [managedObjectModel release];
-    [managedObjectContext release];
-    [persistentStoreCoordinator release];
-}
 
 #pragma mark Begin and End Fetching
 

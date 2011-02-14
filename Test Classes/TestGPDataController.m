@@ -35,9 +35,11 @@
 }
 
 - (void)testFetchAllThreads {
-    NSString *testDatabasePath = [[[NSBundle mainBundle] pathForResource:@"Test Database" ofType:@"sqlite"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ;
-    NSURL *testDatabase = [NSURL URLWithString:testDatabasePath];
-    GPDataController *dataController = [[GPDataController alloc] initWithStoreURL:testDatabase];
+    NSURL *storeURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Test Database" ofType:@"sqlite"]];
+    
+    NSURL *modelURL = [GPDataController defaultManagedObjectModelURL];
+    
+    GPDataController *dataController = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:storeURL];
     NSFetchedResultsController *fetchedResults = [dataController allThreads];
     
     BOOL fetchDidComplete = [fetchedResults performFetch:nil];

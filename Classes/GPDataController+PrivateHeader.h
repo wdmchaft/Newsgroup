@@ -5,6 +5,8 @@
 
 @interface GPDataController()
 
-- (id)initWithStoreURL:(NSURL *)url;
++ (NSURL *)defaultManagedObjectModelURL;
+
+- (id)initWithModelURL:(NSURL *)modelURL andStoreURL:(NSURL *)storeURL;
 
 @end
