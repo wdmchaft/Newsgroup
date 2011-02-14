@@ -21,5 +21,6 @@
 @property (nonatomic, retain) NSString * subject;
 @property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) GPUser * author;
+@property (nonatomic, retain) NSSet* posts;
 
 @end

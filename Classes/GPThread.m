@@ -22,5 +22,6 @@
 @dynamic subject;
 @dynamic timestamp;
 @dynamic author;
+@dynamic posts;
 
 @end
