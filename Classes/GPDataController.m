@@ -9,6 +9,9 @@
 #import "GPDataController.h"
 #import "GPDataController+PrivateHeader.h"
 
+#define POST_REQUEST_FOR_THREAD @"postsForThread"
+#define THREAD_FETCH_KEY @"THREAD"
+
 @interface GPDataController()
 
 // Private methods
@@ -169,6 +172,25 @@
     [sortDescriptors release];
         
     return [aFetchedResultsController autorelease];
+}
+
+- (NSFetchedResultsController *)postsInThread:(GPThread *)thread {
+    
+    // Get the fetch request
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:thread forKey:THREAD_FETCH_KEY];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:POST_REQUEST_FOR_THREAD substitutionVariables:dict];
+    
+    // Set the sort key
+    NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
+    NSArray *sds = [[NSArray alloc] initWithObjects:sd, nil];
+    [fetchRequest setSortDescriptors:sds];
+    
+    NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:@"postsForThread"];
+    
+    [sd release];
+    [sds release];
+    
+    return fetchedResults;
 }
 
 @end

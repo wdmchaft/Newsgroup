@@ -25,6 +25,7 @@
 - (GPThread *)getTestThread {
     GPDataController *dc = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
     NSFetchedResultsController *fr = [dc allThreads];
+    [fr performFetch:nil];
     [dc release];
     return (GPThread *)[[fr fetchedObjects] objectAtIndex:0];
 }
