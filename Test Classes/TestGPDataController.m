@@ -13,33 +13,45 @@
 #import "GPThread.h"
 
 @interface TestGPDataController : GHTestCase {
-    
+    NSURL *testStoreURL;
+    NSURL *modelURL;
+    GPDataController *dataController;
 }
 
 @end
 
 @implementation TestGPDataController
 
+- (GPThread *)getTestThread {
+    GPDataController *dc = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
+    NSFetchedResultsController *fr = [dc allThreads];
+    [dc release];
+    return (GPThread *)[[fr fetchedObjects] objectAtIndex:0];
+}
+
 - (void)setUpClass {
-  // Run at start of all tests in the class
+    testStoreURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Test Database" ofType:@"sqlite"]];
+    modelURL = [GPDataController defaultManagedObjectModelURL];
+    
+    [testStoreURL retain];
+    [modelURL retain];
 }
 
 - (void)tearDownClass {
-  // Run at end of all tests in the class
+    [testStoreURL release];
+    [modelURL release];
 }
 
 - (void)setUp {
+    dataController = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
 }
 
 - (void)tearDown {
+    [dataController release];
+
 }
 
 - (void)testFetchAllThreads {
-    NSURL *storeURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Test Database" ofType:@"sqlite"]];
-    
-    NSURL *modelURL = [GPDataController defaultManagedObjectModelURL];
-    
-    GPDataController *dataController = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:storeURL];
     NSFetchedResultsController *fetchedResults = [dataController allThreads];
     
     BOOL fetchDidComplete = [fetchedResults performFetch:nil];
@@ -56,6 +68,27 @@
     
     NSString *subject = thread.subject;
     GHAssertEqualStrings(subject, @"This is a thread subject", nil);
+}
+
+- (void)testFetchAllPostsForThread {
+    GPThread *thread = [self getTestThread];
+    NSFetchedResultsController *fr = [dataController postsInThread:thread];
+    
+    BOOL fetchDidComplete = [fr performFetch:nil];
+    GHAssertTrue(fetchDidComplete, nil);
+    
+    NSArray *fetchedObjects = [fr fetchedObjects];
+    GHAssertNotNil(fetchedObjects, nil);
+    
+    NSInteger fetchCount = [fetchedObjects count];
+    GHAssertEquals(fetchCount, 1, nil);
+    
+    GPPost *post = (GPPost *)[fetchedObjects objectAtIndex:0];
+    GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
+    
+    GHAssertEqualStrings(post.subject, @"This is a subject", nil);
+    GHAssertEqualStrings(post.body, @"This is a body.", nil);
+    GHAssertFalse([post.isRead boolValue], nil);
 }
 
 @end
