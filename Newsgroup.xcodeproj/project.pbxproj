@@ -25,6 +25,11 @@
 		4DB0B6E513060B3F00B24E54 /* GPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6E413060B3F00B24E54 /* GPThread.m */; };
 		4DC10CEB130879A000944A20 /* TestGPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10CEA130879A000944A20 /* TestGPDataController.m */; };
 		4DC10CF71308863F00944A20 /* Test Database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4DC10CF61308863F00944A20 /* Test Database.sqlite */; };
+		4DC10D0713089B9400944A20 /* GPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D406A130455490033E9E7 /* GPDataController.m */; };
+		4DC10D0813089B9400944A20 /* GPThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6E413060B3F00B24E54 /* GPThread.m */; };
+		4DC10D1E13089CE000944A20 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
+		4DC10D2713089CFF00944A20 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
+		4DC10D2813089CFF00944A20 /* GPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6C61306063600B24E54 /* GPUser.m */; };
 		4DF2D27B13083D9500C8AB3A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */; };
 		4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -60,6 +65,7 @@
 		4DC10CD0130858DB00944A20 /* GPDataController+PrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GPDataController+PrivateHeader.h"; sourceTree = "<group>"; };
 		4DC10CEA130879A000944A20 /* TestGPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestGPDataController.m; path = "Test Classes/TestGPDataController.m"; sourceTree = "<group>"; };
 		4DC10CF61308863F00944A20 /* Test Database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Test Database.sqlite"; path = "Test Classes/Test Database.sqlite"; sourceTree = "<group>"; };
+		4DC10D1713089C8C00944A20 /* Tests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tests_Prefix.pch; path = "Test Classes/Tests_Prefix.pch"; sourceTree = "<group>"; };
 		4DF2D25413083D3300C8AB3A /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = Frameworks/GHUnitIOS.framework; sourceTree = "<group>"; };
 		4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Tests-Info.plist"; path = "Test Classes/Tests-Info.plist"; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC10D1E13089CE000944A20 /* CoreData.framework in Frameworks */,
 				4DF2D27B13083D9500C8AB3A /* GHUnitIOS.framework in Frameworks */,
 				4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */,
 				4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */,
@@ -180,6 +187,7 @@
 		4DF2D28213083E2F00C8AB3A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4DC10D1713089C8C00944A20 /* Tests_Prefix.pch */,
 				4DC10CF61308863F00944A20 /* Test Database.sqlite */,
 				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
 				4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */,
@@ -305,6 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC10D2713089CFF00944A20 /* GPPost.m in Sources */,
+				4DC10D2813089CFF00944A20 /* GPUser.m in Sources */,
+				4DC10D0713089B9400944A20 /* GPDataController.m in Sources */,
+				4DC10D0813089B9400944A20 /* GPThread.m in Sources */,
 				4DF2D29313083EF600C8AB3A /* GHUnitIOSTestMain.m in Sources */,
 				4DC10CEB130879A000944A20 /* TestGPDataController.m in Sources */,
 			);
@@ -361,7 +373,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				GCC_PREFIX_HEADER = "Test Classes/Tests_Prefix.pch";
 				INFOPLIST_FILE = "Test Classes/Tests-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
@@ -395,7 +407,7 @@
 				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/UIKit.framework/Headers/UIKit.h";
+				GCC_PREFIX_HEADER = "Test Classes/Tests_Prefix.pch";
 				INFOPLIST_FILE = "Test Classes/Tests-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (

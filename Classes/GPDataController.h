@@ -26,7 +26,11 @@
 - (void)startFetching;
 - (void)stopFetching;
 
-// FetchedResultsControllers
+/**
+ * All Threads
+ * This method returns all threads, regardless of date or timestamp.
+ * The object using this fetched results controller should always call `performFetch:` before attempting to access data.
+ */
 - (NSFetchedResultsController *)allThreads;
 
 

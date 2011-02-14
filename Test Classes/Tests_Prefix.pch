@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Tests' target in the 'Newsgroup' project
+//
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>

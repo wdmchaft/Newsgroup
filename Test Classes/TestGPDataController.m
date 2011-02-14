@@ -7,8 +7,10 @@
 //
 
 #import <GHUnitIOS/GHUnit.h>
+#import <CoreData/CoreData.h>
 #import "GPDataController.h"
 #import "GPDataController+PrivateHeader.h"
+#import "GPThread.h"
 
 @interface TestGPDataController : GHTestCase {
     
@@ -33,7 +35,25 @@
 }
 
 - (void)testFetchAllThreads {
+    NSString *testDatabasePath = [[[NSBundle mainBundle] pathForResource:@"Test Database" ofType:@"sqlite"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] ;
+    NSURL *testDatabase = [NSURL URLWithString:testDatabasePath];
+    GPDataController *dataController = [[GPDataController alloc] initWithStoreURL:testDatabase];
+    NSFetchedResultsController *fetchedResults = [dataController allThreads];
     
+    BOOL fetchDidComplete = [fetchedResults performFetch:nil];
+    GHAssertTrue(fetchDidComplete, nil);
+    
+    NSArray *fetchedObjects = [fetchedResults fetchedObjects];
+    GHAssertNotNil(fetchedObjects, nil);
+    
+    NSInteger fetchCount = [fetchedObjects count];
+    GHAssertEquals(fetchCount, 1, nil);
+    
+    GPThread *thread = (GPThread *)[fetchedObjects objectAtIndex:0];
+    GHAssertTrue([thread isMemberOfClass:[GPThread class]], nil);
+    
+    NSString *subject = thread.subject;
+    GHAssertEqualStrings(subject, @"This is a thread subject", nil);
 }
 
 @end
