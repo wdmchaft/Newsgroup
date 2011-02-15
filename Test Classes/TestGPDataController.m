@@ -21,9 +21,7 @@
 
 @implementation TestGPDataController
 
-- (BOOL)shouldRunOnMainThread {
-    return YES;
-}
+
 
 - (void)setUpClass {
     testStoreURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Test Database" ofType:@"sqlite"]];
@@ -57,17 +55,19 @@
     GHAssertNotNil(fetchedObjects, nil);
     
     NSInteger fetchCount = [fetchedObjects count];
-    GHAssertEquals(fetchCount, 1, nil);
+    GHAssertEquals(fetchCount, 5, nil);
     
-    GPThread *thread = (GPThread *)[fetchedObjects objectAtIndex:0];
+    GPPost *thread = (GPPost *)[fetchedObjects objectAtIndex:0];
     GHAssertTrue([thread isMemberOfClass:[GPPost class]], nil);
         
     NSString *subject = thread.subject;
-    GHAssertEqualStrings(subject, @"This is a thread subject", nil);
+    GHAssertEqualStrings(subject, @"hrm, this sure smells like change", nil);
 }
 
 - (void)testFetchAllPostsForThread {
-    GPThread *thread = [self getTestThread];
+    GHAssertFalse(YES, nil);
+    /*
+    GPPost *thread = [self getTestThread];
     NSFetchedResultsController *fr = [dataController postsInThread:thread];
     
     BOOL fetchDidComplete = [fr performFetch:nil];
@@ -85,6 +85,8 @@
     GHAssertEqualStrings(post.subject, @"This is a subject", nil);
     GHAssertEqualStrings(post.body, @"This is a body.", nil);
     GHAssertFalse([post.isRead boolValue], nil);
+     */
 }
 
+ 
 @end
