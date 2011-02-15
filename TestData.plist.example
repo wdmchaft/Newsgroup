@@ -1,28 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict>
-	<key>Author</key>
+<array>
 	<dict>
-		<key>email</key>
-		<string>jkubicek@gmail.com</string>
-		<key>handle</key>
-		<string>Kubi</string>
-		<key>name</key>
-		<string>Jim Kubicek</string>
+		<key>PostID</key>
+		<integer>1109</integer>
+		<key>ThreadID</key>
+		<integer>1109</integer>
+		<key>PostLevel</key>
+		<integer>1</integer>
+		<key>MemberID</key>
+		<integer>137</integer>
+		<key>PosterName</key>
+		<string>Antonio de la Serpico</string>
+		<key>Subject</key>
+		<string>hrm, this sure smells like change</string>
+		<key>PostDate</key>
+		<date>2009-01-21T17:35:30Z</date>
+		<key>Read</key>
+		<false/>
 	</dict>
-	<key>Posts</key>
-	<array>
-		<dict>
-			<key>body</key>
-			<string>This is a body.</string>
-			<key>isRead</key>
-			<false/>
-			<key>subject</key>
-			<string>This is a subject</string>
-			<key>timestamp</key>
-			<date>2011-02-11T19:14:04Z</date>
-		</dict>
-	</array>
-</dict>
+</array>
 </plist>
