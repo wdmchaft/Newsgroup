@@ -21,9 +21,12 @@
 // Properties
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic, retain) NSNumber * isRead;
+@property (nonatomic, retain) NSNumber * memberID;
+@property (nonatomic, retain) NSDate * postdate;
+@property (nonatomic, retain) NSString * posterName;
+@property (nonatomic, retain) NSNumber * postID;
+@property (nonatomic, retain) NSNumber * postLevel;
 @property (nonatomic, retain) NSString * subject;
-@property (nonatomic, retain) NSDate * timestamp;
-@property (nonatomic, retain) GPUser * author;
-@property (nonatomic, retain) GPThread * thread;
+@property (nonatomic, retain) NSNumber * threadID;
 
 @end

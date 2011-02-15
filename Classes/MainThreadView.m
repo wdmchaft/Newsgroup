@@ -33,9 +33,9 @@
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     
-    GPThread *thread = (GPThread *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    GPPost *thread = (GPPost *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = thread.subject;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.author.handle, [dateFormatter stringFromDate:thread.timestamp]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [dateFormatter stringFromDate:thread.postdate]];
 }
 
 

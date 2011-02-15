@@ -10,7 +10,6 @@
 #import <CoreData/CoreData.h>
 #import "GPDataController.h"
 #import "GPDataController+PrivateHeader.h"
-#import "GPThread.h"
 
 @interface TestGPDataController : GHTestCase {
     NSURL *testStoreURL;
@@ -24,12 +23,6 @@
 
 - (BOOL)shouldRunOnMainThread {
     return YES;
-}
-
-- (GPThread *)getTestThread {
-    NSFetchedResultsController *fr = [dataController allThreads];
-    [fr performFetch:nil];
-    return (GPThread *)[[fr fetchedObjects] objectAtIndex:0];
 }
 
 - (void)setUpClass {
@@ -67,7 +60,7 @@
     GHAssertEquals(fetchCount, 1, nil);
     
     GPThread *thread = (GPThread *)[fetchedObjects objectAtIndex:0];
-    GHAssertTrue([thread isMemberOfClass:[GPThread class]], nil);
+    GHAssertTrue([thread isMemberOfClass:[GPPost class]], nil);
         
     NSString *subject = thread.subject;
     GHAssertEqualStrings(subject, @"This is a thread subject", nil);

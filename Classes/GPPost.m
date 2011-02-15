@@ -20,9 +20,12 @@
 
 @dynamic body;
 @dynamic isRead;
+@dynamic memberID;
+@dynamic postdate;
+@dynamic posterName;
+@dynamic postID;
+@dynamic postLevel;
 @dynamic subject;
-@dynamic timestamp;
-@dynamic author;
-@dynamic thread;
+@dynamic threadID;
 
 @end

@@ -98,41 +98,21 @@
 - (void)startFetching {
     
     NSString *testDataPath = [[NSBundle mainBundle] pathForResource:@"TestData" ofType:@"plist"];
-    NSDictionary *testDict = [NSDictionary dictionaryWithContentsOfFile:testDataPath];
-    
-    // Setup the author
-    NSDictionary *author = [testDict objectForKey:@"Author"];
-    
-    NSEntityDescription *userEntity = [[self.model entitiesByName] objectForKey:[GPUser entityName]];
-    GPUser *user = [[GPUser alloc] initWithEntity:userEntity insertIntoManagedObjectContext:self.context];
-    
-    user.email = [author objectForKey:@"email"];
-    user.name = [author objectForKey:@"name"];
-    user.handle = [author objectForKey:@"handle"];
-    
-    
-    // Setup the threads
-    NSDictionary *threadDict = [[testDict objectForKey:@"Threads"] objectAtIndex:0];
-    NSEntityDescription *threadEntity = [[self.model entitiesByName] objectForKey:[GPThread entityName]];
-    GPThread *thread = [[GPThread alloc] initWithEntity:threadEntity insertIntoManagedObjectContext:self.context];
-    
-    thread.subject = [threadDict objectForKey:@"subject"];
-    thread.timestamp = [threadDict objectForKey:@"timestamp"];
-    thread.author = user;
-    
-    // Setup the posts
-    NSArray *posts = [testDict objectForKey:@"Posts"];
+    NSArray *testArray = [NSArray arrayWithContentsOfFile:testDataPath];
     
     NSEntityDescription *postEntity = [[self.model entitiesByName] objectForKey:[GPPost entityName]];
-    for (NSDictionary *post in posts) {
+    for (NSDictionary *post in testArray) {
         GPPost *postObject = [[GPPost alloc] initWithEntity:postEntity insertIntoManagedObjectContext:self.context];
         
-        postObject.body = [post objectForKey:@"body"];
-        postObject.isRead = [post objectForKey:@"isRead"];
-        postObject.subject = [post objectForKey:@"subject"];
-        postObject.timestamp = [post objectForKey:@"timestamp"];
-        postObject.author = user;
-        postObject.thread = thread;
+        postObject.body = @"No descriptions <em>loaded</em> <a href=\"http://google.com\">yet</a>";
+        postObject.isRead = [post objectForKey:@"Read"];
+        postObject.memberID = [post objectForKey:@"MemberID"];
+        postObject.postdate = [post objectForKey:@"PostDate"];
+        postObject.posterName = [post objectForKey:@"PosterName"];
+        postObject.postID = [post objectForKey:@"PostID"];
+        postObject.postLevel = [post objectForKey:@"PostLevel"];
+        postObject.subject = [post objectForKey:@"Subject"];
+        postObject.threadID = [post objectForKey:@"ThreadID"];
     }
  
     NSLog(@"%@", [self.context insertedObjects]);
@@ -148,28 +128,15 @@
 
 - (NSFetchedResultsController *)allThreads {
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestTemplateForName:@"allThreads"];
 
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Thread" inManagedObjectContext:self.context];
-    [fetchRequest setEntity:entity];
-    
-    // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
-    
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
-    NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:NO];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:@"allThreads"];
-
-
-    [fetchRequest release];
-    [sortDescriptor release];
     [sortDescriptors release];
+    
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:@"allThreads"];
         
     return [aFetchedResultsController autorelease];
 }
