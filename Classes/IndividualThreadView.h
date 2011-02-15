@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
+@class GPPost;
 
 @interface IndividualThreadView : UITableViewController {
 
+    @private
+    NSFetchedResultsController *fetchedResultsController_;
+    GPPost *post_;
 }
+
+@property (nonatomic, retain) GPPost *post;
 
 @end

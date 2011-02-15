@@ -112,13 +112,13 @@
 				1D3623250D0F684500981E51 /* NewsgroupAppDelegate.m */,
 				28C286DF0D94DF7D0034E888 /* MainThreadView.h */,
 				28C286E00D94DF7D0034E888 /* MainThreadView.m */,
+				4DC10FC0130B430900944A20 /* IndividualThreadView.h */,
+				4DC10FC1130B430900944A20 /* IndividualThreadView.m */,
 				4D8D4069130455490033E9E7 /* GPDataController.h */,
 				4D8D406A130455490033E9E7 /* GPDataController.m */,
 				4DC10CD0130858DB00944A20 /* GPDataController+PrivateHeader.h */,
 				4DB0B6B61306026600B24E54 /* GPPost.h */,
 				4DB0B6B71306026600B24E54 /* GPPost.m */,
-				4DC10FC0130B430900944A20 /* IndividualThreadView.h */,
-				4DC10FC1130B430900944A20 /* IndividualThreadView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
