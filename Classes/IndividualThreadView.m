@@ -20,7 +20,6 @@
 
 @end
 
-
 #pragma mark -
 @implementation IndividualThreadView
 
@@ -35,7 +34,7 @@
     [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     
-    GPPost *thread = (GPPost *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    GPPost *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = thread.subject;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [dateFormatter stringFromDate:thread.postdate]];
 }
@@ -47,10 +46,10 @@
     [super viewDidLoad];
     
     // Set the view title
-    self.title = @"Newsgroup";
+    self.title = self.post.subject;
     
     // Fetch all our threads
-    NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController allThreads];
+    NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithThreadID:self.post.threadID];
     fetchedResults.delegate = self;
     
     NSError *error = nil;
@@ -64,6 +63,7 @@
 
 - (void)dealloc {
     [fetchedResultsController_ release];
+    [post_ release];
     [super dealloc];
 }
 
@@ -83,7 +83,7 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Thread";
+    static NSString *CellIdentifier = @"Post";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {

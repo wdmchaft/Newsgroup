@@ -11,7 +11,7 @@
 
 @class GPPost;
 
-@interface IndividualThreadView : UITableViewController {
+@interface IndividualThreadView : UITableViewController <NSFetchedResultsControllerDelegate> {
 
     @private
     NSFetchedResultsController *fetchedResultsController_;

@@ -10,6 +10,8 @@
 #import "GPDataController.h"
 #import "NewsgroupAppDelegate.h"
 
+#import "IndividualThreadView.h"
+
 @interface MainThreadView ()
 
 // Private Properties
@@ -97,7 +99,12 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GPPost *selectedPost = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
+    IndividualThreadView *viewController = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
+    viewController.post = selectedPost;
+    [self.navigationController pushViewController:viewController animated:YES];
+    [viewController release];
 }
 
 #pragma mark Fetched results controller delegate
