@@ -65,10 +65,8 @@
 }
 
 - (void)testFetchAllPostsForThread {
-    GHAssertFalse(YES, nil);
-    /*
-    GPPost *thread = [self getTestThread];
-    NSFetchedResultsController *fr = [dataController postsInThread:thread];
+
+    NSFetchedResultsController *fr = [dataController postsWithThreadID:[NSNumber numberWithInt:1109]];
     
     BOOL fetchDidComplete = [fr performFetch:nil];
     GHAssertTrue(fetchDidComplete, nil);
@@ -77,15 +75,15 @@
     GHAssertNotNil(fetchedObjects, nil);
     
     NSInteger fetchCount = [fetchedObjects count];
-    GHAssertEquals(fetchCount, 1, nil);
+    GHAssertEquals(fetchCount, 5, nil);
     
-    GPPost *post = (GPPost *)[fetchedObjects objectAtIndex:0];
+    GPPost *post = [fetchedObjects objectAtIndex:0];
     GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
     
-    GHAssertEqualStrings(post.subject, @"This is a subject", nil);
-    GHAssertEqualStrings(post.body, @"This is a body.", nil);
+    GHAssertEqualStrings(post.subject, @"that's their fault", nil);
+    GHAssertEqualStrings(post.body, @"No descriptions <em>loaded</em> <a href=\"http://google.com\">yet</a>", nil);
     GHAssertFalse([post.isRead boolValue], nil);
-     */
+
 }
 
  

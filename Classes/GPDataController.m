@@ -9,9 +9,6 @@
 #import "GPDataController.h"
 #import "GPDataController+PrivateHeader.h"
 
-#define POST_REQUEST_FOR_THREAD @"postsForThread"
-#define THREAD_FETCH_KEY @"THREAD"
-
 @interface GPDataController()
 
 // Private methods
@@ -133,6 +130,7 @@
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    [sortDescriptor release];
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:@"allThreads"];
@@ -140,23 +138,21 @@
     return [aFetchedResultsController autorelease];
 }
 
-- (NSFetchedResultsController *)postsInThread:(GPThread *)thread {
+- (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID {
     
     // Get the fetch request
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:thread forKey:THREAD_FETCH_KEY];
-    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:POST_REQUEST_FOR_THREAD substitutionVariables:dict];
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:threadID forKey:@"threadID"];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsForThread" substitutionVariables:dict];
        
     // Set the sort key
-    NSSortDescriptor *sd2 = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
-    NSArray *sds = [NSArray arrayWithObject:sd2];
-    [fetchRequest setSortDescriptors:sds];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:NO];
+    NSArray *sortArray = [NSArray arrayWithObject:sortDescriptor];
+    [sortDescriptor release];
+    [fetchRequest setSortDescriptors:sortArray];
     
     NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
     
-    [sd2 release];
-    [sds release];
-    
-    return fetchedResults;
+    return [fetchedResults autorelease];
 }
 
 @end

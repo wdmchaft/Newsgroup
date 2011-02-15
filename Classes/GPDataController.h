@@ -35,7 +35,7 @@
  * Posts in thread
  * This method returns all posts in a given input thread.
  */
-- (NSFetchedResultsController *)postsInThread:(GPThread *)thread;
+- (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID;
 
 
 @end
