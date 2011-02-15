@@ -179,15 +179,15 @@
     // Get the fetch request
     NSDictionary *dict = [NSDictionary dictionaryWithObject:thread forKey:THREAD_FETCH_KEY];
     NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:POST_REQUEST_FOR_THREAD substitutionVariables:dict];
-    
+       
     // Set the sort key
-    NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
-    NSArray *sds = [[NSArray alloc] initWithObjects:sd, nil];
+    NSSortDescriptor *sd2 = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
+    NSArray *sds = [NSArray arrayWithObject:sd2];
     [fetchRequest setSortDescriptors:sds];
     
-    NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:@"postsForThread"];
+    NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
     
-    [sd release];
+    [sd2 release];
     [sds release];
     
     return fetchedResults;

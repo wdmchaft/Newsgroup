@@ -22,11 +22,13 @@
 
 @implementation TestGPDataController
 
+- (BOOL)shouldRunOnMainThread {
+    return YES;
+}
+
 - (GPThread *)getTestThread {
-    GPDataController *dc = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
-    NSFetchedResultsController *fr = [dc allThreads];
+    NSFetchedResultsController *fr = [dataController allThreads];
     [fr performFetch:nil];
-    [dc release];
     return (GPThread *)[[fr fetchedObjects] objectAtIndex:0];
 }
 
@@ -66,7 +68,7 @@
     
     GPThread *thread = (GPThread *)[fetchedObjects objectAtIndex:0];
     GHAssertTrue([thread isMemberOfClass:[GPThread class]], nil);
-    
+        
     NSString *subject = thread.subject;
     GHAssertEqualStrings(subject, @"This is a thread subject", nil);
 }
