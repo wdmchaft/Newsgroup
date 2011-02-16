@@ -20,4 +20,11 @@
 
 @property (nonatomic, retain) GPPost *post;
 
+// IBOutlets
+@property (nonatomic, retain) IBOutlet UIView *headerView;
+@property (nonatomic, retain) IBOutlet UILabel *subjectLabel;
+@property (nonatomic, retain) IBOutlet UILabel *authorLabel;
+@property (nonatomic, retain) IBOutlet UILabel *postTimeLable;
+@property (nonatomic, retain) IBOutlet UIWebView *webView;
+
 @end
