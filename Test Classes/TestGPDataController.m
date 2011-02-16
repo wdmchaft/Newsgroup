@@ -86,5 +86,26 @@
 
 }
 
+- (void)testFetchPostsForThreadAtPostLevel {
+    NSFetchedResultsController *fr = [dataController postsWithThreadID:[NSNumber numberWithInt:1109] atPostLevel:[NSNumber numberWithInt:2]];
+    
+    BOOL fetchDidComplete = [fr performFetch:nil];
+    GHAssertTrue(fetchDidComplete, nil);
+    
+    NSArray *fetchedObjects = [fr fetchedObjects];
+    GHAssertNotNil(fetchedObjects, nil);
+    
+    NSInteger fetchCount = [fetchedObjects count];
+    GHAssertEquals(fetchCount, 1, nil);
+    
+    for (GPPost *post in fetchedObjects) {
+
+        GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
+        
+        NSInteger postLevel = [post.postLevel intValue];
+        GHAssertEquals(postLevel, 2, nil);
+    }
+}
+
  
 @end

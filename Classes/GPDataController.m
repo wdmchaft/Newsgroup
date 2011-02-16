@@ -153,4 +153,21 @@
     return [fetchedResults autorelease];
 }
 
+- (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID atPostLevel:(NSNumber *)postLevel {
+    
+    // Get the fetch request
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:threadID, @"threadID", postLevel, @"postLevel", nil];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsForThreadAtLevel" substitutionVariables:dict];
+    
+    // Set the sort key
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:NO];
+    NSArray *sortArray = [NSArray arrayWithObject:sortDescriptor];
+    [sortDescriptor release];
+    [fetchRequest setSortDescriptors:sortArray];
+    
+    NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
+    
+    return [fetchedResults autorelease];
+}
+
 @end

@@ -24,7 +24,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeStyle:NSDateFormatterNoStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
     
     GPPost *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];

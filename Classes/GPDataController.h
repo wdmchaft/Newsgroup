@@ -37,5 +37,11 @@
  */
 - (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID;
 
+/**
+ * Posts in thread, at level
+ * Returns all posts in a given thread at a given level. The level counts start at 1, so top level "thread" posts will have a level of 1.
+ */
+- (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID atPostLevel:(NSNumber *)postLevel;
+
 
 @end
