@@ -42,7 +42,8 @@
     self.title = self.post.subject;
     
     // Fetch all our threads
-    NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithThreadID:self.post.threadID];
+    NSNumber *postLevel = [NSNumber numberWithInt:(1 + [self.post.postLevel intValue])];
+    NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithThreadID:self.post.threadID atPostLevel:postLevel];
     fetchedResults.delegate = self;
     
     NSError *error = nil;
@@ -78,6 +79,12 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GPPost *selectedPost = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    IndividualThreadView *viewController = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
+    viewController.post = selectedPost;
+    [self.navigationController pushViewController:viewController animated:YES];
+    [viewController release];
     
 }
 
