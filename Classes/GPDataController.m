@@ -112,8 +112,6 @@
         postObject.threadID = [post objectForKey:@"ThreadID"];
     }
  
-    NSLog(@"%@", [self.context insertedObjects]);
-
     //[self.context save:nil];
 }
 
