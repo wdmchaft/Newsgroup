@@ -7,6 +7,7 @@
 //
 
 #import "FetchedResultsViewController.h"
+#import "FetchedResultsViewController+PrivateHeader.h"
 
 #pragma mark -
 @implementation FetchedResultsViewController

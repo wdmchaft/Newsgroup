@@ -12,7 +12,7 @@
 #import "GPDataController.h"
 #import "NewsgroupAppDelegate.h"
 
-@interface FetchedResultsViewController : UIViewController {
+@interface FetchedResultsViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
     
 @private
     NSFetchedResultsController *fetchedResultsController_;
