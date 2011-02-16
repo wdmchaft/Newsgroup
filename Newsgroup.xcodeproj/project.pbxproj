@@ -57,6 +57,7 @@
 		4D8D406A130455490033E9E7 /* GPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDataController.m; sourceTree = "<group>"; };
 		4D9D4C78130B5C6100A34E8F /* FetchedResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchedResultsViewController.h; sourceTree = "<group>"; };
 		4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsViewController.m; sourceTree = "<group>"; };
+		4D9D4C7D130B5D6800A34E8F /* FetchedResultsViewController+PrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FetchedResultsViewController+PrivateHeader.h"; sourceTree = "<group>"; };
 		4DB0B61E1305C14600B24E54 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		4DB0B6B61306026600B24E54 /* GPPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPost.h; sourceTree = "<group>"; };
 		4DB0B6B71306026600B24E54 /* GPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPost.m; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 				4DB0B6B71306026600B24E54 /* GPPost.m */,
 				4D9D4C78130B5C6100A34E8F /* FetchedResultsViewController.h */,
 				4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */,
+				4D9D4C7D130B5D6800A34E8F /* FetchedResultsViewController+PrivateHeader.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

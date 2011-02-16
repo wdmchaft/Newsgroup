@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "FetchedResultsViewController.h"
 
 @class GPPost;
 
-@interface IndividualThreadView : UITableViewController <NSFetchedResultsControllerDelegate> {
+@interface IndividualThreadView : FetchedResultsViewController {
 
     @private
-    NSFetchedResultsController *fetchedResultsController_;
     GPPost *post_;
 }
 

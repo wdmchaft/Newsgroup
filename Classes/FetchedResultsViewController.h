@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
+#import "GPDataController.h"
+#import "NewsgroupAppDelegate.h"
 
 @interface FetchedResultsViewController : UIViewController {
+    
+@private
+    NSFetchedResultsController *fetchedResultsController_;
 
 }
 

@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "FetchedResultsViewController.h"
 
-@interface MainThreadView : UITableViewController <NSFetchedResultsControllerDelegate> {
+@interface MainThreadView : FetchedResultsViewController {
 
-@private
-    NSFetchedResultsController *fetchedResultsController_;
 }
 
 @end
