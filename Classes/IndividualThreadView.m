@@ -11,6 +11,7 @@
 
 @interface IndividualThreadView()
 
+- (NSString *)formattedStringFromDate:(NSDate *)date;
 
 @end
 
@@ -30,13 +31,16 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
+    GPPost *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = thread.subject;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [self formattedStringFromDate:thread.postdate]];
+}
+
+- (NSString *)formattedStringFromDate:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
     [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    
-    GPPost *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = thread.subject;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [dateFormatter stringFromDate:thread.postdate]];
+    return [dateFormatter stringFromDate:date];
 }
 
 
@@ -49,7 +53,13 @@
     self.title = self.post.subject;
     
     // Setup the headerview
+    UINib *headerNib = [UINib nibWithNibName:@"HeaderView" bundle:nil];
+    [headerNib instantiateWithOwner:self options:nil];
     self.tableView.tableHeaderView = self.headerView;
+    self.authorLabel.text = self.post.posterName;
+    self.subjectLabel.text = self.post.subject;
+    self.postTimeLabel.text = [self formattedStringFromDate:self.post.postdate];
+    [self.webView loadHTMLString:self.post.body baseURL:nil];
     
     // Fetch all our threads
     NSNumber *postLevel = [NSNumber numberWithInt:(1 + [self.post.postLevel intValue])];
@@ -96,6 +106,16 @@
     [self.navigationController pushViewController:viewController animated:YES];
     [viewController release];
     
+}
+
+#pragma mark UIWebViewDelegate methods
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    if ([[[request URL] description] isEqualToString:@"about:blank"]) {
+        return YES;
+    } else {
+        return NO;
+    }
 }
 
 @end

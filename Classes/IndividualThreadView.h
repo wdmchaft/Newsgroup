@@ -12,7 +12,7 @@
 
 @class GPPost;
 
-@interface IndividualThreadView : FetchedResultsViewController {
+@interface IndividualThreadView : FetchedResultsViewController <UIWebViewDelegate> {
 
     @private
     GPPost *post_;
