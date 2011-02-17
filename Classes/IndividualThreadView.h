@@ -24,7 +24,7 @@
 @property (nonatomic, retain) IBOutlet UIView *headerView;
 @property (nonatomic, retain) IBOutlet UILabel *subjectLabel;
 @property (nonatomic, retain) IBOutlet UILabel *authorLabel;
-@property (nonatomic, retain) IBOutlet UILabel *postTimeLable;
+@property (nonatomic, retain) IBOutlet UILabel *postTimeLabel;
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 
 @end

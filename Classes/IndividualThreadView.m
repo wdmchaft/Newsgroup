@@ -19,6 +19,13 @@
 
 @synthesize post = post_;
 
+// IBOutlets
+@synthesize headerView;
+@synthesize subjectLabel;
+@synthesize authorLabel;
+@synthesize postTimeLabel;
+@synthesize webView;
+
 #pragma mark Instance Methods
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
@@ -40,6 +47,9 @@
     
     // Set the view title
     self.title = self.post.subject;
+    
+    // Setup the headerview
+    self.tableView.tableHeaderView = self.headerView;
     
     // Fetch all our threads
     NSNumber *postLevel = [NSNumber numberWithInt:(1 + [self.post.postLevel intValue])];
