@@ -93,7 +93,7 @@ typedef enum {
    
     UILabel *dateLabel = (UILabel *)[[views_ objectAtIndex:GPProgressTimestampView] viewWithTag:GPProgressTagsTimestampViewDate];
     
-    dateLabel.text = [NSDate stringForDisplayFromDate:timestamp_ prefixed:YES];
+    dateLabel.text = GPProgressTimestampString([NSDate stringForDisplayFromDate:timestamp_ prefixed:YES]);
 }
 
 - (void)configureViews {
