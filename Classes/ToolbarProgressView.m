@@ -7,15 +7,16 @@
 //
 
 #import "ToolbarProgressView.h"
+#import "NSDate+Helper.h"
+
+#define GPProgressTimestampString(x) [NSString stringWithFormat:@"Updated %@", x]
 
 typedef enum {
     GPProgressTagsDeterminiteViewProgressBar = 1
 } GPProgressTagsDeterminiteView;
 
 typedef enum {
-    GPProgressTagsTimestampViewDate = 1,
-    GPProgressTagsTimestampViewTime,
-    GPProgressTagsTimestampViewAMPM
+    GPProgressTagsTimestampViewDate = 1
 } GPProgressTagsTimestampView;
 
 @interface ToolbarProgressView()
@@ -90,23 +91,9 @@ typedef enum {
 
 - (void)configureTimestamp {
    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateStyle:NSDateFormatterShortStyle];
-    [dateFormat setTimeStyle:NSDateFormatterNoStyle];
+    UILabel *dateLabel = (UILabel *)[[views_ objectAtIndex:GPProgressTimestampView] viewWithTag:GPProgressTagsTimestampViewDate];
     
-    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
-    [timeFormat setDateStyle:NSDateFormatterNoStyle];
-    [timeFormat setTimeStyle:NSDateFormatterShortStyle];
-    
-    UIView *tv = [views_ objectAtIndex:GPProgressTimestampView];
-    UILabel *dateLabel = (UILabel *)[tv viewWithTag:GPProgressTagsTimestampViewDate];
-    UILabel *timeLabel = (UILabel *)[tv viewWithTag:GPProgressTagsTimestampViewTime];
-    
-    dateLabel.text = [dateFormat stringFromDate:timestamp_];
-    timeLabel.text = [timeFormat stringFromDate:timestamp_];
-    
-    [dateFormat release];
-    [timeFormat release];
+    dateLabel.text = [NSDate stringForDisplayFromDate:timestamp_ prefixed:YES];
 }
 
 - (void)configureViews {

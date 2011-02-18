@@ -27,6 +27,7 @@
 		4D9D4DBE130DE55200A34E8F /* GPDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4DBC130DE55200A34E8F /* GPDataParser.m */; };
 		4D9D4E26130E0DD800A34E8F /* ToolbarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4E25130E0DD800A34E8F /* ToolbarProgressView.m */; };
 		4D9D4E5D130E12BD00A34E8F /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */; };
+		4D9D4ECF130E993D00A34E8F /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4ECE130E993D00A34E8F /* NSDate+Helper.m */; };
 		4DB0B61F1305C14600B24E54 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DB0B61E1305C14600B24E54 /* TestData.plist */; };
 		4DB0B6B81306026600B24E54 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
 		4DC10CEB130879A000944A20 /* TestGPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10CEA130879A000944A20 /* TestGPDataController.m */; };
@@ -72,6 +73,8 @@
 		4D9D4E24130E0DD800A34E8F /* ToolbarProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarProgressView.h; sourceTree = "<group>"; };
 		4D9D4E25130E0DD800A34E8F /* ToolbarProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarProgressView.m; sourceTree = "<group>"; };
 		4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgressView.xib; path = Resources/ProgressView.xib; sourceTree = "<group>"; };
+		4D9D4ECD130E993D00A34E8F /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "nsdate-helper/NSDate+Helper.h"; sourceTree = "<group>"; };
+		4D9D4ECE130E993D00A34E8F /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "nsdate-helper/NSDate+Helper.m"; sourceTree = "<group>"; };
 		4DB0B61E1305C14600B24E54 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		4DB0B6B61306026600B24E54 /* GPPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPost.h; sourceTree = "<group>"; };
 		4DB0B6B71306026600B24E54 /* GPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPost.m; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				4DF2D2B71308461700C8AB3A /* OCMock */,
+				4D9D4ECB130E992C00A34E8F /* NSDate-Helper */,
 				4DF2D28213083E2F00C8AB3A /* Tests */,
 			);
 			name = CustomTemplate;
@@ -206,6 +210,15 @@
 				4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D9D4ECB130E992C00A34E8F /* NSDate-Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D4ECD130E993D00A34E8F /* NSDate+Helper.h */,
+				4D9D4ECE130E993D00A34E8F /* NSDate+Helper.m */,
+			);
+			name = "NSDate-Helper";
 			sourceTree = "<group>";
 		};
 		4DF2D28213083E2F00C8AB3A /* Tests */ = {
@@ -335,6 +348,7 @@
 				4D9D4D5A130D8A7F00A34E8F /* GPHTTPController.m in Sources */,
 				4D9D4DBE130DE55200A34E8F /* GPDataParser.m in Sources */,
 				4D9D4E26130E0DD800A34E8F /* ToolbarProgressView.m in Sources */,
+				4D9D4ECF130E993D00A34E8F /* NSDate+Helper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
