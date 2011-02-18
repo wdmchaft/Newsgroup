@@ -8,9 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    GPProgressTimestampView,
+    GPProgressIndeterminiteView,
+    GPProgressDeterminiteView
+} ViewType;
 
 @interface ToolbarProgressView : UIView {
 
+    float progress_;
+    NSDate *timestamp_;
+    NSArray *views_;
+    ViewType viewType_;
 }
+
+@property (assign, nonatomic) float progress; 
+@property (retain, nonatomic) NSDate *timestamp;
+@property (assign, nonatomic) ViewType viewType;
 
 @end
