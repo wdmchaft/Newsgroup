@@ -16,9 +16,7 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        UILabel *label = [[UILabel alloc] initWithFrame:frame];
-        label.text = @"Go fuck yoself";
-        [self addSubview:label];
+        
     }
     return self;
 }
