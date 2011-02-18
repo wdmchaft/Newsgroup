@@ -27,7 +27,8 @@
 
     // Setup the default toolbar
     ToolbarProgressView *progView = [[ToolbarProgressView alloc] initWithFrame:PROGRESS_VIEW_FRAME];
-    progView.viewType = GPProgressDeterminiteView;
+    progView.viewType = GPProgressTimestampView;
+    progView.timestamp = [NSDate date];
     
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshData:)];
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
