@@ -8,6 +8,7 @@
 
 #import "FetchedResultsViewController.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
+#import "NewsgroupAppDelegate.h"
 
 #pragma mark -
 @implementation FetchedResultsViewController
@@ -24,6 +25,12 @@
 }    
 
 #pragma mark View Lifecycle
+
+- (void)viewDidLoad {
+    // Setup the toolbar
+    self.toolbarItems = APP_DELEGATE.toolbarItems;
+    
+}
 
 - (void)dealloc {
     [fetchedResultsController_ release];

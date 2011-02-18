@@ -19,6 +19,7 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 // Private properties
 @property (retain, nonatomic) NSManagedObjectContext *context;
 @property (retain, nonatomic) GPHTTPController *httpController;
+@property (readwrite, retain) NSDate *lastFetchTime;
 @property (retain, nonatomic) NSManagedObjectModel *model;
 
 @end
@@ -75,6 +76,7 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 - (void)dealloc {
     [context_ release];
     [httpController_ release];
+    [lastFetchTime_ release];
     [model_ release];
     
     [super dealloc];
@@ -84,7 +86,9 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 #pragma mark Properties
 
 @synthesize context = context_;
+@synthesize delegate = delegate_;
 @synthesize httpController = httpController_;
+@synthesize lastFetchTime = lastFetchTime_;
 @synthesize model = model_;
 
 #pragma mark -
@@ -103,6 +107,29 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
     [self startFetchWithHTTPController:httpController];
     self.httpController = httpController;
     [httpController release];
+    
+    // TODO: Remove all this crap
+    /*
+    NSString *testDataPath = [[NSBundle mainBundle] pathForResource:@"TestData" ofType:@"plist"];
+    NSArray *testArray = [NSArray arrayWithContentsOfFile:testDataPath];
+    
+    NSEntityDescription *postEntity = [[self.model entitiesByName] objectForKey:[GPPost entityName]];
+    for (NSDictionary *post in testArray) {
+        GPPost *postObject = [[GPPost alloc] initWithEntity:postEntity insertIntoManagedObjectContext:self.context];
+        
+        postObject.body = @"No descriptions <em>loaded</em> <a href=\"http://google.com\">yet</a>";
+        postObject.isRead = [post objectForKey:@"Read"];
+        postObject.memberID = [post objectForKey:@"MemberID"];
+        postObject.postdate = [post objectForKey:@"PostDate"];
+        postObject.posterName = [post objectForKey:@"PosterName"];
+        postObject.postID = [post objectForKey:@"PostID"];
+        postObject.postLevel = [post objectForKey:@"PostLevel"];
+        postObject.subject = [post objectForKey:@"Subject"];
+        postObject.threadID = [post objectForKey:@"ThreadID"];
+    }
+ 
+    [self.context save:nil];
+     */
 }
 
 - (void)startFetchWithHTTPController:(GPHTTPController *)controller {
@@ -111,6 +138,10 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
     
     // Start the fetch
     [controller beginFetching];
+    
+    //FIXME:
+    // Since our controller doesn't actually do anything yet, just call the didFinish method.
+    [self fetchSucceded:nil withResults:nil];
 }
 
 - (void)stopFetching {
@@ -129,7 +160,7 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
     [sortDescriptor release];
     [fetchRequest setSortDescriptors:sortDescriptors];
     
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:@"allThreads"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
         
     return [aFetchedResultsController autorelease];
 }
@@ -173,10 +204,29 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 
 - (void)fetchFailed:(GPHTTPController *)controller withError:(NSError *)error {
     
+    // Send the notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidEnd object:self];
+    
+    // Tell the delegate
+    id <GPDataControllerDelegate> delegate = self.delegate;
+    if (delegate) {
+        [delegate fetchFailed:self withError:error];
+    }
 }
 
-- (void)fetchSuccededWithResults:(NSData *)data {
+- (void)fetchSucceded:(GPHTTPController *)controller withResults:(NSData *)data {
     
+    // Send the notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidEnd object:self];
+    
+    // Notify the delegate
+    id delegate = self.delegate;
+    if (delegate) {
+        [delegate fetchSucceded:self];
+    }
+    
+    // Set the last fetch date
+    self.lastFetchTime = [NSDate date];
 }
 
 @end

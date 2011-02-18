@@ -13,7 +13,7 @@
 @protocol GPHTTPControllerDelegate
 
 - (void)fetchFailed:(GPHTTPController *)controller withError:(NSError *)error;
-- (void)fetchSuccededWithResults:(NSData *)data;
+- (void)fetchSucceded:(GPHTTPController *)controller withResults:(NSData *)data;
 
 @end
 

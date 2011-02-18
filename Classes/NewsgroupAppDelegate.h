@@ -21,10 +21,13 @@
 // Properties
 @property (nonatomic, retain) GPDataController *dataController;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+@property (nonatomic, retain) NSArray *toolbarItems;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 // Utility Methods
 - (NSURL *)applicationDocumentsDirectory;
+- (void)newPost:(id)sender;
+- (void)refreshData:(id)sender;
 
 @end
 

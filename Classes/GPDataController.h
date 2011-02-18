@@ -13,18 +13,35 @@
 extern NSString *const GPHTTPRequestDidBegin;
 extern NSString *const GPHTTPRequestDidEnd;
 
+@class GPDataController;
+
+@protocol GPDataControllerDelegate
+
+- (void)fetchFailed:(GPDataController *)dataController withError:(NSError *)error;
+- (void)fetchSucceded:(GPDataController *)dataController;
+
+@end
+
+
 
 @interface GPDataController : NSObject <GPHTTPControllerDelegate> {
 
     @private
     NSManagedObjectContext *context_;
+    id <GPDataControllerDelegate> delegate_;
     GPHTTPController *httpController_;
+    BOOL isFetching_;
+    NSDate *lastFetchTime_;
     NSManagedObjectModel *model_;
     
 }
 
-// Begin and end fetching
-- (BOOL)isFetching;
+// Properties
+@property (assign) id <GPDataControllerDelegate> delegate;
+@property (readonly, retain) NSDate *lastFetchTime;
+@property (readonly) BOOL isFetching;
+
+// Instance Methods
 - (void)startFetching;
 - (void)stopFetching;
 
