@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class GPDataController;
+#import "GPDataController.h"
+
 
 #define APP_DELEGATE ((NewsgroupAppDelegate *)[UIApplication sharedApplication].delegate)
 
-@interface NewsgroupAppDelegate : NSObject <UIApplicationDelegate> {
+@interface NewsgroupAppDelegate : NSObject <UIApplicationDelegate, GPDataControllerDelegate> {
     
     UIWindow *window;
     UINavigationController *navigationController;

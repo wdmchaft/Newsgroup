@@ -25,6 +25,7 @@
 		4D9D4D5A130D8A7F00A34E8F /* GPHTTPController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4D58130D8A7F00A34E8F /* GPHTTPController.m */; };
 		4D9D4DBD130DE55200A34E8F /* GPDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4DBC130DE55200A34E8F /* GPDataParser.m */; };
 		4D9D4DBE130DE55200A34E8F /* GPDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4DBC130DE55200A34E8F /* GPDataParser.m */; };
+		4D9D4E26130E0DD800A34E8F /* ToolbarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4E25130E0DD800A34E8F /* ToolbarProgressView.m */; };
 		4DB0B61F1305C14600B24E54 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DB0B61E1305C14600B24E54 /* TestData.plist */; };
 		4DB0B6B81306026600B24E54 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
 		4DC10CEB130879A000944A20 /* TestGPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10CEA130879A000944A20 /* TestGPDataController.m */; };
@@ -67,6 +68,8 @@
 		4D9D4D58130D8A7F00A34E8F /* GPHTTPController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHTTPController.m; sourceTree = "<group>"; };
 		4D9D4DBB130DE55200A34E8F /* GPDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDataParser.h; sourceTree = "<group>"; };
 		4D9D4DBC130DE55200A34E8F /* GPDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDataParser.m; sourceTree = "<group>"; };
+		4D9D4E24130E0DD800A34E8F /* ToolbarProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarProgressView.h; sourceTree = "<group>"; };
+		4D9D4E25130E0DD800A34E8F /* ToolbarProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarProgressView.m; sourceTree = "<group>"; };
 		4DB0B61E1305C14600B24E54 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		4DB0B6B61306026600B24E54 /* GPPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPost.h; sourceTree = "<group>"; };
 		4DB0B6B71306026600B24E54 /* GPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPost.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				4D9D4D58130D8A7F00A34E8F /* GPHTTPController.m */,
 				4D9D4DBB130DE55200A34E8F /* GPDataParser.h */,
 				4D9D4DBC130DE55200A34E8F /* GPDataParser.m */,
+				4D9D4E24130E0DD800A34E8F /* ToolbarProgressView.h */,
+				4D9D4E25130E0DD800A34E8F /* ToolbarProgressView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 				4D9D4C7A130B5C6100A34E8F /* FetchedResultsViewController.m in Sources */,
 				4D9D4D5A130D8A7F00A34E8F /* GPHTTPController.m in Sources */,
 				4D9D4DBE130DE55200A34E8F /* GPDataParser.m in Sources */,
+				4D9D4E26130E0DD800A34E8F /* ToolbarProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

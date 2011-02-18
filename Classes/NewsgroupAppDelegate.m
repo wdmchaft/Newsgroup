@@ -8,8 +8,9 @@
 
 #import "NewsgroupAppDelegate.h"
 #import "MainThreadView.h"
-#import "GPDataController.h"
+#import "ToolbarProgressView.h"
 
+#define PROGRESS_VIEW_FRAME CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)
 
 @implementation NewsgroupAppDelegate
 
@@ -27,12 +28,14 @@
     // Setup the default toolbar
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshData:)];
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *progressView = [[UIBarButtonItem alloc] initWithCustomView:[[ToolbarProgressView alloc] initWithFrame:PROGRESS_VIEW_FRAME]];
     UIBarButtonItem *newPost = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(newPost:)];
     
-    NSArray *buttonArray = [NSArray arrayWithObjects:refreshButton, flexibleSpace, newPost, nil];
+    NSArray *buttonArray = [NSArray arrayWithObjects:refreshButton, flexibleSpace, progressView, flexibleSpace, newPost, nil];
     
     [refreshButton release];
     [flexibleSpace release];
+    [progressView release];
     [newPost release];
     
     self.toolbarItems = buttonArray;
@@ -71,6 +74,17 @@
 
 - (void)refreshData:(id)sender {
     NSLog(@"refreshData");
+}
+
+#pragma mark -
+#pragma mark GPDataControllerDelegate Methods
+
+- (void)fetchFailed:(GPDataController *)dataController withError:(NSError *)error {
+    // Kill the progress bar
+}
+
+- (void)fetchSucceded:(GPDataController *)dataController {
+    // Kill the progress bar, update the timestamp
 }
 
 
