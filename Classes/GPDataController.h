@@ -7,14 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "GPHTTPController.h"
 #import "GPPost.h"
 
+extern NSString *const GPHTTPRequestDidBegin;
+extern NSString *const GPHTTPRequestDidEnd;
 
-@interface GPDataController : NSObject {
+
+@interface GPDataController : NSObject <GPHTTPControllerDelegate> {
 
     @private
     NSManagedObjectContext *context_;
+    GPHTTPController *httpController_;
     NSManagedObjectModel *model_;
     
 }

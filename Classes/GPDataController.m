@@ -9,12 +9,16 @@
 #import "GPDataController.h"
 #import "GPDataController+PrivateHeader.h"
 
+NSString *const GPHTTPRequestDidBegin = @"GPHTTPRequestDidBegin";
+NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
+
 @interface GPDataController()
 
 // Private methods
 
 // Private properties
 @property (retain, nonatomic) NSManagedObjectContext *context;
+@property (retain, nonatomic) GPHTTPController *httpController;
 @property (retain, nonatomic) NSManagedObjectModel *model;
 
 @end
@@ -70,6 +74,7 @@
 
 - (void)dealloc {
     [context_ release];
+    [httpController_ release];
     [model_ release];
     
     [super dealloc];
@@ -79,11 +84,11 @@
 #pragma mark Properties
 
 @synthesize context = context_;
+@synthesize httpController = httpController_;
 @synthesize model = model_;
 
 #pragma mark -
 #pragma mark Instance Methods
-
 
 #pragma mark Begin and End Fetching
 
@@ -94,25 +99,18 @@
 
 - (void)startFetching {
     
-    NSString *testDataPath = [[NSBundle mainBundle] pathForResource:@"TestData" ofType:@"plist"];
-    NSArray *testArray = [NSArray arrayWithContentsOfFile:testDataPath];
+    GPHTTPController *httpController = [[GPHTTPController alloc] initWithDelegate:self];
+    [self startFetchWithHTTPController:httpController];
+    self.httpController = httpController;
+    [httpController release];
+}
+
+- (void)startFetchWithHTTPController:(GPHTTPController *)controller {
+    // File notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidBegin object:self];
     
-    NSEntityDescription *postEntity = [[self.model entitiesByName] objectForKey:[GPPost entityName]];
-    for (NSDictionary *post in testArray) {
-        GPPost *postObject = [[GPPost alloc] initWithEntity:postEntity insertIntoManagedObjectContext:self.context];
-        
-        postObject.body = @"No descriptions <em>loaded</em> <a href=\"http://google.com\">yet</a>";
-        postObject.isRead = [post objectForKey:@"Read"];
-        postObject.memberID = [post objectForKey:@"MemberID"];
-        postObject.postdate = [post objectForKey:@"PostDate"];
-        postObject.posterName = [post objectForKey:@"PosterName"];
-        postObject.postID = [post objectForKey:@"PostID"];
-        postObject.postLevel = [post objectForKey:@"PostLevel"];
-        postObject.subject = [post objectForKey:@"Subject"];
-        postObject.threadID = [post objectForKey:@"ThreadID"];
-    }
- 
-    //[self.context save:nil];
+    // Start the fetch
+    [controller beginFetching];
 }
 
 - (void)stopFetching {
@@ -168,6 +166,17 @@
     NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
     
     return [fetchedResults autorelease];
+}
+
+#pragma mark -
+#pragma mark GPHTTPControllerDelegate Methods
+
+- (void)fetchFailed:(GPHTTPController *)controller withError:(NSError *)error {
+    
+}
+
+- (void)fetchSuccededWithResults:(NSData *)data {
+    
 }
 
 @end

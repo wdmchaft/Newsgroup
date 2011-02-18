@@ -8,8 +8,10 @@
 
 #import <GHUnitIOS/GHUnit.h>
 #import <CoreData/CoreData.h>
+#import "OCMock.h"
 #import "GPDataController.h"
 #import "GPDataController+PrivateHeader.h"
+#import "GPHTTPController.h"
 
 @interface TestGPDataController : GHTestCase {
     NSURL *testStoreURL;
@@ -105,6 +107,21 @@
         NSInteger postLevel = [post.postLevel intValue];
         GHAssertEquals(postLevel, 2, nil);
     }
+}
+
+- (void)testHTTPUpdates {
+    
+    id mockObserver = [OCMockObject observerMock];
+    [[NSNotificationCenter defaultCenter] addMockObserver:mockObserver name:GPHTTPRequestDidBegin object:nil];
+    [[mockObserver expect] notificationWithName:GPHTTPRequestDidBegin object:[OCMArg any]];
+    
+    id httpController = [OCMockObject mockForClass:[GPHTTPController class]];
+    [[httpController expect] beginFetching];
+
+    [dataController startFetchWithHTTPController:httpController];
+    
+    [httpController verify];
+    [mockObserver verify];
 }
 
  
