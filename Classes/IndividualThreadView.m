@@ -8,10 +8,9 @@
 
 #import "IndividualThreadView.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
+#import "NSDate+Helper.h"
 
 @interface IndividualThreadView()
-
-- (NSString *)formattedStringFromDate:(NSDate *)date;
 
 @end
 
@@ -33,16 +32,8 @@
     
     GPPost *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = thread.subject;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [self formattedStringFromDate:thread.postdate]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [NSDate stringForDisplayFromDate:thread.postdate]];
 }
-
-- (NSString *)formattedStringFromDate:(NSDate *)date {
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    return [dateFormatter stringFromDate:date];
-}
-
 
 #pragma mark View lifecycle
 
@@ -58,7 +49,7 @@
     self.tableView.tableHeaderView = self.headerView;
     self.authorLabel.text = self.post.posterName;
     self.subjectLabel.text = self.post.subject;
-    self.postTimeLabel.text = [self formattedStringFromDate:self.post.postdate];
+    self.postTimeLabel.text = [NSDate stringForDisplayFromDate:self.post.postdate];
     [self.webView loadHTMLString:self.post.body baseURL:nil];
     
     // Fetch all our threads

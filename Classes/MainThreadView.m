@@ -9,6 +9,7 @@
 #import "MainThreadView.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
 #import "IndividualThreadView.h"
+#import "NSDate+Helper.h"
 
 @interface MainThreadView ()
 
@@ -23,13 +24,9 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-    [dateFormatter setDateStyle:NSDateFormatterShortStyle];
-    
     GPPost *thread = (GPPost *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = thread.subject;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [dateFormatter stringFromDate:thread.postdate]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [NSDate stringForDisplayFromDate:thread.postdate]];
 }
 
 
