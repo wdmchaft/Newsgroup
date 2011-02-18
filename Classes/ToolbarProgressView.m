@@ -13,10 +13,6 @@ typedef enum {
 } GPProgressTagsDeterminiteView;
 
 typedef enum {
-    GPProgressTagsIndeterminateViewActivityIndicator = 1
-} GPProgressTagsIndeterminateView;
-
-typedef enum {
     GPProgressTagsTimestampViewDate = 1,
     GPProgressTagsTimestampViewTime,
     GPProgressTagsTimestampViewAMPM
@@ -84,15 +80,33 @@ typedef enum {
 #pragma mark Instance Methods
 
 - (void)configureDeterminateView {
-    
+    UIProgressView *pv = (UIProgressView *)[[views_ objectAtIndex:GPProgressDeterminiteView] viewWithTag:GPProgressTagsDeterminiteViewProgressBar];
+    [pv setProgress:progress_];
 }
 
 - (void)configureIndeterminateView {
-    
+    // Nothing to configure
 }
 
 - (void)configureTimestamp {
+   
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateStyle:NSDateFormatterShortStyle];
+    [dateFormat setTimeStyle:NSDateFormatterNoStyle];
     
+    NSDateFormatter *timeFormat = [[NSDateFormatter alloc] init];
+    [timeFormat setDateStyle:NSDateFormatterNoStyle];
+    [timeFormat setTimeStyle:NSDateFormatterShortStyle];
+    
+    UIView *tv = [views_ objectAtIndex:GPProgressTimestampView];
+    UILabel *dateLabel = (UILabel *)[tv viewWithTag:GPProgressTagsTimestampViewDate];
+    UILabel *timeLabel = (UILabel *)[tv viewWithTag:GPProgressTagsTimestampViewTime];
+    
+    dateLabel.text = [dateFormat stringFromDate:timestamp_];
+    timeLabel.text = [timeFormat stringFromDate:timestamp_];
+    
+    [dateFormat release];
+    [timeFormat release];
 }
 
 - (void)configureViews {
