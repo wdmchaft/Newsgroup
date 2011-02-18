@@ -3,4 +3,4 @@
 	url = git@github.com:jkubicek/asi-http-request.git
 [submodule "nsdate-helper"]
 	path = nsdate-helper
-	url = https://github.com/billymeltdown/nsdate-helper.git
+	url = git@github.com:jkubicek/nsdate-helper.git
