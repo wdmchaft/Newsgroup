@@ -28,6 +28,8 @@
 		4D9D4E26130E0DD800A34E8F /* ToolbarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4E25130E0DD800A34E8F /* ToolbarProgressView.m */; };
 		4D9D4E5D130E12BD00A34E8F /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */; };
 		4D9D4ECF130E993D00A34E8F /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4ECE130E993D00A34E8F /* NSDate+Helper.m */; };
+		4D9D4F30130F38EC00A34E8F /* GPBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4F2F130F38EC00A34E8F /* GPBrowserViewController.m */; };
+		4D9D4F32130F390300A34E8F /* GPBrowserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D4F31130F390300A34E8F /* GPBrowserView.xib */; };
 		4DB0B61F1305C14600B24E54 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DB0B61E1305C14600B24E54 /* TestData.plist */; };
 		4DB0B6B81306026600B24E54 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
 		4DC10CEB130879A000944A20 /* TestGPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10CEA130879A000944A20 /* TestGPDataController.m */; };
@@ -75,6 +77,9 @@
 		4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgressView.xib; path = Resources/ProgressView.xib; sourceTree = "<group>"; };
 		4D9D4ECD130E993D00A34E8F /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "nsdate-helper/NSDate+Helper.h"; sourceTree = "<group>"; };
 		4D9D4ECE130E993D00A34E8F /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "nsdate-helper/NSDate+Helper.m"; sourceTree = "<group>"; };
+		4D9D4F2E130F38EC00A34E8F /* GPBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPBrowserViewController.h; sourceTree = "<group>"; };
+		4D9D4F2F130F38EC00A34E8F /* GPBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPBrowserViewController.m; sourceTree = "<group>"; };
+		4D9D4F31130F390300A34E8F /* GPBrowserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = GPBrowserView.xib; path = Resources/GPBrowserView.xib; sourceTree = "<group>"; };
 		4DB0B61E1305C14600B24E54 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		4DB0B6B61306026600B24E54 /* GPPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPost.h; sourceTree = "<group>"; };
 		4DB0B6B71306026600B24E54 /* GPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPost.m; sourceTree = "<group>"; };
@@ -180,6 +185,7 @@
 				28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */,
 				8D1107310486CEB800E47090 /* Newsgroup-Info.plist */,
 				4DB0B61E1305C14600B24E54 /* TestData.plist */,
+				4D9D4F31130F390300A34E8F /* GPBrowserView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -232,6 +238,8 @@
 				4D9D4C78130B5C6100A34E8F /* FetchedResultsViewController.h */,
 				4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */,
 				4D9D4C7D130B5D6800A34E8F /* FetchedResultsViewController+PrivateHeader.h */,
+				4D9D4F2E130F38EC00A34E8F /* GPBrowserViewController.h */,
+				4D9D4F2F130F38EC00A34E8F /* GPBrowserViewController.m */,
 			);
 			name = "View Controller Classes";
 			sourceTree = "<group>";
@@ -343,6 +351,7 @@
 				4DB0B61F1305C14600B24E54 /* TestData.plist in Resources */,
 				4D9D4D27130CAA2600A34E8F /* HeaderView.xib in Resources */,
 				4D9D4E5D130E12BD00A34E8F /* ProgressView.xib in Resources */,
+				4D9D4F32130F390300A34E8F /* GPBrowserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +382,7 @@
 				4D9D4DBE130DE55200A34E8F /* GPDataParser.m in Sources */,
 				4D9D4E26130E0DD800A34E8F /* ToolbarProgressView.m in Sources */,
 				4D9D4ECF130E993D00A34E8F /* NSDate+Helper.m in Sources */,
+				4D9D4F30130F38EC00A34E8F /* GPBrowserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
