@@ -4,3 +4,6 @@
 [submodule "nsdate-helper"]
 	path = nsdate-helper
 	url = git@github.com:jkubicek/nsdate-helper.git
+[submodule "NSString_Digest"]
+	path = NSString_Digest
+	url = git@github.com:jkubicek/NSString_Digest.git
