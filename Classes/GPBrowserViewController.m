@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,6 +36,7 @@
 
 - (void)dealloc {
     [refreshButton_ release];
+    [url_ release];
     [urlLabel_ release];
     [webView_ release];
     
@@ -46,8 +47,18 @@
 #pragma mark Properties
 
 @synthesize refreshButton = refreshButton_;
+@synthesize url = url_;
 @synthesize urlLabel = urlLabel_;
 @synthesize webView = webView_;
+
+- (void)setUrl:(NSURL *)url {
+    [url retain];
+    [url_ release];
+    url_ = url;
+    
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url_]];
+    self.urlLabel.text = [url_ absoluteString];
+}
 
 #pragma mark Instance Methods
 

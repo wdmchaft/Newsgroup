@@ -13,6 +13,7 @@
     
     @private
     UIBarButtonItem *refreshButton_;
+    NSURL *url_;
     UILabel *urlLabel_;
     UIWebView *webView_;
 
@@ -20,6 +21,7 @@
 
 // Properties
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *refreshButton;
+@property (retain, nonatomic) NSURL *url;
 @property (retain, nonatomic) IBOutlet UILabel *urlLabel;
 @property (retain, nonatomic) IBOutlet UIWebView *webView;
 
