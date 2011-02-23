@@ -18,7 +18,7 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 
 // Private properties
 @property (retain, nonatomic) NSManagedObjectContext *context;
-@property (retain, nonatomic) GPHTTPController *httpController;
+@property (retain, nonatomic) GPHTTPOperation *httpController;
 @property (readwrite, retain) NSDate *lastFetchTime;
 @property (retain, nonatomic) NSManagedObjectModel *model;
 
@@ -103,7 +103,7 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 
 - (void)startFetching {
     
-    GPHTTPController *httpController = [[GPHTTPController alloc] initWithDelegate:self];
+    GPHTTPOperation *httpController = [[GPHTTPOperation alloc] initWithDelegate:self];
     [self startFetchWithHTTPController:httpController];
     self.httpController = httpController;
     [httpController release];
@@ -132,7 +132,7 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
      */
 }
 
-- (void)startFetchWithHTTPController:(GPHTTPController *)controller {
+- (void)startFetchWithHTTPController:(GPHTTPOperation *)controller {
     // File notification
     [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidBegin object:self];
     
@@ -202,7 +202,7 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 #pragma mark -
 #pragma mark GPHTTPControllerDelegate Methods
 
-- (void)fetchFailed:(GPHTTPController *)controller withError:(NSError *)error {
+- (void)fetchFailed:(GPHTTPOperation *)controller withError:(NSError *)error {
     
     // Send the notification
     [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidEnd object:self];
@@ -214,7 +214,7 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
     }
 }
 
-- (void)fetchSucceded:(GPHTTPController *)controller withResults:(NSData *)data {
+- (void)fetchSucceded:(GPHTTPOperation *)controller withResults:(NSData *)data {
     
     // Send the notification
     [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidEnd object:self];

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GPHTTPController.h"
+#import "GPHTTPOperation.h"
 #import "GPPost.h"
 
 extern NSString *const GPHTTPRequestDidBegin;
@@ -29,7 +29,7 @@ extern NSString *const GPHTTPRequestDidEnd;
     @private
     NSManagedObjectContext *context_;
     id <GPDataControllerDelegate> delegate_;
-    GPHTTPController *httpController_;
+    GPHTTPOperation *httpController_;
     BOOL isFetching_;
     NSDate *lastFetchTime_;
     NSManagedObjectModel *model_;

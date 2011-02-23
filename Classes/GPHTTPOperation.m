@@ -6,10 +6,10 @@
 //  Copyright 2011 jimkubicek.com. All rights reserved.
 //
 
-#import "GPHTTPController.h"
+#import "GPHTTPOperation.h"
 
 
-@implementation GPHTTPController
+@implementation GPHTTPOperation
 
 #pragma mark Init methods
 

@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@class GPHTTPController;
+@class GPHTTPOperation;
 
 @protocol GPHTTPControllerDelegate
 
-- (void)fetchFailed:(GPHTTPController *)controller withError:(NSError *)error;
-- (void)fetchSucceded:(GPHTTPController *)controller withResults:(NSData *)data;
+- (void)fetchFailed:(GPHTTPOperation *)controller withError:(NSError *)error;
+- (void)fetchSucceded:(GPHTTPOperation *)controller withResults:(NSData *)data;
 
 @end
 
-@interface GPHTTPController : NSObject {
+@interface GPHTTPOperation : NSOperation {
     id <GPHTTPControllerDelegate> delegate_;
 }
 
@@ -28,8 +28,6 @@
 @property (assign) id <GPHTTPControllerDelegate> delegate;
 
 // Instance Methods
-- (void)beginFetching;
-- (BOOL)isFetching;
-- (void)stopFetching;
+
 
 @end

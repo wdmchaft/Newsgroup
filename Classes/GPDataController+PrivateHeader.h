@@ -3,7 +3,7 @@
  * GPDataController methods without generating a compiler error.
  */
 
-@class GPHTTPController;
+@class GPHTTPOperation;
 
 @interface GPDataController()
 
@@ -16,6 +16,6 @@
 
 
 // Instance Methods
-- (void)startFetchWithHTTPController:(GPHTTPController *)controller;
+- (void)startFetchWithHTTPController:(GPHTTPOperation *)controller;
 
 @end
