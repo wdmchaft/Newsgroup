@@ -65,14 +65,14 @@
 		296BEB66131048C20026BF42 /* NSString+Digest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Digest.m"; path = "NSString_Digest/NSString+Digest.m"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D562014130847090008C9B5 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = Frameworks/OCMock/libOCMock.a; sourceTree = "<group>"; };
-		4D8D4069130455490033E9E7 /* GPDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDataController.h; sourceTree = "<group>"; };
-		4D8D406A130455490033E9E7 /* GPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDataController.m; sourceTree = "<group>"; };
+		4D8D4069130455490033E9E7 /* GPDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GPDataController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4D8D406A130455490033E9E7 /* GPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GPDataController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4D9D4C78130B5C6100A34E8F /* FetchedResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchedResultsViewController.h; sourceTree = "<group>"; };
 		4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsViewController.m; sourceTree = "<group>"; };
 		4D9D4C7D130B5D6800A34E8F /* FetchedResultsViewController+PrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FetchedResultsViewController+PrivateHeader.h"; sourceTree = "<group>"; };
 		4D9D4D26130CAA2600A34E8F /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HeaderView.xib; path = Resources/HeaderView.xib; sourceTree = "<group>"; };
-		4D9D4D57130D8A7F00A34E8F /* GPHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; path = GPHTTPOperation.h; sourceTree = "<group>"; };
-		4D9D4D58130D8A7F00A34E8F /* GPHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHTTPOperation.m; sourceTree = "<group>"; };
+		4D9D4D57130D8A7F00A34E8F /* GPHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GPHTTPOperation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4D9D4D58130D8A7F00A34E8F /* GPHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = GPHTTPOperation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4D9D4DBB130DE55200A34E8F /* GPDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDataParser.h; sourceTree = "<group>"; };
 		4D9D4DBC130DE55200A34E8F /* GPDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDataParser.m; sourceTree = "<group>"; };
 		4D9D4E24130E0DD800A34E8F /* ToolbarProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarProgressView.h; sourceTree = "<group>"; };
