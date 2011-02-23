@@ -69,6 +69,10 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
         [managedObjectContext release];
         [persistentStoreCoordinator release];
         
+        // Setup the Operation Queue
+        operationQueue_ = [[NSOperationQueue alloc] init];
+        [operationQueue_ setName:@"GPDataController queue"];
+        
     }
     return self;
 }
@@ -78,6 +82,10 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
     [httpController_ release];
     [lastFetchTime_ release];
     [model_ release];
+    
+    [operationQueue_ cancelAllOperations];
+    [operationQueue_ waitUntilAllOperationsAreFinished];
+    [operationQueue_ release];
     
     [super dealloc];
 }
@@ -136,12 +144,8 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
     // File notification
     [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidBegin object:self];
     
-    // Start the fetch
-    [controller beginFetching];
-    
-    //FIXME:
-    // Since our controller doesn't actually do anything yet, just call the didFinish method.
-    [self fetchSucceded:nil withResults:nil];
+    // Add to queue
+    [operationQueue_ addOperation:controller];
 }
 
 - (void)stopFetching {
@@ -200,7 +204,7 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 }
 
 #pragma mark -
-#pragma mark GPHTTPControllerDelegate Methods
+#pragma mark GPHTTPOperationDelegate Methods
 
 - (void)fetchFailed:(GPHTTPOperation *)controller withError:(NSError *)error {
     

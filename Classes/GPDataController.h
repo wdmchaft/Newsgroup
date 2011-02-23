@@ -24,7 +24,7 @@ extern NSString *const GPHTTPRequestDidEnd;
 
 
 
-@interface GPDataController : NSObject <GPHTTPControllerDelegate> {
+@interface GPDataController : NSObject <GPHTTPOperationDelegate> {
 
     @private
     NSManagedObjectContext *context_;
@@ -33,6 +33,7 @@ extern NSString *const GPHTTPRequestDidEnd;
     BOOL isFetching_;
     NSDate *lastFetchTime_;
     NSManagedObjectModel *model_;
+    NSOperationQueue *operationQueue_;
     
 }
 

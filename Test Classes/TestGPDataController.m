@@ -11,7 +11,7 @@
 #import "OCMock.h"
 #import "GPDataController.h"
 #import "GPDataController+PrivateHeader.h"
-#import "GPHTTPController.h"
+#import "GPHTTPOperation.h"
 
 @interface TestGPDataController : GHTestCase {
     NSURL *testStoreURL;
@@ -115,8 +115,8 @@
     [[NSNotificationCenter defaultCenter] addMockObserver:mockObserver name:GPHTTPRequestDidBegin object:nil];
     [[mockObserver expect] notificationWithName:GPHTTPRequestDidBegin object:[OCMArg any]];
     
-    id httpController = [OCMockObject mockForClass:[GPHTTPController class]];
-    [[httpController expect] beginFetching];
+    id httpController = [OCMockObject mockForClass:[GPHTTPOperation class]];
+    [[httpController expect] main];
 
     [dataController startFetchWithHTTPController:httpController];
     

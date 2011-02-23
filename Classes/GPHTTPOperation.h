@@ -10,7 +10,7 @@
 
 @class GPHTTPOperation;
 
-@protocol GPHTTPControllerDelegate
+@protocol GPHTTPOperationDelegate
 
 - (void)fetchFailed:(GPHTTPOperation *)controller withError:(NSError *)error;
 - (void)fetchSucceded:(GPHTTPOperation *)controller withResults:(NSData *)data;
@@ -18,16 +18,15 @@
 @end
 
 @interface GPHTTPOperation : NSOperation {
-    id <GPHTTPControllerDelegate> delegate_;
+    id <GPHTTPOperationDelegate> delegate_;
 }
 
 // Init methods
-- (id)initWithDelegate:(id <GPHTTPControllerDelegate>)delegate;
+- (id)initWithDelegate:(id <GPHTTPOperationDelegate>)delegate;
 
 // Properties
-@property (assign) id <GPHTTPControllerDelegate> delegate;
+@property (assign) id <GPHTTPOperationDelegate> delegate;
 
 // Instance Methods
-
 
 @end

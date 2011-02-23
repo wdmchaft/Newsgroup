@@ -17,7 +17,7 @@
     return [self initWithDelegate:nil];
 }
 
-- (id)initWithDelegate:(id <GPHTTPControllerDelegate>)delegate {
+- (id)initWithDelegate:(id <GPHTTPOperationDelegate>)delegate {
     if ((self = [super init])) {
         self.delegate = delegate;
     }
@@ -33,16 +33,21 @@
 @synthesize delegate = delegate_;
 
 #pragma mark Instance Methods
-- (void)beginFetching {
-    
-}
 
-- (BOOL)isFetching {
-    return NO;
-}
+#pragma -
+#pragma NSOperation methods
 
-- (void)stopFetching {
-    
+-(void)main {
+    @try {
+        NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+        
+        NSLog(@"This does nothing at this time");
+        
+        [pool release];
+    }
+    @catch(...) {
+        // Do not rethrow exceptions.
+    }
 }
 
 @end

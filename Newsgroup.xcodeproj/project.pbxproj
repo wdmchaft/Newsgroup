@@ -179,6 +179,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4DEC6AC2131579810021EAAA /* ASIHTTPRequest */,
 				4DF2D2B71308461700C8AB3A /* OCMock */,
 				4D9D4ECB130E992C00A34E8F /* NSDate-Helper */,
 				296BEB60131048A90026BF42 /* NSString_Digest */,
@@ -264,6 +265,13 @@
 				4D9D4E25130E0DD800A34E8F /* ToolbarProgressView.m */,
 			);
 			name = "View Classes";
+			sourceTree = "<group>";
+		};
+		4DEC6AC2131579810021EAAA /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ASIHTTPRequest;
 			sourceTree = "<group>";
 		};
 		4DF2D28213083E2F00C8AB3A /* Tests */ = {
