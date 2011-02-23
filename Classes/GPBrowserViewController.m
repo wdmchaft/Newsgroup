@@ -8,6 +8,11 @@
 
 #import "GPBrowserViewController.h"
 
+@interface GPBrowserViewController()
+
+- (void)setupURLLabel;
+
+@end
 
 @implementation GPBrowserViewController
 
@@ -17,7 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    // Setup the URL Label
+    [self setupURLLabel];
+    
+    // Setup activity indicator
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,6 +37,7 @@
 }
 
 - (void)viewDidUnload {
+    [self setRefreshButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -56,8 +66,8 @@
     [url_ release];
     url_ = url;
     
-    [self.webView loadRequest:[NSURLRequest requestWithURL:url_]];
-    self.urlLabel.text = [url_ absoluteString];
+    [self setupURLLabel];
+    
 }
 
 #pragma mark Instance Methods
@@ -66,5 +76,19 @@
     NSLog(@"ACTION!");
 }
 
+- (void)setupURLLabel {
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
+    self.urlLabel.text = [url_ absoluteString];
+}
 
+#pragma -
+#pragma UIWebViewDelegate
+
+- (void)webViewDidStartLoad:(UIWebView *)webView {
+    NSLog(@"start loading");
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    NSLog(@"finished loading");
+}
 @end

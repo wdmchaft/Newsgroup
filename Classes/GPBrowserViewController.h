@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface GPBrowserViewController : UIViewController {
+@interface GPBrowserViewController : UIViewController <UIWebViewDelegate> {
     
     @private
     UIBarButtonItem *refreshButton_;
@@ -17,6 +17,7 @@
     UILabel *urlLabel_;
     UIWebView *webView_;
 
+    UIBarButtonItem *refreshingButton;
 }
 
 // Properties
