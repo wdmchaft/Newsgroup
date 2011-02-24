@@ -13,14 +13,13 @@
 extern NSString *const GPHTTPRequestDidBegin;
 extern NSString *const GPHTTPRequestDidEnd;
 
-extern NSString *const GPDataControllerNoDelegateException;
-
 extern NSString *const GPDataControllerErrorDomain;
 
 typedef enum {
+    GPDataControllerErrorNoDelegate,
     GPDataControllerErrorNoLogin,
     GPDataControllerErrorNoPassword
-} GPDataControllerErrorCodes;
+} GPDataControllerErrorCode;
 
 @class GPDataController;
 
@@ -55,7 +54,7 @@ typedef enum {
 @property (copy) NSString *password;
 
 // Instance Methods
-- (void)fetchAllPosts;
+- (BOOL)fetchAllPostsWithError:(NSError **)error;
 - (void)stopFetching;
 
 /**

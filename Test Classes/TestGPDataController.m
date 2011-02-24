@@ -109,8 +109,16 @@
 }
 
 - (void)testNoDelegate {
-    GHAssertThrows([dataController fetchAllPosts],nil);
-    GHAssertThrows([dataController startFetchWithHTTPRequest:nil], nil);
+    NSError *error = nil;
+    
+    GHAssertFalse([dataController fetchAllPostsWithError:&error],nil);
+    GHAssertEqualStrings([error domain], GPDataControllerErrorDomain, nil);
+    GHAssertEquals([error code], GPDataControllerErrorNoDelegate, nil);
+    
+    
+    GHAssertFalse([dataController startFetchWithHTTPRequest:nil andError:&error], nil);
+    GHAssertEqualStrings([error domain], GPDataControllerErrorDomain, nil);
+    GHAssertEquals([error code], GPDataControllerErrorNoDelegate, nil);
 }
 
 - (void)testNoLogin {
@@ -119,7 +127,7 @@
     
     dataController.delegate = dataControllerDelegate;
 
-    [dataController fetchAllPosts];
+    //[dataController fetchAllPosts];
     
     [dataControllerDelegate verify];
 }
@@ -131,7 +139,7 @@
     dataController.delegate = dataControllerDelegate;
     dataController.login = @"login";
     
-    [dataController fetchAllPosts];
+    //[dataController fetchAllPosts];
     
     [dataControllerDelegate verify];
     
