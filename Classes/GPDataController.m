@@ -12,9 +12,15 @@
 NSString *const GPHTTPRequestDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 
+NSString *const GPNoDelegateException = @"GPNoDelegateException";
+
+NSString *const GPErrorDomain = @"GPErrorDomain";
+
 @interface GPDataController()
 
 // Private methods
+- (NSException *)noDelegateException;
+- (NSError *)noLoginError;
 
 // Private properties
 @property (retain, nonatomic) NSManagedObjectContext *context;
@@ -80,7 +86,9 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 - (void)dealloc {
     [context_ release];
     [lastFetchTime_ release];
+    [login_ release];
     [model_ release];
+    [password_ release];
     
     [operationQueue_ cancelAllOperations];
     [operationQueue_ waitUntilAllOperationsAreFinished];
@@ -96,7 +104,9 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 @synthesize delegate = delegate_;
 @synthesize httpController = httpController_;
 @synthesize lastFetchTime = lastFetchTime_;
+@synthesize login = login_;
 @synthesize model = model_;
+@synthesize password = password_;
 
 #pragma mark -
 #pragma mark Instance Methods
@@ -108,11 +118,31 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
     return NO;
 }
 
-- (void)startFetching {
-    
+- (void)fetchAllPosts {
+
+    [self startFetchWithHTTPRequest:nil];
 }
 
-- (void)startFetchWithHTTPController:(GPHTTPOperation *)controller {
+- (NSException *)noDelegateException {
+    return [NSException exceptionWithName:GPNoDelegateException reason:NSLocalizedString(@"A delegate must be set before you start fetching", @"no delegate exception reason") userInfo:nil];
+}
+
+- (NSError *)noLoginError {
+    return [NSError 
+}
+
+- (void)startFetchWithHTTPRequest:(ASIHTTPRequest *)controller {
+    
+    // Assure that we have got a delegate
+    if (!delegate_) {
+        @throw [self noDelegateException];
+    }
+    
+    // Check for a login and password
+    if (!self.login) {
+        [self.delegate fetchFailed:self withError:[self noLoginError]];
+    }
+    
     // File notification
     [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidBegin object:self];
     

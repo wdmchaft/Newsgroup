@@ -108,8 +108,28 @@
     }
 }
 
-- (void)testHTTPUpdates {
+- (void)testNoDelegate {
+    GHAssertThrows([dataController fetchAllPosts],nil);
+    GHAssertThrows([dataController startFetchWithHTTPRequest:nil], nil);
+}
+
+- (void)testNoLogin {
+    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];
+    [[dataControllerDelegate expect] fetchFailed:dataController withError:[OCMArg any]];
     
+    dataController.delegate = dataControllerDelegate;
+
+    [dataController fetchAllPosts];
+    
+    [dataControllerDelegate verify];
+}
+
+- (void)testNoPassword {
+    GHAssertFalse(YES, nil);
+}
+
+- (void)testHTTPUpdates {
+    GHAssertFalse(YES, nil);
 }
 
  

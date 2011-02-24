@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "GPPost.h"
+#import "ASIHTTPRequest.h"
 
 extern NSString *const GPHTTPRequestDidBegin;
 extern NSString *const GPHTTPRequestDidEnd;
+
+extern NSString *const GPNoDelegateException;
 
 @class GPDataController;
 
@@ -30,7 +33,9 @@ extern NSString *const GPHTTPRequestDidEnd;
     id <GPDataControllerDelegate> delegate_;
     BOOL isFetching_;
     NSDate *lastFetchTime_;
+    NSString *login_;
     NSManagedObjectModel *model_;
+    NSString *password_;
     NSOperationQueue *operationQueue_;
     
 }
@@ -38,10 +43,12 @@ extern NSString *const GPHTTPRequestDidEnd;
 // Properties
 @property (assign) id <GPDataControllerDelegate> delegate;
 @property (readonly, retain) NSDate *lastFetchTime;
+@property (copy) NSString *login;
 @property (readonly) BOOL isFetching;
+@property (copy) NSString *password;
 
 // Instance Methods
-- (void)startFetching;
+- (void)fetchAllPosts;
 - (void)stopFetching;
 
 /**

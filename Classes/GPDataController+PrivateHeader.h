@@ -4,6 +4,8 @@
  */
 
 @class GPHTTPOperation;
+@class ASIHTTPRequest;
+
 
 @interface GPDataController()
 
@@ -16,6 +18,6 @@
 
 
 // Instance Methods
-- (void)startFetchWithHTTPController:(GPHTTPOperation *)controller;
+- (void)startFetchWithHTTPRequest:(ASIHTTPRequest *)controller;
 
 @end
