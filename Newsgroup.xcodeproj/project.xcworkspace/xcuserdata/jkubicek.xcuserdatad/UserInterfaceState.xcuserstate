@@ -3396,8 +3396,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>320242253.06305403</real>
-		<string>{7800, 1290}</string>
+		<real>320242409.33244097</real>
+		<string>{7724, 1248}</string>
 		<string>{7982, 0}</string>
 		<dict>
 			<key>$class</key>
@@ -3492,7 +3492,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>320241921.41311598</real>
+		<real>320242404.41566598</real>
 		<string>{4033, 1904}</string>
 		<string>{4997, 0}</string>
 		<dict>
@@ -4634,7 +4634,7 @@
 				<integer>372</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h</string>
+		<string>file://localhost/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/string.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4652,7 +4652,7 @@
 				<integer>374</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/string.h</string>
+		<string>file://localhost/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5419,8 +5419,8 @@
 				</dict>
 			</array>
 		</dict>
-		<real>320242253.06526101</real>
-		<string>{7800, 1290}</string>
+		<real>320242409.33658099</real>
+		<string>{7724, 1248}</string>
 		<string>{7982, 0}</string>
 		<string>-decodeUnicodeEscape:index:</string>
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
