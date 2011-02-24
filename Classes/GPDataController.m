@@ -79,7 +79,6 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 
 - (void)dealloc {
     [context_ release];
-    [httpController_ release];
     [lastFetchTime_ release];
     [model_ release];
     
@@ -111,33 +110,6 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 
 - (void)startFetching {
     
-    GPHTTPOperation *httpController = [[GPHTTPOperation alloc] initWithDelegate:self];
-    [self startFetchWithHTTPController:httpController];
-    self.httpController = httpController;
-    [httpController release];
-    
-    // TODO: Remove all this crap
-    /*
-    NSString *testDataPath = [[NSBundle mainBundle] pathForResource:@"TestData" ofType:@"plist"];
-    NSArray *testArray = [NSArray arrayWithContentsOfFile:testDataPath];
-    
-    NSEntityDescription *postEntity = [[self.model entitiesByName] objectForKey:[GPPost entityName]];
-    for (NSDictionary *post in testArray) {
-        GPPost *postObject = [[GPPost alloc] initWithEntity:postEntity insertIntoManagedObjectContext:self.context];
-        
-        postObject.body = @"No descriptions <em>loaded</em> <a href=\"http://google.com\">yet</a>";
-        postObject.isRead = [post objectForKey:@"Read"];
-        postObject.memberID = [post objectForKey:@"MemberID"];
-        postObject.postdate = [post objectForKey:@"PostDate"];
-        postObject.posterName = [post objectForKey:@"PosterName"];
-        postObject.postID = [post objectForKey:@"PostID"];
-        postObject.postLevel = [post objectForKey:@"PostLevel"];
-        postObject.subject = [post objectForKey:@"Subject"];
-        postObject.threadID = [post objectForKey:@"ThreadID"];
-    }
- 
-    [self.context save:nil];
-     */
 }
 
 - (void)startFetchWithHTTPController:(GPHTTPOperation *)controller {
@@ -145,7 +117,6 @@ NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
     [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidBegin object:self];
     
     // Add to queue
-    [operationQueue_ addOperation:controller];
 }
 
 - (void)stopFetching {

@@ -60,6 +60,10 @@
 		4DEC6AF01315E6B10021EAAA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AEF1315E6B10021EAAA /* SystemConfiguration.framework */; };
 		4DEC6AF21315E6BB0021EAAA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AF11315E6BB0021EAAA /* MobileCoreServices.framework */; };
 		4DEC6AF51315E6D40021EAAA /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AF41315E6D40021EAAA /* libz.1.2.3.dylib */; };
+		4DEC6AF61315E9660021EAAA /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AF41315E6D40021EAAA /* libz.1.2.3.dylib */; };
+		4DEC6AF71315E96C0021EAAA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AF11315E6BB0021EAAA /* MobileCoreServices.framework */; };
+		4DEC6AF81315E96E0021EAAA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AEF1315E6B10021EAAA /* SystemConfiguration.framework */; };
+		4DEC6AF91315E9710021EAAA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AED1315E6A60021EAAA /* CFNetwork.framework */; };
 		4DF2D27B13083D9500C8AB3A /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */; };
 		4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -172,8 +176,12 @@
 			files = (
 				4DC10D1E13089CE000944A20 /* CoreData.framework in Frameworks */,
 				4DF2D27B13083D9500C8AB3A /* GHUnitIOS.framework in Frameworks */,
-				4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */,
 				4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */,
+				4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */,
+				4DEC6AF61315E9660021EAAA /* libz.1.2.3.dylib in Frameworks */,
+				4DEC6AF91315E9710021EAAA /* CFNetwork.framework in Frameworks */,
+				4DEC6AF81315E96E0021EAAA /* SystemConfiguration.framework in Frameworks */,
+				4DEC6AF71315E96C0021EAAA /* MobileCoreServices.framework in Frameworks */,
 				4DF2D27E13083DB600C8AB3A /* UIKit.framework in Frameworks */,
 				4D562015130847090008C9B5 /* libOCMock.a in Frameworks */,
 			);
@@ -283,9 +291,9 @@
 		4D9D4F0F130EA04500A34E8F /* Data Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4DC10CD0130858DB00944A20 /* GPDataController+PrivateHeader.h */,
 				4D8D4069130455490033E9E7 /* GPDataController.h */,
 				4D8D406A130455490033E9E7 /* GPDataController.m */,
-				4DC10CD0130858DB00944A20 /* GPDataController+PrivateHeader.h */,
 				4DB0B6B61306026600B24E54 /* GPPost.h */,
 				4DB0B6B71306026600B24E54 /* GPPost.m */,
 				4D9D4DBB130DE55200A34E8F /* GPDataParser.h */,
@@ -652,6 +660,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
@@ -679,6 +688,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				RUN_CLANG_STATIC_ANALYZER = YES;
