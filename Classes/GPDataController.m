@@ -8,6 +8,7 @@
 
 #import "GPDataController.h"
 #import "GPDataController+PrivateHeader.h"
+#import "JSON.h"
 
 NSString *const GPDataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const GPDataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
@@ -140,6 +141,10 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     }
 }
 
+- (void)loadNewPosts:(NSDictionary *)postDict intoContext:(NSManagedObjectContext *)context {
+    assert(@"This method needs to do something");
+}
+
 - (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error {
     
     // Assure that we have got a delegate
@@ -229,7 +234,10 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
-    NSLog(@"%c", _cmd);
+    // Get the response string out of the request
+    NSString *response = [request responseString];
+    NSDictionary *dict = [response JSONValue];
+    [self loadNewPosts:dict intoContext:self.context];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
