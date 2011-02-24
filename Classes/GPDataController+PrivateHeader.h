@@ -18,7 +18,7 @@
 
 
 // Instance Methods
-- (void)loadNewPosts:(NSDictionary *)postDict intoContext:(NSManagedObjectContext *)context;
+- (void)loadNewPosts:(NSArray *)postDict intoContext:(NSManagedObjectContext *)context;
 - (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error;
 
 @end

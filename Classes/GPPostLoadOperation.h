@@ -10,7 +10,10 @@
 
 
 @interface GPPostLoadOperation : NSOperation {
-    
+
 }
+
+- (BOOL)addPostsFromArray:(NSArray *)posts toContext:(NSManagedObjectContext *)context;
+- (NSDateFormatter *)dateFormatter;
 
 @end

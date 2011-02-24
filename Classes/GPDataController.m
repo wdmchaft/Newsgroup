@@ -141,7 +141,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     }
 }
 
-- (void)loadNewPosts:(NSDictionary *)postDict intoContext:(NSManagedObjectContext *)context {
+- (void)loadNewPosts:(NSArray *)posts intoContext:(NSManagedObjectContext *)context {
     assert(@"This method needs to do something");
 }
 
@@ -236,8 +236,8 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 - (void)requestFinished:(ASIHTTPRequest *)request {
     // Get the response string out of the request
     NSString *response = [request responseString];
-    NSDictionary *dict = [response JSONValue];
-    [self loadNewPosts:dict intoContext:self.context];
+    NSArray *posts = [response JSONValue];
+    [self loadNewPosts:posts intoContext:self.context];
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
