@@ -152,7 +152,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
         [self error:error withErrorCode:GPDataControllerErrorNoLogin];
         return NO;
     }
-    if (!self.login) {
+    if (!self.password) {
         [self error:error withErrorCode:GPDataControllerErrorNoPassword];
         return NO;
     }
