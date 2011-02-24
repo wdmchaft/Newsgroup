@@ -10,7 +10,7 @@
 #import "GPPostLoadOperation.h"
 
 @interface TestGPPostLoadOperation : GHTestCase {
-    
+    GPPostLoadOperation *postLoadOperation;
 }
 
 @end
@@ -26,13 +26,25 @@
 }
 
 - (void)setUp {
+    postLoadOperation = [[GPPostLoadOperation alloc] init];
 }
 
 - (void)tearDown {
-    
+    [postLoadOperation release];
 }
 
-- (void)testFetchAllThreads {
+- (void)testDateFormatter {
+    NSString *inputDateString = @"2009-06-21T05:45:13Z";
+    NSString *inputDate = @"06-21-2009 05:45:13";
+    
+    NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
+    [myDateFormatter setDateFormat:@"MM'-'dd'-'yyyy HH':'mm':'ss"];
+    [myDateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    NSDate *myDate = [myDateFormatter dateFromString:inputDate];
+    
+    NSDate *testDate = [[postLoadOperation dateFormatter] dateFromString:inputDateString];
+    
+    GHAssertTrue([testDate isEqualToDate:myDate], @"%@ and %@ do not match", testDate, myDate);
 }
 
 

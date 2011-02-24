@@ -3282,9 +3282,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>320243823.10563499</real>
+		<real>320261167.39815903</real>
 		<string>{0, 362}</string>
-		<string>{320, 35}</string>
+		<string>{341, 13}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4176,9 +4176,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>320259403.67682302</real>
-		<string>{0, 454}</string>
-		<string>{444, 0}</string>
+		<real>320261185.20621401</real>
+		<string>{149, 1014}</string>
+		<string>{896, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -4603,9 +4603,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>320259194.921911</real>
-		<string>{0, 1298}</string>
-		<string>{1076, 0}</string>
+		<real>320261167.23057997</real>
+		<string>{46, 1592}</string>
+		<string>{1562, 40}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5584,7 +5584,7 @@
 				<integer>464</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>320243899.157372</real>
+			<real>320261184.748303</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -5595,7 +5595,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 7:38 AM</string>
+		<string>Today at 12:26 PM</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>
@@ -5637,7 +5637,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>476</integer>
+					<integer>477</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -5696,7 +5696,7 @@
 				<integer>472</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/jkubicek/Development/Newsgroup/Test%20Classes/TestGPDataController.m</string>
+		<string>file://localhost/Users/jkubicek/Development/Newsgroup/Classes/GPPostLoadOperation.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5729,9 +5729,10 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>71</integer>
+				<integer>476</integer>
 			</dict>
 		</dict>
+		<string>file://localhost/Users/jkubicek/Development/Newsgroup/Test%20Classes/TestGPDataController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5746,10 +5747,9 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>477</integer>
+				<integer>71</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/jkubicek/Development/Newsgroup/Classes/GPPostLoadOperation.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7924,7 +7924,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>256</integer>
+					<integer>20</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8288,10 +8288,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>320259403.68132001</real>
-		<string>{0, 454}</string>
-		<string>{444, 0}</string>
-		<string>-testFetchAllThreads</string>
+		<real>320261185.20862699</real>
+		<string>{149, 1014}</string>
+		<string>{896, 0}</string>
+		<string>-testDateFormatter</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8324,7 +8324,7 @@
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {913, 702}}</string>
+		<string>{{0, 0}, {913, 565}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -10687,11 +10687,15 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>534</integer>
+					<integer>528</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>669</integer>
+					<integer>529</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>530</integer>
 				</dict>
 			</array>
 		</dict>
