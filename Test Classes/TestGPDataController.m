@@ -151,6 +151,22 @@
     
 }
 
+- (void)testStartNotifications {
+    id mock = [OCMockObject observerMock];
+    [[NSNotificationCenter defaultCenter] addMockObserver:mock name:GPDataControllerFetchDidBegin object:nil];
+    [[mock expect] notificationWithName:GPDataControllerFetchDidBegin object:[OCMArg any]];
+    
+    id mockDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];
+    
+    dataController.delegate = mockDelegate;
+    dataController.login = @"login";
+    dataController.password = @"password";
+    [dataController fetchAllPostsWithError:nil];
+    
+    [mock verify];
+    [mockDelegate verify];
+}
+
 - (void)testHTTPUpdates {
     GHAssertFalse(YES, nil);
 }

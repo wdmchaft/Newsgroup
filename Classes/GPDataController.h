@@ -10,8 +10,8 @@
 #import "GPPost.h"
 #import "ASIHTTPRequest.h"
 
-extern NSString *const GPHTTPRequestDidBegin;
-extern NSString *const GPHTTPRequestDidEnd;
+extern NSString *const GPDataControllerFetchDidBegin;
+extern NSString *const GPDataControllerFetchDidEnd;
 
 extern NSString *const GPDataControllerErrorDomain;
 

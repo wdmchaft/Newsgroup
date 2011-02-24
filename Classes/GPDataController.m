@@ -9,8 +9,8 @@
 #import "GPDataController.h"
 #import "GPDataController+PrivateHeader.h"
 
-NSString *const GPHTTPRequestDidBegin = @"GPHTTPRequestDidBegin";
-NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
+NSString *const GPDataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
+NSString *const GPDataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
 
 NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
@@ -158,7 +158,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     }
     
     // File notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidBegin object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidBegin object:self];
     
     // Add to queue
     
@@ -226,7 +226,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 - (void)fetchFailed:(GPHTTPOperation *)controller withError:(NSError *)error {
     
     // Send the notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidEnd object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidEnd object:self];
     
     // Tell the delegate
     id <GPDataControllerDelegate> delegate = self.delegate;
@@ -238,7 +238,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 - (void)fetchSucceded:(GPHTTPOperation *)controller withResults:(NSData *)data {
     
     // Send the notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:GPHTTPRequestDidEnd object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidEnd object:self];
     
     // Notify the delegate
     id delegate = self.delegate;
