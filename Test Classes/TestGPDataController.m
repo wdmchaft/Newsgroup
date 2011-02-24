@@ -125,7 +125,16 @@
 }
 
 - (void)testNoPassword {
-    GHAssertFalse(YES, nil);
+    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];
+    [[dataControllerDelegate expect] fetchFailed:dataController withError:[OCMArg any]];
+    
+    dataController.delegate = dataControllerDelegate;
+    dataController.login = @"login";
+    
+    [dataController fetchAllPosts];
+    
+    [dataControllerDelegate verify];
+    
 }
 
 - (void)testHTTPUpdates {

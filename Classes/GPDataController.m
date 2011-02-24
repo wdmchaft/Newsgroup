@@ -12,9 +12,9 @@
 NSString *const GPHTTPRequestDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const GPHTTPRequestDidEnd = @"GPHTTPRequestDidEnd";
 
-NSString *const GPNoDelegateException = @"GPNoDelegateException";
+NSString *const GPDataControllerNoDelegateException = @"GPNoDelegateException";
 
-NSString *const GPErrorDomain = @"GPErrorDomain";
+NSString *const GPDataControllerErrorDomain = @"GPErrorDomain";
 
 @interface GPDataController()
 
@@ -124,11 +124,15 @@ NSString *const GPErrorDomain = @"GPErrorDomain";
 }
 
 - (NSException *)noDelegateException {
-    return [NSException exceptionWithName:GPNoDelegateException reason:NSLocalizedString(@"A delegate must be set before you start fetching", @"no delegate exception reason") userInfo:nil];
+    return [NSException exceptionWithName:GPDataControllerNoDelegateException reason:NSLocalizedString(@"A delegate must be set before you start fetching", @"no delegate exception reason") userInfo:nil];
 }
 
 - (NSError *)noLoginError {
-    return [NSError 
+    return [NSError errorWithDomain:GPDataControllerErrorDomain code:GPDataControllerErrorNoLogin userInfo:nil];
+}
+
+- (NSError *)noPasswordError {
+    return [NSError errorWithDomain:GPDataControllerErrorDomain code:GPDataControllerErrorNoPassword userInfo:nil];
 }
 
 - (void)startFetchWithHTTPRequest:(ASIHTTPRequest *)controller {
@@ -141,6 +145,9 @@ NSString *const GPErrorDomain = @"GPErrorDomain";
     // Check for a login and password
     if (!self.login) {
         [self.delegate fetchFailed:self withError:[self noLoginError]];
+    }
+    if (!self.login) {
+        [self.delegate fetchFailed:self withError:[self noPasswordError]];
     }
     
     // File notification
