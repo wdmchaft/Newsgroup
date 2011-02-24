@@ -7,3 +7,6 @@
 [submodule "NSString_Digest"]
 	path = NSString_Digest
 	url = git@github.com:jkubicek/NSString_Digest.git
+[submodule "json-framework"]
+	path = json-framework
+	url = https://github.com/stig/json-framework.git
