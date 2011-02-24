@@ -15,6 +15,13 @@ extern NSString *const GPHTTPRequestDidEnd;
 
 extern NSString *const GPNoDelegateException;
 
+extern NSString *const GPErrorDomain;
+
+typedef enum {
+    GPDataControllerErrorNoLogin,
+    GPDataControllerErrorNoPassword
+} GPDataControllerErrorCodes;
+
 @class GPDataController;
 
 @protocol GPDataControllerDelegate
