@@ -58,6 +58,7 @@
 		4DC10D2713089CFF00944A20 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
 		4DC10D5113093EA700944A20 /* Newsgroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */; };
 		4DC10FC3130B430900944A20 /* IndividualThreadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10FC1130B430900944A20 /* IndividualThreadView.m */; };
+		4DE98DFF1316C4780060B34F /* TestGPPostLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE98DFE1316C4780060B34F /* TestGPPostLoadOperation.m */; };
 		4DEC6AD7131579C30021EAAA /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6AC4131579C30021EAAA /* ASIAuthenticationDialog.m */; };
 		4DEC6AD8131579C30021EAAA /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6AC4131579C30021EAAA /* ASIAuthenticationDialog.m */; };
 		4DEC6AD9131579C30021EAAA /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6AC7131579C30021EAAA /* ASIDataCompressor.m */; };
@@ -156,6 +157,7 @@
 		4DC10D1713089C8C00944A20 /* Tests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tests_Prefix.pch; path = "Test Classes/Tests_Prefix.pch"; sourceTree = "<group>"; };
 		4DC10FC0130B430900944A20 /* IndividualThreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndividualThreadView.h; sourceTree = "<group>"; };
 		4DC10FC1130B430900944A20 /* IndividualThreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndividualThreadView.m; sourceTree = "<group>"; };
+		4DE98DFE1316C4780060B34F /* TestGPPostLoadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestGPPostLoadOperation.m; path = "Test Classes/TestGPPostLoadOperation.m"; sourceTree = "<group>"; };
 		4DEC6AC3131579C30021EAAA /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = "asi-http-request/Classes/ASIAuthenticationDialog.h"; sourceTree = "<group>"; };
 		4DEC6AC4131579C30021EAAA /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = "asi-http-request/Classes/ASIAuthenticationDialog.m"; sourceTree = "<group>"; };
 		4DEC6AC5131579C30021EAAA /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = "asi-http-request/Classes/ASICacheDelegate.h"; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
 				4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */,
 				4DC10CEA130879A000944A20 /* TestGPDataController.m */,
+				4DE98DFE1316C4780060B34F /* TestGPPostLoadOperation.m */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				4D72F98913167AFA0027E478 /* SBJsonTokeniser.m in Sources */,
 				4D72F98B13167AFA0027E478 /* SBJsonWriter.m in Sources */,
 				4D72F98F13167E190027E478 /* GPPostLoadOperation.m in Sources */,
+				4DE98DFF1316C4780060B34F /* TestGPPostLoadOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
