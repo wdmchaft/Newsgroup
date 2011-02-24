@@ -122,12 +122,15 @@
 }
 
 - (void)testNoLogin {
-    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];
-    [[dataControllerDelegate expect] fetchFailed:dataController withError:[OCMArg any]];
     
+    NSError *error = nil;
+    
+    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];    
     dataController.delegate = dataControllerDelegate;
 
-    //[dataController fetchAllPosts];
+    GHAssertFalse([dataController fetchAllPostsWithError:&error], nil);
+    GHAssertEqualStrings([error domain], GPDataControllerErrorDomain, nil);
+    GHAssertEquals([error code], GPDataControllerErrorNoLogin, nil);
     
     [dataControllerDelegate verify];
 }
