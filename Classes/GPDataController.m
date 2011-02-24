@@ -140,7 +140,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     }
 }
 
-- (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)controller andError:(NSError **)error {
+- (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error {
     
     // Assure that we have got a delegate
     if (!self.delegate) {
@@ -157,10 +157,11 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
         return NO;
     }
     
-    // File notification
+    // Post notification
     [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidBegin object:self];
     
     // Add to queue
+    [operationQueue_ addOperation:request];
     
     return YES;
 }
@@ -221,33 +222,18 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 }
 
 #pragma mark -
-#pragma mark GPHTTPOperationDelegate Methods
+#pragma mark ASIHTTPRequestDelegate
 
-- (void)fetchFailed:(GPHTTPOperation *)controller withError:(NSError *)error {
-    
-    // Send the notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidEnd object:self];
-    
-    // Tell the delegate
-    id <GPDataControllerDelegate> delegate = self.delegate;
-    if (delegate) {
-        [delegate fetchFailed:self withError:error];
-    }
+- (void)requestStarted:(ASIHTTPRequest *)request {
+    NSLog(@"%c", _cmd);
 }
 
-- (void)fetchSucceded:(GPHTTPOperation *)controller withResults:(NSData *)data {
-    
-    // Send the notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidEnd object:self];
-    
-    // Notify the delegate
-    id delegate = self.delegate;
-    if (delegate) {
-        [delegate fetchSucceded:self];
-    }
-    
-    // Set the last fetch date
-    self.lastFetchTime = [NSDate date];
+- (void)requestFinished:(ASIHTTPRequest *)request {
+    NSLog(@"%c", _cmd);
+}
+
+- (void)requestFailed:(ASIHTTPRequest *)request {
+    NSLog(@"%c", _cmd);
 }
 
 @end

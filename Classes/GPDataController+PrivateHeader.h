@@ -18,6 +18,6 @@
 
 
 // Instance Methods
-- (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)controller andError:(NSError **)error;
+- (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error;
 
 @end

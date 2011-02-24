@@ -167,9 +167,34 @@
     [mockDelegate verify];
 }
 
-- (void)testHTTPUpdates {
-    GHAssertFalse(YES, nil);
+- (void)testStartHTTPUpdates {
+    /*
+    id mockRequest = [OCMockObject mockForClass:[ASIHTTPRequest class]];
+    id mockDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];
+
+    
+    dataController.delegate = mockDelegate;
+    dataController.login = @"login";
+    dataController.password = @"password";
+    [dataController fetchAllPostsWithError:nil];
+    
+    [mockRequest verify];
+    [mockDelegate verify];
+     */
+    GHAssertTrue(NO, @"will alway fail");
 }
 
+- (void)testRequestSuccess {
+    id mockRequest = [OCMockObject mockForClass:[ASIHTTPRequest class]];
+    [[mockRequest expect] responseString];
+    
+    [dataController requestFinished:mockRequest];
+    
+    [mockRequest verify];
+}
+
+- (void)testRequestFail {
+    GHAssertTrue(NO, @"will alway fail");
+}
  
 @end

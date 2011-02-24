@@ -32,7 +32,7 @@ typedef enum {
 
 
 
-@interface GPDataController : NSObject {
+@interface GPDataController : NSObject <ASIHTTPRequestDelegate> {
 
     @private
     NSManagedObjectContext *context_;
