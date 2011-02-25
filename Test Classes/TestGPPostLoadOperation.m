@@ -47,5 +47,9 @@
     GHAssertTrue([testDate isEqualToDate:myDate], @"%@ and %@ do not match", testDate, myDate);
 }
 
+- (void)testAddPostsFromArray {
+    GHAssertTrue(NO, nil);
+}
+
 
 @end

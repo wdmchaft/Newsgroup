@@ -397,6 +397,17 @@
 			name = "View Classes";
 			sourceTree = "<group>";
 		};
+		4DE98E851317CD1D0060B34F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DC10D1713089C8C00944A20 /* Tests_Prefix.pch */,
+				4DC10CF61308863F00944A20 /* Test Database.sqlite */,
+				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
+				4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		4DEC6AC2131579810021EAAA /* ASIHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,12 +449,9 @@
 		4DF2D28213083E2F00C8AB3A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				4DC10D1713089C8C00944A20 /* Tests_Prefix.pch */,
-				4DC10CF61308863F00944A20 /* Test Database.sqlite */,
-				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
-				4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */,
 				4DC10CEA130879A000944A20 /* TestGPDataController.m */,
 				4DE98DFE1316C4780060B34F /* TestGPPostLoadOperation.m */,
+				4DE98E851317CD1D0060B34F /* Supporting Files */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
