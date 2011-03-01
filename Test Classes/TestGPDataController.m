@@ -10,7 +10,6 @@
 #import <CoreData/CoreData.h>
 #import "OCMock.h"
 #import "GPDataController.h"
-#import "GPDataController+PrivateHeader.h"
 
 @interface TestGPDataController : GHTestCase {
     NSURL *testStoreURL;

@@ -7,13 +7,16 @@
 //
 
 #import "GPDataController.h"
-#import "GPDataController+PrivateHeader.h"
 #import "JSON.h"
+#import "NSString+Digest.h"
 
 NSString *const GPDataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const GPDataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
 
 NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
+
+#define BASE_URL_STRING @"https://api.greenpride.com/Service.svc/"
+#define REPLY_FORMAT @"format=json"
 
 @interface GPDataController()
 
@@ -22,7 +25,6 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
 // Private properties
 @property (retain, nonatomic) NSManagedObjectContext *context;
-@property (retain, nonatomic) GPHTTPOperation *httpController;
 @property (readwrite, retain) NSDate *lastFetchTime;
 @property (retain, nonatomic) NSManagedObjectModel *model;
 
@@ -36,6 +38,17 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
 + (NSURL *)defaultManagedObjectModelURL {
     return [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Newsgroup" ofType:@"momd"]];
+}
+
++ (NSString *)escapedHashForPassword:(NSString *)password {
+    NSString *hash = [password hashWithDigestType:JKStringDigestTypeSHA512];
+    return [hash stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+}
+
++ (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode {
+    // Build the URL
+    NSString *urlPath = [NSString stringWithFormat:@"%@Hash?Value=%@&URLEncode=%@&%@", BASE_URL_STRING, value, shouldEncode ? @"True" : @"False", REPLY_FORMAT];
+    return [ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlPath]];
 }
 
 #pragma mark -
@@ -100,7 +113,6 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
 @synthesize context = context_;
 @synthesize delegate = delegate_;
-@synthesize httpController = httpController_;
 @synthesize lastFetchTime = lastFetchTime_;
 @synthesize login = login_;
 @synthesize model = model_;
