@@ -63,6 +63,7 @@
 		4DE98E89131C7BEC0060B34F /* NSString+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BEB66131048C20026BF42 /* NSString+Digest.m */; };
 		4DE98E8C131D00220060B34F /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE98E8B131D00220060B34F /* GTMBase64.m */; };
 		4DE98E8D131D00220060B34F /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE98E8B131D00220060B34F /* GTMBase64.m */; };
+		4DE98E90131D0B670060B34F /* login.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DE98E8F131D0B670060B34F /* login.plist */; };
 		4DEC6AD7131579C30021EAAA /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6AC4131579C30021EAAA /* ASIAuthenticationDialog.m */; };
 		4DEC6AD8131579C30021EAAA /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6AC4131579C30021EAAA /* ASIAuthenticationDialog.m */; };
 		4DEC6AD9131579C30021EAAA /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6AC7131579C30021EAAA /* ASIDataCompressor.m */; };
@@ -164,6 +165,7 @@
 		4DE98E87131C67A70060B34F /* TestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestAPI.m; path = "Test Classes/TestAPI.m"; sourceTree = "<group>"; };
 		4DE98E8A131D00210060B34F /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = GTMBase64/GTMBase64.h; sourceTree = "<group>"; };
 		4DE98E8B131D00220060B34F /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMBase64.m; path = GTMBase64/GTMBase64.m; sourceTree = "<group>"; };
+		4DE98E8F131D0B670060B34F /* login.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = login.plist; path = "Test Classes/login.plist"; sourceTree = "<group>"; };
 		4DEC6AC3131579C30021EAAA /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = "asi-http-request/Classes/ASIAuthenticationDialog.h"; sourceTree = "<group>"; };
 		4DEC6AC4131579C30021EAAA /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = "asi-http-request/Classes/ASIAuthenticationDialog.m"; sourceTree = "<group>"; };
 		4DEC6AC5131579C30021EAAA /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = "asi-http-request/Classes/ASICacheDelegate.h"; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				4DC10CF61308863F00944A20 /* Test Database.sqlite */,
 				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
 				4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */,
+				4DE98E8F131D0B670060B34F /* login.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DC10CF71308863F00944A20 /* Test Database.sqlite in Resources */,
+				4DE98E90131D0B670060B34F /* login.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
