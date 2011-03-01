@@ -42,7 +42,10 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
 + (NSString *)escapedHashForPassword:(NSString *)password {
     NSString *hash = [password hashWithDigestType:JKStringDigestTypeSHA512];
-    return [hash stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString *escaped = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)hash, NULL, (CFStringRef)@"+=", kCFStringEncodingUTF8);
+    
+    return escaped;
 }
 
 + (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode {
