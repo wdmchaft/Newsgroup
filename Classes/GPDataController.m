@@ -70,6 +70,8 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
     NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@Posts?UserName=%@&Password=%@", BASE_URL_STRING, username, [GPDataController escapedHashForPassword:password]];
     
+    // If you pass a '0' for any of these values then that value is ignored.
+    //  i.e. '0' for the thread ID pulls in all threads
     [urlPath appendFormat:@"&ThreadID=%i", threadID];
     [urlPath appendFormat:@"&PostID=%i", postID];
     [urlPath appendFormat:@"&ThreadLimit=%i", threadLimit];

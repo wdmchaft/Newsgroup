@@ -116,7 +116,11 @@
 #endif
 
 - (void)testPosts {
-    GHAssertTrue(NO, nil);
+    
+    ASIHTTPRequest *request = [GPDataController postsWithUsername:login password:[GPDataController escapedHashForPassword:password] threadID:0 postID:0 threadLimit:0];
+    
+    // Test pulling in all threads
+    [request startSynchronous];
 }
 
 @end

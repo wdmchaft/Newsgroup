@@ -80,6 +80,7 @@ typedef enum {
 + (NSString *)escapedHashForPassword:(NSString *)password;
 + (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode;
 + (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password;
++ (ASIHTTPRequest *)postsWithUsername:(NSString *)username password:(NSString *)password threadID:(NSInteger)threadID postID:(NSInteger)postID threadLimit:(NSInteger)threadLimit;
 
 // Init methods
 - (id)initWithModelURL:(NSURL *)modelURL andStoreURL:(NSURL *)storeURL;
