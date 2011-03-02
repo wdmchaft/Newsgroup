@@ -40,7 +40,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     return [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Newsgroup" ofType:@"momd"]];
 }
 
-+ (NSString *)escapedHashForPassword:(NSString *)password {
++ (NSString *)hashString:(NSString *)password {
     NSString *hash = [password hashWithDigestType:JKStringDigestTypeSHA512];
     
     return hash;
@@ -57,7 +57,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
     NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@UserGet?UserName=%@", BASE_URL_STRING, username];
     if (password) {
-        [urlPath appendFormat:@"&Password=%@", [GPDataController escapedHashForPassword:password]];
+        [urlPath appendFormat:@"&Password=%@", [GPDataController hashString:password]];
     }
     [urlPath appendFormat:@"&%@", REPLY_FORMAT];
     
@@ -68,7 +68,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
 + (ASIHTTPRequest *)postsWithUsername:(NSString *)username password:(NSString *)password threadID:(NSInteger)threadID postID:(NSInteger)postID threadLimit:(NSInteger)threadLimit {
 
-    NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@Posts?UserName=%@&Password=%@", BASE_URL_STRING, username, [GPDataController escapedHashForPassword:password]];
+    NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@Posts?UserName=%@&Password=%@", BASE_URL_STRING, username, [GPDataController hashString:password]];
     
     // If you pass a '0' for any of these values then that value is ignored.
     //  i.e. '0' for the thread ID pulls in all threads

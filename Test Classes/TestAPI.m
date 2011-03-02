@@ -18,10 +18,25 @@
     NSString *password;
     NSDictionary *testUser;
 }
+
+- (NSString *)runASIRequest:(ASIHTTPRequest *)request;
+
 @end
 
 
 @implementation TestAPI
+
+- (NSString *)runASIRequest:(ASIHTTPRequest *)request {
+    [request startSynchronous];
+    NSError *error = [request error];
+
+    if (error) {
+        GHAssertTrue(NO, @"Request failed with error: %@", error);
+        return nil;
+    }
+    
+    return [request responseString];
+}
 
 - (BOOL)shouldRunOnMainThread {
     return NO;
@@ -57,13 +72,13 @@
     dataController = nil;
 }
 
-#if 0
+#if 1
 
 - (void)testHash {
     NSString *inputPassword = @"password";
     
     NSString *testHash = @"sQnzu7wkTrgkQZF+0G1hi5AI3Qmzvv0bXgc5THBqi7mAsdd4Xll27ASbRt9fEyavWi6m0QP9B8lThf+rDKy8hg==";
-    NSString *actualHash = [GPDataController escapedHashForPassword:inputPassword];
+    NSString *actualHash = [GPDataController hashString:inputPassword];
     
     GHAssertEqualStrings(testHash, actualHash, nil);
 }
@@ -83,7 +98,7 @@
     }
     
     
-    NSString *myHash = [GPDataController escapedHashForPassword:inputValue];
+    NSString *myHash = [GPDataController hashString:inputValue];
     
     GHAssertEqualStrings(response, myHash, nil);
 }
@@ -117,7 +132,7 @@
 
 - (void)testPosts {
     
-    ASIHTTPRequest *request = [GPDataController postsWithUsername:login password:[GPDataController escapedHashForPassword:password] threadID:0 postID:0 threadLimit:0];
+    ASIHTTPRequest *request = [GPDataController postsWithUsername:login password:password threadID:0 postID:0 threadLimit:0];
     
     // Test pulling in all threads
     [request startSynchronous];

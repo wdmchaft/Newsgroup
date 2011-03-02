@@ -77,7 +77,7 @@ typedef enum {
 
 // Class methods
 + (NSURL *)defaultManagedObjectModelURL;
-+ (NSString *)escapedHashForPassword:(NSString *)password;
++ (NSString *)hashString:(NSString *)password;
 + (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode;
 + (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password;
 + (ASIHTTPRequest *)postsWithUsername:(NSString *)username password:(NSString *)password threadID:(NSInteger)threadID postID:(NSInteger)postID threadLimit:(NSInteger)threadLimit;
