@@ -79,6 +79,7 @@ typedef enum {
 + (NSURL *)defaultManagedObjectModelURL;
 + (NSString *)escapedHashForPassword:(NSString *)password;
 + (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode;
++ (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password;
 
 // Init methods
 - (id)initWithModelURL:(NSURL *)modelURL andStoreURL:(NSURL *)storeURL;

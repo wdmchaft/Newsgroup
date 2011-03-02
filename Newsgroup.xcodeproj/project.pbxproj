@@ -95,6 +95,7 @@
 		4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		4DF2D27E13083DB600C8AB3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		4DF2D29313083EF600C8AB3A /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */; };
+		4DF61C47131DB00600B378E4 /* TestUser.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DF61C46131DB00600B378E4 /* TestUser.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,6 +202,7 @@
 		4DF2D2BB130846DF00C8AB3A /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCMock.h; path = Frameworks/OCMock/Headers/OCMock/OCMock.h; sourceTree = "<group>"; };
 		4DF2D2BC130846DF00C8AB3A /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCMockObject.h; path = Frameworks/OCMock/Headers/OCMock/OCMockObject.h; sourceTree = "<group>"; };
 		4DF2D2BD130846DF00C8AB3A /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCMockRecorder.h; path = Frameworks/OCMock/Headers/OCMock/OCMockRecorder.h; sourceTree = "<group>"; };
+		4DF61C46131DB00600B378E4 /* TestUser.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TestUser.plist; path = "Test Classes/TestUser.plist"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsgroup-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsgroup-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -413,6 +415,7 @@
 				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
 				4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */,
 				4DE98E8F131D0B670060B34F /* login.plist */,
+				4DF61C46131DB00600B378E4 /* TestUser.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 			files = (
 				4DC10CF71308863F00944A20 /* Test Database.sqlite in Resources */,
 				4DE98E90131D0B670060B34F /* login.plist in Resources */,
+				4DF61C47131DB00600B378E4 /* TestUser.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,19 +43,27 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 + (NSString *)escapedHashForPassword:(NSString *)password {
     NSString *hash = [password hashWithDigestType:JKStringDigestTypeSHA512];
     
-    NSString *escaped = hash;
-    
-    escaped = [escaped stringByReplacingOccurrencesOfString:@"=" withString:@"%3d"];
-    escaped = [escaped stringByReplacingOccurrencesOfString:@"+" withString:@"%2b"];
-    escaped = [escaped stringByReplacingOccurrencesOfString:@"/" withString:@"%2f"];
-    
-    return escaped;
+    return hash;
 }
 
 + (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode {
     // Build the URL
     NSString *urlPath = [NSString stringWithFormat:@"%@Hash?Value=%@&URLEncode=%@&%@", BASE_URL_STRING, value, shouldEncode ? @"True" : @"False", REPLY_FORMAT];
+    urlPath = [urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     return [ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlPath]];
+}
+
++ (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password {
+
+    NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@UserGet?UserName=%@", BASE_URL_STRING, username];
+    if (password) {
+        [urlPath appendFormat:@"&Password=%@", [GPDataController escapedHashForPassword:password]];
+    }
+    [urlPath appendFormat:@"&%@", REPLY_FORMAT];
+    
+    NSURL *url =  [NSURL URLWithString:[urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    return [ASIHTTPRequest requestWithURL:url];
+    
 }
 
 #pragma mark -
@@ -249,7 +257,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 #pragma mark ASIHTTPRequestDelegate
 
 - (void)requestStarted:(ASIHTTPRequest *)request {
-    NSLog(@"%c", _cmd);
+    //NSLog(@"%c", (int)_cmd);
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
@@ -260,7 +268,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
-    NSLog(@"%c", _cmd);
+    //NSLog(@"%c", _cmd);
 }
 
 @end
