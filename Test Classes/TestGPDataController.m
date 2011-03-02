@@ -21,8 +21,6 @@
 
 @implementation TestGPDataController
 
-
-
 - (void)setUpClass {
     testStoreURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Test Database" ofType:@"sqlite"]];
     modelURL = [GPDataController defaultManagedObjectModelURL];

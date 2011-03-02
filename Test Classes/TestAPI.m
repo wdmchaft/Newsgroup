@@ -23,6 +23,9 @@
 
 @implementation TestAPI
 
+- (BOOL)shouldRunOnMainThread {
+    return NO;
+}
 
 - (void)setUpClass {
     NSDictionary *loginPassword = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"login" ofType:@"plist"]];
@@ -40,6 +43,9 @@
 - (void)tearDownClass {
     [login release];
     [password release];
+    
+    [testUser release];
+    testUser = nil;
 }
 
 - (void)setUp {
@@ -49,10 +55,9 @@
 - (void)tearDown {
     [dataController release];
     dataController = nil;
-    
-    [testUser release];
-    testUser = nil;
 }
+
+#if 0
 
 - (void)testHash {
     NSString *inputPassword = @"password";
@@ -108,5 +113,10 @@
     GHAssertTrue([[jsonResponse objectForKey:@"UserID"] isEqualToNumber:[testUser objectForKey:@"UserID"]], nil);
 }
 
+#endif
+
+- (void)testPosts {
+    GHAssertTrue(NO, nil);
+}
 
 @end

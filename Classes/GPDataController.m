@@ -61,9 +61,21 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     }
     [urlPath appendFormat:@"&%@", REPLY_FORMAT];
     
-    NSURL *url =  [NSURL URLWithString:[urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL *url = [NSURL URLWithString:[urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     return [ASIHTTPRequest requestWithURL:url];
     
+}
+
++ (ASIHTTPRequest *)postsWithUsername:(NSString *)username password:(NSString *)password threadID:(NSInteger)threadID postID:(NSInteger)postID threadLimit:(NSInteger)threadLimit {
+
+    NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@Posts?UserName=%@&Password=%@", BASE_URL_STRING, username, [GPDataController escapedHashForPassword:password]];
+    
+    [urlPath appendFormat:@"&ThreadID=%i", threadID];
+    [urlPath appendFormat:@"&PostID=%i", postID];
+    [urlPath appendFormat:@"&ThreadLimit=%i", threadLimit];
+
+    NSURL *url = [NSURL URLWithString:[urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    return [ASIHTTPRequest requestWithURL:url];
 }
 
 #pragma mark -
