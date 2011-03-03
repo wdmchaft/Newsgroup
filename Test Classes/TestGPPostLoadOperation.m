@@ -48,7 +48,14 @@
 }
 
 - (void)testAddPostsFromArray {
-    GHAssertTrue(NO, nil);
+    NSArray *testArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"newsgroup_posts_cleaned" ofType:@"plist"]];
+    
+    GPPostLoadOperation *postLoad = [[GPPostLoadOperation alloc] init];
+    
+    
+    
+    [postLoad release];
+
 }
 
 
