@@ -4605,7 +4605,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>320811385.22399998</real>
+		<real>320811469.18739599</real>
 		<string>{1469, 1473}</string>
 		<string>{2298, 0}</string>
 		<string>-application:didFinishLaunchingWithOptions:</string>
@@ -13082,7 +13082,7 @@
 				</dict>
 			</array>
 		</dict>
-		<real>320811385.221802</real>
+		<real>320811469.18314499</real>
 		<string>{1469, 1473}</string>
 		<string>{2298, 0}</string>
 		<dict>
@@ -15163,7 +15163,7 @@
 				<integer>1181</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>320811352.03545398</real>
+			<real>320811446.13271201</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -15174,7 +15174,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 9:15 PM</string>
+		<string>Today at 9:17 PM</string>
 		<integer>106</integer>
 		<dict>
 			<key>$class</key>
