@@ -27,6 +27,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
     // Setup the default toolbar
+    //TODO: This should be setup propertly
     ToolbarProgressView *progView = [[ToolbarProgressView alloc] initWithFrame:PROGRESS_VIEW_FRAME];
     progView.viewType = GPProgressDeterminiteView;
     progView.progress = 0.69f;
@@ -48,8 +49,15 @@
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
+    
+    // Setup the data controller
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsUsernameKey];
+    NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsPasswordKey];
 
     GPDataController *dc = [[GPDataController alloc] init];
+    dc.login = username;
+    dc.password = password;
+    
     NSError *error = nil;
     if (![dc fetchAllPostsWithError:&error]) {
         NSLog(@"%@", error);
