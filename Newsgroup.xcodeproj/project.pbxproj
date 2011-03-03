@@ -20,6 +20,8 @@
 		296BEB67131048C20026BF42 /* NSString+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BEB66131048C20026BF42 /* NSString+Digest.m */; };
 		4D41B3A6131F29410044171F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B3A5131F29410044171F /* Settings.bundle */; };
 		4D41B3AA131F36BD0044171F /* DDAlertPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */; };
+		4D41B3AC131FFC860044171F /* TestPostLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41B3AB131FFC860044171F /* TestPostLoad.m */; };
+		4D41B402132004730044171F /* newsgroup_posts_cleaned.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */; };
 		4D562015130847090008C9B5 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D562014130847090008C9B5 /* libOCMock.a */; };
 		4D72F97A13167AFA0027E478 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F96913167AFA0027E478 /* NSObject+JSON.m */; };
 		4D72F97B13167AFA0027E478 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F96913167AFA0027E478 /* NSObject+JSON.m */; };
@@ -44,8 +46,6 @@
 		4D8D406B1304554A0033E9E7 /* GPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D406A130455490033E9E7 /* GPDataController.m */; };
 		4D9D4C7A130B5C6100A34E8F /* FetchedResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */; };
 		4D9D4D27130CAA2600A34E8F /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D4D26130CAA2600A34E8F /* HeaderView.xib */; };
-		4D9D4DBD130DE55200A34E8F /* GPDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4DBC130DE55200A34E8F /* GPDataParser.m */; };
-		4D9D4DBE130DE55200A34E8F /* GPDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4DBC130DE55200A34E8F /* GPDataParser.m */; };
 		4D9D4E26130E0DD800A34E8F /* ToolbarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4E25130E0DD800A34E8F /* ToolbarProgressView.m */; };
 		4D9D4E5D130E12BD00A34E8F /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */; };
 		4D9D4ECF130E993D00A34E8F /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4ECE130E993D00A34E8F /* NSDate+Helper.m */; };
@@ -120,6 +120,8 @@
 		4D41B3A5131F29410044171F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
 		4D41B3A8131F36BD0044171F /* DDAlertPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAlertPrompt.h; path = DDAlertPrompt/DDAlertPrompt.h; sourceTree = "<group>"; };
 		4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAlertPrompt.m; path = DDAlertPrompt/DDAlertPrompt.m; sourceTree = "<group>"; };
+		4D41B3AB131FFC860044171F /* TestPostLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestPostLoad.m; path = "Test Classes/TestPostLoad.m"; sourceTree = "<group>"; };
+		4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = newsgroup_posts_cleaned.plist; path = "Test Classes/newsgroup_posts_cleaned.plist"; sourceTree = "<group>"; };
 		4D562014130847090008C9B5 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = Frameworks/OCMock/libOCMock.a; sourceTree = "<group>"; };
 		4D72F96713167AFA0027E478 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "json-framework/Classes/JSON.h"; sourceTree = "<group>"; };
 		4D72F96813167AFA0027E478 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JSON.h"; path = "json-framework/Classes/NSObject+JSON.h"; sourceTree = "<group>"; };
@@ -149,8 +151,6 @@
 		4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsViewController.m; sourceTree = "<group>"; };
 		4D9D4C7D130B5D6800A34E8F /* FetchedResultsViewController+PrivateHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FetchedResultsViewController+PrivateHeader.h"; sourceTree = "<group>"; };
 		4D9D4D26130CAA2600A34E8F /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = HeaderView.xib; path = Resources/HeaderView.xib; sourceTree = "<group>"; };
-		4D9D4DBB130DE55200A34E8F /* GPDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDataParser.h; sourceTree = "<group>"; };
-		4D9D4DBC130DE55200A34E8F /* GPDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDataParser.m; sourceTree = "<group>"; };
 		4D9D4E24130E0DD800A34E8F /* ToolbarProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolbarProgressView.h; sourceTree = "<group>"; };
 		4D9D4E25130E0DD800A34E8F /* ToolbarProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolbarProgressView.m; sourceTree = "<group>"; };
 		4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgressView.xib; path = Resources/ProgressView.xib; sourceTree = "<group>"; };
@@ -392,8 +392,6 @@
 				4D8D406A130455490033E9E7 /* GPDataController.m */,
 				4DB0B6B61306026600B24E54 /* GPPost.h */,
 				4DB0B6B71306026600B24E54 /* GPPost.m */,
-				4D9D4DBB130DE55200A34E8F /* GPDataParser.h */,
-				4D9D4DBC130DE55200A34E8F /* GPDataParser.m */,
 				4D72F98C13167E180027E478 /* GPPostLoadOperation.h */,
 				4D72F98D13167E180027E478 /* GPPostLoadOperation.m */,
 			);
@@ -428,6 +426,7 @@
 		4DE98E851317CD1D0060B34F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */,
 				4DC10D1713089C8C00944A20 /* Tests_Prefix.pch */,
 				4DC10CF61308863F00944A20 /* Test Database.sqlite */,
 				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
@@ -488,6 +487,7 @@
 		4DF2D28213083E2F00C8AB3A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4D41B3AB131FFC860044171F /* TestPostLoad.m */,
 				4DE98E87131C67A70060B34F /* TestAPI.m */,
 				4DC10CEA130879A000944A20 /* TestGPDataController.m */,
 				4DE98DFE1316C4780060B34F /* TestGPPostLoadOperation.m */,
@@ -594,6 +594,7 @@
 				4DC10CF71308863F00944A20 /* Test Database.sqlite in Resources */,
 				4DE98E90131D0B670060B34F /* login.plist in Resources */,
 				4DF61C47131DB00600B378E4 /* TestUser.plist in Resources */,
+				4D41B402132004730044171F /* newsgroup_posts_cleaned.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,7 +613,6 @@
 				4DB0B6B81306026600B24E54 /* GPPost.m in Sources */,
 				4DC10FC3130B430900944A20 /* IndividualThreadView.m in Sources */,
 				4D9D4C7A130B5C6100A34E8F /* FetchedResultsViewController.m in Sources */,
-				4D9D4DBE130DE55200A34E8F /* GPDataParser.m in Sources */,
 				4D9D4E26130E0DD800A34E8F /* ToolbarProgressView.m in Sources */,
 				4D9D4ECF130E993D00A34E8F /* NSDate+Helper.m in Sources */,
 				4D9D4F30130F38EC00A34E8F /* GPBrowserViewController.m in Sources */,
@@ -651,7 +651,6 @@
 				4DC10D0713089B9400944A20 /* GPDataController.m in Sources */,
 				4DF2D29313083EF600C8AB3A /* GHUnitIOSTestMain.m in Sources */,
 				4DC10CEB130879A000944A20 /* TestGPDataController.m in Sources */,
-				4D9D4DBD130DE55200A34E8F /* GPDataParser.m in Sources */,
 				4DEC6AD8131579C30021EAAA /* ASIAuthenticationDialog.m in Sources */,
 				4DEC6ADA131579C30021EAAA /* ASIDataCompressor.m in Sources */,
 				4DEC6ADC131579C30021EAAA /* ASIDataDecompressor.m in Sources */,
@@ -674,6 +673,7 @@
 				4DE98DFF1316C4780060B34F /* TestGPPostLoadOperation.m in Sources */,
 				4DE98E88131C67A70060B34F /* TestAPI.m in Sources */,
 				4DE98E8D131D00220060B34F /* GTMBase64.m in Sources */,
+				4D41B3AC131FFC860044171F /* TestPostLoad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +693,10 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Newsgroup_Prefix.pch;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					"DEBUG=1",
+					"DEBUG_REQUEST_STATUS=1",
+				);
 				INFOPLIST_FILE = "Newsgroup-Info.plist";
 				PRODUCT_NAME = Newsgroup;
 			};

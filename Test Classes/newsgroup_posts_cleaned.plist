@@ -1,0 +1,6286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1299101852000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Going to be in Portland (April 3-7), thinking of taking vacation on the 8th and hanging out on the west coast.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29333</integer>
+		<key>PostID</key>
+		<integer>29333</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>Seattle people</string>
+		<key>ThreadID</key>
+		<integer>29333</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299102421000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	so we can not hang out, and play starcraft2.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29333</integer>
+		<key>PostID</key>
+		<integer>29334</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>come up to seattle</string>
+		<key>ThreadID</key>
+		<integer>29333</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299102675000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	to the gay guy i went to hike school with that lives out there. i&amp;#39;m sure you&amp;#39;ll run into him&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29333</integer>
+		<key>PostID</key>
+		<integer>29337</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>say hi</string>
+		<key>ThreadID</key>
+		<integer>29333</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299104625000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I didn&amp;#39;t know you and balls went to hike skugl0rs together&lt;/p&gt;
+&lt;p&gt;
+	I GOT YOU GOOD YOU FUCKER!!! MAN!!!&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29337</integer>
+		<key>PostID</key>
+		<integer>29340</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>wow</string>
+		<key>ThreadID</key>
+		<integer>29333</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299109052000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	why do you hate me?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29340</integer>
+		<key>PostID</key>
+		<integer>29342</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>fuck you</string>
+		<key>ThreadID</key>
+		<integer>29333</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299113594000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	love and hate are exactly the same thing&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29342</integer>
+		<key>PostID</key>
+		<integer>29346</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>I don't hate you - just that</string>
+		<key>ThreadID</key>
+		<integer>29333</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>160</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>Brownie</string>
+		<key>Date</key>
+		<string>/Date(1299152494000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29346</integer>
+		<key>PostID</key>
+		<integer>29352</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>oh rly? (nt)</string>
+		<key>ThreadID</key>
+		<integer>29333</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299091650000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;h1 style="font-size: 72px;"&gt;
+	OMG IPAD 2&lt;/h1&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29286</integer>
+		<key>PostID</key>
+		<integer>29286</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>APple</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>140</integer>
+		<key>AuthorName</key>
+		<string>Rya</string>
+		<key>AuthorNickname</key>
+		<string>Malaria vector</string>
+		<key>Date</key>
+		<string>/Date(1299093536000-0700)/</string>
+		<key>Description</key>
+		<string>I can has higher resolution plz</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29286</integer>
+		<key>PostID</key>
+		<integer>29288</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>Evolutionary not revolutionary</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299093807000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	she just bought an ipad this past weekend. when does 2 come out?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29288</integer>
+		<key>PostID</key>
+		<integer>29290</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>laughing at my sister</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>140</integer>
+		<key>AuthorName</key>
+		<string>Rya</string>
+		<key>AuthorNickname</key>
+		<string>Malaria vector</string>
+		<key>Date</key>
+		<string>/Date(1299095609000-0700)/</string>
+		<key>Description</key>
+		<string>Use case that where I could justify buying a tablet</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29290</integer>
+		<key>PostID</key>
+		<integer>29296</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>I still havent found a complelling</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299095629000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29296</integer>
+		<key>PostID</key>
+		<integer>29297</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>do you have an ipad? (nt)</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>140</integer>
+		<key>AuthorName</key>
+		<string>Rya</string>
+		<key>AuthorNickname</key>
+		<string>Malaria vector</string>
+		<key>Date</key>
+		<string>/Date(1299095734000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29297</integer>
+		<key>PostID</key>
+		<integer>29301</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>No (nt)</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299100930000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	then I bought themshits. Very cools&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29301</integer>
+		<key>PostID</key>
+		<integer>29329</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>i thought that too</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299111773000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Tho I wonder why we both bought something we didnt think we&amp;#39;d have a use for.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29329</integer>
+		<key>PostID</key>
+		<integer>29343</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>8</integer>
+		<key>Subject</key>
+		<string>2st</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299096025000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I have two iPads (one going to my sister - won it taking a survey for b-skugl0rs alumni), and it&amp;#39;s the most useless gadget I&amp;#39;ve ever had. &amp;nbsp;I used to use it for reading shit until I got a kindle (I&amp;#39;ve gotten over the shitty kindle pdf support - it sucks but it&amp;#39;s an awesome reading device). &amp;nbsp;I don&amp;#39;t really know what else I do on it. &amp;nbsp;Browsing fucking blows hardcore, typing blows, looking at google earth/maps is kinda cool, but I can has big monitor on laptop/desktop.&lt;/p&gt;
+&lt;p&gt;
+	People who like their iPad, what exactly is its purpose?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29296</integer>
+		<key>PostID</key>
+		<integer>29306</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>9</integer>
+		<key>Subject</key>
+		<string>there isn't one</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1299096278000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	it&amp;#39;s a gift.&amp;nbsp; I wanted a touchscreen computer for the kitchen to look up recipes and to watch tv when I was in there.&amp;nbsp;Probably would have gotten a cheaper tablet if I was going to buy it on my own.&amp;nbsp; Basically I use it as a second television.&amp;nbsp; Also, I don&amp;#39;t own a laptop, so its nice reading the web on something bigger than my phone, but I&amp;#39;d say I take it out of the house maybe once a month.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29306</integer>
+		<key>PostID</key>
+		<integer>29312</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>10</integer>
+		<key>Subject</key>
+		<string>I didn't buy mine</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299096650000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I never take mine out of the hoos except on the airplane. &amp;nbsp;Then on the plane I realize there&amp;#39;s no WIFI and browsing sucks anyway so I put it back then go to the bathroom to jerk off.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29312</integer>
+		<key>PostID</key>
+		<integer>29318</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>11</integer>
+		<key>Subject</key>
+		<string>word</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299096978000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	is def. a much more convenient masturbatory aid if you don&amp;#39;t have a desk to sit a laptop on&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29318</integer>
+		<key>PostID</key>
+		<integer>29320</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>12</integer>
+		<key>Subject</key>
+		<string>ipod/ipad</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>140</integer>
+		<key>AuthorName</key>
+		<string>Rya</string>
+		<key>AuthorNickname</key>
+		<string>Malaria vector</string>
+		<key>Date</key>
+		<string>/Date(1299097001000-0700)/</string>
+		<key>Description</key>
+		<string>Dont you just save yourself some time and jerkoff in your seat?</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29318</integer>
+		<key>PostID</key>
+		<integer>29321</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>13</integer>
+		<key>Subject</key>
+		<string>Why</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299096603000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	i love my ipod touch, but don&amp;#39;t see a reason to upgrade to the XL size ipod touch&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29306</integer>
+		<key>PostID</key>
+		<integer>29317</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>14</integer>
+		<key>Subject</key>
+		<string>but it's got multitouch!</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299100989000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	&lt;a href="http://www.aopa.org/members/files/pilot/2011/january/feature_apple_ipad_offers_many_possibilities_for_pilots.html"&gt;http://www.aopa.org/members/files/pilot/2011/january/feature_apple_ipad_offers_many_possibilities_for_pilots.html&lt;/a&gt;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29306</integer>
+		<key>PostID</key>
+		<integer>29330</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>15</integer>
+		<key>Subject</key>
+		<string>there isn't one</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299101214000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	if you have a light source, kindle &amp;gt; ipad for reading.&lt;/p&gt;
+&lt;p&gt;
+	I have hulu+ and on the ipad, demshits is awesome. I usually watch a tv episode or two while trying to fall asleep.&lt;/p&gt;
+&lt;p&gt;
+	Also for flying, it&amp;#39;s great. I load it up with a few movies, plus a few games, and that&amp;#39;s all I need.&lt;/p&gt;
+&lt;p&gt;
+	I don&amp;#39;t have a problem with browsing, not sure what cohen finds wrong with the browsing experience.&lt;/p&gt;
+&lt;p&gt;
+	I&amp;#39;m gonna get an ipad2 and gibb0rs my original to my gf. Unless she moves to CA then that bitch can buy her own apple shit.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29306</integer>
+		<key>PostID</key>
+		<integer>29331</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>16</integer>
+		<key>Subject</key>
+		<string>there isn't one</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299102474000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	give it to me&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29331</integer>
+		<key>PostID</key>
+		<integer>29335</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>17</integer>
+		<key>Subject</key>
+		<string>i'll be your gf</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299102507000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	no teeth.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29335</integer>
+		<key>PostID</key>
+		<integer>29336</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>18</integer>
+		<key>Subject</key>
+		<string>just remember</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299112651000-0700)/</string>
+		<key>Description</key>
+		<string>on his computer is play flash games on the web.</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29331</integer>
+		<key>PostID</key>
+		<integer>29345</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>19</integer>
+		<key>Subject</key>
+		<string>The only thing Cohen does</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299112478000-0700)/</string>
+		<key>Description</key>
+		<string>nobody needs a tablet like this. 
+
+As far as what I use mine for: email, web browsing, rss feeds. For 90% of the non-development shit I do, it's better than a laptop. It's just as fast, it's effectively always on, the battery lasts forever, it's super light, you can cram it anywhere.
+
+It's certainly a luxury, though. It's not even close to a laptop replacement.</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29306</integer>
+		<key>PostID</key>
+		<integer>29344</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>20</integer>
+		<key>Subject</key>
+		<string>I love mine, but</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1</integer>
+		<key>AuthorName</key>
+		<string>Mat</string>
+		<key>AuthorNickname</key>
+		<string>Matt Pavey</string>
+		<key>Date</key>
+		<string>/Date(1299114091000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	the ipad2 is 33% thinner and only 1.3lbs (compared to 1.5lbs) and supposed to be much faster, and the graphics are up to 9x faster. and cameras on the front and back. and the battery life didn&amp;#39;t suffer either. sounds pretty sweet if you ask me. not sure i&amp;#39;ll be in the market for one anytime soon. but i didn&amp;#39;t think i was for the original ipad and i&amp;#39;m really glad i got it.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29344</integer>
+		<key>PostID</key>
+		<integer>29347</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>21</integer>
+		<key>Subject</key>
+		<string>I love mine, but</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299115373000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Three reasons:&lt;/p&gt;
+&lt;p&gt;
+	1. It&amp;#39;s faster.&lt;/p&gt;
+&lt;p&gt;
+	2. I&amp;#39;m a whore&lt;/p&gt;
+&lt;p&gt;
+	3. Stephanie is getting the old iPad&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29347</integer>
+		<key>PostID</key>
+		<integer>29348</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>22</integer>
+		<key>Subject</key>
+		<string>I'm getting one</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299118526000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	but we don&amp;#39;t want the irish!&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29348</integer>
+		<key>PostID</key>
+		<integer>29349</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>23</integer>
+		<key>Subject</key>
+		<string>I'll give you #2</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299095659000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	She should be able to return it. I think they dropped the restocking fee&amp;#39;s.&amp;nbsp; March 11th.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29290</integer>
+		<key>PostID</key>
+		<integer>29298</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>24</integer>
+		<key>Subject</key>
+		<string>laughing at my sister</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299095997000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29298</integer>
+		<key>PostID</key>
+		<integer>29305</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>25</integer>
+		<key>Subject</key>
+		<string>i may mention that to her (nt)</string>
+		<key>ThreadID</key>
+		<integer>29286</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299084007000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29260</integer>
+		<key>PostID</key>
+		<integer>29260</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>hey how ya doin? (nt)</string>
+		<key>ThreadID</key>
+		<integer>29260</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>160</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>Brownie</string>
+		<key>Date</key>
+		<string>/Date(1299088503000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29260</integer>
+		<key>PostID</key>
+		<integer>29271</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>hey how ya doin? (nt)</string>
+		<key>ThreadID</key>
+		<integer>29260</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299090797000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29271</integer>
+		<key>PostID</key>
+		<integer>29283</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>hey how ya doin? (nt)</string>
+		<key>ThreadID</key>
+		<integer>29260</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>160</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>Brownie</string>
+		<key>Date</key>
+		<string>/Date(1299152414000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29283</integer>
+		<key>PostID</key>
+		<integer>29351</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>hey how ya doin? (nt)</string>
+		<key>ThreadID</key>
+		<integer>29260</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299048570000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	&amp;lt;monagrip&amp;gt;who wants to fucking touch me?&amp;lt;/monagrip&amp;gt;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29245</integer>
+		<key>PostID</key>
+		<integer>29245</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>When you impress yourself do you go</string>
+		<key>ThreadID</key>
+		<integer>29245</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1</integer>
+		<key>AuthorName</key>
+		<string>Mat</string>
+		<key>AuthorNickname</key>
+		<string>Matt Pavey</string>
+		<key>Date</key>
+		<string>/Date(1299074883000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29245</integer>
+		<key>PostID</key>
+		<integer>29251</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>lol, that or something very similar (nt)</string>
+		<key>ThreadID</key>
+		<integer>29245</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299081433000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	occasionally.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29245</integer>
+		<key>PostID</key>
+		<integer>29257</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>I've said that out loud</string>
+		<key>ThreadID</key>
+		<integer>29245</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>136</integer>
+		<key>AuthorName</key>
+		<string>Sco</string>
+		<key>AuthorNickname</key>
+		<string>{: (|)</string>
+		<key>Date</key>
+		<string>/Date(1299084218000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	&amp;quot;Who wants to fucking touch me?&amp;quot; is my NASA e-mail signature.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29257</integer>
+		<key>PostID</key>
+		<integer>29261</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>amateur stuff</string>
+		<key>ThreadID</key>
+		<integer>29245</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>140</integer>
+		<key>AuthorName</key>
+		<string>Rya</string>
+		<key>AuthorNickname</key>
+		<string>Malaria vector</string>
+		<key>Date</key>
+		<string>/Date(1299084803000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29245</integer>
+		<key>PostID</key>
+		<integer>29263</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>Who wants to fucking touch me? (nt)</string>
+		<key>ThreadID</key>
+		<integer>29245</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299030682000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	$6400. &amp;nbsp;Who wants to get drunk for like 64 days in a row?&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	That&amp;#39;s what happens when you change jobs twice, and don&amp;#39;t get W4 set up correctly on either.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29224</integer>
+		<key>PostID</key>
+		<integer>29224</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>tax refund</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299030711000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29224</integer>
+		<key>PostID</key>
+		<integer>29226</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>thats a lot of free money! (nt)</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299030985000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29226</integer>
+		<key>PostID</key>
+		<integer>29229</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>right? (nt)</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299031027000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	that the gov&amp;#39;t saved for me in what is now referred to as the &amp;quot;airplane fund&amp;quot;.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29226</integer>
+		<key>PostID</key>
+		<integer>29231</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>that's just money</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>136</integer>
+		<key>AuthorName</key>
+		<string>Sco</string>
+		<key>AuthorNickname</key>
+		<string>{: (|)</string>
+		<key>Date</key>
+		<string>/Date(1299045025000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	a little over 13k from the gov, and 3k from Alabama. &amp;nbsp;And it all went directly towards my mortgage. &amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29224</integer>
+		<key>PostID</key>
+		<integer>29244</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>my highest refund was...</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299064801000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	hasn&amp;#39;t given me mine yet....the state of MA gave mine in like 3 days after electronic filing&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29244</integer>
+		<key>PostID</key>
+		<integer>29248</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>fucking fed</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>124</integer>
+		<key>AuthorName</key>
+		<string>Joh</string>
+		<key>AuthorNickname</key>
+		<string>Old Doty Bastard</string>
+		<key>Date</key>
+		<string>/Date(1299077023000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29248</integer>
+		<key>PostID</key>
+		<integer>29256</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>Fax me some pls! (nt)</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>140</integer>
+		<key>AuthorName</key>
+		<string>Rya</string>
+		<key>AuthorNickname</key>
+		<string>Malaria vector</string>
+		<key>Date</key>
+		<string>/Date(1299084924000-0700)/</string>
+		<key>Description</key>
+		<string>Why would you loan the gubment money at 0%</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29224</integer>
+		<key>PostID</key>
+		<integer>29264</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>8</integer>
+		<key>Subject</key>
+		<string>Cool story bro</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299091036000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	who withold 50% of overtime. &amp;nbsp;Seriously you guys.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29264</integer>
+		<key>PostID</key>
+		<integer>29284</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>9</integer>
+		<key>Subject</key>
+		<string>tell that to fucken payroll</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>160</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>Brownie</string>
+		<key>Date</key>
+		<string>/Date(1299088554000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	owed Fed $147&lt;/p&gt;
+&lt;p&gt;
+	Owed VA $19&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29224</integer>
+		<key>PostID</key>
+		<integer>29272</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>10</integer>
+		<key>Subject</key>
+		<string>mine worked out perfectly</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299088748000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	now have 8 exemptions on W4&amp;nbsp;(up from 6) and taking an extra $13 out of state taxes per pay period. will tweak again next year i&amp;#39;m sure&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29272</integer>
+		<key>PostID</key>
+		<integer>29276</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>11</integer>
+		<key>Subject</key>
+		<string>$1100 from fed, owed IN $400</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299096139000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	perfectly would be owing 100% of your taxes and paying it on April 15th...seriously u guyz&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29272</integer>
+		<key>PostID</key>
+		<integer>29310</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>12</integer>
+		<key>Subject</key>
+		<string>ehhh</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>140</integer>
+		<key>AuthorName</key>
+		<string>Rya</string>
+		<key>AuthorNickname</key>
+		<string>Malaria vector</string>
+		<key>Date</key>
+		<string>/Date(1299096316000-0700)/</string>
+		<key>Description</key>
+		<string>The IRS penalizes you If you owe too much.
+Perfect would be maximum amount such that you aren't penalized</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29310</integer>
+		<key>PostID</key>
+		<integer>29313</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>13</integer>
+		<key>Subject</key>
+		<string>Not perfect</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1299096573000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	not sure how IRS penalties work though.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29313</integer>
+		<key>PostID</key>
+		<integer>29316</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>14</integer>
+		<key>Subject</key>
+		<string>Not necessarily</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299096690000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	agree++&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29313</integer>
+		<key>PostID</key>
+		<integer>29319</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>15</integer>
+		<key>Subject</key>
+		<string>good call</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>160</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>Brownie</string>
+		<key>Date</key>
+		<string>/Date(1299152386000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	so near perfect, ass.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29319</integer>
+		<key>PostID</key>
+		<integer>29350</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>16</integer>
+		<key>Subject</key>
+		<string>anything over $500 me thinks</string>
+		<key>ThreadID</key>
+		<integer>29224</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299024643000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Like my facebook page...spam your friends.&lt;/p&gt;
+&lt;p&gt;
+	&lt;a href="https://www.facebook.com/pages/Roy-Rotten-Games/141725885891256"&gt;https://www.facebook.com/pages/Roy-Rotten-Games/141725885891256&lt;/a&gt;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29219</integer>
+		<key>PostID</key>
+		<integer>29219</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>ehh</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299025566000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	while signed in as my wife. &amp;nbsp;Also used a free promo code. &amp;nbsp;Very nice&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29219</integer>
+		<key>PostID</key>
+		<integer>29220</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>done</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299030687000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	but what are the promo codes for?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29219</integer>
+		<key>PostID</key>
+		<integer>29225</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>maybe i'm retarded</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299031138000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	just for the game. Apple gives them so you pass them along to friends and blogs and shit to spread the word.&lt;/p&gt;
+&lt;p&gt;
+	I&amp;#39;m using it as an incentive to get people to &amp;quot;like&amp;quot; the page.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29225</integer>
+		<key>PostID</key>
+		<integer>29232</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>right now</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299031324000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Save you cash money $1, yo&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29225</integer>
+		<key>PostID</key>
+		<integer>29235</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>They get you the app for free</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299031915000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	fuck me&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29235</integer>
+		<key>PostID</key>
+		<integer>29239</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>already bought the birch</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299032614000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	but believe me, I&amp;#39;m glad you supported my efforts bro!&lt;/p&gt;
+&lt;p&gt;
+	I&amp;#39;ll make sure you get a code for my next game! Hopefurry be out in a few weeks.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29239</integer>
+		<key>PostID</key>
+		<integer>29240</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>sorry man</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299036452000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	it&amp;#39;s a buck. looking forward to more!&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29240</integer>
+		<key>PostID</key>
+		<integer>29242</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>8</integer>
+		<key>Subject</key>
+		<string>no worries</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299031368000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I&amp;#39;m going to rip you off and make a Facebook page for Basil Apps.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29219</integer>
+		<key>PostID</key>
+		<integer>29236</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>9</integer>
+		<key>Subject</key>
+		<string>omg balls</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299031434000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	FACEBOOK MAC PENIS TOUCH&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29236</integer>
+		<key>PostID</key>
+		<integer>29237</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>10</integer>
+		<key>Subject</key>
+		<string>do it, and we'll like each other</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299031492000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	the key to riches is to get someone kimportant to mention your app.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29236</integer>
+		<key>PostID</key>
+		<integer>29238</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>11</integer>
+		<key>Subject</key>
+		<string>i've acertained that</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299033665000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	and I made like $75 right after that. So yeah&amp;hellip; I think you&amp;#39;ve got a point.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29238</integer>
+		<key>PostID</key>
+		<integer>29241</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>12</integer>
+		<key>Subject</key>
+		<string>I was mentioned on two blogs</string>
+		<key>ThreadID</key>
+		<integer>29219</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299024155000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	did that chick from Hulu contact joo?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29218</integer>
+		<key>PostID</key>
+		<integer>29218</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>krubi</string>
+		<key>ThreadID</key>
+		<integer>29218</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299030345000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	She&amp;#39;s chatting with people and getting back to me.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29218</integer>
+		<key>PostID</key>
+		<integer>29223</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>yes, we chatted</string>
+		<key>ThreadID</key>
+		<integer>29218</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1517</integer>
+		<key>AuthorName</key>
+		<string>And</string>
+		<key>AuthorNickname</key>
+		<string>Carpenter</string>
+		<key>Date</key>
+		<string>/Date(1299000236000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	It&amp;#39;s suppose to add album info, cover art, and correctly label&amp;nbsp;all your songs.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	- Does it actually work?&lt;/p&gt;
+&lt;p&gt;
+	- Is it fast/slow?&lt;/p&gt;
+&lt;p&gt;
+	- Anyone know of anything similar, better, cheaper, free?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29167</integer>
+		<key>PostID</key>
+		<integer>29167</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>Anyone use 'Tune Up' for iTunes?</string>
+		<key>ThreadID</key>
+		<integer>29167</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299009366000-0700)/</string>
+		<key>Description</key>
+		<string>do that on it's own?</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29167</integer>
+		<key>PostID</key>
+		<integer>29187</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>Doesn't itunes</string>
+		<key>ThreadID</key>
+		<integer>29167</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1517</integer>
+		<key>AuthorName</key>
+		<string>And</string>
+		<key>AuthorNickname</key>
+		<string>Carpenter</string>
+		<key>Date</key>
+		<string>/Date(1299013184000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	but for me normally doesnt suceed.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29187</integer>
+		<key>PostID</key>
+		<integer>29189</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>i think it tries</string>
+		<key>ThreadID</key>
+		<integer>29167</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299022683000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	This works great for getting the album art&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	http://www.apple.com/downloads/dashboard/music/amazonalbumart.html&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29167</integer>
+		<key>PostID</key>
+		<integer>29217</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>I do everything manually</string>
+		<key>ThreadID</key>
+		<integer>29167</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1298990262000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	they only paid out my bonus on the portion of money after I re-hired. &amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29157</integer>
+		<key>PostID</key>
+		<integer>29157</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>hey tbird</string>
+		<key>ThreadID</key>
+		<integer>29157</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>135</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>tim james</string>
+		<key>Date</key>
+		<string>/Date(1299000199000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	that makes sense.&amp;nbsp; I know you&amp;#39;re special, but not so special they need to give you $Texas!&lt;/p&gt;
+&lt;p&gt;
+	on 2 other notes:&lt;/p&gt;
+&lt;p&gt;
+	1.&amp;nbsp; cat contract is tentatively agreed to for the UAW.&lt;/p&gt;
+&lt;p&gt;
+	2.&amp;nbsp; that means vacation is a go - so I am theoretically in for the cabin trip.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29157</integer>
+		<key>PostID</key>
+		<integer>29166</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>hey tbird</string>
+		<key>ThreadID</key>
+		<integer>29157</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>135</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>tim james</string>
+		<key>Date</key>
+		<string>/Date(1299000284000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	also, for I got the full STIP reward as well as an additional individual incentive for my personal performance this year.&amp;nbsp; then 5 minutes later I got off from the hand job.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29166</integer>
+		<key>PostID</key>
+		<integer>29168</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>hey tbird</string>
+		<key>ThreadID</key>
+		<integer>29157</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>160</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>Brownie</string>
+		<key>Date</key>
+		<string>/Date(1299002146000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	all i read was.... TBIRD IN FOR CABIN TRIP.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29166</integer>
+		<key>PostID</key>
+		<integer>29174</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>hey tbird</string>
+		<key>ThreadID</key>
+		<integer>29157</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>135</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>tim james</string>
+		<key>Date</key>
+		<string>/Date(1299005326000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	unofficial.&amp;nbsp; Will likely be moving to new position in summertime what may conflict, but I&amp;#39;m penciling in the dates now - won&amp;#39;t be able to do full time,&amp;nbsp; but 4 day weekend likely.&amp;nbsp; I&amp;#39;ll only officially unofficially commit if fishing is confirmed.&amp;nbsp; BOYEE&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29174</integer>
+		<key>PostID</key>
+		<integer>29181</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>hey tbird</string>
+		<key>ThreadID</key>
+		<integer>29157</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>160</integer>
+		<key>AuthorName</key>
+		<string>Tim</string>
+		<key>AuthorNickname</key>
+		<string>Brownie</string>
+		<key>Date</key>
+		<string>/Date(1299068347000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	with the fiches!&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	Fishing, boating, drinking, etc. confirmed.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29181</integer>
+		<key>PostID</key>
+		<integer>29249</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>you're going to swim</string>
+		<key>ThreadID</key>
+		<integer>29157</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299081664000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	that &amp;quot;bridging service&amp;quot; does not actually mean what you think it means, i.e. my vacation accrual went to zero, so basically another 9.5 years until I get my 4th week. &amp;nbsp;Fucked myself out of good things.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29166</integer>
+		<key>PostID</key>
+		<integer>29258</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>I just realized today</string>
+		<key>ThreadID</key>
+		<integer>29157</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1517</integer>
+		<key>AuthorName</key>
+		<string>And</string>
+		<key>AuthorNickname</key>
+		<string>Carpenter</string>
+		<key>Date</key>
+		<string>/Date(1298990042000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	airport...it was awesome...the $$ Man.&amp;nbsp; Shook his hand and talked to him.&amp;nbsp; No one else recognized him, lol.&lt;/p&gt;
+&lt;p&gt;
+	value +&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29156</integer>
+		<key>PostID</key>
+		<integer>29156</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>I met Eddie Money in ATL</string>
+		<key>ThreadID</key>
+		<integer>29156</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299001786000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;img src="http://i413.photobucket.com/albums/pp219/SantaKhala/SuperCoolStoryBro.png"&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29156</integer>
+		<key>PostID</key>
+		<integer>29172</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>I met Eddie Money in ATL</string>
+		<key>ThreadID</key>
+		<integer>29156</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299002958000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	kick me in the balls and scream &amp;quot;I&amp;#39;M EDDIE FUCKING MONEY!&amp;quot; and I wouldn&amp;#39;t&amp;nbsp; recognize him&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29156</integer>
+		<key>PostID</key>
+		<integer>29175</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>he could</string>
+		<key>ThreadID</key>
+		<integer>29156</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299019438000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	and I still didn&amp;#39;t recognize him.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29175</integer>
+		<key>PostID</key>
+		<integer>29203</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>I looked up pictures of him</string>
+		<key>ThreadID</key>
+		<integer>29156</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299020765000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	to say that Carpenter recognized him at the airport once.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29203</integer>
+		<key>PostID</key>
+		<integer>29216</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>i just updated his wiki page</string>
+		<key>ThreadID</key>
+		<integer>29156</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1416</integer>
+		<key>AuthorName</key>
+		<string>Lex</string>
+		<key>AuthorNickname</key>
+		<string>Lex</string>
+		<key>Date</key>
+		<string>/Date(1299026902000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	anyone recognize carpenter?&lt;/p&gt;
+&lt;p&gt;
+	fuck I&amp;#39;m not sure I would recognize you anymore.&lt;/p&gt;
+&lt;p&gt;
+	you were the black guy in our class right?&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29216</integer>
+		<key>PostID</key>
+		<integer>29221</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>would</string>
+		<key>ThreadID</key>
+		<integer>29156</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1416</integer>
+		<key>AuthorName</key>
+		<string>Lex</string>
+		<key>AuthorNickname</key>
+		<string>Lex</string>
+		<key>Date</key>
+		<string>/Date(1299027087000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	that was joji&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29221</integer>
+		<key>PostID</key>
+		<integer>29222</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>sorry</string>
+		<key>ThreadID</key>
+		<integer>29156</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299031244000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	barker recognized me in Inception. so...yeah.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29221</integer>
+		<key>PostID</key>
+		<integer>29234</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>8</integer>
+		<key>Subject</key>
+		<string>well</string>
+		<key>ThreadID</key>
+		<integer>29156</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1298989998000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I&amp;#39;m going to houston to pick up a rescue today (American Bulldog/Pit Bull mix).&amp;nbsp; Anyone have any tips for training?&amp;nbsp; I haven&amp;#39;t owned a dog since 6th grade, and I hear proper training is especially important with both Pit Bulls and Amer. Bulldogs.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29155</integer>
+		<key>PostID</key>
+		<integer>29155</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>Getting a dog</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1298993706000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	especially terriers though pits are generally mild mannered for terriers.&lt;/p&gt;
+&lt;p&gt;
+	I&amp;#39;d highly recommend getting obedience training. &amp;nbsp;Call a breeder (multiple breeders if you have time - find a terrier breeder if you can)&amp;nbsp;in the area and ask for a recommendation of where to go for obedience training.&lt;/p&gt;
+&lt;p&gt;
+	Some recommendations (probably common sense but there are a lot of bad [or significantly sub-optimal, let&amp;#39;s say] dag owners out there):&lt;/p&gt;
+&lt;p&gt;
+	1) &lt;strong&gt;obedience training&lt;/strong&gt; - go through all the classes they have (not exactly cheap but it&amp;#39;s worth it me thinks haha &amp;#39;nuff said). &amp;nbsp;Should be like $100-150 per dog per class. &amp;nbsp;I&amp;#39;ve spent a couple grand training my dags though my terrier isn&amp;#39;t as obedient my yother dag.&lt;/p&gt;
+&lt;p&gt;
+	2) &lt;strong&gt;consistency&lt;/strong&gt; - you hear that you have to be the &amp;quot;alpha&amp;quot; everywhere these days and it&amp;#39;s pretty true. &amp;nbsp;If you say &amp;quot;sit,&amp;quot; make sure they sit every single time - don&amp;#39;t give them any&amp;nbsp;leeway. &amp;nbsp;Kind of feel like a dick doing it, but know that it&amp;#39;s good for the dag.&lt;/p&gt;
+&lt;p&gt;
+	3) &lt;strong&gt;never ever use physical punishment&lt;/strong&gt;, especially a terrier - the only time you should put your hands on your dag is to pet them, to scratch their nuts, or to ejaculate them. &amp;nbsp;Terriers are known bite back though pits are pretty mild and probably would just take it like a bitch. &amp;nbsp;My ex-roommate smacked my gf&amp;#39;s scottish terrier one time and the scottie took a huge piece of flesh out of his leg. &amp;nbsp;hospital++ then roommate--&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29155</integer>
+		<key>PostID</key>
+		<integer>29160</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>training is impotant with any dag</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1298997399000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	thanks for the advice.&amp;nbsp; My biggest worry is that, while both breeds are very similar in their overall temperament, there are a few major differences (like response to other dogs) that I don&amp;#39;t know how our new dog will be.&amp;nbsp; I guess that&amp;#39;d be a plus with going to a professional trainer.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29160</integer>
+		<key>PostID</key>
+		<integer>29161</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>training is impotant with any dag</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299003155000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	over a year ago, and that cunt still barks at me every time i see her.&lt;/p&gt;
+&lt;p&gt;
+	+1 on feeling like a dick, as far as putting my dog in a crate and stuff like that, but i have a hell of a dog now. after he outgrew the puppy phase, at about 2 yrs, i didn&amp;#39;t even lock him in the crate unless i was gonna be gone for a good while. at night, he would almost always sleep in it if the door was open. if i said go to bed, he just went, no trouble. BIL said he felt like crate training a dog was punishing them, so he has 3 total PITA dogs&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29160</integer>
+		<key>PostID</key>
+		<integer>29176</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>i swatted at BIL's dog once</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299006421000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	it&amp;#39;s not punishing them. It&amp;#39;s punishing them, if you&amp;#39;re like beat the dog, then stuff them in the crate.&lt;/p&gt;
+&lt;p&gt;
+	the crate is suppose to be the dog&amp;#39;s own place (tapping into their &amp;#39;den&amp;#39; mentality).&lt;/p&gt;
+&lt;p&gt;
+	I mean, it&amp;#39;s cruel to crate your dog day in and day out for long periods of time, but crate training is super important.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29176</integer>
+		<key>PostID</key>
+		<integer>29183</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>yeah your bil is a tard</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299009918000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	i would crate him if i couldn&amp;#39;t pay attention to him, even if i was home. otherwise, i&amp;#39;d lose track and he&amp;#39;d shit somewhere. maybe he&amp;#39;s just institutionalized, but he likes being in tight quarters all the time now (under the porch, in his dog house, etc. he used to lay under my desk while i checked my email when he was an inside dog.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29183</integer>
+		<key>PostID</key>
+		<integer>29188</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>yeah, when my dog was little</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299019822000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	i trained with pee pads and the fake grass for our deck. I like being able to have the dog come and wake me up if he wants to play, or to have the room to fuck his stuffed rabbit. My dog has a house in the house, but it cannot lock. He sleeps in it with no training done....just a comfortable place to sleep. Pee pads let the dog do his shit when needed....although a bigger dog this may prove impossible&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29188</integer>
+		<key>PostID</key>
+		<integer>29205</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>i never crate trained, no probs</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299030880000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	may be the key. my dog just shredded pee pads&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29205</integer>
+		<key>PostID</key>
+		<integer>29227</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>8</integer>
+		<key>Subject</key>
+		<string>i think your last statement</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1298998402000-0700)/</string>
+		<key>Description</key>
+		<string>Wanna swing south for dinner?</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29155</integer>
+		<key>PostID</key>
+		<integer>29162</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>9</integer>
+		<key>Subject</key>
+		<string>When are you gonna be in hou?</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1298999073000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	we expect to leave here at 5, so by the time we get the dog it might be 7:30-ish when we get to your place.&amp;nbsp; Is that OK or is it too late for dinner?&amp;nbsp; Also, would you be OK with a new dog visiting your house?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29162</integer>
+		<key>PostID</key>
+		<integer>29163</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>10</integer>
+		<key>Subject</key>
+		<string>Dinner sounds good</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299001205000-0700)/</string>
+		<key>Description</key>
+		<string>My cats would probably try to kill your dog. You could probably leave it in the back yard tho. 
+
+For dinner I'd prolly just get pizza or Chinese or have Amanda make something as she won't want to take Maxine out that late.  Let me check with her and see what she thinks. Is your new dog a puppy?</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29163</integer>
+		<key>PostID</key>
+		<integer>29170</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>11</integer>
+		<key>Subject</key>
+		<string>We could do 7:30 but</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299001641000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Whatever you want to do is fine with me, food-wise.&amp;nbsp; The new dog is an older puppy (i think 4-6 months).&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29170</integer>
+		<key>PostID</key>
+		<integer>29171</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>12</integer>
+		<key>Subject</key>
+		<string>We could do 7:30 but</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299001957000-0700)/</string>
+		<key>Description</key>
+		<string>We'll have food ready right around 7:30 and you can leave the dog in the back yard. Amanda was good with that plan.
+Becca is coming too right?</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29171</integer>
+		<key>PostID</key>
+		<integer>29173</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>13</integer>
+		<key>Subject</key>
+		<string>Ok</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299004692000-0700)/</string>
+		<key>Description</key>
+		<string>Yeah, she's coming.   How bad's traffic heading south?  Hopefully we're not too late if things get bad.</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29173</integer>
+		<key>PostID</key>
+		<integer>29178</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>14</integer>
+		<key>Subject</key>
+		<string>Ok</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299005020000-0700)/</string>
+		<key>Description</key>
+		<string>288 ususlly gets fucked around pearland but is ok most everywhere south of that,  I don't know what downtown looks like.</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29178</integer>
+		<key>PostID</key>
+		<integer>29179</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>15</integer>
+		<key>Subject</key>
+		<string>South from where?</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299005273000-0700)/</string>
+		<key>Description</key>
+		<string>We'll be coming off 290 and crossing the city.</string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29179</integer>
+		<key>PostID</key>
+		<integer>29180</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>16</integer>
+		<key>Subject</key>
+		<string>South from where?</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299005764000-0700)/</string>
+		<key>Description</key>
+		<string>To 288. It'll be busy but should take any more time.</string>
+		<key>Level</key>
+		<integer>10</integer>
+		<key>ParentID</key>
+		<integer>29180</integer>
+		<key>PostID</key>
+		<integer>29182</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>17</integer>
+		<key>Subject</key>
+		<string>Take the beltway 8</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299007029000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29178</integer>
+		<key>PostID</key>
+		<integer>29184</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>18</integer>
+		<key>Subject</key>
+		<string>Wingstop ok for dinner? (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299007214000-0700)/</string>
+		<key>Description</key>
+		<string>I've never had food from there, but I'm sure it's not that different than b-dubs</string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29184</integer>
+		<key>PostID</key>
+		<integer>29185</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>19</integer>
+		<key>Subject</key>
+		<string>Sounds good</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299007401000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>10</integer>
+		<key>ParentID</key>
+		<integer>29185</integer>
+		<key>PostID</key>
+		<integer>29186</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>20</integer>
+		<key>Subject</key>
+		<string>Yup (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1298999679000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	to get a pit mix if it&amp;#39;s going to be your first dag. Study the breed&amp;#39;s characteristics and know them by heart.&lt;/p&gt;
+&lt;p&gt;
+	Pitbull&amp;#39;s have gotten an unfair rap--some of it is breed stigma, and some of it is based on truth. I&amp;#39;m sure the rescue has ascertained that this dog is safe to be adopted, however you can&amp;#39;t 100% ensure that&amp;#39;s the case.&lt;/p&gt;
+&lt;p&gt;
+	What Cohen said was right on, training is very important, but even a well trained dog is still a dog and can do crazy shit, so you&amp;#39;ll have to always be aware of that.&lt;/p&gt;
+&lt;p&gt;
+	I have a beagle; beagles are smaller dogs, even tempered, and good with people. She&amp;#39;s been through 9 months of formal obedience training (puppy, adv 1, adv 2), and we continually work with her to teach her new tricks. Despite that, I&amp;#39;m still pretty vigalent when we&amp;#39;re not at home, because she&amp;#39;s still a dog. To make things worse, people are fucking stupid.&lt;/p&gt;
+&lt;p&gt;
+	One time, we were at a local fair, and this little toddler runs up to my dog and tried to give my dog a hug. I pulled my dog back and yelled at the kids parent, because despite my dog being even tempered, and use to children, she will bite if she feels threatened cuz she&amp;#39;s a dumb dog and thats what dogs do.&lt;/p&gt;
+&lt;p&gt;
+	You&amp;#39;re getting a dog that while lovable, has breed characteristics that make it less ideal. Pitbulls aren&amp;#39;t always even tempered, they have incredibly strong jaws, their breed line has been decimated by assholes to the point where they&amp;#39;re crazy as fuck and if there are breed bans Pit and Pit mixes are at the top of the list. My sister has a pit mix, and it&amp;#39;s a great dog, very friendly, very good with kids, but it&amp;#39;s part pit, and she knows she has to be extra careful.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29155</integer>
+		<key>PostID</key>
+		<integer>29164</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>21</integer>
+		<key>Subject</key>
+		<string>seems like a bad idea</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1</integer>
+		<key>AuthorName</key>
+		<string>Mat</string>
+		<key>AuthorNickname</key>
+		<string>Matt Pavey</string>
+		<key>Date</key>
+		<string>/Date(1299000103000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I have a Westie (because that&amp;#39;s how I roll) and he&amp;#39;s the best dog ever. Self taught, no lessons. And I&amp;#39;ll fight anyone who says different. He also very much enjoys licking his bunghole even though he gets super-expressed every 3-4 weeks.&lt;/p&gt;
+&lt;p&gt;
+	&lt;img alt="Westie" src="http://www.gibdogpetsuppliesblog.com/westie.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;
+	That&amp;#39;s all I&amp;#39;ve got to say about that. Sorry for the useless reply, what did you expect.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29164</integer>
+		<key>PostID</key>
+		<integer>29165</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>22</integer>
+		<key>Subject</key>
+		<string>West Highland White Terrier</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299014277000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	best dog I&amp;#39;ve ever had - A-Personailty, napoleons.&lt;/p&gt;
+&lt;p&gt;
+	awesome dags though. &amp;nbsp;awesomer than all the other dags I&amp;#39;ve had - Chesapeake Bay Retriever, Rottweilers, German Shepherd, Labs, Mastiff, Scottish Terrier, and&amp;nbsp;Black Russian Terrier&lt;/p&gt;
+&lt;p&gt;
+	only a hair above the&amp;nbsp;Black Russian Terrier though (biased since my yother current dag is a BRT)&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29165</integer>
+		<key>PostID</key>
+		<integer>29191</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>23</integer>
+		<key>Subject</key>
+		<string>2st on the westie</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299020087000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	you need a manly dog like my pomeranian.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	Only a true man can sport a 4lb dustmop&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29165</integer>
+		<key>PostID</key>
+		<integer>29206</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>24</integer>
+		<key>Subject</key>
+		<string>you have a faggy dog</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299030978000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	from my furniture moving days, had a pom that would fuck his cats all teh tim. hilarity&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29206</integer>
+		<key>PostID</key>
+		<integer>29228</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>25</integer>
+		<key>Subject</key>
+		<string>old bossman</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299000421000-0700)/</string>
+		<key>Description</key>
+		<string>But it's either me, a complete stranger that may fight her, or the gas chamber.  Also, at least it's part bulldog, which I heard was the breed of the decade, so there is hope.  I've been reading about the breed a lot the last few days so understand their history/breeding purpose, and, honestly, it's made me definately want to get her.   We'll see how it goes today when we see her.</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29164</integer>
+		<key>PostID</key>
+		<integer>29169</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>26</integer>
+		<key>Subject</key>
+		<string>I'm aware of the risks</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299003318000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	they are hella pricey and popular&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29169</integer>
+		<key>PostID</key>
+		<integer>29177</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>27</integer>
+		<key>Subject</key>
+		<string>uncle breeds Am  Bulls</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299013709000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;div&gt;
+	at least any greater risks than adopting any arbitrary dog (of the same size I suppose, I&amp;#39;d admit that there &amp;nbsp;are differences in adopting an arbitrary 7 lb chihuahua vs. adopting an arbitrary 150 lb rottweiler).&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	If a dog that attacks even remotely resembles a pit, cops report it as a pitbull attack. &amp;nbsp;There&amp;#39;s such a ridiculous amount of sensationalism w.r.t. pits - it&amp;#39;s retarded and absolutely baseless (yes absolutely). &amp;nbsp;I think (think? talk about baseless!) people are attracted to pits because they look tough and menacing (adds to sensationalism) and, like many (perhaps all) other breeds, can be trained to fight. &amp;nbsp;I think if Border Collies looked more menacing, you&amp;#39;d see more people training them to fight and there&amp;#39;d be Border Collie killings and everyone would be scared of Border Collies. &amp;nbsp;Sounds retarded but the real point is that I think too much BS is placed on &amp;quot;fighting instincts&amp;quot; and &amp;quot;breed characteristics&amp;quot; and not enough owness is placed on retarded dog breeders and even more retarded dog owners. &amp;nbsp;Sure, there&amp;#39;s something to be said aboot instincts and breed characteristics, but pitbulls are in no way a special case (check out the caucasian ovcharka breed for a real special case)&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	Plus, pitbulls don&amp;#39;t have stronger jaws than any other dog of similar head size - this is a retarded myth. &amp;nbsp;They can be trained and some have instincts to bite and hold - but again there&amp;#39;s nothing special about the pit here (many other dogs have strong bite and hold instincts and &amp;quot;strong&amp;quot; jaws). &amp;nbsp;The only thing that&amp;#39;s different about pits is the media blowing things out of proportion with &amp;quot;statistics.&amp;quot; &amp;nbsp;If your pit or any other dog has been trained to bite and hold, then you&amp;#39;re going to have issues - you can get what&amp;#39;s called a &amp;quot;break stick&amp;quot; to bust open his/her jaws if you&amp;#39;re really concerned.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	The pit used to be rightfully considered the All-American dag. &amp;nbsp;Great with kids, loyal, and generally just a good dag. &amp;nbsp;Don&amp;#39;t believe the hype, mang. &amp;nbsp;It&amp;#39;s total BS. &amp;nbsp;&lt;/div&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29169</integer>
+		<key>PostID</key>
+		<integer>29190</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>28</integer>
+		<key>Subject</key>
+		<string>I don't think there's any risks</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299014934000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	adopting a lab is far less likely going to result in problems than adopting a pitbull. While dog bite numbers are hard to get a number of two breeds typically stand out when looking at dog bites: Pitbulls and Rottweilers.&lt;/p&gt;
+&lt;p&gt;
+	Yes pitbull&amp;#39;s have gotten a bad name because of morans, but that doesn&amp;#39;t mean that the breed doesn&amp;#39;t have inherent characteristics that you should be aware about.&lt;/p&gt;
+&lt;p&gt;
+	Border Collies are a poor choice if you have small kids, because the border collie is a working dog with a strong herding instinct.&lt;/p&gt;
+&lt;p&gt;
+	I never said pitbulls have stronger jaws than dogs with similar sized heads. I said they have very strong jaws, as do rottweilers, and many other breeds. If homeslap said he was going to get a rotty, I would have told him the same &amp;quot;be careful.&amp;quot; Certain dogs breeds are not for inexperienced dog owners.&lt;/p&gt;
+&lt;p&gt;
+	Because the dog is a mix, and from a rescue, its going to be much harder to figure out the dog&amp;#39;s temperment. Dog&amp;#39;s temperments vary in a litter, but the behavior of the breed-line is a good indication of the overall temperment. The Pitbull line has been abused to overbred to encourage erratic, and aggressive behavior due to their usage in dog fighting. How do yo know this dog doesn&amp;#39;t come from a pitbull line that is bat shit insane?&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29190</integer>
+		<key>PostID</key>
+		<integer>29192</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>29</integer>
+		<key>Subject</key>
+		<string>thats stupid</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299016791000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;div style="font-family: Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); "&gt;
+	&lt;p&gt;
+		&amp;quot;adopting a lab is far less likely going to result in problems than adopting a pitbull&amp;quot;&lt;/p&gt;
+	&lt;p&gt;
+		nonsense. &amp;nbsp;I disagree wholeheartedly with this statement. &amp;nbsp;also, bite stats are retarded sensationalism. &amp;nbsp;Typically, the numbers are not normalized - i.e. the numbers are based on total # of bites not total # of bites per total # of breed. &amp;nbsp;Breeds like the Shar Pei and Chow Chow jump to the top of the list once #s are normalized (though there&amp;#39;s not really much statistical difference among breeds). &amp;nbsp;Bite stats based on normalized retarded owners not on &amp;quot;breeds&amp;quot; would make more sense. &amp;nbsp;I really don&amp;#39;t think there&amp;#39;s much if any causality in a &amp;quot;breed.&amp;quot; &amp;nbsp;rotties get a hella unfair bad name too. &amp;nbsp;fuck retarded owners, fuck the retarded media for sensationalism, and fuck people who are suspectible to sensationalism and don&amp;#39;t &amp;quot;get statistics.&amp;quot;&lt;/p&gt;
+	&lt;p&gt;
+		how do you know a mastiff doesn&amp;#39;t come from a super agreesive mastiff line? &amp;nbsp;talk about problems. &amp;nbsp;again, I don&amp;#39;t think there&amp;#39;s anything intrinsic about the pitbull breed that makes them a bad choice.&lt;/p&gt;
+	&lt;p&gt;
+		I&amp;#39;d tell him to be careful with any dog and follow all the good advice that&amp;#39;s been given on this thread.&lt;/p&gt;
+&lt;/div&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29192</integer>
+		<key>PostID</key>
+		<integer>29193</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>30</integer>
+		<key>Subject</key>
+		<string>ridiculous</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1455</integer>
+		<key>AuthorName</key>
+		<string>Ben</string>
+		<key>AuthorNickname</key>
+		<string>Ben</string>
+		<key>Date</key>
+		<string>/Date(1299017039000-0700)/</string>
+		<key>Description</key>
+		<string>I'm glad I just have cats.</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29193</integer>
+		<key>PostID</key>
+		<integer>29194</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>31</integer>
+		<key>Subject</key>
+		<string>Shit</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299017683000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	cats are jerks and there&amp;#39;s no way I could ever handle their jerk behavior.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29194</integer>
+		<key>PostID</key>
+		<integer>29198</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>32</integer>
+		<key>Subject</key>
+		<string>nonsense</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299020666000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29198</integer>
+		<key>PostID</key>
+		<integer>29213</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>33</integer>
+		<key>Subject</key>
+		<string>never trust cats..they are evil (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299017127000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Lab&amp;#39;s have higher aggression and a high prey drive...so becareful. Why, because they&amp;#39;re friendly, and in general aggression has been bred out of the line. Sure you can beat the shit outta one and turn it into a nightmare, but there is a reason why the Lab is till the number 1 more registered dog in america.&lt;/p&gt;
+&lt;p&gt;
+	It&amp;#39;s stupid to assume that all dogs breeds act the same, and you have to take the same precautions regardless of which breed you choose.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29193</integer>
+		<key>PostID</key>
+		<integer>29195</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>34</integer>
+		<key>Subject</key>
+		<string>no one ever says</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299031022000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	town were from retrievers, one lab and one golden&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29195</integer>
+		<key>PostID</key>
+		<integer>29230</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>35</integer>
+		<key>Subject</key>
+		<string>2 bad bites i can think of in my</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299085986000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;div&gt;
+	I don&amp;#39;t assume all breeds act the same. &amp;nbsp;Breed is definitely a consideration and certainly all dog breeds do not behave identically. &amp;nbsp;I just think pitbulls are not as devilish of a breed as you&amp;#39;re painting them. &amp;nbsp;I do think that too much owness is placed on breed and not enough is placed on training and LITERALLY everything else non-breed-related we&amp;#39;ve talked about on this thread.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	I also don&amp;#39;t think the pitbull has higher chasing instincts, bite-and-hold instincts, or agression instincts than any other terrier. &amp;nbsp;Terriers certainly do excell in these characteristics, though. &amp;nbsp;In fact, I suspect (based on non-scientific experience) that pitbulls instincts are much, much, much lower than the other terriers (airedale, fox, westie, and especially the scottish terrier) in all respects. &amp;nbsp;The other terriers seem much more apt to jump to WWIII-level psychosis than pits. &amp;nbsp;Some dags breeds are going to be more work but I don&amp;#39;t think pits are in this &amp;quot;some dag breeds&amp;quot; category. &amp;nbsp;Again, check out the caucasian ovcharka if you want to see a dag breed in the &amp;quot;some dag breeds&amp;quot; category. &amp;nbsp;Is a caucasian ovcharka going to be more work/risk on average than a lab? &amp;nbsp;Definitely. &amp;nbsp;Is a pitbull going to be more work/risk than a lab? &amp;nbsp;Maybe marginally since it is a [relatively weak instinct] terrier, but I would practially say no.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	Bottom line is that owning any dog obedience training should be #1. &amp;nbsp;Obviously you should understand breed tendencies (and understand the skinny behind BS bite statistics) and try to understand the dag&amp;#39;s history if possible. &amp;nbsp;Above all, through obedience training, proper exercise, consistency, and other shit we&amp;#39;ve talked aboot you can have a great dag regardless of breed.&lt;/div&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29195</integer>
+		<key>PostID</key>
+		<integer>29266</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>36</integer>
+		<key>Subject</key>
+		<string>hmm</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299089369000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Not all dogs require the same level of training, and/or exercise.&lt;/p&gt;
+&lt;p&gt;
+	Terriers aren&amp;#39;t the only type of dog breed family. As far as I know, terriers are little bastard dogs, the whole lot of them. Fuck &amp;#39;em all. Hounds for life, nigga.&lt;/p&gt;
+&lt;p&gt;
+	And selective breeding has given breeds very distinct characteristics. Pitbull&amp;#39;s were bred to fight in the pit. Websites that advocate for pitbulls say things such as &amp;quot;dont leave your dog alone with other animals.&amp;quot; Can pitbulls get along with other pets in the house, sure they can.&lt;/p&gt;
+&lt;p&gt;
+	Bite statistics are meaningless, my point isn&amp;#39;t that &amp;quot;ooh pitbulls are bad.&amp;quot; My point is pitbull is not a dog for an inexpereinced dog owner, because they do have high prey drives and do have higher agression and require a lot more forethought than say a beagle, lab, or pug.&lt;/p&gt;
+&lt;p&gt;
+	&amp;quot;Training&amp;quot; is too broad of a term to throw around. Does getting a book from the library and training your dog from it, constitute effective training? What about watching the dog whisperer, and emulating that shit? Is that effective?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29266</integer>
+		<key>PostID</key>
+		<integer>29277</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>37</integer>
+		<key>Subject</key>
+		<string>again that's not true at all</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299095131000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;div&gt;
+	that all breeds don&amp;#39;t act the same way? &amp;nbsp;I think that&amp;#39;s true. &amp;nbsp;Or you don&amp;#39;t think it&amp;#39;s true that all dogs should have obedience training? &amp;nbsp;Never did I say that all dogs require identical obedience training. &amp;nbsp;Maybe you could be more specific.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	I also never said terriers are the only dog breed...not sure from where you pulled that. &amp;nbsp;I only said that pits are mild terriers. &amp;nbsp;If you want a dead cat, get a scottish terrier. &amp;nbsp;Airedales are also much more iffy around smaller animals than pits are. &amp;nbsp;But I don&amp;#39;t think high prey drive necessarily translates into more likely to bite people. &amp;nbsp;Rottweilers barely have a prey drive and they bite people. &amp;nbsp;Labs, as you claim, don&amp;#39;t have a prey drive and they&amp;#39;ve killed babies.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	pits &amp;quot;do have high prey drives and do have higher agression and require a lot more forethought than say a beagle, lab, or pug.&amp;quot;&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	Does the pit breed have a prey drive? &amp;nbsp;Sure. &amp;nbsp;Does the pit breed intrinsically have abnormally high levels agreesion toward humans? &amp;nbsp;I don&amp;#39;t think there&amp;#39;s any evidence of this. &amp;nbsp;Prey drive is certainly instinctual. &amp;nbsp;a pit certainly has higher prey drive instincts than a beagle, pug for sure. &amp;nbsp;A lab? &amp;nbsp;maybe marginally. &amp;nbsp;Labs will kill small animals, man, they hunt and kill shit. &amp;nbsp;They&amp;#39;re not just retrievers. &amp;nbsp;Now an airedale (or many other terriers) certainly has a much, much higher prey drive than a lab or a pit. &amp;nbsp;I guess I&amp;#39;d techincally put a pit ahead of a lab for prey drive instincts, but I don&amp;#39;t think the difference is that striking. &amp;nbsp;Not as striking as the difference between a pit and a scottie/airedale.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	Pits were not bred for fighting but for bull and bear baiting.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	&amp;quot;My point is pitbull is not a dog for an inexpereinced dog owner, because they do have high prey drives and do have higher agression&amp;quot;&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	again, they don&amp;#39;t have THAT high of a prey drive but they do have one so sure, I&amp;#39;d agree that they&amp;#39;re not the absolute best choice for an inexperienced dog owner. &amp;nbsp;The agression claim is unsubstatiated though, again particularly agression toward humans. &amp;nbsp;I think pits are not a bad choice for a first time dog owner provided they train and are the &amp;quot;alpha.&amp;quot; &amp;nbsp;I would very highly recommend against many of the other terriers as a first time dog owner, though.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	by &amp;quot;training&amp;quot; I mean &amp;quot;reputable obedience training&amp;quot; which is also a broad term (but less broad). &amp;nbsp;how about &amp;quot;AKC Club/sanctioned obedience training&amp;quot; - I don&amp;#39;t think even &amp;quot;obedience training&amp;quot; is that broad - I&amp;#39;ve been to three different obedience schools and they all basically taught the same shit. &amp;nbsp;Sure there are differences but there were fundamental similarities.&lt;/div&gt;</string>
+		<key>Level</key>
+		<integer>10</integer>
+		<key>ParentID</key>
+		<integer>29277</integer>
+		<key>PostID</key>
+		<integer>29294</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>38</integer>
+		<key>Subject</key>
+		<string>what's not true at all?</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299097461000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Pits are clearly exibit the same behavior as labs.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>11</integer>
+		<key>ParentID</key>
+		<integer>29294</integer>
+		<key>PostID</key>
+		<integer>29322</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>39</integer>
+		<key>Subject</key>
+		<string>okay neldog</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299097870000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>12</integer>
+		<key>ParentID</key>
+		<integer>29322</integer>
+		<key>PostID</key>
+		<integer>29324</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>40</integer>
+		<key>Subject</key>
+		<string>nice try (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299017484000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	pitbulls are bad dogs, and that people shouldn&amp;#39;t adopt them.&lt;/p&gt;
+&lt;p&gt;
+	I&amp;#39;m saying, that if it&amp;#39;s your first dog, it&amp;#39;s a bad choice. They require a lot more socialization, obedience training, and overall handling than other breeds.&lt;/p&gt;
+&lt;p&gt;
+	They require a lot of exercise, and it&amp;#39;s a 10 year committment. If you are planning on having kids, can you ensure that the dog will still get the same amount of care that it would get now?&lt;/p&gt;
+&lt;p&gt;
+	It&amp;#39;s great that Vargas wants to adopt form a shelter, but that he should realize that the characteristics of the pittbull (even if it is a mix) make it a more challenging dog to own, than say a lab, or a goldie.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29193</integer>
+		<key>PostID</key>
+		<integer>29196</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>41</integer>
+		<key>Subject</key>
+		<string>i'm not saying</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299017936000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I disagree about the training.&amp;nbsp; They were bred to be around people and handled by various owners/handlers all the time.&amp;nbsp; Regarding stats and the media, the two of the first cases of media overhype regarding pits were actually not pits at all.&amp;nbsp; In the first case, the dogs were mixed and provoked.&amp;nbsp; In the second case, the victim first called in an mentione the right breed in the report but was ignored by the media.&amp;nbsp; As a test, he called back a week later and mentioned that they were pit bulls and had four newspapers at his house that same afternoon.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	Hell, the German Shephard we used to own as a kid was probably more of a PITA than this dog will be, and they&amp;#39;re supposed to be super people friendly and trainable.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29196</integer>
+		<key>PostID</key>
+		<integer>29199</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>42</integer>
+		<key>Subject</key>
+		<string>i'm not saying</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299018835000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	aren&amp;#39;t people friendly at all.&lt;/p&gt;
+&lt;p&gt;
+	They&amp;#39;re working dogs, with high intelligence, and high energy and need a lot of exercise and training.&lt;/p&gt;
+&lt;p&gt;
+	They can be trained to be good with people, but they&amp;#39;re very territorial and very protective of their family.&lt;/p&gt;
+&lt;p&gt;
+	You&amp;#39;re definitely going into this with the wrong attitude if you think that your pitbull mix isn&amp;#39;t going to require a lot of training, and a lot of exercise. They might be okay with people, but thats not all your dog is going to encounter in its life. Children, cats, other dogs, cars, bikes, skateboards, rollerblades, is the pitbull bred to be around all those things?&lt;/p&gt;
+&lt;p&gt;
+	Proper obedience training, proper exercise, proper socialization, is so much more important with a pitbull.&lt;/p&gt;
+&lt;p&gt;
+	Yes German shepards need the same type of training. So do rottweilers. And likewise, those dogs are not for inexerienced dog owners.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29199</integer>
+		<key>PostID</key>
+		<integer>29202</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>43</integer>
+		<key>Subject</key>
+		<string>uh german shepards</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299017548000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	it&amp;#39;s a friend&amp;#39;s friend kind of thing.&amp;nbsp; The owner can&amp;#39;t keep it so my co-worker&amp;#39;s parents are keeping it to prevent it from being put to sleep.&amp;nbsp; they were looking to find someone they knew take over the dog because they dont&amp;#39; want it going to the wrong person.&amp;nbsp; Like Cohen said, these dogs were the All-american dogs around WWI and WWII-eras.&amp;nbsp; It was in the 60&amp;#39;s and 70&amp;#39;s when dogfighting became illegal that the media started focusing on the dog instead of the dogfighters when they began covering dogfighint ring busts.&amp;nbsp; From then on, anything that looks like a pit is considered a pit even if it&amp;#39;s mostly rot or doberman or whatever.&amp;nbsp; True pits and especially true american bulldogs are not vicious dogs, just assertive.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29192</integer>
+		<key>PostID</key>
+		<integer>29197</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>44</integer>
+		<key>Subject</key>
+		<string>not from a rescue</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299018242000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	its about knowing how to deal with their aggression and high prey drive.&lt;/p&gt;
+&lt;p&gt;
+	Unless your dog was actually alive during WWII, I dont&amp;#39; really consider that fact(opinion) to be relevant in this discussion.&lt;/p&gt;
+&lt;p&gt;
+	Sounds like your mind is made up. It&amp;#39;s great that you&amp;#39;re going to get the dog; just be aware that unlike what cohen says, you will need to do more work with this type of dog than you would with say a lab or a pug.&lt;/p&gt;
+&lt;p&gt;
+	It has high energy, and needs daily obedience training, and daily exercise, and it&amp;#39;s a 10-15 year committment. If you can&amp;#39;t do that, then please don&amp;#39;t adopt the dog.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29197</integer>
+		<key>PostID</key>
+		<integer>29200</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>45</integer>
+		<key>Subject</key>
+		<string>its not about the visciousness</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299018672000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	am i a bit worried?&amp;nbsp; yes.&amp;nbsp; do i think we can give the dog the attention it needs?&amp;nbsp; yes+.&amp;nbsp; My big problem will be with other people thinking we have cujo when we really just have rin tin tin.&amp;nbsp; luckily, wife has always had pets and is actually responsible.&amp;nbsp; Also, we live across the street from a park and get sunshine 90% of year, so exercise is no problem.&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29200</integer>
+		<key>PostID</key>
+		<integer>29201</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>46</integer>
+		<key>Subject</key>
+		<string>fair enough</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299086508000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I think you&amp;#39;ll be fine. &amp;nbsp;Don&amp;#39;t believe the BS &amp;quot;let&amp;#39;s villify the pitbull&amp;quot; hype.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29201</integer>
+		<key>PostID</key>
+		<integer>29267</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>47</integer>
+		<key>Subject</key>
+		<string>fair enough</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299089632000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	believe all dogs act 100% the same, so training is 100% communative.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>10</integer>
+		<key>ParentID</key>
+		<integer>29267</integer>
+		<key>PostID</key>
+		<integer>29280</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>48</integer>
+		<key>Subject</key>
+		<string>yeah instead</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299086692000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Is a pitbull more work than a pug? &amp;nbsp;Most definitely. &amp;nbsp;Pugs are worthless couch potatoes that require minimal exercise. &amp;nbsp;Labs? &amp;nbsp;Labs need a lot of exercise as well and I don&amp;#39;t think pitbulls are inherently more aggresive than labs. &amp;nbsp;I don&amp;#39;t think citing retarded bite stats is sufficient evidence to prove otherwise. &amp;nbsp;Labs kill kids/people, too so let&amp;#39;s villlify them.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29200</integer>
+		<key>PostID</key>
+		<integer>29268</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>49</integer>
+		<key>Subject</key>
+		<string>its not about the visciousness</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299089553000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Pitbulls were bred to be more agressive. Labs were bred to retrieve. Agression has been bred out of their blood line. It&amp;#39;s not exactly rocket science.&lt;/p&gt;
+&lt;p&gt;
+	Or are you now going to tell me your dags have the same sense of smell as my dag?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29268</integer>
+		<key>PostID</key>
+		<integer>29278</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>50</integer>
+		<key>Subject</key>
+		<string>its not about the visciousness</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299091437000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	anyone ever bet on a lab in a dog fight?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>10</integer>
+		<key>ParentID</key>
+		<integer>29278</integer>
+		<key>PostID</key>
+		<integer>29285</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>51</integer>
+		<key>Subject</key>
+		<string>when was the last time</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299092604000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	for bull baiting, not fighting.&lt;/p&gt;
+&lt;p&gt;
+	that&amp;#39;s not to say they aren&amp;#39;t agressive, just that they&amp;#39;re not bred for dog fighting&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>10</integer>
+		<key>ParentID</key>
+		<integer>29278</integer>
+		<key>PostID</key>
+		<integer>29287</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>52</integer>
+		<key>Subject</key>
+		<string>pits were bred</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299093910000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	and they certainly weren&amp;#39;t bred to be agreesive toward people/kids. &amp;nbsp;In fact, pits are so good around children that they are know (used to be widely know) as &amp;quot;America&amp;#39;s Nanny Dog.&amp;quot;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>11</integer>
+		<key>ParentID</key>
+		<integer>29287</integer>
+		<key>PostID</key>
+		<integer>29291</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>53</integer>
+		<key>Subject</key>
+		<string>what he said</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299094360000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	My dag&amp;#39;s prey instincts will cause her to run out the door every time I open it and hunt out small nursing infants and snatch them from their mother&amp;#39;s bosom to meet an untimely death unless I level up my dag owner skills first. &amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	The reality is, the dog is well behaved.&amp;nbsp; The people who held her for two months while looking for a good home did a decent job of early training.&amp;nbsp; She sits, stays, comes when asked, and does not take off running when doors are opened.&amp;nbsp; She doesn&amp;#39;t jump on people and does not bite.&amp;nbsp; Twice she&amp;#39;s licked my hand because she wanted a treat that I was holding, but stopped when asked.&amp;nbsp; There&amp;#39;s still a lot of work to do, but it&amp;#39;ll be no harder and no easier than any other dog her size and weight.&amp;nbsp; If anything, I think it&amp;#39;ll be easier than anything smaller minus a Corgi, and easier to manage than most large dogs.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>12</integer>
+		<key>ParentID</key>
+		<integer>29291</integer>
+		<key>PostID</key>
+		<integer>29293</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>54</integer>
+		<key>Subject</key>
+		<string>don't you understand?!</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299095896000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	how many owners of dogs that bite people say &amp;quot;my dog is/was so well behaved?&amp;quot;&lt;/p&gt;
+&lt;p&gt;
+	Just because your dog behaves for you, doesn&amp;#39;t mean you shouldn&amp;#39;t be lax with your training and socialization.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>13</integer>
+		<key>ParentID</key>
+		<integer>29293</integer>
+		<key>PostID</key>
+		<integer>29303</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>55</integer>
+		<key>Subject</key>
+		<string>and</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299096109000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	about not being lax.&amp;nbsp; but i would have put as much effort into training any other dog (most likely since the other breeds i would consider are Germ. shephard and husky or similar types of dog).&amp;nbsp; My wife really wants a corgi as well, but even those little guys are know to herd children if given the opportunity.&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>14</integer>
+		<key>ParentID</key>
+		<integer>29303</integer>
+		<key>PostID</key>
+		<integer>29309</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>56</integer>
+		<key>Subject</key>
+		<string>i agree</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299096031000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	and after bull baiting was outlawed, they were bred to fight in pits (hence the name &amp;quot;pit&amp;quot;).&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>11</integer>
+		<key>ParentID</key>
+		<integer>29287</integer>
+		<key>PostID</key>
+		<integer>29307</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>57</integer>
+		<key>Subject</key>
+		<string>pits were bred</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299096417000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	and it has a cited source, &amp;quot;pit&amp;quot; was added due to the popularity of putting them in pits for &amp;quot;ratting&amp;quot;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>12</integer>
+		<key>ParentID</key>
+		<integer>29307</integer>
+		<key>PostID</key>
+		<integer>29314</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>58</integer>
+		<key>Subject</key>
+		<string>according to wikipedia</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299096546000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	maybe &amp;quot;some&amp;quot; breeders tried to breed them to fight but certainly not all of them and certainly not all of the pits that were imported to the US were bred to fight. &amp;nbsp;How many of pitbulls today were offspring of dogs that were bred to fight? &amp;nbsp;I don&amp;#39;t know. &amp;nbsp;How optimally did the breeders work? &amp;nbsp;I don&amp;#39;t know. &amp;nbsp;I think beating the dogs into being mean was probably enough to get them to fight well - not much breeding necessary probably.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>12</integer>
+		<key>ParentID</key>
+		<integer>29307</integer>
+		<key>PostID</key>
+		<integer>29315</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>59</integer>
+		<key>Subject</key>
+		<string>hmm</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299097708000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	so, pits were bred to fight, especially those imported to the US, but, there was a huge differences between fights back then and now.&amp;nbsp; After bullbaiting and other bloodsports were banned, people resorted to fighting pits (or, at the time, Bulls &amp;amp; Terriers since they weren&amp;#39;t quite pits yet) for entertainment.&amp;nbsp; However, a bull dog fight was a long bout more like a boxing match than mortal kombat.&amp;nbsp; The matches usually lasted over 1 hr and there were many rules that had to be followed.&amp;nbsp; As part of the ritual, the dogs were handled by many people including the ref, the opponent&amp;#39;s handler, and their own handler before, during, and after the matches.&amp;nbsp; This is one of the main reasons why pits and other bull dogs are people-friendly.&amp;nbsp; Dogs that did not get along with handlers/refs/other dog owners were usually euthanized since they couldn&amp;#39;t compete.&amp;nbsp; Also, the breed is one of few breeds that can differentiate between a friend and a threat instantly and at the same time.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	in the modern dog fight, so-called pit bulls are usually just mutts bred from the meanest of street dogs available, are heavily chained, and are rarely handled by anyone.&amp;nbsp; Dogs that come from this environment are not real pit bulls whether or not they&amp;#39;ll look like it.&amp;nbsp; Also, it&amp;#39;s not likely that dogs that got bred for this purpose managed to not only survive logn enough to breed but also have its genese get mixed back into the purbred bloodline.&amp;nbsp; While my dog isn&amp;#39;t purebred, both of its parents are (as attested to by the family that i got it from).&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>13</integer>
+		<key>ParentID</key>
+		<integer>29315</integer>
+		<key>PostID</key>
+		<integer>29323</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>60</integer>
+		<key>Subject</key>
+		<string>hmm</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299098526000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	or did you mean it&amp;#39;s not registered, but both parents are?&lt;/p&gt;
+&lt;p&gt;
+	that&amp;#39;s the scoop with my dog&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>14</integer>
+		<key>ParentID</key>
+		<integer>29323</integer>
+		<key>PostID</key>
+		<integer>29325</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>61</integer>
+		<key>Subject</key>
+		<string>your last statement makes no sense</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299098702000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	with exactly the same behavior - no difference&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>15</integer>
+		<key>ParentID</key>
+		<integer>29325</integer>
+		<key>PostID</key>
+		<integer>29326</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>62</integer>
+		<key>Subject</key>
+		<string>purebreds of different breeds</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299099566000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	this thread is too long. hard to remember the deets&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>16</integer>
+		<key>ParentID</key>
+		<integer>29326</integer>
+		<key>PostID</key>
+		<integer>29327</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>63</integer>
+		<key>Subject</key>
+		<string>derr</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299100364000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>15</integer>
+		<key>ParentID</key>
+		<integer>29325</integer>
+		<key>PostID</key>
+		<integer>29328</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>64</integer>
+		<key>Subject</key>
+		<string>yes (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299031147000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	was a pit (actually a staffordshire i think, but same effing thing), and was the most popular dog at that time&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29197</integer>
+		<key>PostID</key>
+		<integer>29233</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>65</integer>
+		<key>Subject</key>
+		<string>Our Gang's Petie</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299075379000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Thomas Edison, Mark Twain, Hellen Keller, Michael J. Fox.&amp;nbsp; Personally, I think the breed is fine.&amp;nbsp; Strong, yes.&amp;nbsp; Stubborn, a little.&amp;nbsp; Intelligent, very.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	Did not eat or attempt to eat Hoff&amp;#39;s cats or child, so, so far so good.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29233</integer>
+		<key>PostID</key>
+		<integer>29253</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>66</integer>
+		<key>Subject</key>
+		<string>Other famous pit owners</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299089592000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29253</integer>
+		<key>PostID</key>
+		<integer>29279</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>67</integer>
+		<key>Subject</key>
+		<string>you forgot Michael Vick (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299020580000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29192</integer>
+		<key>PostID</key>
+		<integer>29210</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>68</integer>
+		<key>Subject</key>
+		<string>morans spell moron wrong :) (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299020660000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;img src="http://1.bp.blogspot.com/_fnsOmb0Fvog/S1-X1iyFOAI/AAAAAAAAB8Y/AT3gPngs3E8/s400/moran.jpg"&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29210</integer>
+		<key>PostID</key>
+		<integer>29212</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>69</integer>
+		<key>Subject</key>
+		<string>or you fail at the internets</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299020731000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29212</integer>
+		<key>PostID</key>
+		<integer>29215</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>70</integer>
+		<key>Subject</key>
+		<string>http://en.wikipedia.org/wiki/Touch% (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299020502000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	but we had one at teh OSU house. We raised it from 8 weeks on...constantly around people, handled by everyone. Once it grew to about 8 months it had to be put down because it attacked 5-6 people. Some might think that it was the environment, but we had labs raised in the house, and they grew up to be harmless people lovers.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	I was in the thinking that they got a bad rap...until I saw one grow from just off weaning to semi-adult and have a humane society rule the dog dangerous at 8 months and recommend it be put down.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29190</integer>
+		<key>PostID</key>
+		<integer>29209</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>71</integer>
+		<key>Subject</key>
+		<string>i thought that</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299020274000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	three bulldogs&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	they are dumb as bricks&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	I understand how Tom could fool the bullog on Tom and Jerry so easily. A mouse is smarter than a cat...and a cat is smarter than a bulldog&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29169</integer>
+		<key>PostID</key>
+		<integer>29208</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>72</integer>
+		<key>Subject</key>
+		<string>my neighbor has</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299020702000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	a 4 inch clit.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29208</integer>
+		<key>PostID</key>
+		<integer>29214</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>73</integer>
+		<key>Subject</key>
+		<string>my neighbor has</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299019488000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	the vet will try to sell you on frontline, but that shit doesn&amp;#39;t work. My friends dog used frontline and was removing ticks montly. K9 advantix is called &amp;quot;dangerous&amp;quot; so vets don&amp;#39;t like it. Fuck the vets. Follow the directions and put it in a place the dog can&amp;#39;t lick, and you will be problem free. The rare case of your dog eating it is less likely than the plausible case of your dog getting lyme disease becasue frontline takes forever to kill shit.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29155</integer>
+		<key>PostID</key>
+		<integer>29204</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>74</integer>
+		<key>Subject</key>
+		<string>use k9 advantix</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299020251000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	i&amp;#39;ll look into that when I go get it shots.&amp;nbsp; Thanks.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29204</integer>
+		<key>PostID</key>
+		<integer>29207</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>75</integer>
+		<key>Subject</key>
+		<string>use k9 advantix</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299020615000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	single pill. demshits is gangster. No fleas. Also controls various worm parasites.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29207</integer>
+		<key>PostID</key>
+		<integer>29211</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>76</integer>
+		<key>Subject</key>
+		<string>we use Sentinel</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1403</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>AlabamaSucks.com</string>
+		<key>Date</key>
+		<string>/Date(1299044623000-0700)/</string>
+		<key>Description</key>
+		<string>On revolution?</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29204</integer>
+		<key>PostID</key>
+		<integer>29243</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>77</integer>
+		<key>Subject</key>
+		<string>what is your professional opinion</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>137</integer>
+		<key>AuthorName</key>
+		<string>Jim</string>
+		<key>AuthorNickname</key>
+		<string>Vigio Morgenstern</string>
+		<key>Date</key>
+		<string>/Date(1299058641000-0700)/</string>
+		<key>Description</key>
+		<string>The jury is still out on Libyans.</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29243</integer>
+		<key>PostID</key>
+		<integer>29246</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>78</integer>
+		<key>Subject</key>
+		<string>Worked well for the Egyptians</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299064723000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	as long as you like turning in circles...it can make some dizzy&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29243</integer>
+		<key>PostID</key>
+		<integer>29247</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>79</integer>
+		<key>Subject</key>
+		<string>it is great</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299074794000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	anyone have it?&amp;nbsp; Is it worth it?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29155</integer>
+		<key>PostID</key>
+		<integer>29250</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>80</integer>
+		<key>Subject</key>
+		<string>Pet insurance</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299075342000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	spend roughly $200-300/year on medical shit for my dog (shot, checkup and flea/tick/heartworm shit), and $40/month on food. had a bad year last year when he went catatonic on me and it cost me like $500 with the vet i think&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29250</integer>
+		<key>PostID</key>
+		<integer>29252</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>81</integer>
+		<key>Subject</key>
+		<string>don't have it</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299075526000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	Just found out a co-worker&amp;#39;s wife is in vet school.&amp;nbsp; I&amp;#39;ll try to find out her semi-professional opinion on the matter.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29252</integer>
+		<key>PostID</key>
+		<integer>29254</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>82</integer>
+		<key>Subject</key>
+		<string>that's not bad</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299088576000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	his vet bills, jesusfuck!&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29254</integer>
+		<key>PostID</key>
+		<integer>29273</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>83</integer>
+		<key>Subject</key>
+		<string>don't ask cohen about</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299095770000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29273</integer>
+		<key>PostID</key>
+		<integer>29302</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>84</integer>
+		<key>Subject</key>
+		<string>I'm trying to block that out (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299075638000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	probably went catatonic because you feed him shit food&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29252</integer>
+		<key>PostID</key>
+		<integer>29255</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>85</integer>
+		<key>Subject</key>
+		<string>don't have it</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1299082687000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I would say you are at risk as well then.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29255</integer>
+		<key>PostID</key>
+		<integer>29259</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>86</integer>
+		<key>Subject</key>
+		<string>hmmmmm</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299084533000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I don&amp;#39;t claim to be an expert but no vet/animal nutritionalist is going to recommend packaged dag food over what I feed my dags. &amp;nbsp;Natural, real food &amp;gt; super-feather-stuffed, unnatural&amp;nbsp;packaged crap. &amp;nbsp;Doesn&amp;#39;t take much, just talk to your vet or pick up just about any dog nutrition book. &amp;nbsp;It costs way more but it&amp;#39;s worth it - better/perfect teeth and breath, better metabolics and general heath, increased longevity. &amp;nbsp;I guess cost is more important than dag health to many people. &amp;nbsp;Maybe it&amp;#39;s just ignorance (not bad ignorance, some people probably just don&amp;#39;t know how important canine diet is - my dags eat better [certainly healthier] than I do).&lt;/p&gt;
+&lt;p&gt;
+	My big dag was on some Costco crap (blue bag, sweet potato and salmon) that supposedly is among the &amp;quot;best&amp;quot; (read most expensive) dag food out there. &amp;nbsp;Dag had plaque on his teeth and he was &amp;lt; 1 year old when I got him. &amp;nbsp;Vet would have though he was older b/c he had so much plaque. &amp;nbsp;Put him on the natural shist for a couple months and most of the plaque is gone. &amp;nbsp;Carrots knock dem shist off and the real food doesn&amp;#39;t build more plaque.&lt;/p&gt;
+&lt;p&gt;
+	I guess people don&amp;#39;t love their dags. &amp;nbsp;(&amp;quot;oh it&amp;#39;s just a dag&amp;quot; people).dieplz()&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29259</integer>
+		<key>PostID</key>
+		<integer>29262</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>87</integer>
+		<key>Subject</key>
+		<string>says the expert on dag nutrition</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1299085973000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	anecdotal evidence&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29262</integer>
+		<key>PostID</key>
+		<integer>29265</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>88</integer>
+		<key>Subject</key>
+		<string>sweet</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299088684000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29265</integer>
+		<key>PostID</key>
+		<integer>29275</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>89</integer>
+		<key>Subject</key>
+		<string>that's the best kind! (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299095694000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	agree that my personal examples weren&amp;#39;t evidence&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29265</integer>
+		<key>PostID</key>
+		<integer>29299</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>90</integer>
+		<key>Subject</key>
+		<string>based on scientific evidence</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1299095937000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29299</integer>
+		<key>PostID</key>
+		<integer>29304</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>91</integer>
+		<key>Subject</key>
+		<string>proves your point (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299096198000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	EXACTLY!!! &amp;nbsp;MAN!!!&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>10</integer>
+		<key>ParentID</key>
+		<integer>29304</integer>
+		<key>PostID</key>
+		<integer>29311</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>92</integer>
+		<key>Subject</key>
+		<string>what was my point?</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299087011000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	what do you feed your dogs?&amp;nbsp; I&amp;#39;m not a fan of dog food smell, so i&amp;#39;d much rather feed my dag something fresher.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29262</integer>
+		<key>PostID</key>
+		<integer>29269</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>93</integer>
+		<key>Subject</key>
+		<string>bi-curious</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1416</integer>
+		<key>AuthorName</key>
+		<string>Lex</string>
+		<key>AuthorNickname</key>
+		<string>Lex</string>
+		<key>Date</key>
+		<string>/Date(1299087379000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29269</integer>
+		<key>PostID</key>
+		<integer>29270</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>94</integer>
+		<key>Subject</key>
+		<string>chipotle (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299093677000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I can now get 6 tacos and share one of them with the dog.&amp;nbsp; I wonder if it&amp;#39;ll like carnitas or barbacoa more?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29270</integer>
+		<key>PostID</key>
+		<integer>29289</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>95</integer>
+		<key>Subject</key>
+		<string>sounds great</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1299101676000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	would be my bet&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>10</integer>
+		<key>ParentID</key>
+		<integer>29289</integer>
+		<key>PostID</key>
+		<integer>29332</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>96</integer>
+		<key>Subject</key>
+		<string>lengua</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299095608000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	but not too much as to make my dags sick.&lt;/p&gt;
+&lt;p&gt;
+	typically:&lt;/p&gt;
+&lt;p&gt;
+	meat: beef, lamb, or chicken (limited chicken but sometimes)&lt;/p&gt;
+&lt;p&gt;
+	vegetables: broccoli and carrots usually, sometimes peas&lt;/p&gt;
+&lt;p&gt;
+	carbs: oatmeal, millet, barley, wild rice&lt;/p&gt;
+&lt;p&gt;
+	usually give them sweet potatoes too.&lt;/p&gt;
+&lt;p&gt;
+	ballpark %s:&lt;/p&gt;
+&lt;p&gt;
+	~40-50% sweetpotatoes/pumpkin and carbs listed above, 10-15% veggies, rest meat.&lt;/p&gt;
+&lt;p&gt;
+	Just mix it all up and give it to them. &amp;nbsp;Also given them omega 3 cap and a multivitamin.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>8</integer>
+		<key>ParentID</key>
+		<integer>29269</integer>
+		<key>PostID</key>
+		<integer>29295</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>97</integer>
+		<key>Subject</key>
+		<string>I mix it up</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1489</integer>
+		<key>AuthorName</key>
+		<string>Edg</string>
+		<key>AuthorNickname</key>
+		<string>prepare for you're doom!</string>
+		<key>Date</key>
+		<string>/Date(1299103560000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	do you cook the meat at all or all rare?&amp;nbsp; probably not needed for beef/lamb, but what about the chicken?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>9</integer>
+		<key>ParentID</key>
+		<integer>29295</integer>
+		<key>PostID</key>
+		<integer>29339</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>98</integer>
+		<key>Subject</key>
+		<string>I mix it up</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>118</integer>
+		<key>AuthorName</key>
+		<string>Nic</string>
+		<key>AuthorNickname</key>
+		<string></string>
+		<key>Date</key>
+		<string>/Date(1299104863000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	jury&amp;#39;s out on whether raw is better too. &amp;nbsp;I cook the chicken all the way at least partially because I don&amp;#39;t want my dog&amp;#39;s beard full of salmonella when he&amp;#39;s sniffing strangers asses (might give me&amp;nbsp;salmonella since I go right in there afterward sometimes - usually before though so I&amp;#39;m good. &amp;nbsp;I don&amp;#39;t cook the beef/lamb all the way usually fo mo betta flava. &amp;nbsp;medium/medium rare. &amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>10</integer>
+		<key>ParentID</key>
+		<integer>29339</integer>
+		<key>PostID</key>
+		<integer>29341</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>99</integer>
+		<key>Subject</key>
+		<string>I cook all of it</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299089873000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	what the fuck is an animal nutritionalist?&lt;/p&gt;
+&lt;p&gt;
+	Roxy needs special diet, so it&amp;#39;s natural dry food with acidopholus mixed in.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29262</integer>
+		<key>PostID</key>
+		<integer>29282</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>100</integer>
+		<key>Subject</key>
+		<string>seriously</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299089706000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	who wants to fucking touch me.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29259</integer>
+		<key>PostID</key>
+		<integer>29281</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>101</integer>
+		<key>Subject</key>
+		<string>LOL!</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1299088603000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	i&amp;#39;m a terrible person. thanks!&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29255</integer>
+		<key>PostID</key>
+		<integer>29274</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>102</integer>
+		<key>Subject</key>
+		<string>probably</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>161</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>lauria</string>
+		<key>Date</key>
+		<string>/Date(1299103101000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	only worth it if you start it as a puppy and lock in a low rate&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29250</integer>
+		<key>PostID</key>
+		<integer>29338</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>103</integer>
+		<key>Subject</key>
+		<string>have it</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1299094335000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	When you change &amp;quot;breed&amp;quot; to &amp;quot;race&amp;quot;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29155</integer>
+		<key>PostID</key>
+		<integer>29292</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>104</integer>
+		<key>Subject</key>
+		<string>This thread is a lot more fun</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1299095697000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	whats the difference?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29292</integer>
+		<key>PostID</key>
+		<integer>29300</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>105</integer>
+		<key>Subject</key>
+		<string>This thread is a lot more fun</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1299096063000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29300</integer>
+		<key>PostID</key>
+		<integer>29308</integer>
+		<key>Read</key>
+		<false/>
+		<key>Sequence</key>
+		<integer>106</integer>
+		<key>Subject</key>
+		<string>derr (nt)</string>
+		<key>ThreadID</key>
+		<integer>29155</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>158</integer>
+		<key>AuthorName</key>
+		<string>Dav</string>
+		<key>AuthorNickname</key>
+		<string>whitman</string>
+		<key>Date</key>
+		<string>/Date(1298932013000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	need help for two things:&lt;br /&gt;
+	&lt;br /&gt;
+	1) figure out whether to replace hard drive or just get new computer. Emily is&lt;br /&gt;
+	checking on cost of new hard drive from local computer store, and I need to compare&lt;br /&gt;
+	it to the cost of a new computer. I&amp;#39;m guessing replacement hard drive won&amp;#39;t be&lt;br /&gt;
+	that much, but if I end up looking at new computers I need to know what&amp;nbsp;hard&lt;br /&gt;
+	ware to get (I get an HP discount through work). Mostly use the computer for&lt;br /&gt;
+	tubes, word &amp;amp; excel, and listen to music. I do a little bit of photo editing&lt;br /&gt;
+	though and Gus&amp;#39; robot programming, which seem to take quite a bit of power. Any&lt;br /&gt;
+	suggestions?&lt;br /&gt;
+	&lt;br /&gt;
+	2) Fried hard drive had all of kids pictures on it. Of course I don&amp;#39;t have them&lt;br /&gt;
+	backed up anywhere (one of those things I always meant to do). Computer place&lt;br /&gt;
+	said they&amp;#39;d have to send it off to recover the data, and it would cost ~$1800.&lt;br /&gt;
+	Anybody know how to do this or where to get it done cheaper than that?&lt;br /&gt;
+	&lt;br /&gt;
+	&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29140</integer>
+		<key>PostID</key>
+		<integer>29140</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>home computer hard drive is fried</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1298933771000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	how did it fail? does it not do anything? does it make hellacious noises?&lt;/p&gt;
+&lt;p&gt;
+	Get a replacement drive from tigerdirect.com. You should be able to get one for $50 or so. how old is your computer? i&amp;#39;m guessing the drive is an IDE drive, and not real big, maybe 100GB tops?&lt;/p&gt;
+&lt;p&gt;
+	If you got a replacement drive or new computer ($500 range), you *might* be able to hook the old HD up and pull data from it, but that depends on the definition of fried&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29140</integer>
+		<key>PostID</key>
+		<integer>29141</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>question</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1298934391000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	1) For your case, a new hdd runs from $30-$300.&amp;nbsp; I spent $120 for a 2TB hdd last saturday. If the time you spend waiting for your comp to do anything meaningful is more than your patience, buy a new comp. Otherwise just buy a new drive.&lt;/p&gt;
+&lt;p&gt;
+	2) This is a little trickier. You can attempt to do what corbin said, and connect the hdd after the fact and see if you can pull off the data. There are also other tricks,&lt;/p&gt;
+&lt;p&gt;
+	-Sticking it in the freezer: http://geeksaresexy.blogspot.com/2006/01/freeze-your-hard-drive-to-recover-data.html&lt;/p&gt;
+&lt;p&gt;
+	-Paying for a hdd data recovery software: http://www.grc.com/spinrite.htm\&lt;/p&gt;
+&lt;p&gt;
+	-Paying for a data recovery service. There are a number of places that do this, with varying costs. Obviously you get what you pay for--if you have naked pictures of the wife, or whatever, they will probably find their way onto the internet if you go with a cheapo solution like BestBuy.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29140</integer>
+		<key>PostID</key>
+		<integer>29143</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>home computer hard drive is fried</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1416</integer>
+		<key>AuthorName</key>
+		<string>Lex</string>
+		<key>AuthorNickname</key>
+		<string>Lex</string>
+		<key>Date</key>
+		<string>/Date(1298937016000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	careful with the harddrive recovery software, it will fuck more up than help&lt;/p&gt;
+&lt;p&gt;
+	does the computer recognize the harddrive?&lt;/p&gt;
+&lt;p&gt;
+	if not replace the driver board on the harddrive. even if it recognizes the harddrive just go ahead and replace driver board. google model info of the HD, should be around $50&lt;/p&gt;
+&lt;p&gt;
+	you might even be able to see a fried surface mount component (that will confirm this failure mode)&lt;/p&gt;
+&lt;p&gt;
+	buy ide/sata to usb adapter from newegg ($20)&lt;/p&gt;
+&lt;p&gt;
+	but external HD ($100)&lt;/p&gt;
+&lt;p&gt;
+	plug into another computer or the orginal if you know how to boot from usb, find the files and copy to external HD&lt;/p&gt;
+&lt;p&gt;
+	this is much less than sending to recovery places. and just as reliable&lt;/p&gt;
+&lt;p&gt;
+	I will do this for $500 but the is no guarantee that I can recover anything.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	you can google this and figure it out within a couple hours&lt;/p&gt;
+&lt;p&gt;
+	good luck&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29143</integer>
+		<key>PostID</key>
+		<integer>29145</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>home computer hard drive is fried</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>148</integer>
+		<key>AuthorName</key>
+		<string>Ron</string>
+		<key>AuthorNickname</key>
+		<string>Ronald Stanis</string>
+		<key>Date</key>
+		<string>/Date(1298935035000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29140</integer>
+		<key>PostID</key>
+		<integer>29144</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>have crobin make you one, he's good (nt)</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1298943738000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	but my shit is running good after intel replaced the mobo&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29144</integer>
+		<key>PostID</key>
+		<integer>29149</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>not to jinx myself</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>155</integer>
+		<key>AuthorName</key>
+		<string>Cod</string>
+		<key>AuthorNickname</key>
+		<string>CRW</string>
+		<key>Date</key>
+		<string>/Date(1298937865000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	(Let the yea/nea comments flow.)&lt;/p&gt;
+&lt;p&gt;
+	I started using carbonite for backup. It&amp;#39;s an internet backup service that is currently ~$55/year. Basically, I set the directories I want backed up and let it go. It took about 4 days to upload everything the first time, but it actively monitors those directories and uploads anything new. Now I don&amp;#39;t have a paranoid wife that worried we&amp;#39;re going to lose pictures anymore.&lt;/p&gt;
+&lt;p&gt;
+	I had an external I was backing up to, but I never did backups often enough. This way it&amp;#39;s automagic and I don&amp;#39;t have to think about it. Plus if my house get destroyed, the files don&amp;#39;t.&lt;/p&gt;
+&lt;p&gt;
+	-Cody&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29140</integer>
+		<key>PostID</key>
+		<integer>29146</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>Too late to help now, but future</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1</integer>
+		<key>AuthorName</key>
+		<string>Mat</string>
+		<key>AuthorNickname</key>
+		<string>Matt Pavey</string>
+		<key>Date</key>
+		<string>/Date(1298939654000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	YEA to the offsite backups.&lt;/p&gt;
+&lt;p&gt;
+	Lots of good products out there. When carbonite first came out it was really slow (not the backup speeds, but the actual performance of the PC after loading it). That&amp;#39;s been several years. It may be much better by now. I use a couple other products for offsite backups. CrashPlan Pro and Jungle Disk. I&amp;#39;d say between Carbonite, CrashPlan or JungleDisk you&amp;#39;ll be pretty happy.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29146</integer>
+		<key>PostID</key>
+		<integer>29147</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>8</integer>
+		<key>Subject</key>
+		<string>Too late to help now, but future</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>158</integer>
+		<key>AuthorName</key>
+		<string>Dav</string>
+		<key>AuthorNickname</key>
+		<string>whitman</string>
+		<key>Date</key>
+		<string>/Date(1298939903000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I don&amp;#39;t get to the newsgroup much, but at least I know where to go to get good computer dork&amp;nbsp;advice.&amp;nbsp; (see how I wait till after I get advice before letting loose with the insults?&amp;nbsp; I&amp;#39;m smarter than I used to be.)&lt;/p&gt;
+&lt;p&gt;
+	Will probably replace current hard drive since I&amp;#39;m in the mood to minimize cash flow right now.&amp;nbsp; May need to get help with hard drive recovery since I don&amp;#39;t want to screw it up and I&amp;#39;m a computer idiot, but there&amp;#39;s no reason that can&amp;#39;t wait a little while, right?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29140</integer>
+		<key>PostID</key>
+		<integer>29148</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>9</integer>
+		<key>Subject</key>
+		<string>thanks</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>119</integer>
+		<key>AuthorName</key>
+		<string>Ste</string>
+		<key>AuthorNickname</key>
+		<string>corbin</string>
+		<key>Date</key>
+		<string>/Date(1298943839000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	and put it in the packaging that the new one comes in, i don&amp;#39;t see why you&amp;#39;d need to jump right on it.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29148</integer>
+		<key>PostID</key>
+		<integer>29150</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>10</integer>
+		<key>Subject</key>
+		<string>yeah, if you just pull that one</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1</integer>
+		<key>AuthorName</key>
+		<string>Mat</string>
+		<key>AuthorNickname</key>
+		<string>Matt Pavey</string>
+		<key>Date</key>
+		<string>/Date(1298944421000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	you can pretty cheaply get an external hard drive enclosure from best buy, something like one of these:&lt;/p&gt;
+&lt;p&gt;
+	&lt;a href="http://www.bestbuy.com/site/olspage.jsp?_dyncharset=ISO-8859-1&amp;amp;_dynSessConf=5070743952810111356&amp;amp;id=pcat17071&amp;amp;type=page&amp;amp;st=rocketfish+hard+drive&amp;amp;sc=Global&amp;amp;cp=1&amp;amp;nrp=15&amp;amp;sp=&amp;amp;qp=&amp;amp;list=n&amp;amp;iht=y&amp;amp;usc=All+Categories&amp;amp;ks=960" target="_blank"&gt;http://www.bestbuy.com/site/olspage.jsp?_dyncharset=ISO-8859-1&amp;amp;_dynSessConf=5070743952810111356&amp;amp;id=pcat17071&amp;amp;type=page&amp;amp;st=rocketfish+hard+drive&amp;amp;sc=Global&amp;amp;cp=1&amp;amp;nrp=15&amp;amp;sp=&amp;amp;qp=&amp;amp;list=n&amp;amp;iht=y&amp;amp;usc=All+Categories&amp;amp;ks=960&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+	I&amp;#39;m guessing you have a 3.5&amp;quot; IDE drive.&lt;/p&gt;
+&lt;p&gt;
+	It&amp;#39;s easy to install and as long as the drive isn&amp;#39;t completely hosed you should be able to get on there long enough to copy most of your stuff off to your new computer.&lt;/p&gt;
+&lt;p&gt;
+	60% of the time it works, every time. [cheesy grin]&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29140</integer>
+		<key>PostID</key>
+		<integer>29151</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>11</integer>
+		<key>Subject</key>
+		<string>home computer hard drive is fried</string>
+		<key>ThreadID</key>
+		<integer>29140</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1298931148000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	You were great in Inception&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29139</integer>
+		<key>PostID</key>
+		<integer>29139</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>Balls</string>
+		<key>ThreadID</key>
+		<integer>29139</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1298933923000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I get no recognition for my work in Avatar.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29139</integer>
+		<key>PostID</key>
+		<integer>29142</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>sadly</string>
+		<key>ThreadID</key>
+		<integer>29139</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>136</integer>
+		<key>AuthorName</key>
+		<string>Sco</string>
+		<key>AuthorNickname</key>
+		<string>{: (|)</string>
+		<key>Date</key>
+		<string>/Date(1298954143000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	that&amp;#39;s because you wern&amp;#39;t acting. &amp;nbsp;You were just going to work, looking at monitors, and coding a bunch of shit. &amp;nbsp;You are the charlie sheen version of avatar.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29142</integer>
+		<key>PostID</key>
+		<integer>29152</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>sadly</string>
+		<key>ThreadID</key>
+		<integer>29139</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1298957271000-0700)/</string>
+		<key>Description</key>
+		<string>I have no idea what that means...but I bet I can add up the change in your pockets.</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29152</integer>
+		<key>PostID</key>
+		<integer>29153</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>sadly</string>
+		<key>ThreadID</key>
+		<integer>29139</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>136</integer>
+		<key>AuthorName</key>
+		<string>Sco</string>
+		<key>AuthorNickname</key>
+		<string>{: (|)</string>
+		<key>Date</key>
+		<string>/Date(1298982517000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	I mean that the indian guy in avatar was a computer guy. &amp;nbsp;You are a computer guy, and playing a computer guy isn&amp;#39;t really acting.&lt;/p&gt;
+&lt;p&gt;
+	&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;
+	Charlie Sheen is living his life the same way he portrays it on two and a half men. &amp;nbsp;He isn&amp;#39;t acting either.&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>5</integer>
+		<key>ParentID</key>
+		<integer>29153</integer>
+		<key>PostID</key>
+		<integer>29154</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>5</integer>
+		<key>Subject</key>
+		<string>sadly</string>
+		<key>ThreadID</key>
+		<integer>29139</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1426</integer>
+		<key>AuthorName</key>
+		<string>Bri</string>
+		<key>AuthorNickname</key>
+		<string>Abrasive Poster</string>
+		<key>Date</key>
+		<string>/Date(1298992490000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	So he&amp;#39;s not funny at all in real life either?&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>6</integer>
+		<key>ParentID</key>
+		<integer>29154</integer>
+		<key>PostID</key>
+		<integer>29158</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>oh?</string>
+		<key>ThreadID</key>
+		<integer>29139</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>111</integer>
+		<key>AuthorName</key>
+		<string>Ala</string>
+		<key>AuthorNickname</key>
+		<string>Stinky Cooper</string>
+		<key>Date</key>
+		<string>/Date(1298993090000-0700)/</string>
+		<key>Description</key>
+		<string>Too soon man, too soon.</string>
+		<key>Level</key>
+		<integer>7</integer>
+		<key>ParentID</key>
+		<integer>29158</integer>
+		<key>PostID</key>
+		<integer>29159</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>oh?</string>
+		<key>ThreadID</key>
+		<integer>29139</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>148</integer>
+		<key>AuthorName</key>
+		<string>Ron</string>
+		<key>AuthorNickname</key>
+		<string>Ronald Stanis</string>
+		<key>Date</key>
+		<string>/Date(1298918380000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;div&gt;
+	Something to do with industrial boilers.&amp;nbsp; Just like to job Joji applied for I dont know the manager who is doing the hiring but I do know one guy in his group.&amp;nbsp; So I would have no pull in helping someone get the job but I could get more information.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	Ron&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	Desciption&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	Gas Technology Institute (GTI), the nation&amp;#39;s leading research and development and training organization serving energy markets, has an opportunity for a Mechanical Engineer in our Industrial group.&amp;nbsp; This position is responsible for performing energy research projects related to commercial and industrial boilers as well as steam/hot water systems.&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	&lt;div&gt;
+		B.S. in Mechanical Engineering with 2+ year&amp;#39;s relevant experience; M.S. preferred.&amp;nbsp; Demonstrated experience with technologies and products associated with steam and power generation and combined heat and power systems is required.&amp;nbsp; Candidate must have strong analytical skills as well as excellent oral and written communication skills.&amp;nbsp; We are looking for an innovative individual with an interest in research and development.&lt;/div&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+	&lt;div&gt;
+		Gas Technology Institute offers generous benefits, competitive salaries, and the opportunity to work in a professional R&amp;amp;D environment.&amp;nbsp; This position is located in the Chicago area and GTI will assist with relocation.&lt;/div&gt;
+	&lt;div&gt;
+		&amp;nbsp;&lt;/div&gt;
+	&lt;div&gt;
+		You must have legal authorization to work for GTI on your date of hire with no further action required by GTI.&amp;nbsp; We are an Equal Opportunity Employer M/F/D/V&lt;/div&gt;
+&lt;/div&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29137</integer>
+		<key>PostID</key>
+		<integer>29137</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>job posting</string>
+		<key>ThreadID</key>
+		<integer>29137</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1</integer>
+		<key>AuthorName</key>
+		<string>Mat</string>
+		<key>AuthorNickname</key>
+		<string>Matt Pavey</string>
+		<key>Date</key>
+		<string>/Date(1298910465000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	kubi, i updated the api to automatically set the subject to &amp;quot;No Subject&amp;quot; when no subject is passed in. i also updated the api to behave like the web app in that if you don&amp;#39;t specify a description it will add (nt) to the subject and if someone replies to a post with (nt) in the subject it will remove the (nt) accordingly (assuming there is an actual description).&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>1</integer>
+		<key>ParentID</key>
+		<integer>29130</integer>
+		<key>PostID</key>
+		<integer>29130</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>1</integer>
+		<key>Subject</key>
+		<string>api...</string>
+		<key>ThreadID</key>
+		<integer>29130</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1298917758000-0700)/</string>
+		<key>Description</key>
+		<string>Or not</string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29130</integer>
+		<key>PostID</key>
+		<integer>29131</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>2</integer>
+		<key>Subject</key>
+		<string>does that work</string>
+		<key>ThreadID</key>
+		<integer>29130</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1298917791000-0700)/</string>
+		<key>Description</key>
+		<string>There is text here</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29131</integer>
+		<key>PostID</key>
+		<integer>29132</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>3</integer>
+		<key>Subject</key>
+		<string>or</string>
+		<key>ThreadID</key>
+		<integer>29130</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>126</integer>
+		<key>AuthorName</key>
+		<string>Jef</string>
+		<key>AuthorNickname</key>
+		<string>zero cum game, thats no fun</string>
+		<key>Date</key>
+		<string>/Date(1298917851000-0700)/</string>
+		<key>Description</key>
+		<string>Huh?</string>
+		<key>Level</key>
+		<integer>4</integer>
+		<key>ParentID</key>
+		<integer>29132</integer>
+		<key>PostID</key>
+		<integer>29133</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>4</integer>
+		<key>Subject</key>
+		<string>what about  this</string>
+		<key>ThreadID</key>
+		<integer>29130</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1</integer>
+		<key>AuthorName</key>
+		<string>Mat</string>
+		<key>AuthorNickname</key>
+		<string>Matt Pavey</string>
+		<key>Date</key>
+		<string>/Date(1298917860000-0700)/</string>
+		<key>Description</key>
+		<string></string>
+		<key>Level</key>
+		<integer>2</integer>
+		<key>ParentID</key>
+		<integer>29130</integer>
+		<key>PostID</key>
+		<integer>29134</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>6</integer>
+		<key>Subject</key>
+		<string>yes (nt)</string>
+		<key>ThreadID</key>
+		<integer>29130</integer>
+	</dict>
+	<dict>
+		<key>AuthorID</key>
+		<integer>1</integer>
+		<key>AuthorName</key>
+		<string>Mat</string>
+		<key>AuthorNickname</key>
+		<string>Matt Pavey</string>
+		<key>Date</key>
+		<string>/Date(1298917870000-0700)/</string>
+		<key>Description</key>
+		<string>&lt;p&gt;
+	man!&lt;/p&gt;</string>
+		<key>Level</key>
+		<integer>3</integer>
+		<key>ParentID</key>
+		<integer>29134</integer>
+		<key>PostID</key>
+		<integer>29135</integer>
+		<key>Read</key>
+		<true/>
+		<key>Sequence</key>
+		<integer>7</integer>
+		<key>Subject</key>
+		<string>no</string>
+		<key>ThreadID</key>
+		<integer>29130</integer>
+	</dict>
+</array>
+</plist>

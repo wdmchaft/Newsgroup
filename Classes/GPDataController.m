@@ -9,6 +9,7 @@
 #import "GPDataController.h"
 #import "JSON.h"
 #import "NSString+Digest.h"
+#import "GPPostLoadOperation.h"
 
 NSString *const GPDataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const GPDataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
@@ -209,7 +210,16 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 }
 
 - (void)loadNewPosts:(NSArray *)posts intoContext:(NSManagedObjectContext *)context {
-    assert(@"This method needs to do something");
+    GPPostLoadOperation *postLoad = [[GPPostLoadOperation alloc] init];
+    if ( [postLoad addPostsFromArray:posts toContext:context] ) {
+        // send notification that we're finished
+        [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidEnd object:self];
+        
+        // let delegate know
+        [self.delegate fetchSucceded:self];
+    } else {
+        NSAssert(YES, @"Construct some sort of error here");
+    }
 }
 
 - (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error {
@@ -295,6 +305,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     // Get the response string out of the request
     NSString *response = [request responseString];
     NSArray *posts = [response JSONValue];
+    
     [self loadNewPosts:posts intoContext:self.context];
 }
 
