@@ -57,6 +57,7 @@
     GPDataController *dc = [[GPDataController alloc] init];
     dc.login = username;
     dc.password = password;
+    dc.delegate = self;
     
     NSError *error = nil;
     if (![dc fetchAllPostsWithError:&error]) {

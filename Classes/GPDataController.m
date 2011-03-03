@@ -176,17 +176,28 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 - (void)error:(NSError **)error withErrorCode:(GPDataControllerErrorCode)code {
     if (error != NULL) {
         
-        // TODO: Flesh out these error objects
-        NSDictionary *userInfo = nil;
+        NSDictionary *userInfo;
+        NSString *description;
+        NSString *failureReason;
+        
         switch (code) {
+                
             case GPDataControllerErrorNoDelegate:
-                // setup the userInfo dict
+                description = NSLocalizedString(@"No Delegate", nil);
+                failureReason = NSLocalizedString(@"GPDataController must have a delegate set", nil);
+                userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
                 break;
+                
             case GPDataControllerErrorNoLogin:
-                // userInfo
+                description = NSLocalizedString(@"No Username", nil);
+                failureReason = NSLocalizedString(@"GPDataController must have a username set before attempting a fetch", nil);
+                userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
                 break;
+                
             case GPDataControllerErrorNoPassword:
-                // userInfo
+                description = NSLocalizedString(@"No Password", nil);
+                failureReason = NSLocalizedString(@"GPDataController must have a password set before attempting a fetch", nil);
+                userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
                 break;
         }
         
