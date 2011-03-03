@@ -170,7 +170,10 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
         return NO;
     }
     
-    return [self startFetchWithHTTPRequest:[GPDataController postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0] andError:error];
+    ASIHTTPRequest *request = [GPDataController postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
+    [request setDelegate:self];
+    
+    return [self startFetchWithHTTPRequest:request andError:error];
 }
 
 - (void)error:(NSError **)error withErrorCode:(GPDataControllerErrorCode)code {
@@ -285,7 +288,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 #pragma mark ASIHTTPRequestDelegate
 
 - (void)requestStarted:(ASIHTTPRequest *)request {
-    //NSLog(@"%c", (int)_cmd);
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
@@ -296,7 +299,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
-    //NSLog(@"%c", _cmd);
+    NSLog(@"%@", NSStringFromSelector(_cmd));
 }
 
 @end

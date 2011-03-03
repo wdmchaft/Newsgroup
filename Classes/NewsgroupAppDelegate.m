@@ -10,6 +10,7 @@
 #import "MainThreadView.h"
 #import "ToolbarProgressView.h"
 #import "JKConstants.h"
+#import "DDAlertPrompt.h"
 
 #define PROGRESS_VIEW_FRAME CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)
 
@@ -50,10 +51,16 @@
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
     
-    // Setup the data controller
+    // Get the username and passwords
     NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsUsernameKey];
     NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsPasswordKey];
 
+    // If they don't exist, pop up an alert
+    if (!username || !password) {
+        // TODO: POP UP AN ALERT, YO
+    }
+    
+    // Setup the data controller
     GPDataController *dc = [[GPDataController alloc] init];
     dc.login = username;
     dc.password = password;
