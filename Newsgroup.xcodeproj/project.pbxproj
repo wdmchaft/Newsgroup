@@ -203,6 +203,7 @@
 		4DF2D2BC130846DF00C8AB3A /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCMockObject.h; path = Frameworks/OCMock/Headers/OCMock/OCMockObject.h; sourceTree = "<group>"; };
 		4DF2D2BD130846DF00C8AB3A /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCMockRecorder.h; path = Frameworks/OCMock/Headers/OCMock/OCMockRecorder.h; sourceTree = "<group>"; };
 		4DF61C46131DB00600B378E4 /* TestUser.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TestUser.plist; path = "Test Classes/TestUser.plist"; sourceTree = "<group>"; };
+		4DF61C48131F228D00B378E4 /* JKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKConstants.h; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsgroup-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsgroup-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,6 +246,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4DF61C48131F228D00B378E4 /* JKConstants.h */,
 				1D3623240D0F684500981E51 /* NewsgroupAppDelegate.h */,
 				1D3623250D0F684500981E51 /* NewsgroupAppDelegate.m */,
 				4D9D4F12130EA05E00A34E8F /* View Controller Classes */,

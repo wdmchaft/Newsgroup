@@ -75,6 +75,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     [urlPath appendFormat:@"&ThreadID=%i", threadID];
     [urlPath appendFormat:@"&PostID=%i", postID];
     [urlPath appendFormat:@"&ThreadLimit=%i", threadLimit];
+    [urlPath appendFormat:@"&%@", REPLY_FORMAT];
 
     NSURL *url = [NSURL URLWithString:[urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     return [ASIHTTPRequest requestWithURL:url];
@@ -158,13 +159,24 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 }
 
 - (BOOL)fetchAllPostsWithError:(NSError **)error {
-
-    return [self startFetchWithHTTPRequest:nil andError:error];
+    
+    // Check for a login and password
+    if (!self.login) {
+        [self error:error withErrorCode:GPDataControllerErrorNoLogin];
+        return NO;
+    }
+    if (!self.password) {
+        [self error:error withErrorCode:GPDataControllerErrorNoPassword];
+        return NO;
+    }
+    
+    return [self startFetchWithHTTPRequest:[GPDataController postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0] andError:error];
 }
 
 - (void)error:(NSError **)error withErrorCode:(GPDataControllerErrorCode)code {
     if (error != NULL) {
         
+        // TODO: Flesh out these error objects
         NSDictionary *userInfo = nil;
         switch (code) {
             case GPDataControllerErrorNoDelegate:
@@ -193,15 +205,6 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
         [self error:error withErrorCode:GPDataControllerErrorNoDelegate];
         return NO;
     }    
-    // Check for a login and password
-    if (!self.login) {
-        [self error:error withErrorCode:GPDataControllerErrorNoLogin];
-        return NO;
-    }
-    if (!self.password) {
-        [self error:error withErrorCode:GPDataControllerErrorNoPassword];
-        return NO;
-    }
     
     // Post notification
     [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidBegin object:self];

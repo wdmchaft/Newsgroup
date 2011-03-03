@@ -72,7 +72,7 @@
     dataController = nil;
 }
 
-#if 1
+#if 0
 
 - (void)testHash {
     NSString *inputPassword = @"password";
@@ -87,16 +87,13 @@
     NSString *inputValue = @"test string";
     
     ASIHTTPRequest *request = [GPDataController hashRequestWithValue:inputValue urlEncode:NO];
-    [request startSynchronous];
-    NSError *error = [request error];
-    NSString *response = nil;
-    if (!error) {
-        // The response is not valid JSON, don't try to parse it.
-        response = [request responseString];
-        response = [response stringByReplacingOccurrencesOfString:@"\"" withString:@""];
-        response = [response stringByReplacingOccurrencesOfString:@"\\/" withString:@"/"];
-    }
     
+    NSString *response = [self runASIRequest:request];
+
+    // The response is not valid JSON, don't try to parse it.
+    response = [request responseString];
+    response = [response stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+    response = [response stringByReplacingOccurrencesOfString:@"\\/" withString:@"/"];
     
     NSString *myHash = [GPDataController hashString:inputValue];
     
@@ -106,17 +103,10 @@
 - (void)testUserGet {
     
     ASIHTTPRequest *request = [GPDataController userWithUsername:login andPassword:password];
-    [request startSynchronous];
-    NSError *error = [request error];
-    NSString *response = nil;
-    if (!error) {
-        response = [request responseString];
-    } else {
-        NSLog(@"%@", error);
-    }
+
+    NSString *response = [self runASIRequest:request];
     
     NSDictionary *jsonResponse = [response JSONValue];
-    
     
     GHAssertEqualStrings([testUser objectForKey:@"FirstName"], [jsonResponse objectForKey:@"FirstName"], nil);
     GHAssertEqualStrings([testUser objectForKey:@"FullName"], [jsonResponse objectForKey:@"FullName"], nil);
@@ -128,14 +118,41 @@
     GHAssertTrue([[jsonResponse objectForKey:@"UserID"] isEqualToNumber:[testUser objectForKey:@"UserID"]], nil);
 }
 
-#endif
-
 - (void)testPosts {
     
     ASIHTTPRequest *request = [GPDataController postsWithUsername:login password:password threadID:0 postID:0 threadLimit:0];
     
     // Test pulling in all threads
-    [request startSynchronous];
+    NSString *response = [self runASIRequest:request];
+    NSArray *allThreads = (NSArray *)[response JSONValue];
+    NSInteger allThreadCount = [allThreads count];
+    GHAssertNotNULL((void *)allThreadCount, nil);
+    
+    // Test pulling in a single thread
+    NSNumber *threadId = [[allThreads objectAtIndex:0] objectForKey:@"ThreadID"];
+    GHAssertNotNULL(threadId, nil);
+    
+    request = [GPDataController postsWithUsername:login password:password threadID:[threadId intValue] postID:0 threadLimit:0];
+    response = [self runASIRequest:request];
+    
+    NSArray *postsInThread = [response JSONValue];
+    GHAssertNotNULL(postsInThread, nil);
+    
+    NSInteger postsInThreadCount = [postsInThread count];
+    GHAssertLessThan(postsInThreadCount, allThreadCount, nil);
+    
+    // Test pulling in a single post
+    NSNumber *postId = [[postsInThread objectAtIndex:0] objectForKey:@"PostID"];
+    GHAssertNotNULL(postId, nil);
+    
+    request = [GPDataController postsWithUsername:login password:password threadID:0 postID:[postId intValue] threadLimit:0];
+    response = [self runASIRequest:request];
+    
+    NSArray *singlePost = [response JSONValue];
+    GHAssertNotNULL(singlePost, nil);
+    GHAssertTrue(1 == [singlePost count], nil);
 }
+
+#endif
 
 @end

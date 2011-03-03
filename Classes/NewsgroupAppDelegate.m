@@ -9,6 +9,7 @@
 #import "NewsgroupAppDelegate.h"
 #import "MainThreadView.h"
 #import "ToolbarProgressView.h"
+#import "JKConstants.h"
 
 #define PROGRESS_VIEW_FRAME CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)
 
@@ -49,7 +50,11 @@
     [self.window makeKeyAndVisible];
 
     GPDataController *dc = [[GPDataController alloc] init];
-    [dc startFetching];
+    NSError *error = nil;
+    if (![dc fetchAllPostsWithError:&error]) {
+        NSLog(@"%@", error);
+        NSAssert(NO, nil);
+    }
     self.dataController = dc;
     [dc release];
     
