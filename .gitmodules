@@ -10,3 +10,6 @@
 [submodule "json-framework"]
 	path = json-framework
 	url = git@github.com:jkubicek/json-framework.git
+[submodule "DDAlertPrompt"]
+	path = DDAlertPrompt
+	url = git@github.com:jkubicek/DDAlertPrompt.git
