@@ -16,6 +16,8 @@ NSString *const GPDataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
 
 NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
+NSString *const GPDataControllerLastFetchTime = @"GPDataControllerLastFetchTime";
+
 #define BASE_URL_STRING @"https://api.greenpride.com/Service.svc/"
 #define REPLY_FORMAT @"format=json"
 
@@ -126,7 +128,6 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
 - (void)dealloc {
     [context_ release];
-    [lastFetchTime_ release];
     [login_ release];
     [model_ release];
     [password_ release];
@@ -143,10 +144,17 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
 @synthesize context = context_;
 @synthesize delegate = delegate_;
-@synthesize lastFetchTime = lastFetchTime_;
 @synthesize login = login_;
 @synthesize model = model_;
 @synthesize password = password_;
+
+- (void)setLastFetchTime:(NSDate *)lastFetchTime {
+    [[NSUserDefaults standardUserDefaults] setObject:lastFetchTime forKey:GPDataControllerLastFetchTime];
+}
+
+- (NSDate *)lastFetchTime {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:GPDataControllerLastFetchTime];
+}
 
 #pragma mark -
 #pragma mark Instance Methods

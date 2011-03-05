@@ -60,7 +60,6 @@ typedef enum {
     NSManagedObjectContext *context_;
     id <GPDataControllerDelegate> delegate_;
     BOOL isFetching_;
-    NSDate *lastFetchTime_;
     NSString *login_;
     NSManagedObjectModel *model_;
     NSString *password_;
