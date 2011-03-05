@@ -30,13 +30,35 @@
 
 - (BOOL)addPostsFromArray:(NSArray *)posts toContext:(NSManagedObjectContext *)context {
     
+    NSFetchRequest *allPostsRequest = [[[context persistentStoreCoordinator] managedObjectModel] fetchRequestTemplateForName:@"allPosts"];
+    
+    NSError *error = nil;
+    NSArray *allPosts = [context executeFetchRequest:allPostsRequest error:&error];
+    if (!allPosts) {
+        NSLog(@"%@", error);
+    }
+    
     for (NSDictionary *postDict in posts) {
-        GPPost *post = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:context];
+        
+        // If the postID exists, update, else insert
+        NSNumber *postID = [postDict objectForKey:@"PostID"];
+        
+        NSUInteger existingPostIndex = [allPosts indexOfObjectPassingTest:^(id obj, NSUInteger idx, BOOL *stop) {
+            return [[obj postID] isEqualToNumber:postID];
+        }];
+        
+        GPPost *post;
+        if (existingPostIndex == NSNotFound) {
+            post = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:context];
+            post.postID = postID;
+        } else {
+            post = [allPosts objectAtIndex:existingPostIndex];
+        }
+        
         post.body = [postDict objectForKey:@"Description"];
         post.isRead = [postDict objectForKey:@"Read"];
         post.memberID = [postDict objectForKey:@"AuthorID"];
         post.posterName = [postDict objectForKey:@"AuthorName"];
-        post.postID = [postDict objectForKey:@"PostID"];
         post.postLevel = [postDict objectForKey:@"Level"];
         post.subject = [postDict objectForKey:@"Subject"];
         post.threadID = [postDict objectForKey:@"ThreadID"];

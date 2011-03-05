@@ -328,10 +328,13 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     NSArray *posts = [response JSONValue];
     
     [self loadNewPosts:posts intoContext:self.context];
+    
+    
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
     NSLog(@"%@", NSStringFromSelector(_cmd));
+    NSLog(@"%@", [request error]);
 }
 
 @end

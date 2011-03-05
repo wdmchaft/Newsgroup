@@ -107,7 +107,6 @@
     GHAssertNotNil(fetchedObjects, nil);
     
     fetchCount = [fetchedObjects count];
-    loadCount = [testArray count];
     GHAssertEquals(fetchCount, loadCount, nil);
     
     [postLoad release];
