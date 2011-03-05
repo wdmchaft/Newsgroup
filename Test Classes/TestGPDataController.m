@@ -108,6 +108,9 @@
 - (void)testNoDelegate {
     NSError *error = nil;
     
+    dataController.login = @"fake login";
+    dataController.password = @"fake password";
+    
     GHAssertFalse([dataController fetchAllPostsWithError:&error],nil);
     GHAssertEqualStrings([error domain], GPDataControllerErrorDomain, nil);
     GHAssertEquals([error code], GPDataControllerErrorNoDelegate, nil);

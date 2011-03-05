@@ -12,19 +12,38 @@
 
 @implementation GPPostLoadOperation
 
++ (NSDate *)convertToDate:(NSString *)dateString {
+    // @"/Date(1299282285000-0700)/"
+    
+    NSMutableString *inputString = [dateString mutableCopy];
+    [inputString replaceOccurrencesOfString:@"/Date(" withString:@"" options:0 range:NSMakeRange(0, [inputString length])];
+    [inputString replaceOccurrencesOfString:@")/" withString:@"" options:0 range:NSMakeRange(0, [inputString length])];
+    
+    NSArray *dateComponents = [inputString componentsSeparatedByString:@"-"];
+    
+    NSDate *gmtDate = [NSDate dateWithTimeIntervalSince1970:[[dateComponents objectAtIndex:0] doubleValue]/1000.0];
+    
+    [inputString release];
+    return gmtDate;
+}
+
+// We need to allocated our own context if we use the post load operation in it's own thread. The
+//  context will only work properly in the thread in which it was allocated.
+
 - (BOOL)addPostsFromArray:(NSArray *)posts toContext:(NSManagedObjectContext *)context {
     
     for (NSDictionary *postDict in posts) {
         GPPost *post = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:context];
-        post.body = [postDict objectForKey:@"body"];
-        post.isRead = [postDict objectForKey:@"isRead"];
-        post.memberID = [postDict objectForKey:@"memberID"];
-        post.postdate = [[self dateFormatter] dateFromString:[postDict objectForKey:@"postdate"]];
-        post.posterName = [postDict objectForKey:@"posterName"];
-        post.postID = [postDict objectForKey:@"postID"];
-        post.postLevel = [postDict objectForKey:@"postLevel"];
-        post.subject = [postDict objectForKey:@"subject"];
-        post.threadID = [postDict objectForKey:@"threadID"];
+        post.body = [postDict objectForKey:@"Description"];
+        post.isRead = [postDict objectForKey:@"Read"];
+        post.memberID = [postDict objectForKey:@"AuthorID"];
+        post.posterName = [postDict objectForKey:@"AuthorName"];
+        post.postID = [postDict objectForKey:@"PostID"];
+        post.postLevel = [postDict objectForKey:@"Level"];
+        post.subject = [postDict objectForKey:@"Subject"];
+        post.threadID = [postDict objectForKey:@"ThreadID"];
+        
+        post.postdate = [GPPostLoadOperation convertToDate:[postDict objectForKey:@"Date"]];
     }
     
     return YES;

@@ -22,10 +22,9 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 @interface GPDataController()
 
 // Private methods
-- (void)error:(NSError **)error withErrorCode:(GPDataControllerErrorCode)code;
+- (NSUInteger)error:(NSError **)error withErrorCode:(GPDataControllerErrorCode)code;
 
 // Private properties
-@property (retain, nonatomic) NSManagedObjectContext *context;
 @property (readwrite, retain) NSDate *lastFetchTime;
 @property (retain, nonatomic) NSManagedObjectModel *model;
 
@@ -177,7 +176,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     return [self startFetchWithHTTPRequest:request andError:error];
 }
 
-- (void)error:(NSError **)error withErrorCode:(GPDataControllerErrorCode)code {
+- (NSUInteger)error:(NSError **)error withErrorCode:(GPDataControllerErrorCode)code {
     if (error != NULL) {
         
         NSDictionary *userInfo;
@@ -207,6 +206,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
         
         *error = [[[NSError alloc] initWithDomain:GPDataControllerErrorDomain code:code userInfo:userInfo] autorelease];
     }
+    return 0;
 }
 
 - (void)loadNewPosts:(NSArray *)posts intoContext:(NSManagedObjectContext *)context {
@@ -220,6 +220,7 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     } else {
         NSAssert(YES, @"Construct some sort of error here");
     }
+    [postLoad release];
 }
 
 - (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error {

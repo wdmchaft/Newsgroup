@@ -13,6 +13,8 @@
 
 }
 
++ (NSDate *)convertToDate:(NSString *)dateString;
+
 - (BOOL)addPostsFromArray:(NSArray *)posts toContext:(NSManagedObjectContext *)context;
 - (NSDateFormatter *)dateFormatter;
 

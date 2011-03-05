@@ -69,6 +69,7 @@ typedef enum {
 }
 
 // Properties
+@property (retain, nonatomic) NSManagedObjectContext *context;
 @property (assign) id <GPDataControllerDelegate> delegate;
 @property (readonly, retain) NSDate *lastFetchTime;
 @property (copy) NSString *login;
