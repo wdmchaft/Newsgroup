@@ -34,22 +34,6 @@
     [postLoadOperation release];
 }
 
-- (void)testDateFormatter {
-    NSString *inputDateString = @"/Date(1299102421000-0700)/";
-    NSString *inputDate = @"06-21-2009 05:45:13";
-    
-    NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
-    [myDateFormatter setDateFormat:@"MM'-'dd'-'yyyy HH':'mm':'ss"];
-    [myDateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
-    NSDate *myDate = [myDateFormatter dateFromString:inputDate];
-    
-    NSDate *testDate = [[postLoadOperation dateFormatter] dateFromString:inputDateString];
-    
-    GHAssertTrue([testDate isEqualToDate:myDate], @"%@ and %@ do not match", testDate, myDate);
-    
-    [myDateFormatter release];
-}
-
 - (void)testDateConversion {
     NSString *paveyDateString = @"/Date(1299282285000-0700)/";
     NSString *myDateString = @"03-04-2011 16:44:45";
