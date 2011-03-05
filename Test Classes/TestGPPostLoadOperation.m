@@ -9,6 +9,7 @@
 #import <GHUnitIOS/GHUnit.h>
 #import "GPPostLoadOperation.h"
 #import "GPDataController.h"
+#import "JKConstants.h"
 
 @interface TestGPPostLoadOperation : GHTestCase {
     GPPostLoadOperation *postLoadOperation;
@@ -57,6 +58,16 @@
     // Create the context
     NSURL *testStoreURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"TestGPPostLoadOperation.sqlite"];
     NSURL *modelURL = [GPDataController defaultManagedObjectModelURL];
+
+    // We're loading 15 threads
+    NSInteger loadCount = 15;
+
+    
+    // Remove the old persistant store
+    MAKE_ERROR;
+    if (![[NSFileManager defaultManager] removeItemAtURL:testStoreURL error:&error]) {
+        NSLog(@"%@", error);
+    }
     
     // Do a full fetch, the number of posts in the context should be the same as what was passed in.
     GPDataController *dataController = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
@@ -71,7 +82,6 @@
     GHAssertEquals(fetchCount, 0, nil);
     
     [postLoad addPostsFromArray:testArray toContext:dataController.context];
-    NSError *error = nil;
     BOOL didSave = [dataController.context save:&error];
     GHAssertTrue(didSave, nil);
     fetchedResults = [dataController allThreads];
@@ -83,7 +93,6 @@
     GHAssertNotNil(fetchedObjects, nil);
     
     fetchCount = [fetchedObjects count];
-    NSInteger loadCount = [testArray count];
     GHAssertEquals(fetchCount, loadCount, nil); //todo: I'm counting the number of posts loaded and comparing it against the number of *threads* returned. They should usually not match!
     
     // Add the posts to the context again, then do a full fetch. The results shouldn't change.
@@ -102,9 +111,6 @@
     GHAssertEquals(fetchCount, loadCount, nil);
     
     [postLoad release];
-    
-    // remove persistant store
-    [[NSFileManager defaultManager] removeItemAtURL:testStoreURL error:nil];
 
 }
 
