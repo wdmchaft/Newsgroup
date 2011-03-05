@@ -105,6 +105,14 @@
     }
 }
 
+- (void)testFetchSinglePost {
+    NSInteger postID = 1109;
+    GPPost *fetchedPost = [dataController postWithId:postID];
+    NSNumber *outputPostID = fetchedPost.postID;
+    
+    GHAssertEquals(postID, [outputPostID intValue], nil);
+}
+
 - (void)testNoDelegate {
     NSError *error = nil;
     

@@ -122,5 +122,11 @@ typedef enum {
  */
 - (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID atPostLevel:(NSNumber *)postLevel;
 
+/**
+ * Post with ID
+ * Returns the post with the given ID or null if it does not exist
+ */
+- (GPPost *)postWithId:(NSUInteger)postID;
+
 
 @end

@@ -11,3 +11,5 @@ NSString *const JKDefaultsPasswordKey = @"JKDefaultsPasswordKey";
 
 #define MAKE_ERROR NSError *error = nil
 #define LOG_ERROR_FROM_METHOD(x) if(!x){ NSLog(@"%@", error) }
+
+#define LOG(x) NSLog(@"%@", x)

@@ -295,6 +295,26 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
     return [fetchedResults autorelease];
 }
 
+- (GPPost *)postWithId:(NSUInteger)postID {
+    
+    // get the fetch request
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:postID] forKey:@"postID"];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postWithID" substitutionVariables:dict];
+    
+    NSError *error = nil;
+    NSArray *resultArray = [self.context executeFetchRequest:fetchRequest error:&error];
+    
+    if( !resultArray ) {
+        NSLog(@"%@", error);
+        return nil;
+    } else if ([resultArray count] != 1) {
+        NSLog(@"There was an error, either no posts exist with that ID, or more than one post exists with that ID");
+        return nil;
+    } else {
+        return [resultArray objectAtIndex:0];
+    }
+}
+
 #pragma mark -
 #pragma mark ASIHTTPRequestDelegate
 
