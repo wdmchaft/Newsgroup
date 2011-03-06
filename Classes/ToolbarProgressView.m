@@ -51,9 +51,9 @@ typedef enum {
 
 #pragma mark Properties
 
-@synthesize progress;
-@synthesize timestamp;
-@synthesize viewType;
+@synthesize progress = progress_;
+@synthesize timestamp = timestamp_;
+@synthesize viewType = viewType_;
 
 - (void)setProgress:(float)prog {
     progress_ = prog;
@@ -72,6 +72,13 @@ typedef enum {
 - (void)setViewType:(ViewType)vt {
 
     UIView *view = [views_ objectAtIndex:vt];
+
+    // Remove all subviews
+    NSArray *subviews = self.subviews;
+    [subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [obj removeFromSuperview];
+    }];
+    
     [self addSubview:view];
     viewType_ = vt;
     
@@ -93,7 +100,13 @@ typedef enum {
    
     UILabel *dateLabel = (UILabel *)[[views_ objectAtIndex:GPProgressTimestampView] viewWithTag:GPProgressTagsTimestampViewDate];
     
-    dateLabel.text = GPProgressTimestampString([NSDate stringForDisplayFromDate:timestamp_ prefixed:YES]);
+    if (self.timestamp) {
+        NSString *dateString = GPProgressTimestampString([NSDate stringForDisplayFromDate:timestamp_ prefixed:YES]);
+        dateLabel.text = dateString;
+    } else {
+        dateLabel.text = @"";
+    }
+    
 }
 
 - (void)configureViews {

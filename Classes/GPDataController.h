@@ -50,11 +50,16 @@ typedef enum {
  */
 - (void)fetchSucceded:(GPDataController *)dataController;
 
+/**
+ * Set Progress
+ */
+- (void)setProgress:(float)newProgress dataController:(GPDataController *)dataController;
+
 @end
 
 
 
-@interface GPDataController : NSObject <ASIHTTPRequestDelegate> {
+@interface GPDataController : NSObject <ASIHTTPRequestDelegate, ASIHTTPRequestDelegate> {
 
     @private
     NSManagedObjectContext *context_;

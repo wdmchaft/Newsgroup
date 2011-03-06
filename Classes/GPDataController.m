@@ -180,6 +180,7 @@ NSString *const GPDataControllerLastFetchTime = @"GPDataControllerLastFetchTime"
     
     ASIHTTPRequest *request = [GPDataController postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
     [request setDelegate:self];
+    [request setDownloadProgressDelegate:self];
     
     return [self startFetchWithHTTPRequest:request andError:error];
 }
@@ -220,6 +221,9 @@ NSString *const GPDataControllerLastFetchTime = @"GPDataControllerLastFetchTime"
 - (void)loadNewPosts:(NSArray *)posts intoContext:(NSManagedObjectContext *)context {
     GPPostLoadOperation *postLoad = [[GPPostLoadOperation alloc] init];
     if ( [postLoad addPostsFromArray:posts toContext:context] ) {
+        // Update the last fetch time
+        self.lastFetchTime = [NSDate date];
+        
         // send notification that we're finished
         [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidEnd object:self];
         
@@ -336,13 +340,17 @@ NSString *const GPDataControllerLastFetchTime = @"GPDataControllerLastFetchTime"
     NSArray *posts = [response JSONValue];
     
     [self loadNewPosts:posts intoContext:self.context];
-    
-    
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
     NSLog(@"%@", NSStringFromSelector(_cmd));
     NSLog(@"%@", [request error]);
+}
+
+#pragma ASIProgressDelegate
+
+- (void)setProgress:(float)newProgress {
+    [self.delegate setProgress:newProgress dataController:self];
 }
 
 @end

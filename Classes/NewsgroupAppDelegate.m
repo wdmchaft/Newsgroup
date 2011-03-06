@@ -15,9 +15,10 @@
 
 @implementation NewsgroupAppDelegate
 
-@synthesize dataController;
+@synthesize dataController = dataController_;
 @synthesize navigationController;
 @synthesize toolbarItems;
+@synthesize progressView = progressView_;
 @synthesize window;
 
 
@@ -26,15 +27,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
-    // Setup the default toolbar
-    //TODO: This should be setup propertly
     ToolbarProgressView *progView = [[ToolbarProgressView alloc] initWithFrame:PROGRESS_VIEW_FRAME];
     progView.viewType = GPProgressDeterminiteView;
-    progView.progress = 0.69f;
+    progView.progress = 0.0f;
     
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshData:)];
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
     UIBarButtonItem *progressView = [[UIBarButtonItem alloc] initWithCustomView:progView];
+    self.progressView = progView;
+    [progView release];
+    
     UIBarButtonItem *newPost = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(newPost:)];
     
     NSArray *buttonArray = [NSArray arrayWithObjects:refreshButton, flexibleSpace, progressView, flexibleSpace, newPost, nil];
@@ -56,7 +59,7 @@
 
     // If they don't exist, pop up an alert
     if (!username || !password) {
-        // TODO: POP UP AN ALERT, YO
+        NSAssert(YES, @"You need to add a pop-up for checking on the status of the username/password");
     }
     
     // Setup the data controller
@@ -78,7 +81,7 @@
 
 - (void)dealloc {
     
-    [dataController release];
+    [dataController_ release];
     [navigationController release];
     [toolbarItems release];
     [window release];
@@ -104,13 +107,17 @@
 #pragma mark GPDataControllerDelegate Methods
 
 - (void)fetchFailed:(GPDataController *)dataController withError:(NSError *)error {
-    // Kill the progress bar
+    //TODO: need to do something appropriate here
 }
 
 - (void)fetchSucceded:(GPDataController *)dataController {
-    // Kill the progress bar, update the timestamp
+    self.progressView.timestamp = dataController.lastFetchTime;
+    self.progressView.viewType = GPProgressTimestampView;
 }
 
+- (void)setProgress:(float)newProgress dataController:(GPDataController *)dataController {
+    self.progressView.progress = newProgress;
+}
 
 @end
 

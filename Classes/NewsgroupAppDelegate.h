@@ -12,10 +12,15 @@
 
 #define APP_DELEGATE ((NewsgroupAppDelegate *)[UIApplication sharedApplication].delegate)
 
+@class ToolbarProgressView;
+
 @interface NewsgroupAppDelegate : NSObject <UIApplicationDelegate, GPDataControllerDelegate> {
     
     UIWindow *window;
     UINavigationController *navigationController;
+    
+    GPDataController *dataController_;
+    ToolbarProgressView *progressView_;
 
 }
 
@@ -23,6 +28,7 @@
 @property (nonatomic, retain) GPDataController *dataController;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, retain) NSArray *toolbarItems;
+@property (nonatomic, retain) ToolbarProgressView *progressView;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 // Utility Methods
