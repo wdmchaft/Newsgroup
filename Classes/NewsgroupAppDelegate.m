@@ -27,6 +27,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
+    [self configureToolbarButtons];
+    
+    // Add the navigation controller's view to the window and display.
+    [self.window addSubview:navigationController.view];
+    [self.window makeKeyAndVisible];
+    
+    [self setupDataController];
+    
+    return YES;
+}
+
+- (void)dealloc {
+    
+    [dataController_ release];
+    [navigationController release];
+    [toolbarItems release];
+    [window release];
+    [super dealloc];
+}
+
+#pragma mark -
+#pragma mark Instance Methods
+
+- (NSURL *)applicationDocumentsDirectory {
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (void)configureToolbarButtons {
     ToolbarProgressView *progView = [[ToolbarProgressView alloc] initWithFrame:PROGRESS_VIEW_FRAME];
     progView.viewType = GPProgressDeterminiteView;
     progView.progress = 0.0f;
@@ -48,15 +76,14 @@
     [newPost release];
     
     self.toolbarItems = buttonArray;
-    
-    // Add the navigation controller's view to the window and display.
-    [self.window addSubview:navigationController.view];
-    [self.window makeKeyAndVisible];
-    
+
+}
+
+- (void)setupDataController {
     // Get the username and passwords
     NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsUsernameKey];
     NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsPasswordKey];
-
+    
     // If they don't exist, pop up an alert
     if (!username || !password) {
         NSAssert(YES, @"You need to add a pop-up for checking on the status of the username/password");
@@ -68,31 +95,10 @@
     dc.password = password;
     dc.delegate = self;
     
-    NSError *error = nil;
-    if (![dc fetchAllPostsWithError:&error]) {
-        NSLog(@"%@", error);
-        NSAssert(NO, nil);
-    }
     self.dataController = dc;
+    [self refreshData:self];
     [dc release];
-    
-    return YES;
-}
 
-- (void)dealloc {
-    
-    [dataController_ release];
-    [navigationController release];
-    [toolbarItems release];
-    [window release];
-    [super dealloc];
-}
-
-#pragma mark -
-#pragma mark Instance Methods
-
-- (NSURL *)applicationDocumentsDirectory {
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 - (void)newPost:(id)sender {
@@ -100,14 +106,20 @@
 }
 
 - (void)refreshData:(id)sender {
-    NSLog(@"refreshData");
+    
+    NSError *error = nil;
+    if (![self.dataController fetchAllPostsWithError:&error]) {
+        NSLog(@"%@", error);
+        NSAssert(NO, nil);
+    }
+    
 }
 
 #pragma mark -
 #pragma mark GPDataControllerDelegate Methods
 
 - (void)fetchFailed:(GPDataController *)dataController withError:(NSError *)error {
-    //TODO: need to do something appropriate here
+    //TODO: do something important here
 }
 
 - (void)fetchSucceded:(GPDataController *)dataController {

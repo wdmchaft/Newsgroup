@@ -33,6 +33,8 @@
 
 // Utility Methods
 - (NSURL *)applicationDocumentsDirectory;
+- (void)configureToolbarButtons;
+- (void)setupDataController;
 - (void)newPost:(id)sender;
 - (void)refreshData:(id)sender;
 
