@@ -21,12 +21,14 @@
     
     GPDataController *dataController_;
     ToolbarProgressView *progressView_;
-
+    UIBarButtonItem *refreshButton_;
+    
 }
 
 // Properties
 @property (nonatomic, retain) GPDataController *dataController;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
+@property (nonatomic, retain) UIBarButtonItem *refreshButton;
 @property (nonatomic, retain) NSArray *toolbarItems;
 @property (nonatomic, retain) ToolbarProgressView *progressView;
 @property (nonatomic, retain) IBOutlet UIWindow *window;

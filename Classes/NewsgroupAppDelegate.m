@@ -20,6 +20,7 @@
 @synthesize toolbarItems;
 @synthesize progressView = progressView_;
 @synthesize window;
+@synthesize refreshButton = refreshButton_;
 
 
 #pragma mark -
@@ -44,6 +45,7 @@
     [navigationController release];
     [toolbarItems release];
     [window release];
+    [refreshButton_ release];
     [super dealloc];
 }
 
@@ -70,7 +72,9 @@
     
     NSArray *buttonArray = [NSArray arrayWithObjects:refreshButton, flexibleSpace, progressView, flexibleSpace, newPost, nil];
     
+    self.refreshButton = refreshButton;
     [refreshButton release];
+    
     [flexibleSpace release];
     [progressView release];
     [newPost release];
@@ -107,6 +111,8 @@
 
 - (void)refreshData:(id)sender {
     
+    self.refreshButton.enabled = NO;
+    
     NSError *error = nil;
     if (![self.dataController fetchAllPostsWithError:&error]) {
         NSLog(@"%@", error);
@@ -119,12 +125,16 @@
 #pragma mark GPDataControllerDelegate Methods
 
 - (void)fetchFailed:(GPDataController *)dataController withError:(NSError *)error {
-    //TODO: do something important here
+    
+    self.refreshButton.enabled = YES;
+    
 }
 
 - (void)fetchSucceded:(GPDataController *)dataController {
     self.progressView.timestamp = dataController.lastFetchTime;
     self.progressView.viewType = GPProgressTimestampView;
+    
+    self.refreshButton.enabled = YES;
 }
 
 - (void)setProgress:(float)newProgress dataController:(GPDataController *)dataController {
