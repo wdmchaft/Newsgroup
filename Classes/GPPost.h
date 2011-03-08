@@ -25,8 +25,9 @@
 @property (nonatomic, retain) NSDate * postdate;
 @property (nonatomic, retain) NSString * posterName;
 @property (nonatomic, retain) NSNumber * postID;
-@property (nonatomic, retain) NSNumber * postLevel;
 @property (nonatomic, retain) NSString * subject;
 @property (nonatomic, retain) NSNumber * threadID;
+
+
 
 @end
