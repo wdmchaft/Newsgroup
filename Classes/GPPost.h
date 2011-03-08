@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-@class GPUser;
-@class GPThread;
 
 
 @interface GPPost : NSManagedObject {
@@ -27,6 +25,8 @@
 @property (nonatomic, retain) NSNumber * postID;
 @property (nonatomic, retain) NSString * subject;
 @property (nonatomic, retain) NSNumber * threadID;
+@property (nonatomic, retain) GPPost * parentPost;
+@property (nonatomic, retain) NSSet* childPosts;
 
 
 
