@@ -14,6 +14,7 @@
 
 #define POSTID 9876 
 #define THREADID 9875
+#define PARENTID 9875
 #define MEMBERID 123
 #define SUBJECT @"subject"
 #define BODY @"this is the body of a post"
@@ -23,6 +24,8 @@
     NSURL *testStoreURL;
     NSURL *modelURL;
     GPDataController *dataController;
+    
+    NSInteger countOfTestPosts;
 }
 
 @end
@@ -61,6 +64,8 @@
     dummyPost.threadID = [NSNumber numberWithInt:THREADID];
     dummyPost.postdate = [NSDate date];
     
+    countOfTestPosts = 1;
+    
     NSError *error = nil;
     if ([dc.context save:&error]) {
         NSLog(@"%@", error);
@@ -95,7 +100,7 @@
     GHAssertNotNil(fetchedObjects, nil);
     
     NSInteger fetchCount = [fetchedObjects count];
-    GHAssertEquals(fetchCount, 1, nil);
+    GHAssertEquals(fetchCount, countOfTestPosts, nil);
     
     GPPost *thread = (GPPost *)[fetchedObjects objectAtIndex:0];
     GHAssertTrue([thread isMemberOfClass:[GPPost class]], nil);
@@ -126,8 +131,8 @@
 
 }
 
-- (void)testFetchPostsForThreadAtPostLevel {
-    NSFetchedResultsController *fr = [dataController postsWithThreadID:[NSNumber numberWithInt:THREADID] atPostLevel:[NSNumber numberWithInt:1]];
+- (void)testFetchPostsWithParentPostId {
+    NSFetchedResultsController *fr = [dataController postsWithParentID:[NSNumber numberWithInt:THREADID] atPostLevel:[NSNumber numberWithInt:1]];
     
     BOOL fetchDidComplete = [fr performFetch:nil];
     GHAssertTrue(fetchDidComplete, nil);
