@@ -53,7 +53,6 @@
 		4DB0B61F1305C14600B24E54 /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DB0B61E1305C14600B24E54 /* TestData.plist */; };
 		4DB0B6B81306026600B24E54 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
 		4DC10CEB130879A000944A20 /* TestGPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10CEA130879A000944A20 /* TestGPDataController.m */; };
-		4DC10CF71308863F00944A20 /* Test Database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 4DC10CF61308863F00944A20 /* Test Database.sqlite */; };
 		4DC10D0713089B9400944A20 /* GPDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D406A130455490033E9E7 /* GPDataController.m */; };
 		4DC10D1E13089CE000944A20 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
 		4DC10D2713089CFF00944A20 /* GPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* GPPost.m */; };
@@ -161,7 +160,6 @@
 		4DB0B6B61306026600B24E54 /* GPPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPost.h; sourceTree = "<group>"; };
 		4DB0B6B71306026600B24E54 /* GPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPost.m; sourceTree = "<group>"; };
 		4DC10CEA130879A000944A20 /* TestGPDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestGPDataController.m; path = "Test Classes/TestGPDataController.m"; sourceTree = "<group>"; };
-		4DC10CF61308863F00944A20 /* Test Database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Test Database.sqlite"; path = "Test Classes/Test Database.sqlite"; sourceTree = "<group>"; };
 		4DC10D1713089C8C00944A20 /* Tests_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tests_Prefix.pch; path = "Test Classes/Tests_Prefix.pch"; sourceTree = "<group>"; };
 		4DC10FC0130B430900944A20 /* IndividualThreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndividualThreadView.h; sourceTree = "<group>"; };
 		4DC10FC1130B430900944A20 /* IndividualThreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndividualThreadView.m; sourceTree = "<group>"; };
@@ -313,10 +311,9 @@
 				2899E55F0DE3E45000AC0155 /* MainThreadView.xib */,
 				4D9D4D26130CAA2600A34E8F /* HeaderView.xib */,
 				4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */,
+				4D9D4F31130F390300A34E8F /* GPBrowserView.xib */,
 				28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */,
 				8D1107310486CEB800E47090 /* Newsgroup-Info.plist */,
-				4DB0B61E1305C14600B24E54 /* TestData.plist */,
-				4D9D4F31130F390300A34E8F /* GPBrowserView.xib */,
 				4D41B3A5131F29410044171F /* Settings.bundle */,
 			);
 			name = Resources;
@@ -424,9 +421,9 @@
 		4DE98E851317CD1D0060B34F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4DB0B61E1305C14600B24E54 /* TestData.plist */,
 				4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */,
 				4DC10D1713089C8C00944A20 /* Tests_Prefix.pch */,
-				4DC10CF61308863F00944A20 /* Test Database.sqlite */,
 				4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */,
 				4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */,
 				4DE98E8F131D0B670060B34F /* login.plist */,
@@ -588,7 +585,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DC10CF71308863F00944A20 /* Test Database.sqlite in Resources */,
 				4DE98E90131D0B670060B34F /* login.plist in Resources */,
 				4DF61C47131DB00600B378E4 /* TestUser.plist in Resources */,
 				4D41B402132004730044171F /* newsgroup_posts_cleaned.plist in Resources */,

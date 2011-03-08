@@ -10,6 +10,14 @@
 #import <CoreData/CoreData.h>
 #import "OCMock.h"
 #import "GPDataController.h"
+#import "GPPost.h"
+
+#define POSTID 9876 
+#define THREADID 9875
+#define MEMBERID 123
+#define SUBJECT @"subject"
+#define BODY @"this is the body of a post"
+#define POSTER_NAME @"woah!"
 
 @interface TestGPDataController : GHTestCase {
     NSURL *testStoreURL;
@@ -21,15 +29,49 @@
 
 @implementation TestGPDataController
 
+- (void)cleanUpTestFiles {
+    NSError *error = nil;
+    if ([[NSFileManager defaultManager] removeItemAtURL:testStoreURL error:&error]) {
+        NSLog(@"%@", error);
+    }
+
+}
+
 - (void)setUpClass {
-    testStoreURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Test Database" ofType:@"sqlite"]];
+    
+    testStoreURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"TestDatabase.sqlite"];
     modelURL = [GPDataController defaultManagedObjectModelURL];
     
     [testStoreURL retain];
     [modelURL retain];
+    
+    [self cleanUpTestFiles];
+    
+    // Load some dummy data
+    GPDataController *dc = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
+    GPPost *dummyPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
+    
+    dummyPost.body = BODY;
+    dummyPost.isRead = [NSNumber numberWithBool:NO];
+    dummyPost.memberID = [NSNumber numberWithInt:MEMBERID];
+    dummyPost.postID = [NSNumber numberWithInt:POSTID];
+    dummyPost.posterName = POSTER_NAME;
+    dummyPost.postLevel = [NSNumber numberWithInt:1];
+    dummyPost.subject = SUBJECT;
+    dummyPost.threadID = [NSNumber numberWithInt:THREADID];
+    dummyPost.postdate = [NSDate date];
+    
+    NSError *error = nil;
+    if ([dc.context save:&error]) {
+        NSLog(@"%@", error);
+    }
+    
+    [dc release];
 }
 
 - (void)tearDownClass {
+    [self cleanUpTestFiles];
+        
     [testStoreURL release];
     [modelURL release];
 }
@@ -53,18 +95,18 @@
     GHAssertNotNil(fetchedObjects, nil);
     
     NSInteger fetchCount = [fetchedObjects count];
-    GHAssertEquals(fetchCount, 5, nil);
+    GHAssertEquals(fetchCount, 1, nil);
     
     GPPost *thread = (GPPost *)[fetchedObjects objectAtIndex:0];
     GHAssertTrue([thread isMemberOfClass:[GPPost class]], nil);
         
     NSString *subject = thread.subject;
-    GHAssertEqualStrings(subject, @"hrm, this sure smells like change", nil);
+    GHAssertEqualStrings(subject, SUBJECT, nil);
 }
 
 - (void)testFetchAllPostsForThread {
 
-    NSFetchedResultsController *fr = [dataController postsWithThreadID:[NSNumber numberWithInt:1109]];
+    NSFetchedResultsController *fr = [dataController postsWithThreadID:[NSNumber numberWithInt:THREADID]];
     
     BOOL fetchDidComplete = [fr performFetch:nil];
     GHAssertTrue(fetchDidComplete, nil);
@@ -73,19 +115,19 @@
     GHAssertNotNil(fetchedObjects, nil);
     
     NSInteger fetchCount = [fetchedObjects count];
-    GHAssertEquals(fetchCount, 5, nil);
+    GHAssertEquals(fetchCount, 1, nil);
     
     GPPost *post = [fetchedObjects objectAtIndex:0];
     GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
     
-    GHAssertEqualStrings(post.subject, @"that's their fault", nil);
-    GHAssertEqualStrings(post.body, @"No descriptions <em>loaded</em> <a href=\"http://google.com\">yet</a>", nil);
+    GHAssertEqualStrings(post.subject, SUBJECT, nil);
+    GHAssertEqualStrings(post.body, BODY, nil);
     GHAssertFalse([post.isRead boolValue], nil);
 
 }
 
 - (void)testFetchPostsForThreadAtPostLevel {
-    NSFetchedResultsController *fr = [dataController postsWithThreadID:[NSNumber numberWithInt:1109] atPostLevel:[NSNumber numberWithInt:2]];
+    NSFetchedResultsController *fr = [dataController postsWithThreadID:[NSNumber numberWithInt:THREADID] atPostLevel:[NSNumber numberWithInt:1]];
     
     BOOL fetchDidComplete = [fr performFetch:nil];
     GHAssertTrue(fetchDidComplete, nil);
@@ -101,12 +143,12 @@
         GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
         
         NSInteger postLevel = [post.postLevel intValue];
-        GHAssertEquals(postLevel, 2, nil);
+        GHAssertEquals(postLevel, 1, nil);
     }
 }
 
 - (void)testFetchSinglePost {
-    NSInteger postID = 1109;
+    NSInteger postID = POSTID;
     GPPost *fetchedPost = [dataController postWithId:postID];
     NSNumber *outputPostID = fetchedPost.postID;
     
@@ -175,23 +217,6 @@
     [mockDelegate verify];
 }
 
-- (void)testStartHTTPUpdates {
-    /*
-    id mockRequest = [OCMockObject mockForClass:[ASIHTTPRequest class]];
-    id mockDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];
-
-    
-    dataController.delegate = mockDelegate;
-    dataController.login = @"login";
-    dataController.password = @"password";
-    [dataController fetchAllPostsWithError:nil];
-    
-    [mockRequest verify];
-    [mockDelegate verify];
-     */
-    GHAssertTrue(NO, @"will alway fail");
-}
-
 - (void)testRequestSuccess {
     id mockRequest = [OCMockObject mockForClass:[ASIHTTPRequest class]];
     [[mockRequest expect] responseString];
@@ -199,10 +224,6 @@
     [dataController requestFinished:mockRequest];
     
     [mockRequest verify];
-}
-
-- (void)testRequestFail {
-    GHAssertTrue(NO, @"will alway fail");
 }
  
 @end
