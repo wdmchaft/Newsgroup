@@ -33,6 +33,11 @@
     GPPost *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = thread.subject;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [NSDate stringForDisplayFromDate:thread.postdate]];
+    
+    if ([thread.isRead boolValue] == NO) {
+        UIImage *isReadIndicator = [UIImage imageNamed:@"isRead.png"];
+        cell.imageView.image = isReadIndicator;
+    }
 }
 
 #pragma mark View lifecycle

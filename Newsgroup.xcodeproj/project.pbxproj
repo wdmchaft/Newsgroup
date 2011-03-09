@@ -21,6 +21,7 @@
 		4D41B3A6131F29410044171F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B3A5131F29410044171F /* Settings.bundle */; };
 		4D41B3AA131F36BD0044171F /* DDAlertPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */; };
 		4D41B402132004730044171F /* newsgroup_posts_cleaned.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */; };
+		4D54C9321327A9BA001D70C1 /* isRead.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D54C9311327A9BA001D70C1 /* isRead.png */; };
 		4D562015130847090008C9B5 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D562014130847090008C9B5 /* libOCMock.a */; };
 		4D72F97A13167AFA0027E478 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F96913167AFA0027E478 /* NSObject+JSON.m */; };
 		4D72F97B13167AFA0027E478 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F96913167AFA0027E478 /* NSObject+JSON.m */; };
@@ -119,6 +120,7 @@
 		4D41B3A8131F36BD0044171F /* DDAlertPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAlertPrompt.h; path = DDAlertPrompt/DDAlertPrompt.h; sourceTree = "<group>"; };
 		4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAlertPrompt.m; path = DDAlertPrompt/DDAlertPrompt.m; sourceTree = "<group>"; };
 		4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = newsgroup_posts_cleaned.plist; path = "Test Classes/newsgroup_posts_cleaned.plist"; sourceTree = "<group>"; };
+		4D54C9311327A9BA001D70C1 /* isRead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = isRead.png; sourceTree = "<group>"; };
 		4D562014130847090008C9B5 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = Frameworks/OCMock/libOCMock.a; sourceTree = "<group>"; };
 		4D72F96713167AFA0027E478 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "json-framework/Classes/JSON.h"; sourceTree = "<group>"; };
 		4D72F96813167AFA0027E478 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+JSON.h"; path = "json-framework/Classes/NSObject+JSON.h"; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4D54C9301327A9BA001D70C1 /* Image Resources */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				2899E55F0DE3E45000AC0155 /* MainThreadView.xib */,
 				4D9D4D26130CAA2600A34E8F /* HeaderView.xib */,
@@ -343,6 +346,14 @@
 				4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */,
 			);
 			name = DDAlertPrompt;
+			sourceTree = "<group>";
+		};
+		4D54C9301327A9BA001D70C1 /* Image Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4D54C9311327A9BA001D70C1 /* isRead.png */,
+			);
+			path = "Image Resources";
 			sourceTree = "<group>";
 		};
 		4D72F96613167AC70027E478 /* json-framework */ = {
@@ -578,6 +589,7 @@
 				4D9D4E5D130E12BD00A34E8F /* ProgressView.xib in Resources */,
 				4D9D4F32130F390300A34E8F /* GPBrowserView.xib in Resources */,
 				4D41B3A6131F29410044171F /* Settings.bundle in Resources */,
+				4D54C9321327A9BA001D70C1 /* isRead.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
