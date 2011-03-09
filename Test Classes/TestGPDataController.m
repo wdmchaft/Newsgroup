@@ -12,7 +12,7 @@
 #import "GPDataController.h"
 #import "GPPost.h"
 
-#define POSTID 9876 
+#define CHILD_POSTID 9876 
 #define THREADID 9875
 #define PARENTID 9875
 #define MEMBERID 123
@@ -26,6 +26,7 @@
     GPDataController *dataController;
     
     NSInteger countOfTestPosts;
+    NSInteger countOfThreads;
 }
 
 @end
@@ -52,19 +53,32 @@
     
     // Load some dummy data
     GPDataController *dc = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
+    
+    GPPost *parentPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
+    
+    parentPost.body = BODY;
+    parentPost.isRead = [NSNumber numberWithBool:NO];
+    parentPost.memberID = [NSNumber numberWithInt:MEMBERID];
+    parentPost.postID = [NSNumber numberWithInt:PARENTID];
+    parentPost.posterName = POSTER_NAME;
+    parentPost.subject = SUBJECT;
+    parentPost.threadID = [NSNumber numberWithInt:THREADID];
+    parentPost.postdate = [NSDate date];
+    
     GPPost *dummyPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
     
     dummyPost.body = BODY;
     dummyPost.isRead = [NSNumber numberWithBool:NO];
     dummyPost.memberID = [NSNumber numberWithInt:MEMBERID];
-    dummyPost.postID = [NSNumber numberWithInt:POSTID];
+    dummyPost.postID = [NSNumber numberWithInt:CHILD_POSTID];
     dummyPost.posterName = POSTER_NAME;
-    dummyPost.postLevel = [NSNumber numberWithInt:1];
     dummyPost.subject = SUBJECT;
     dummyPost.threadID = [NSNumber numberWithInt:THREADID];
     dummyPost.postdate = [NSDate date];
+    dummyPost.parentPost = parentPost;
     
-    countOfTestPosts = 1;
+    countOfTestPosts = 2;
+    countOfThreads = 1;
     
     NSError *error = nil;
     if ([dc.context save:&error]) {
@@ -100,7 +114,7 @@
     GHAssertNotNil(fetchedObjects, nil);
     
     NSInteger fetchCount = [fetchedObjects count];
-    GHAssertEquals(fetchCount, countOfTestPosts, nil);
+    GHAssertEquals(fetchCount, countOfThreads, nil);
     
     GPPost *thread = (GPPost *)[fetchedObjects objectAtIndex:0];
     GHAssertTrue([thread isMemberOfClass:[GPPost class]], nil);
@@ -120,7 +134,7 @@
     GHAssertNotNil(fetchedObjects, nil);
     
     NSInteger fetchCount = [fetchedObjects count];
-    GHAssertEquals(fetchCount, 1, nil);
+    GHAssertEquals(fetchCount, countOfTestPosts, nil);
     
     GPPost *post = [fetchedObjects objectAtIndex:0];
     GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
@@ -132,7 +146,7 @@
 }
 
 - (void)testFetchPostsWithParentPostId {
-    NSFetchedResultsController *fr = [dataController postsWithParentID:[NSNumber numberWithInt:THREADID] atPostLevel:[NSNumber numberWithInt:1]];
+    NSFetchedResultsController *fr = [dataController postsWithParentID:[NSNumber numberWithInt:THREADID]];
     
     BOOL fetchDidComplete = [fr performFetch:nil];
     GHAssertTrue(fetchDidComplete, nil);
@@ -146,14 +160,12 @@
     for (GPPost *post in fetchedObjects) {
 
         GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
-        
-        NSInteger postLevel = [post.postLevel intValue];
-        GHAssertEquals(postLevel, 1, nil);
+        GHAssertTrue([post.parentPost.postID isEqualToNumber:[NSNumber numberWithInt:PARENTID]], nil);
     }
 }
 
 - (void)testFetchSinglePost {
-    NSInteger postID = POSTID;
+    NSInteger postID = CHILD_POSTID;
     GPPost *fetchedPost = [dataController postWithId:postID];
     NSNumber *outputPostID = fetchedPost.postID;
     

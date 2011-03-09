@@ -121,10 +121,11 @@ typedef enum {
 - (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID;
 
 /**
- * Posts in thread, at level
- * Returns all posts in a given thread at a given level. The level counts start at 1, so top level "thread" posts will have a level of 1.
+ * Posts with parent ID
+ * Returns all posts with the given parent ID
+ * @param parentID An NSNumber with the ID of the parent post
  */
-- (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID atPostLevel:(NSNumber *)postLevel;
+- (NSFetchedResultsController *)postsWithParentID:(NSNumber *)parentID;
 
 /**
  * Post with ID

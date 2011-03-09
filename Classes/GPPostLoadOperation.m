@@ -62,8 +62,8 @@
         post.subject = [postDict objectForKey:@"Subject"];
         post.threadID = [postDict objectForKey:@"ThreadID"];
         post.parentID = [postDict objectForKey:@"ParentID"];
-        
         post.postdate = [GPPostLoadOperation convertToDate:[postDict objectForKey:@"Date"]];
+        
     }
     
     return YES;
