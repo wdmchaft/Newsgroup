@@ -59,9 +59,9 @@
         post.isRead = [postDict objectForKey:@"Read"];
         post.memberID = [postDict objectForKey:@"AuthorID"];
         post.posterName = [postDict objectForKey:@"AuthorName"];
-        post.postLevel = [postDict objectForKey:@"Level"];
         post.subject = [postDict objectForKey:@"Subject"];
         post.threadID = [postDict objectForKey:@"ThreadID"];
+        post.parentID = [postDict objectForKey:@"ParentID"];
         
         post.postdate = [GPPostLoadOperation convertToDate:[postDict objectForKey:@"Date"]];
     }
