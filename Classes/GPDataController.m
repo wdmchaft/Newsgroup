@@ -290,11 +290,11 @@ NSString *const GPDataControllerLastFetchTime = @"GPDataControllerLastFetchTime"
     return [fetchedResults autorelease];
 }
 
-- (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID atPostLevel:(NSNumber *)postLevel {
+- (NSFetchedResultsController *)postsWithParentID:(NSNumber *)parentID {
     
     // Get the fetch request
-    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:threadID, @"threadID", postLevel, @"postLevel", nil];
-    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsForThreadAtLevel" substitutionVariables:dict];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:parentID, @"parentID", nil];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
     
     // Set the sort key
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:NO];

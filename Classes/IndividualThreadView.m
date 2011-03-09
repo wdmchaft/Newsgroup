@@ -53,8 +53,7 @@
     [self.webView loadHTMLString:self.post.body baseURL:nil];
     
     // Fetch all our threads
-    NSNumber *postLevel = [NSNumber numberWithInt:(1 + [self.post.postLevel intValue])];
-    NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithThreadID:self.post.threadID atPostLevel:postLevel];
+    NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithParentID:self.post.postID];
     fetchedResults.delegate = self;
     
     NSError *error = nil;

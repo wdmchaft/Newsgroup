@@ -59,11 +59,25 @@
         post.isRead = [postDict objectForKey:@"Read"];
         post.memberID = [postDict objectForKey:@"AuthorID"];
         post.posterName = [postDict objectForKey:@"AuthorName"];
-        post.postLevel = [postDict objectForKey:@"Level"];
         post.subject = [postDict objectForKey:@"Subject"];
         post.threadID = [postDict objectForKey:@"ThreadID"];
-        
         post.postdate = [GPPostLoadOperation convertToDate:[postDict objectForKey:@"Date"]];
+        
+        NSNumber *parentID = [postDict objectForKey:@"ParentID"];
+        if (![[postDict objectForKey:@"PostID"] isEqualToNumber:parentID]) {
+            NSDictionary *dict = [NSDictionary dictionaryWithObject:parentID forKey:@"postID"];
+            NSFetchRequest *parentPost = [[NSManagedObjectModel mergedModelFromBundles:nil] fetchRequestFromTemplateWithName:@"postWithID" substitutionVariables:dict];
+            [parentPost setIncludesPendingChanges:YES];
+            error = nil;
+            NSArray *parentPosts = [context executeFetchRequest:parentPost error:&error];
+            if (!parentPosts) {
+                NSLog(@"%@", error);
+            }
+            GPPost *parent = [parentPosts objectAtIndex:0];
+            post.parentPost = parent;
+        }
+        
+        NSLog(@"INSERTED OBJECTS %@", [context insertedObjects]);
     }
     
     return YES;
