@@ -27,6 +27,7 @@
 @dynamic subject;
 @dynamic threadID;
 @dynamic parentID;
+@dynamic postLevel;
 
 
 @end

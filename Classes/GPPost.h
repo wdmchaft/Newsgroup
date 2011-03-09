@@ -26,6 +26,7 @@
 @property (nonatomic, retain) NSString * subject;
 @property (nonatomic, retain) NSNumber * threadID;
 @property (nonatomic, retain) NSNumber * parentID;
+@property (nonatomic, retain) NSNumber * postLevel;
 
 
 

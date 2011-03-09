@@ -64,6 +64,7 @@
     parentPost.subject = SUBJECT;
     parentPost.threadID = [NSNumber numberWithInt:THREADID];
     parentPost.postdate = [NSDate date];
+    parentPost.postLevel = [NSNumber numberWithInt:1];
     
     GPPost *dummyPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
     
@@ -75,7 +76,8 @@
     dummyPost.subject = SUBJECT;
     dummyPost.threadID = [NSNumber numberWithInt:THREADID];
     dummyPost.postdate = [NSDate date];
-    dummyPost.parentPost = parentPost;
+    dummyPost.parentID = parentPost.postID;
+    dummyPost.postLevel = [NSNumber numberWithInt:2];
     
     countOfTestPosts = 2;
     countOfThreads = 1;
@@ -160,7 +162,7 @@
     for (GPPost *post in fetchedObjects) {
 
         GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
-        GHAssertTrue([post.parentPost.postID isEqualToNumber:[NSNumber numberWithInt:PARENTID]], nil);
+        GHAssertTrue([post.parentID isEqualToNumber:[NSNumber numberWithInt:PARENTID]], nil);
     }
 }
 
