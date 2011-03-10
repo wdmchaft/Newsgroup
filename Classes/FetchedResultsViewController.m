@@ -9,6 +9,7 @@
 #import "FetchedResultsViewController.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
 #import "NewsgroupAppDelegate.h"
+#import "NSDate+Helper.h"
 
 #pragma mark -
 @implementation FetchedResultsViewController
@@ -20,7 +21,14 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
 
-    return;
+    GPPost *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = thread.subject;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [NSDate stringForDisplayFromDate:thread.postdate]];
+    
+    if ([thread.isRead boolValue] == NO) {
+        UIImage *isReadIndicator = [UIImage imageNamed:@"isRead.png"];
+        cell.imageView.image = isReadIndicator;
+    }
 
 }    
 

@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "FetchedResultsViewController.h"
 
+
 @class GPPost;
 
 @interface IndividualThreadView : FetchedResultsViewController <UIWebViewDelegate> {
