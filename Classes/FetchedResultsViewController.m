@@ -10,6 +10,7 @@
 #import "FetchedResultsViewController+PrivateHeader.h"
 #import "NewsgroupAppDelegate.h"
 #import "NSDate+Helper.h"
+#import "IndividualThreadView.h"
 
 #pragma mark -
 @implementation FetchedResultsViewController
@@ -110,6 +111,23 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView endUpdates];
+}
+
+#pragma mark UITableViewDataSource
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GPPost *selectedPost = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    // Mark the current post as read
+    if ([selectedPost.isRead boolValue] == NO) {
+        selectedPost.isRead = [NSNumber numberWithBool:YES];
+        [APP_DELEGATE.dataController markPostAsRead:selectedPost.postID];
+    }
+    
+    IndividualThreadView *viewController = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
+    viewController.post = selectedPost;
+    [self.navigationController pushViewController:viewController animated:YES];
+    [viewController release];
 }
 
 #pragma mark -

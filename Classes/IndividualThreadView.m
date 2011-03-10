@@ -62,12 +62,6 @@
     
     self.fetchedResultsController = fetchedResults;
     
-    // Mark the current post as read
-    if ([self.post.isRead boolValue] == NO) {
-        self.post.isRead = [NSNumber numberWithBool:YES];
-        [APP_DELEGATE.dataController markPostAsRead:self.post.postID];
-    }
-    
 }
 
 - (void)dealloc {
@@ -89,18 +83,6 @@
     [self configureCell:cell atIndexPath:indexPath];
     
     return cell;
-}
-
-#pragma mark Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    GPPost *selectedPost = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    IndividualThreadView *viewController = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
-    viewController.post = selectedPost;
-    [self.navigationController pushViewController:viewController animated:YES];
-    [viewController release];
-    
 }
 
 #pragma mark UIWebViewDelegate methods
