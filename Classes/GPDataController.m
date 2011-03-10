@@ -18,6 +18,11 @@ NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
 
 NSString *const GPDataControllerLastFetchTime = @"GPDataControllerLastFetchTime";
 
+
+NSString *const GPDataControllerNoUsernameException = @"GPDataControllerNoUsernameException";
+NSString *const GPDataControllerNoPasswordException = @"GPDataControllerNoPasswordException";
+NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDException";
+
 #define BASE_URL_STRING @"https://api.greenpride.com/Service.svc/"
 #define REPLY_FORMAT @"format=json"
 
@@ -53,6 +58,27 @@ NSString *const GPDataControllerLastFetchTime = @"GPDataControllerLastFetchTime"
     NSString *urlPath = [NSString stringWithFormat:@"%@Hash?Value=%@&URLEncode=%@&%@", BASE_URL_STRING, value, shouldEncode ? @"True" : @"False", REPLY_FORMAT];
     urlPath = [urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     return [ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlPath]];
+}
+
++ (ASIHTTPRequest *)markPostAsRead:(NSNumber *)postID username:(NSString *)username password:(NSString *)password {
+    NSException *e = nil;
+    
+    if (postID == nil) {
+        e = [NSException exceptionWithName:GPDataControllerNoPostIDException reason:@"This method must take a postID as input" userInfo:nil];
+    } else if (username == nil) {
+        e = [NSException exceptionWithName:GPDataControllerNoUsernameException reason:@"This method must take a username as input" userInfo:nil];
+    } else if (password == nil) {
+        e = [NSException exceptionWithName:GPDataControllerNoPasswordException reason:@"This method must take a password as input" userInfo:nil];
+    }
+    
+    if (e) {
+        @throw e;
+    }
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostMarkAs?UserName=%@&Password=%@&Read=True&PostID=%@&format=json", username, [GPDataController hashString:password], postID];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    return [ASIHTTPRequest requestWithURL:url];
 }
 
 + (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password {

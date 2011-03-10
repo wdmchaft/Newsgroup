@@ -34,6 +34,13 @@ typedef enum {
     GPDataControllerErrorNoPassword
 } GPDataControllerErrorCode;
 
+/**
+ * Exception strings
+ */
+extern NSString *const GPDataControllerNoUsernameException;
+extern NSString *const GPDataControllerNoPasswordException;
+extern NSString *const GPDataControllerNoPostIDException;
+
 @class GPDataController;
 
 @protocol GPDataControllerDelegate
@@ -84,6 +91,7 @@ typedef enum {
 + (NSURL *)defaultManagedObjectModelURL;
 + (NSString *)hashString:(NSString *)password;
 + (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode;
++ (ASIHTTPRequest *)markPostAsRead:(NSNumber *)postID username:(NSString *)username password:(NSString *)password;
 + (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password;
 + (ASIHTTPRequest *)postsWithUsername:(NSString *)username password:(NSString *)password threadID:(NSInteger)threadID postID:(NSInteger)postID threadLimit:(NSInteger)threadLimit;
 
