@@ -185,6 +185,14 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 #pragma mark -
 #pragma mark Instance Methods
 
+- (BOOL)markPostAsRead:(NSNumber *)postID {
+    ASIHTTPRequest *request = [GPDataController markPostAsRead:postID username:self.login password:self.password];
+    [request setDelegate:self];
+    
+    [operationQueue_ addOperation:request];
+    return YES;
+}
+
 #pragma mark Begin and End Fetching
 
 - (BOOL)isFetching {

@@ -61,6 +61,13 @@
     }
     
     self.fetchedResultsController = fetchedResults;
+    
+    // Mark the current post as read
+    if ([self.post.isRead boolValue] == NO) {
+        self.post.isRead = [NSNumber numberWithBool:YES];
+        [APP_DELEGATE.dataController markPostAsRead:self.post.postID];
+    }
+    
 }
 
 - (void)dealloc {

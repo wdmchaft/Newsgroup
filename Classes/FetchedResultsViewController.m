@@ -37,7 +37,6 @@
 - (void)viewDidLoad {
     // Setup the toolbar
     self.toolbarItems = APP_DELEGATE.toolbarItems;
-    
 }
 
 - (void)dealloc {

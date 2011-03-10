@@ -98,6 +98,12 @@ extern NSString *const GPDataControllerNoPostIDException;
 // Init methods
 - (id)initWithModelURL:(NSURL *)modelURL andStoreURL:(NSURL *)storeURL;
 
+/**
+ * Mark post as read
+ * Marks the given post as read
+ * @param postID An NSNumber representation of the postID
+ */
+- (BOOL)markPostAsRead:(NSNumber *)postID;
 
 /**
  * The default method to begin all fetches.
@@ -112,7 +118,19 @@ extern NSString *const GPDataControllerNoPostIDException;
  * @param context The context into which the posts will be loaded. 
  */
 - (void)loadNewPosts:(NSArray *)postDict intoContext:(NSManagedObjectContext *)context;
+
+/**
+ * Start Fetch with HTTP Request
+ * Start fetching all threads with the given request
+ * @param request An ASIHTTPRequest appropriatly configured.
+ * @param error An NSError object, optional
+ */
 - (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error;
+
+/**
+ * Stop Fetching
+ * Stops a fetch
+ */
 - (void)stopFetching;
 
 /**
