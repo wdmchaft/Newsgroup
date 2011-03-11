@@ -13,18 +13,16 @@
 
 NSString *const GPDataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const GPDataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
-
 NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
-
 NSString *const GPDataControllerLastFetchTime = @"GPDataControllerLastFetchTime";
-
-
 NSString *const GPDataControllerNoUsernameException = @"GPDataControllerNoUsernameException";
 NSString *const GPDataControllerNoPasswordException = @"GPDataControllerNoPasswordException";
 NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDException";
 
 #define BASE_URL_STRING @"https://api.greenpride.com/Service.svc/"
 #define REPLY_FORMAT @"format=json"
+
+#define ASSERT_NOT_NIL(object,error) NSAssert(object != nil, @"%@", error)
 
 @interface GPDataController()
 
@@ -391,7 +389,13 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 #pragma mark Unread Posts
 
 - (NSInteger)countOfUnreadPosts {
-    return 0;
+    NSFetchRequest *fetchRequest = [self.model fetchRequestTemplateForName:@"allUnread"];
+    
+    NSError *error = nil;
+    NSArray *results = [self.context executeFetchRequest:fetchRequest error:&error];
+    ASSERT_NOT_NIL(results, error);
+    
+    return [results count];
 }
 
 - (NSArray *)pathToNextUnreadPost {
@@ -403,7 +407,20 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 }
 
 - (GPPost *)nextUnreadPost {
-    return nil;
+    NSFetchRequest *fetchRequest = [self.model fetchRequestTemplateForName:@"allUnread"];
+    NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sd]];
+    [fetchRequest setFetchLimit:1];
+    
+    NSError *error = nil;
+    NSArray *results = [self.context executeFetchRequest:fetchRequest error:&error];
+    ASSERT_NOT_NIL(results, error);
+    
+    if ([results count] > 0) {
+        return [results objectAtIndex:0];
+    } else {
+        return nil;
+    }
 }
 
 - (GPPost *)nextUnreadPostUnderPost:(GPPost *)post {

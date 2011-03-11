@@ -234,6 +234,7 @@
     [[mock expect] notificationWithName:GPDataControllerFetchDidBegin object:[OCMArg any]];
     
     id mockDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];
+    //[[mockDelegate expect] setProgress:0.0f dataController:[OCMArg any]];
     
     dataController.delegate = mockDelegate;
     dataController.login = @"login";
@@ -308,15 +309,15 @@
 }
 
 -(void)testNextUnreadPost {
-    GPPost *expectedPost = childPost;
-    GPPost *actualPost = [dataController nextUnreadPost];
-    GHAssertTrue([expectedPost isEqual:actualPost], nil);
+    NSUInteger expectedPostID = CHILD_POSTID;
+    NSUInteger actualPostID = [[dataController nextUnreadPost].postID intValue];
+    GHAssertEquals(expectedPostID, actualPostID, nil);
 }
 
 -(void)testNextUnreadPostUnderPost {
-    GPPost *expectedPost = childPost;
-    GPPost *actualPost = [dataController nextUnreadPost];
-    GHAssertTrue([expectedPost isEqual:actualPost], nil);
+    NSUInteger expectedPostID = CHILD_POSTID;
+    NSUInteger actualPostID = [[dataController nextUnreadPostUnderPost:parentPost].postID intValue];
+    GHAssertEquals(expectedPostID, actualPostID, nil);
 }
 
 -(void)testPathToPost {
