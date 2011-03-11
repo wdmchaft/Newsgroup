@@ -141,6 +141,11 @@ extern NSString *const GPDataControllerNoPostIDException;
 - (NSFetchedResultsController *)allThreads;
 
 /**
+ * Post has children
+ */
+- (BOOL)postHasChildren:(NSNumber *)postID;
+
+/**
  * Posts in thread
  * This method returns all posts in a given input thread.
  */

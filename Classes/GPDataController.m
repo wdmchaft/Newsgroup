@@ -307,6 +307,23 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     return [aFetchedResultsController autorelease];
 }
 
+- (BOOL)postHasChildren:(NSNumber *)postID {
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:postID forKey:@"parentID"];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
+    
+    NSError *error = nil;
+    NSArray *results = [self.context executeFetchRequest:fetchRequest error:&error];
+    
+    if (!results) {
+        NSLog(@"%@", error);
+        return NO;
+    } else if ([results count] == 0) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
 - (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID {
     
     // Get the fetch request
