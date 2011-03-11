@@ -124,6 +124,9 @@
         [APP_DELEGATE.dataController markPostAsRead:selectedPost.postID];
     }
     
+    // Get rid of the unread indicator
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    
     IndividualThreadView *viewController = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
     viewController.post = selectedPost;
     [self.navigationController pushViewController:viewController animated:YES];
