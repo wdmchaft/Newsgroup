@@ -27,6 +27,9 @@
     
     NSInteger countOfTestPosts;
     NSInteger countOfThreads;
+    
+    GPPost *parentPost;
+    GPPost *childPost;
 }
 
 @end
@@ -54,10 +57,11 @@
     // Load some dummy data
     GPDataController *dc = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
     
-    GPPost *parentPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
+    parentPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
+    [parentPost retain];
     
     parentPost.body = BODY;
-    parentPost.isRead = [NSNumber numberWithBool:NO];
+    parentPost.isRead = [NSNumber numberWithBool:YES];
     parentPost.memberID = [NSNumber numberWithInt:MEMBERID];
     parentPost.postID = [NSNumber numberWithInt:PARENTID];
     parentPost.posterName = POSTER_NAME;
@@ -66,18 +70,19 @@
     parentPost.postdate = [NSDate date];
     parentPost.postLevel = [NSNumber numberWithInt:1];
     
-    GPPost *dummyPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
+    childPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
+    [childPost retain];
     
-    dummyPost.body = BODY;
-    dummyPost.isRead = [NSNumber numberWithBool:NO];
-    dummyPost.memberID = [NSNumber numberWithInt:MEMBERID];
-    dummyPost.postID = [NSNumber numberWithInt:CHILD_POSTID];
-    dummyPost.posterName = POSTER_NAME;
-    dummyPost.subject = SUBJECT;
-    dummyPost.threadID = [NSNumber numberWithInt:THREADID];
-    dummyPost.postdate = [NSDate date];
-    dummyPost.parentID = parentPost.postID;
-    dummyPost.postLevel = [NSNumber numberWithInt:2];
+    childPost.body = BODY;
+    childPost.isRead = [NSNumber numberWithBool:NO];
+    childPost.memberID = [NSNumber numberWithInt:MEMBERID];
+    childPost.postID = [NSNumber numberWithInt:CHILD_POSTID];
+    childPost.posterName = POSTER_NAME;
+    childPost.subject = SUBJECT;
+    childPost.threadID = [NSNumber numberWithInt:THREADID];
+    childPost.postdate = [NSDate date];
+    childPost.parentID = parentPost.postID;
+    childPost.postLevel = [NSNumber numberWithInt:2];
     
     countOfTestPosts = 2;
     countOfThreads = 1;
@@ -95,6 +100,9 @@
         
     [testStoreURL release];
     [modelURL release];
+    
+    [parentPost release];
+    [childPost release];
 }
 
 - (void)setUp {
@@ -263,6 +271,68 @@
     NSURL *testURL = [request url];
     
     GHAssertEqualObjects(targetURL, testURL, nil);
+}
+
+-(void)testCountOfUnreadPosts {
+    NSInteger expectedValue = 1;
+    NSInteger actualValue = [dataController countOfUnreadPosts];
+    
+    GHAssertEquals(actualValue, expectedValue, nil);
+}
+
+-(void)testPathToNextUnreadPost {
+    NSArray *outputArray = [dataController pathToNextUnreadPost];
+    
+    NSUInteger expectedCount = 2;
+    NSUInteger actualCount = [outputArray count];
+    GHAssertEquals(actualCount, expectedCount, nil);
+    
+    NSUInteger expectedFirstPostID = PARENTID;
+    NSUInteger actualFirstPostID = [[[outputArray objectAtIndex:0] postID] intValue];
+    GHAssertEquals(expectedFirstPostID, actualFirstPostID, nil);
+    
+    NSUInteger expectedSecondPostID = CHILD_POSTID;
+    NSUInteger actualSecondPostID = [[[outputArray objectAtIndex:1] postID] intValue];
+    GHAssertEquals(expectedSecondPostID, actualSecondPostID, nil);
+}
+
+-(void)testPathToNextUnreadPostUnderPost {
+    NSArray *outputArray = [dataController pathToNextUnreadPostUnderPost:parentPost];
+    
+    NSUInteger expectedCount = 1;
+    NSUInteger actualCount = [outputArray count];
+    GHAssertEquals(expectedCount, actualCount, nil);
+    
+    outputArray = [dataController pathToNextUnreadPostUnderPost:childPost];
+    GHAssertNil(outputArray, nil);
+}
+
+-(void)testNextUnreadPost {
+    GPPost *expectedPost = childPost;
+    GPPost *actualPost = [dataController nextUnreadPost];
+    GHAssertTrue([expectedPost isEqual:actualPost], nil);
+}
+
+-(void)testNextUnreadPostUnderPost {
+    GPPost *expectedPost = childPost;
+    GPPost *actualPost = [dataController nextUnreadPost];
+    GHAssertTrue([expectedPost isEqual:actualPost], nil);
+}
+
+-(void)testPathToPost {
+    NSArray *outputArray = [dataController pathToNextUnreadPost];
+    
+    NSUInteger expectedCount = 2;
+    NSUInteger actualCount = [outputArray count];
+    GHAssertEquals(actualCount, expectedCount, nil);
+    
+    NSUInteger expectedFirstPostID = PARENTID;
+    NSUInteger actualFirstPostID = [[[outputArray objectAtIndex:0] postID] intValue];
+    GHAssertEquals(expectedFirstPostID, actualFirstPostID, nil);
+    
+    NSUInteger expectedSecondPostID = CHILD_POSTID;
+    NSUInteger actualSecondPostID = [[[outputArray objectAtIndex:1] postID] intValue];
+    GHAssertEquals(expectedSecondPostID, actualSecondPostID, nil);
 }
  
 @end

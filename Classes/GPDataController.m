@@ -388,6 +388,32 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     }
 }
 
+#pragma mark Unread Posts
+
+- (NSInteger)countOfUnreadPosts {
+    return 0;
+}
+
+- (NSArray *)pathToNextUnreadPost {
+    return nil;
+}
+
+- (NSArray *)pathToNextUnreadPostUnderPost:(GPPost *)post {
+    return nil;
+}
+
+- (GPPost *)nextUnreadPost {
+    return nil;
+}
+
+- (GPPost *)nextUnreadPostUnderPost:(GPPost *)post {
+    return nil;
+}
+
+- (NSArray *)pathToPost:(GPPost *)post {
+    return nil;
+}
+
 #pragma mark -
 #pragma mark ASIHTTPRequestDelegate
 

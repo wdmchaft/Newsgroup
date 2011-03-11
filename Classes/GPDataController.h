@@ -165,5 +165,13 @@ extern NSString *const GPDataControllerNoPostIDException;
  */
 - (GPPost *)postWithId:(NSUInteger)postID;
 
+// Unread Posts
+- (NSInteger)countOfUnreadPosts;
+- (NSArray *)pathToNextUnreadPost;
+- (NSArray *)pathToNextUnreadPostUnderPost:(GPPost *)post;
+- (GPPost *)nextUnreadPost;
+- (GPPost *)nextUnreadPostUnderPost:(GPPost *)post;
+- (NSArray *)pathToPost:(GPPost *)post;
+
 
 @end
