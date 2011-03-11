@@ -90,6 +90,7 @@ extern NSString *const GPDataControllerNoPostIDException;
 // Class methods
 + (NSURL *)defaultManagedObjectModelURL;
 + (NSString *)hashString:(NSString *)password;
++ (NSString *)addBodyToHTMLTemplate:(NSString *)body;
 + (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode;
 + (ASIHTTPRequest *)markPostAsRead:(NSNumber *)postID username:(NSString *)username password:(NSString *)password;
 + (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password;

@@ -48,7 +48,7 @@
     self.authorLabel.text = self.post.posterName;
     self.subjectLabel.text = self.post.subject;
     self.postTimeLabel.text = [NSDate stringForDisplayFromDate:self.post.postdate];
-    [self.webView loadHTMLString:self.post.body baseURL:nil];
+    [self.webView loadHTMLString:[GPDataController addBodyToHTMLTemplate:self.post.body] baseURL:nil];
     
     // Fetch all our threads
     NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithParentID:self.post.postID];

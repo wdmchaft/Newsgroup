@@ -53,6 +53,16 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     return hash;
 }
 
++ (NSString *)addBodyToHTMLTemplate:(NSString *)body {
+    
+    NSError *error = nil;
+    NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"post_body" ofType:@"html"];
+    NSString *template = [NSString stringWithContentsOfFile:templatePath encoding:NSUTF8StringEncoding error:&error];
+    NSAssert(template != nil, @"%@", error);
+    
+    return [template stringByReplacingOccurrencesOfString:@"<%body_text%>" withString:body];
+}
+
 + (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode {
     // Build the URL
     NSString *urlPath = [NSString stringWithFormat:@"%@Hash?Value=%@&URLEncode=%@&%@", BASE_URL_STRING, value, shouldEncode ? @"True" : @"False", REPLY_FORMAT];
