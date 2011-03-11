@@ -39,6 +39,7 @@
 - (void)setupDataController;
 - (void)newPost:(id)sender;
 - (void)refreshData:(id)sender;
+- (void)nextUnread:(id)sender;
 
 @end
 

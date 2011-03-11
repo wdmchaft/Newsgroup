@@ -61,26 +61,30 @@
     progView.viewType = GPProgressDeterminiteView;
     progView.progress = 0.0f;
     
+    // Create the bar buttons
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshData:)];
+   
+    UIBarButtonItem *nextUnreadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(nextUnread:)];
+    
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     UIBarButtonItem *progressView = [[UIBarButtonItem alloc] initWithCustomView:progView];
-    self.progressView = progView;
-    [progView release];
     
     UIBarButtonItem *newPost = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(newPost:)];
     
-    NSArray *buttonArray = [NSArray arrayWithObjects:refreshButton, flexibleSpace, progressView, flexibleSpace, newPost, nil];
-    
+    // Add the buttons to an array
+    NSArray *buttonArray = [NSArray arrayWithObjects:refreshButton, nextUnreadButton, flexibleSpace, progressView, flexibleSpace, newPost, nil];
+
+    self.toolbarItems = buttonArray;
+    self.progressView = progView;
     self.refreshButton = refreshButton;
-    [refreshButton release];
     
+    [progView release];
+    [refreshButton release];
+    [nextUnreadButton release];
     [flexibleSpace release];
     [progressView release];
     [newPost release];
-    
-    self.toolbarItems = buttonArray;
-
 }
 
 - (void)setupDataController {
@@ -119,6 +123,10 @@
         NSAssert(NO, nil);
     }
     
+}
+
+- (void)nextUnread:(id)sender {
+    NSLog(@"next unread");
 }
 
 #pragma mark -
