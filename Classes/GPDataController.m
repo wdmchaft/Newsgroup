@@ -428,7 +428,13 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 }
 
 - (NSArray *)pathToPost:(GPPost *)post {
-    return nil;
+    // If we are a top level post, return an array with only us in it
+    if ([post.parentID isEqualToNumber:post.postID]) {
+        return [NSArray arrayWithObject:post];
+    } else {
+        GPPost *parentPost = [self postWithId:post.parentID];
+        return [[self pathToPost:parentPost] arrayByAddingObject:post];
+    }
 }
 
 #pragma mark -
