@@ -366,10 +366,10 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     return [fetchedResults autorelease];
 }
 
-- (GPPost *)postWithId:(NSUInteger)postID {
+- (GPPost *)postWithId:(NSNumber *)postID {
     
     // get the fetch request
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:postID] forKey:@"postID"];
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:postID forKey:@"postID"];
     NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postWithID" substitutionVariables:dict];
     
     NSError *error = nil;

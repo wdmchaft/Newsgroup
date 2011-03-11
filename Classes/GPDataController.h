@@ -163,7 +163,7 @@ extern NSString *const GPDataControllerNoPostIDException;
  * Post with ID
  * Returns the post with the given ID or null if it does not exist
  */
-- (GPPost *)postWithId:(NSUInteger)postID;
+- (GPPost *)postWithId:(NSNumber *)postID;
 
 // Unread Posts
 - (NSInteger)countOfUnreadPosts;
