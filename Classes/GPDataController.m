@@ -410,6 +410,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     NSFetchRequest *fetchRequest = [self.model fetchRequestTemplateForName:@"allUnread"];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sd]];
+    [sd release];
     [fetchRequest setFetchLimit:1];
     
     NSError *error = nil;
@@ -424,6 +425,35 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 }
 
 - (GPPost *)nextUnreadPostUnderPost:(GPPost *)post {
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:post.postID forKey:@"parentID"];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
+    NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sd]];
+    [sd release];
+    
+    NSError *error = nil;
+    NSArray *results = [self.context executeFetchRequest:fetchRequest error:&error];
+    ASSERT_NOT_NIL(results, error);
+    
+    // If this post has no children, return nil
+    if ([results count] == 0) {
+        return nil;
+    }
+    
+    // Iterate over the posts
+    for (GPPost *childPost in results) {
+        // if the child is unread, return it
+        if ([childPost.isRead boolValue] == NO) {
+            return childPost;
+        } else {
+            // Get the unread post for the children
+            GPPost *grandchildPost = [self nextUnreadPostUnderPost:childPost];
+            if (grandchildPost) {
+                return grandchildPost;
+            }
+        }
+    }
+    
     return nil;
 }
 
