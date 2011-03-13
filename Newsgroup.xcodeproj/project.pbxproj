@@ -98,6 +98,7 @@
 		4DF2D27E13083DB600C8AB3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		4DF2D29313083EF600C8AB3A /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */; };
 		4DF61C47131DB00600B378E4 /* TestUser.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DF61C46131DB00600B378E4 /* TestUser.plist */; };
+		4DF83DB5132C42D400F30E73 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF83DB4132C42D400F30E73 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -209,6 +210,7 @@
 		4DF2D2BD130846DF00C8AB3A /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCMockRecorder.h; path = Frameworks/OCMock/Headers/OCMock/OCMockRecorder.h; sourceTree = "<group>"; };
 		4DF61C46131DB00600B378E4 /* TestUser.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TestUser.plist; path = "Test Classes/TestUser.plist"; sourceTree = "<group>"; };
 		4DF61C48131F228D00B378E4 /* JKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKConstants.h; sourceTree = "<group>"; };
+		4DF83DB4132C42D400F30E73 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsgroup-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsgroup-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -311,6 +313,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4DF83DB4132C42D400F30E73 /* Icon.png */,
 				4D0B8E641329C26C0081E772 /* post_body.html */,
 				4D54C9301327A9BA001D70C1 /* Image Resources */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
@@ -594,6 +597,7 @@
 				4D41B3A6131F29410044171F /* Settings.bundle in Resources */,
 				4D54C9321327A9BA001D70C1 /* isRead.png in Resources */,
 				4D0B8E651329C26C0081E772 /* post_body.html in Resources */,
+				4DF83DB5132C42D400F30E73 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
