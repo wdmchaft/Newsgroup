@@ -295,7 +295,7 @@
     GPPost *childPost = [dataController postWithId:[NSNumber numberWithInt:CHILD_POSTID]];
     NSArray *outputArray = [dataController pathToNextUnreadPostUnderPost:parentPost];
     
-    NSUInteger expectedCount = 1;
+    NSUInteger expectedCount = 2;
     NSUInteger actualCount = [outputArray count];
     GHAssertEquals(expectedCount, actualCount, nil);
     
