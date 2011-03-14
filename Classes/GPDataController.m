@@ -400,7 +400,11 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 
 - (NSArray *)pathToNextUnreadPost {
     GPPost *post = [self nextUnreadPost];
-    return [self pathToPost:post];
+    if (post) {
+        return [self pathToPost:post];
+    } else {
+        return nil;
+    }
 }
 
 - (NSArray *)pathToNextUnreadPostUnderPost:(GPPost *)post {

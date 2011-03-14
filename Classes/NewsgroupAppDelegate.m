@@ -130,6 +130,10 @@
     // Get a path to the next unread posts.
     NSArray *pathToPost = [self.dataController pathToNextUnreadPost];
     
+    if (pathToPost == nil) {
+        return;
+    }
+    
     MainThreadView *mainThreadView = [[MainThreadView alloc] initWithNibName:@"MainThreadView" bundle:nil];
     NSMutableArray *controllerArray = [NSMutableArray arrayWithObject:mainThreadView];
     [mainThreadView release];
