@@ -8,6 +8,7 @@
 
 #import "NewsgroupAppDelegate.h"
 #import "MainThreadView.h"
+#import "IndividualThreadView.h"
 #import "ToolbarProgressView.h"
 #import "JKConstants.h"
 
@@ -126,7 +127,21 @@
 }
 
 - (void)nextUnread:(id)sender {
-    NSLog(@"next unread");
+    // Get a path to the next unread posts.
+    NSArray *pathToPost = [self.dataController pathToNextUnreadPost];
+    
+    MainThreadView *mainThreadView = [[MainThreadView alloc] initWithNibName:@"MainThreadView" bundle:nil];
+    NSMutableArray *controllerArray = [NSMutableArray arrayWithObject:mainThreadView];
+    [mainThreadView release];
+    
+    for (GPPost *post in pathToPost) {
+        IndividualThreadView *threadView = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
+        threadView.post = post;
+        [controllerArray addObject:threadView];
+        [threadView release];
+    }
+    
+    self.navigationController.viewControllers = controllerArray;
 }
 
 #pragma mark -

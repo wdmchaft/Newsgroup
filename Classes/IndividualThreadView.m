@@ -50,6 +50,10 @@
     self.postTimeLabel.text = [NSDate stringForDisplayFromDate:self.post.postdate];
     [self.webView loadHTMLString:[GPDataController addBodyToHTMLTemplate:self.post.body] baseURL:nil];
     
+    // Set the current post as read
+    self.post.isRead = [NSNumber numberWithBool:YES];
+    [APP_DELEGATE.dataController markPostAsRead:self.post.postID];
+    
     // Fetch all our threads
     NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithParentID:self.post.postID];
     fetchedResults.delegate = self;
