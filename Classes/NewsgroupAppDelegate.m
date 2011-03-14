@@ -118,6 +118,9 @@
     
     self.refreshButton.enabled = NO;
     
+    self.progressView.viewType = GPProgressDeterminiteView;
+    self.progressView.progress = 0.0f;
+    
     NSError *error = nil;
     if (![self.dataController fetchAllPostsWithError:&error]) {
         NSLog(@"%@", error);
