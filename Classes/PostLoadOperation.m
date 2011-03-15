@@ -1,16 +1,16 @@
 //
-//  GPPostLoadOperation.m
+//  PostLoadOperation.m
 //  Newsgroup
 //
 //  Created by Jim Kubicek on 2/24/11.
 //  Copyright 2011 jimkubicek.com. All rights reserved.
 //
 
-#import "GPPostLoadOperation.h"
+#import "PostLoadOperation.h"
 #import "Post.h"
 
 
-@implementation GPPostLoadOperation
+@implementation PostLoadOperation
 
 + (NSDate *)convertToDate:(NSString *)dateString {
     
@@ -63,7 +63,7 @@
         post.threadID = [postDict objectForKey:@"ThreadID"];
         post.parentID = [postDict objectForKey:@"ParentID"];
         post.postLevel = [postDict objectForKey:@"Level"];
-        post.postdate = [GPPostLoadOperation convertToDate:[postDict objectForKey:@"Date"]];
+        post.postdate = [PostLoadOperation convertToDate:[postDict objectForKey:@"Date"]];
         
     }
     

@@ -9,7 +9,7 @@
 #import "DataController.h"
 #import "JSON.h"
 #import "NSString+Digest.h"
-#import "GPPostLoadOperation.h"
+#import "PostLoadOperation.h"
 
 NSString *const DataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const DataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
@@ -261,7 +261,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 - (void)loadNewPosts:(NSArray *)posts intoContext:(NSManagedObjectContext *)context {
-    GPPostLoadOperation *postLoad = [[GPPostLoadOperation alloc] init];
+    PostLoadOperation *postLoad = [[PostLoadOperation alloc] init];
     if ( [postLoad addPostsFromArray:posts toContext:context] ) {
         // Update the last fetch time
         self.lastFetchTime = [NSDate date];

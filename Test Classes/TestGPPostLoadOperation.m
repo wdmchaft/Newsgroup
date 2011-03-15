@@ -1,5 +1,5 @@
 //
-//  TestGPPostLoadOperation.m
+//  TestPostLoadOperation.m
 //  Newsgroup
 //
 //  Created by Jim Kubicek on 2/24/11.
@@ -7,17 +7,17 @@
 //
 
 #import <GHUnitIOS/GHUnit.h>
-#import "GPPostLoadOperation.h"
+#import "PostLoadOperation.h"
 #import "DataController.h"
 #import "JKConstants.h"
 
-@interface TestGPPostLoadOperation : GHTestCase {
-    GPPostLoadOperation *postLoadOperation;
+@interface TestPostLoadOperation : GHTestCase {
+    PostLoadOperation *postLoadOperation;
 }
 
 @end
 
-@implementation TestGPPostLoadOperation
+@implementation TestPostLoadOperation
 
 
 
@@ -28,7 +28,7 @@
 }
 
 - (void)setUp {
-    postLoadOperation = [[GPPostLoadOperation alloc] init];
+    postLoadOperation = [[PostLoadOperation alloc] init];
 }
 
 - (void)tearDown {
@@ -39,7 +39,7 @@
     NSString *paveyDateString = @"/Date(1299282285000-0700)/";
     NSString *myDateString = @"03-04-2011 16:44:45";
     
-    NSDate *paveyDate = [GPPostLoadOperation convertToDate:paveyDateString];
+    NSDate *paveyDate = [PostLoadOperation convertToDate:paveyDateString];
     
     NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
     [myDateFormatter setDateFormat:@"MM'-'dd'-'yyyy HH':'mm':'ss"];
@@ -53,10 +53,10 @@
 - (void)testAddPostsFromArray {
     NSArray *testArray = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"newsgroup_posts_cleaned" ofType:@"plist"]];
     
-    GPPostLoadOperation *postLoad = [[GPPostLoadOperation alloc] init];
+    PostLoadOperation *postLoad = [[PostLoadOperation alloc] init];
     
     // Create the context
-    NSURL *testStoreURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"TestGPPostLoadOperation.sqlite"];
+    NSURL *testStoreURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"TestPostLoadOperation.sqlite"];
     NSURL *modelURL = [DataController defaultManagedObjectModelURL];
 
     // We're loading 15 threads

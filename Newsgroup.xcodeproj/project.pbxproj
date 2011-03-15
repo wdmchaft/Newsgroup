@@ -42,8 +42,8 @@
 		4D72F98913167AFA0027E478 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F97713167AFA0027E478 /* SBJsonTokeniser.m */; };
 		4D72F98A13167AFA0027E478 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F97913167AFA0027E478 /* SBJsonWriter.m */; };
 		4D72F98B13167AFA0027E478 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F97913167AFA0027E478 /* SBJsonWriter.m */; };
-		4D72F98E13167E190027E478 /* GPPostLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F98D13167E180027E478 /* GPPostLoadOperation.m */; };
-		4D72F98F13167E190027E478 /* GPPostLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F98D13167E180027E478 /* GPPostLoadOperation.m */; };
+		4D72F98E13167E190027E478 /* PostLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F98D13167E180027E478 /* PostLoadOperation.m */; };
+		4D72F98F13167E190027E478 /* PostLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F98D13167E180027E478 /* PostLoadOperation.m */; };
 		4D8D406B1304554A0033E9E7 /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D406A130455490033E9E7 /* DataController.m */; };
 		4D9D4C7A130B5C6100A34E8F /* FetchedResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */; };
 		4D9D4D27130CAA2600A34E8F /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D4D26130CAA2600A34E8F /* HeaderView.xib */; };
@@ -145,8 +145,8 @@
 		4D72F97713167AFA0027E478 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonTokeniser.m; path = "json-framework/Classes/SBJsonTokeniser.m"; sourceTree = "<group>"; };
 		4D72F97813167AFA0027E478 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = "json-framework/Classes/SBJsonWriter.h"; sourceTree = "<group>"; };
 		4D72F97913167AFA0027E478 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = "json-framework/Classes/SBJsonWriter.m"; sourceTree = "<group>"; };
-		4D72F98C13167E180027E478 /* GPPostLoadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPostLoadOperation.h; sourceTree = "<group>"; };
-		4D72F98D13167E180027E478 /* GPPostLoadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPostLoadOperation.m; sourceTree = "<group>"; };
+		4D72F98C13167E180027E478 /* PostLoadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PostLoadOperation.h; sourceTree = "<group>"; };
+		4D72F98D13167E180027E478 /* PostLoadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostLoadOperation.m; sourceTree = "<group>"; };
 		4D72F99013167EF90027E478 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = "asi-http-request/Classes/ASIHTTPRequest.h"; sourceTree = "<group>"; };
 		4D8D4069130455490033E9E7 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = DataController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4D8D406A130455490033E9E7 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DataController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -404,8 +404,8 @@
 				4D8D406A130455490033E9E7 /* DataController.m */,
 				4DB0B6B61306026600B24E54 /* Post.h */,
 				4DB0B6B71306026600B24E54 /* Post.m */,
-				4D72F98C13167E180027E478 /* GPPostLoadOperation.h */,
-				4D72F98D13167E180027E478 /* GPPostLoadOperation.m */,
+				4D72F98C13167E180027E478 /* PostLoadOperation.h */,
+				4D72F98D13167E180027E478 /* PostLoadOperation.m */,
 			);
 			name = "Data Classes";
 			sourceTree = "<group>";
@@ -648,7 +648,7 @@
 				4D72F98613167AFA0027E478 /* SBJsonStreamWriterState.m in Sources */,
 				4D72F98813167AFA0027E478 /* SBJsonTokeniser.m in Sources */,
 				4D72F98A13167AFA0027E478 /* SBJsonWriter.m in Sources */,
-				4D72F98E13167E190027E478 /* GPPostLoadOperation.m in Sources */,
+				4D72F98E13167E190027E478 /* PostLoadOperation.m in Sources */,
 				4DE98E8C131D00220060B34F /* GTMBase64.m in Sources */,
 				4D41B3AA131F36BD0044171F /* DDAlertPrompt.m in Sources */,
 			);
@@ -682,7 +682,7 @@
 				4D72F98713167AFA0027E478 /* SBJsonStreamWriterState.m in Sources */,
 				4D72F98913167AFA0027E478 /* SBJsonTokeniser.m in Sources */,
 				4D72F98B13167AFA0027E478 /* SBJsonWriter.m in Sources */,
-				4D72F98F13167E190027E478 /* GPPostLoadOperation.m in Sources */,
+				4D72F98F13167E190027E478 /* PostLoadOperation.m in Sources */,
 				4DE98DFF1316C4780060B34F /* TestGPPostLoadOperation.m in Sources */,
 				4DE98E88131C67A70060B34F /* TestAPI.m in Sources */,
 				4DE98E8D131D00220060B34F /* GTMBase64.m in Sources */,
