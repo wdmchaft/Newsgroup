@@ -1,20 +1,20 @@
-    //
-//  GPBrowserViewController.m
+//
+//  BrowserViewController.m
 //  Newsgroup
 //
 //  Created by Jim Kubicek on 2/18/11.
 //  Copyright 2011 jimkubicek.com. All rights reserved.
 //
 
-#import "GPBrowserViewController.h"
+#import "BrowserViewController.h"
 
-@interface GPBrowserViewController()
+@interface BrowserViewController()
 
 - (void)setupURLLabel;
 
 @end
 
-@implementation GPBrowserViewController
+@implementation BrowserViewController
 
 #pragma mark -
 #pragma mark Object Lifecycle

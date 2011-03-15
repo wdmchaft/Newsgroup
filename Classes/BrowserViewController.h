@@ -1,5 +1,5 @@
 //
-//  GPBrowserViewController.h
+//  BrowserViewController.h
 //  Newsgroup
 //
 //  Created by Jim Kubicek on 2/18/11.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface GPBrowserViewController : UIViewController <UIWebViewDelegate> {
+@interface BrowserViewController : UIViewController <UIWebViewDelegate> {
     
     @private
     UIBarButtonItem *refreshButton_;

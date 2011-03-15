@@ -226,8 +226,7 @@
     [[NSNotificationCenter defaultCenter] addMockObserver:mock name:GPDataControllerFetchDidBegin object:nil];
     [[mock expect] notificationWithName:GPDataControllerFetchDidBegin object:[OCMArg any]];
     
-    id mockDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];
-    //[[mockDelegate expect] setProgress:0.0f dataController:[OCMArg any]];
+    id mockDelegate = [OCMockObject niceMockForProtocol:@protocol(GPDataControllerDelegate)];
     
     dataController.delegate = mockDelegate;
     dataController.login = @"login";
