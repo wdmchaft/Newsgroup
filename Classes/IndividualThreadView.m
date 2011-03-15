@@ -53,7 +53,7 @@
     self.authorLabel.text = self.post.posterName;
     self.subjectLabel.text = self.post.subject;
     self.postTimeLabel.text = [NSDate stringForDisplayFromDate:self.post.postdate];
-    [self.webView loadHTMLString:[GPDataController addBodyToHTMLTemplate:self.post.body] baseURL:nil];
+    [self.webView loadHTMLString:[DataController addBodyToHTMLTemplate:self.post.body] baseURL:nil];
     
     // Set the current post as read
     self.post.isRead = [NSNumber numberWithBool:YES];

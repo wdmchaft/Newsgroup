@@ -8,7 +8,7 @@
 
 #import <GHUnitIOS/GHUnit.h>
 #import "GPPostLoadOperation.h"
-#import "GPDataController.h"
+#import "DataController.h"
 #import "JKConstants.h"
 
 @interface TestGPPostLoadOperation : GHTestCase {
@@ -57,7 +57,7 @@
     
     // Create the context
     NSURL *testStoreURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"TestGPPostLoadOperation.sqlite"];
-    NSURL *modelURL = [GPDataController defaultManagedObjectModelURL];
+    NSURL *modelURL = [DataController defaultManagedObjectModelURL];
 
     // We're loading 15 threads
     NSInteger loadCount = 15;
@@ -70,7 +70,7 @@
     }
     
     // Do a full fetch, the number of posts in the context should be the same as what was passed in.
-    GPDataController *dataController = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
+    DataController *dataController = [[DataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
     NSFetchedResultsController *fetchedResults = [dataController allThreads];
     BOOL fetchDidComplete = [fetchedResults performFetch:nil];
     GHAssertTrue(fetchDidComplete, nil);

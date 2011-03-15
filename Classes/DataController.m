@@ -1,33 +1,33 @@
 //
-//  GPDataController.m
+//  DataController.m
 //  Newsgroup
 //
 //  Created by Jim Kubicek on 2/10/11.
 //  Copyright 2011 Jim Kubicek. All rights reserved.
 //
 
-#import "GPDataController.h"
+#import "DataController.h"
 #import "JSON.h"
 #import "NSString+Digest.h"
 #import "GPPostLoadOperation.h"
 
-NSString *const GPDataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
-NSString *const GPDataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
-NSString *const GPDataControllerErrorDomain = @"GPDataControllerErrorDomain";
-NSString *const GPDataControllerLastFetchTime = @"GPDataControllerLastFetchTime";
-NSString *const GPDataControllerNoUsernameException = @"GPDataControllerNoUsernameException";
-NSString *const GPDataControllerNoPasswordException = @"GPDataControllerNoPasswordException";
-NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDException";
+NSString *const DataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
+NSString *const DataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
+NSString *const DataControllerErrorDomain = @"DataControllerErrorDomain";
+NSString *const DataControllerLastFetchTime = @"DataControllerLastFetchTime";
+NSString *const DataControllerNoUsernameException = @"DataControllerNoUsernameException";
+NSString *const DataControllerNoPasswordException = @"DataControllerNoPasswordException";
+NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDException";
 
 #define BASE_URL_STRING @"https://api.greenpride.com/Service.svc/"
 #define REPLY_FORMAT @"format=json"
 
 #define ASSERT_NOT_NIL(object,error) NSAssert(object != nil, @"%@", error)
 
-@interface GPDataController()
+@interface DataController()
 
 // Private methods
-- (NSUInteger)error:(NSError **)error withErrorCode:(GPDataControllerErrorCode)code;
+- (NSUInteger)error:(NSError **)error withErrorCode:(DataControllerErrorCode)code;
 
 // Private properties
 @property (readwrite, retain) NSDate *lastFetchTime;
@@ -36,7 +36,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 @end
 
 
-@implementation GPDataController
+@implementation DataController
 
 #pragma mark -
 #pragma mark Class Methods
@@ -72,18 +72,18 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     NSException *e = nil;
     
     if (postID == nil) {
-        e = [NSException exceptionWithName:GPDataControllerNoPostIDException reason:@"This method must take a postID as input" userInfo:nil];
+        e = [NSException exceptionWithName:DataControllerNoPostIDException reason:@"This method must take a postID as input" userInfo:nil];
     } else if (username == nil) {
-        e = [NSException exceptionWithName:GPDataControllerNoUsernameException reason:@"This method must take a username as input" userInfo:nil];
+        e = [NSException exceptionWithName:DataControllerNoUsernameException reason:@"This method must take a username as input" userInfo:nil];
     } else if (password == nil) {
-        e = [NSException exceptionWithName:GPDataControllerNoPasswordException reason:@"This method must take a password as input" userInfo:nil];
+        e = [NSException exceptionWithName:DataControllerNoPasswordException reason:@"This method must take a password as input" userInfo:nil];
     }
     
     if (e) {
         @throw e;
     }
     
-    NSString *urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostMarkAs?UserName=%@&Password=%@&Read=True&PostID=%@&format=json", username, [GPDataController hashString:password], postID];
+    NSString *urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostMarkAs?UserName=%@&Password=%@&Read=True&PostID=%@&format=json", username, [DataController hashString:password], postID];
     NSURL *url = [NSURL URLWithString:urlString];
     
     return [ASIHTTPRequest requestWithURL:url];
@@ -93,7 +93,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 
     NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@UserGet?UserName=%@", BASE_URL_STRING, username];
     if (password) {
-        [urlPath appendFormat:@"&Password=%@", [GPDataController hashString:password]];
+        [urlPath appendFormat:@"&Password=%@", [DataController hashString:password]];
     }
     [urlPath appendFormat:@"&%@", REPLY_FORMAT];
     
@@ -104,7 +104,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 
 + (ASIHTTPRequest *)postsWithUsername:(NSString *)username password:(NSString *)password threadID:(NSInteger)threadID postID:(NSInteger)postID threadLimit:(NSInteger)threadLimit {
 
-    NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@Posts?UserName=%@&Password=%@", BASE_URL_STRING, username, [GPDataController hashString:password]];
+    NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@Posts?UserName=%@&Password=%@", BASE_URL_STRING, username, [DataController hashString:password]];
     
     // If you pass a '0' for any of these values then that value is ignored.
     //  i.e. '0' for the thread ID pulls in all threads
@@ -124,7 +124,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     
     NSURL *storeURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"Newsgroup.sqlite"];
     
-    NSURL *modelURL = [GPDataController defaultManagedObjectModelURL];
+    NSURL *modelURL = [DataController defaultManagedObjectModelURL];
     
     return [self initWithModelURL:modelURL andStoreURL:storeURL];
 }
@@ -154,7 +154,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
         
         // Setup the Operation Queue
         operationQueue_ = [[NSOperationQueue alloc] init];
-        [operationQueue_ setName:@"GPDataController queue"];
+        [operationQueue_ setName:@"DataController queue"];
         
     }
     return self;
@@ -183,18 +183,18 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 @synthesize password = password_;
 
 - (void)setLastFetchTime:(NSDate *)lastFetchTime {
-    [[NSUserDefaults standardUserDefaults] setObject:lastFetchTime forKey:GPDataControllerLastFetchTime];
+    [[NSUserDefaults standardUserDefaults] setObject:lastFetchTime forKey:DataControllerLastFetchTime];
 }
 
 - (NSDate *)lastFetchTime {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:GPDataControllerLastFetchTime];
+    return [[NSUserDefaults standardUserDefaults] objectForKey:DataControllerLastFetchTime];
 }
 
 #pragma mark -
 #pragma mark Instance Methods
 
 - (BOOL)markPostAsRead:(NSNumber *)postID {
-    ASIHTTPRequest *request = [GPDataController markPostAsRead:postID username:self.login password:self.password];
+    ASIHTTPRequest *request = [DataController markPostAsRead:postID username:self.login password:self.password];
     [request setDelegate:self];
     
     [operationQueue_ addOperation:request];
@@ -212,22 +212,22 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     
     // Check for a login and password
     if (!self.login) {
-        [self error:error withErrorCode:GPDataControllerErrorNoLogin];
+        [self error:error withErrorCode:DataControllerErrorNoLogin];
         return NO;
     }
     if (!self.password) {
-        [self error:error withErrorCode:GPDataControllerErrorNoPassword];
+        [self error:error withErrorCode:DataControllerErrorNoPassword];
         return NO;
     }
     
-    ASIHTTPRequest *request = [GPDataController postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
+    ASIHTTPRequest *request = [DataController postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
     [request setDelegate:self];
     [request setDownloadProgressDelegate:self];
     
     return [self startFetchWithHTTPRequest:request andError:error];
 }
 
-- (NSUInteger)error:(NSError **)error withErrorCode:(GPDataControllerErrorCode)code {
+- (NSUInteger)error:(NSError **)error withErrorCode:(DataControllerErrorCode)code {
     if (error != NULL) {
         
         NSDictionary *userInfo;
@@ -236,26 +236,26 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
         
         switch (code) {
                 
-            case GPDataControllerErrorNoDelegate:
+            case DataControllerErrorNoDelegate:
                 description = NSLocalizedString(@"No Delegate", nil);
-                failureReason = NSLocalizedString(@"GPDataController must have a delegate set", nil);
+                failureReason = NSLocalizedString(@"DataController must have a delegate set", nil);
                 userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
                 break;
                 
-            case GPDataControllerErrorNoLogin:
+            case DataControllerErrorNoLogin:
                 description = NSLocalizedString(@"No Username", nil);
-                failureReason = NSLocalizedString(@"GPDataController must have a username set before attempting a fetch", nil);
+                failureReason = NSLocalizedString(@"DataController must have a username set before attempting a fetch", nil);
                 userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
                 break;
                 
-            case GPDataControllerErrorNoPassword:
+            case DataControllerErrorNoPassword:
                 description = NSLocalizedString(@"No Password", nil);
-                failureReason = NSLocalizedString(@"GPDataController must have a password set before attempting a fetch", nil);
+                failureReason = NSLocalizedString(@"DataController must have a password set before attempting a fetch", nil);
                 userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
                 break;
         }
         
-        *error = [[[NSError alloc] initWithDomain:GPDataControllerErrorDomain code:code userInfo:userInfo] autorelease];
+        *error = [[[NSError alloc] initWithDomain:DataControllerErrorDomain code:code userInfo:userInfo] autorelease];
     }
     return 0;
 }
@@ -267,7 +267,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
         self.lastFetchTime = [NSDate date];
         
         // send notification that we're finished
-        [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidEnd object:self];
+        [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerFetchDidEnd object:self];
         
         // let delegate know
         [self.delegate fetchSucceded:self];
@@ -281,12 +281,12 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     
     // Assure that we have got a delegate
     if (!self.delegate) {
-        [self error:error withErrorCode:GPDataControllerErrorNoDelegate];
+        [self error:error withErrorCode:DataControllerErrorNoDelegate];
         return NO;
     }    
     
     // Post notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:GPDataControllerFetchDidBegin object:self];
+    [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerFetchDidBegin object:self];
     
     // Add to queue
     [operationQueue_ addOperation:request];

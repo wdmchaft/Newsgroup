@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GPDataController.h"
+#import "DataController.h"
 
 
 #define APP_DELEGATE ((NewsgroupAppDelegate *)[UIApplication sharedApplication].delegate)
@@ -19,7 +19,7 @@
     UIWindow *window;
     UINavigationController *navigationController;
     
-    GPDataController *dataController_;
+    DataController *dataController_;
     ToolbarProgressView *progressView_;
     UIBarButtonItem *refreshButton_;
     UIBarButtonItem *newPostButton_;
@@ -27,7 +27,7 @@
 }
 
 // Properties
-@property (nonatomic, retain) GPDataController *dataController;
+@property (nonatomic, retain) DataController *dataController;
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 @property (nonatomic, retain) UIBarButtonItem *refreshButton;
 @property (nonatomic, retain) NSArray *toolbarItems;

@@ -101,7 +101,7 @@
     }
     
     // Setup the data controller
-    GPDataController *dc = [[GPDataController alloc] init];
+    DataController *dc = [[DataController alloc] init];
     dc.login = username;
     dc.password = password;
     dc.delegate = self;
@@ -156,7 +156,7 @@
 #pragma mark -
 #pragma mark DataControllerDelegate Methods
 
-- (void)fetchFailed:(GPDataController *)dataController withError:(NSError *)error {
+- (void)fetchFailed:(DataController *)dataController withError:(NSError *)error {
     
     self.refreshButton.enabled = YES;
     
@@ -164,14 +164,14 @@
     
 }
 
-- (void)fetchSucceded:(GPDataController *)dataController {
+- (void)fetchSucceded:(DataController *)dataController {
     self.progressView.timestamp = dataController.lastFetchTime;
     self.progressView.viewType = GPProgressTimestampView;
     
     self.refreshButton.enabled = YES;
 }
 
-- (void)setProgress:(float)newProgress dataController:(GPDataController *)dataController {
+- (void)setProgress:(float)newProgress dataController:(DataController *)dataController {
     self.progressView.progress = newProgress;
 }
 

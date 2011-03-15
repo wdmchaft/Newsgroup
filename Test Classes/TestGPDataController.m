@@ -1,5 +1,5 @@
 //
-//  TestGPDataController.m
+//  TestDataController.m
 //  Newsgroup
 //
 //  Created by Jim Kubicek on 2/13/11.
@@ -9,7 +9,7 @@
 #import <GHUnitIOS/GHUnit.h>
 #import <CoreData/CoreData.h>
 #import "OCMock.h"
-#import "GPDataController.h"
+#import "DataController.h"
 #import "Post.h"
 
 #define CHILD_POSTID 9876 
@@ -20,10 +20,10 @@
 #define BODY @"this is the body of a post"
 #define POSTER_NAME @"woah!"
 
-@interface TestGPDataController : GHTestCase {
+@interface TestDataController : GHTestCase {
     NSURL *testStoreURL;
     NSURL *modelURL;
-    GPDataController *dataController;
+    DataController *dataController;
     
     NSInteger countOfTestPosts;
     NSInteger countOfThreads;
@@ -31,7 +31,7 @@
 
 @end
 
-@implementation TestGPDataController
+@implementation TestDataController
 
 - (void)cleanUpTestFiles {
     NSError *error = nil;
@@ -44,7 +44,7 @@
 - (void)setUpClass {
     
     testStoreURL = [[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject] URLByAppendingPathComponent:@"TestDatabase.sqlite"];
-    modelURL = [GPDataController defaultManagedObjectModelURL];
+    modelURL = [DataController defaultManagedObjectModelURL];
     
     [testStoreURL retain];
     [modelURL retain];
@@ -52,7 +52,7 @@
     [self cleanUpTestFiles];
     
     // Load some dummy data
-    GPDataController *dc = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
+    DataController *dc = [[DataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
     
     Post *parentPost = [NSEntityDescription insertNewObjectForEntityForName:[Post entityName] inManagedObjectContext:dc.context];
     
@@ -99,7 +99,7 @@
 }
 
 - (void)setUp {
-    dataController = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
+    dataController = [[DataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
 }
 
 - (void)tearDown {
@@ -182,13 +182,13 @@
     dataController.password = @"fake password";
     
     GHAssertFalse([dataController fetchAllPostsWithError:&error],nil);
-    GHAssertEqualStrings([error domain], GPDataControllerErrorDomain, nil);
-    GHAssertEquals([error code], GPDataControllerErrorNoDelegate, nil);
+    GHAssertEqualStrings([error domain], DataControllerErrorDomain, nil);
+    GHAssertEquals([error code], DataControllerErrorNoDelegate, nil);
     
     
     GHAssertFalse([dataController startFetchWithHTTPRequest:nil andError:&error], nil);
-    GHAssertEqualStrings([error domain], GPDataControllerErrorDomain, nil);
-    GHAssertEquals([error code], GPDataControllerErrorNoDelegate, nil);
+    GHAssertEqualStrings([error domain], DataControllerErrorDomain, nil);
+    GHAssertEquals([error code], DataControllerErrorNoDelegate, nil);
 }
 
 - (void)testNoLogin {
@@ -199,8 +199,8 @@
     dataController.delegate = dataControllerDelegate;
 
     GHAssertFalse([dataController fetchAllPostsWithError:&error], nil);
-    GHAssertEqualStrings([error domain], GPDataControllerErrorDomain, nil);
-    GHAssertEquals([error code], GPDataControllerErrorNoLogin, nil);
+    GHAssertEqualStrings([error domain], DataControllerErrorDomain, nil);
+    GHAssertEquals([error code], DataControllerErrorNoLogin, nil);
     
     [dataControllerDelegate verify];
 }
@@ -214,8 +214,8 @@
     dataController.login = @"login";
     
     GHAssertFalse([dataController fetchAllPostsWithError:&error], nil);
-    GHAssertEqualStrings([error domain], GPDataControllerErrorDomain, nil);
-    GHAssertEquals([error code], GPDataControllerErrorNoPassword, nil);
+    GHAssertEqualStrings([error domain], DataControllerErrorDomain, nil);
+    GHAssertEquals([error code], DataControllerErrorNoPassword, nil);
     
     [dataControllerDelegate verify];
     
@@ -224,8 +224,8 @@
 /*
 - (void)testStartNotifications {
     id mock = [OCMockObject observerMock];
-    [[NSNotificationCenter defaultCenter] addMockObserver:mock name:GPDataControllerFetchDidBegin object:nil];
-    [[mock expect] notificationWithName:GPDataControllerFetchDidBegin object:[OCMArg any]];
+    [[NSNotificationCenter defaultCenter] addMockObserver:mock name:DataControllerFetchDidBegin object:nil];
+    [[mock expect] notificationWithName:DataControllerFetchDidBegin object:[OCMArg any]];
     
     id mockDelegate = [OCMockObject niceMockForProtocol:@protocol(DataControllerDelegate)];
     
@@ -255,13 +255,13 @@
     
     ASIHTTPRequest *request;
     
-    GHAssertThrows([GPDataController markPostAsRead:nil username:nil password:nil], nil);
-    GHAssertThrows([GPDataController markPostAsRead:postID username:nil password:nil], nil);
-    GHAssertThrows([GPDataController markPostAsRead:postID username:username password:nil], nil);
-    GHAssertNoThrow(request = [GPDataController markPostAsRead:postID username:username password:password], nil);
+    GHAssertThrows([DataController markPostAsRead:nil username:nil password:nil], nil);
+    GHAssertThrows([DataController markPostAsRead:postID username:nil password:nil], nil);
+    GHAssertThrows([DataController markPostAsRead:postID username:username password:nil], nil);
+    GHAssertNoThrow(request = [DataController markPostAsRead:postID username:username password:password], nil);
     GHAssertNotNil(request, nil);
     
-    NSString *urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostMarkAs?UserName=%@&Password=%@&Read=True&PostID=%@&format=json", username, [GPDataController hashString:password], postID];
+    NSString *urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostMarkAs?UserName=%@&Password=%@&Read=True&PostID=%@&format=json", username, [DataController hashString:password], postID];
     NSURL *targetURL = [NSURL URLWithString:urlString];
     NSURL *testURL = [request url];
     

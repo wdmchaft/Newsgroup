@@ -7,13 +7,13 @@
 //
 
 #import <GHUnitIOS/GHUnit.h>
-#import "GPDataController.h"
+#import "DataController.h"
 #import "ASIHTTPRequest.h"
 #import "JSON.h"
 
 @interface TestAPI : GHTestCase {
 @private
-    GPDataController *dataController;
+    DataController *dataController;
     NSString *login;
     NSString *password;
     NSDictionary *testUser;
@@ -64,7 +64,7 @@
 }
 
 - (void)setUp {
-    dataController = [[GPDataController alloc] init];
+    dataController = [[DataController alloc] init];
 }
 
 - (void)tearDown {
@@ -78,7 +78,7 @@
     NSString *inputPassword = @"password";
     
     NSString *testHash = @"sQnzu7wkTrgkQZF+0G1hi5AI3Qmzvv0bXgc5THBqi7mAsdd4Xll27ASbRt9fEyavWi6m0QP9B8lThf+rDKy8hg==";
-    NSString *actualHash = [GPDataController hashString:inputPassword];
+    NSString *actualHash = [DataController hashString:inputPassword];
     
     GHAssertEqualStrings(testHash, actualHash, nil);
 }
@@ -86,7 +86,7 @@
 - (void)testGetHash {
     NSString *inputValue = @"test string";
     
-    ASIHTTPRequest *request = [GPDataController hashRequestWithValue:inputValue urlEncode:NO];
+    ASIHTTPRequest *request = [DataController hashRequestWithValue:inputValue urlEncode:NO];
     
     NSString *response = [self runASIRequest:request];
 
@@ -95,14 +95,14 @@
     response = [response stringByReplacingOccurrencesOfString:@"\"" withString:@""];
     response = [response stringByReplacingOccurrencesOfString:@"\\/" withString:@"/"];
     
-    NSString *myHash = [GPDataController hashString:inputValue];
+    NSString *myHash = [DataController hashString:inputValue];
     
     GHAssertEqualStrings(response, myHash, nil);
 }
 
 - (void)testUserGet {
     
-    ASIHTTPRequest *request = [GPDataController userWithUsername:login andPassword:password];
+    ASIHTTPRequest *request = [DataController userWithUsername:login andPassword:password];
 
     NSString *response = [self runASIRequest:request];
     
@@ -120,7 +120,7 @@
 
 - (void)testPosts {
     
-    ASIHTTPRequest *request = [GPDataController postsWithUsername:login password:password threadID:0 postID:0 threadLimit:0];
+    ASIHTTPRequest *request = [DataController postsWithUsername:login password:password threadID:0 postID:0 threadLimit:0];
     
     // Test pulling in all threads
     NSString *response = [self runASIRequest:request];
@@ -132,7 +132,7 @@
     NSNumber *threadId = [[allThreads objectAtIndex:0] objectForKey:@"ThreadID"];
     GHAssertNotNULL(threadId, nil);
     
-    request = [GPDataController postsWithUsername:login password:password threadID:[threadId intValue] postID:0 threadLimit:0];
+    request = [DataController postsWithUsername:login password:password threadID:[threadId intValue] postID:0 threadLimit:0];
     response = [self runASIRequest:request];
     
     NSArray *postsInThread = [response JSONValue];
@@ -145,7 +145,7 @@
     NSNumber *postId = [[postsInThread objectAtIndex:0] objectForKey:@"PostID"];
     GHAssertNotNULL(postId, nil);
     
-    request = [GPDataController postsWithUsername:login password:password threadID:0 postID:[postId intValue] threadLimit:0];
+    request = [DataController postsWithUsername:login password:password threadID:0 postID:[postId intValue] threadLimit:0];
     response = [self runASIRequest:request];
     
     NSArray *singlePost = [response JSONValue];

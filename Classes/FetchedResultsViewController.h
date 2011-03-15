@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-#import "GPDataController.h"
+#import "DataController.h"
 #import "NewsgroupAppDelegate.h"
 
 @interface FetchedResultsViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
