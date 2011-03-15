@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GPPost.h"
+#import "Post.h"
 #import "ASIHTTPRequest.h"
 
 /**
@@ -163,15 +163,15 @@ extern NSString *const GPDataControllerNoPostIDException;
  * Post with ID
  * Returns the post with the given ID or null if it does not exist
  */
-- (GPPost *)postWithId:(NSNumber *)postID;
+- (Post *)postWithId:(NSNumber *)postID;
 
 // Unread Posts
 - (NSInteger)countOfUnreadPosts;
 - (NSArray *)pathToNextUnreadPost;
-- (NSArray *)pathToNextUnreadPostUnderPost:(GPPost *)post;
-- (GPPost *)nextUnreadPost;
-- (GPPost *)nextUnreadPostUnderPost:(GPPost *)post;
-- (NSArray *)pathToPost:(GPPost *)post;
+- (NSArray *)pathToNextUnreadPostUnderPost:(Post *)post;
+- (Post *)nextUnreadPost;
+- (Post *)nextUnreadPostUnderPost:(Post *)post;
+- (NSArray *)pathToPost:(Post *)post;
 
 
 @end

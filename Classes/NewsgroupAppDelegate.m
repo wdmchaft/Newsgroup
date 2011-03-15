@@ -143,7 +143,7 @@
     NSMutableArray *controllerArray = [NSMutableArray arrayWithObject:mainThreadView];
     [mainThreadView release];
     
-    for (GPPost *post in pathToPost) {
+    for (Post *post in pathToPost) {
         IndividualThreadView *threadView = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
         threadView.post = post;
         [controllerArray addObject:threadView];

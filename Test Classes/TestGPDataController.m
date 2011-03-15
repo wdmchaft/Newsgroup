@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "OCMock.h"
 #import "GPDataController.h"
-#import "GPPost.h"
+#import "Post.h"
 
 #define CHILD_POSTID 9876 
 #define THREADID 9875
@@ -54,7 +54,7 @@
     // Load some dummy data
     GPDataController *dc = [[GPDataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
     
-    GPPost *parentPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
+    Post *parentPost = [NSEntityDescription insertNewObjectForEntityForName:[Post entityName] inManagedObjectContext:dc.context];
     
     parentPost.body = BODY;
     parentPost.isRead = [NSNumber numberWithBool:YES];
@@ -67,7 +67,7 @@
     parentPost.postLevel = [NSNumber numberWithInt:1];
     parentPost.parentID = [NSNumber numberWithInt:PARENTID];
     
-    GPPost *childPost = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:dc.context];
+    Post *childPost = [NSEntityDescription insertNewObjectForEntityForName:[Post entityName] inManagedObjectContext:dc.context];
     
     childPost.body = BODY;
     childPost.isRead = [NSNumber numberWithBool:NO];
@@ -119,8 +119,8 @@
     NSInteger fetchCount = [fetchedObjects count];
     GHAssertEquals(fetchCount, countOfThreads, nil);
     
-    GPPost *thread = (GPPost *)[fetchedObjects objectAtIndex:0];
-    GHAssertTrue([thread isMemberOfClass:[GPPost class]], nil);
+    Post *thread = (Post *)[fetchedObjects objectAtIndex:0];
+    GHAssertTrue([thread isMemberOfClass:[Post class]], nil);
         
     NSString *subject = thread.subject;
     GHAssertEqualStrings(subject, SUBJECT, nil);
@@ -139,8 +139,8 @@
     NSInteger fetchCount = [fetchedObjects count];
     GHAssertEquals(fetchCount, countOfTestPosts, nil);
     
-    GPPost *post = [fetchedObjects objectAtIndex:0];
-    GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
+    Post *post = [fetchedObjects objectAtIndex:0];
+    GHAssertTrue([post isMemberOfClass:[Post class]], nil);
     
     GHAssertEqualStrings(post.subject, SUBJECT, nil);
     GHAssertEqualStrings(post.body, BODY, nil);
@@ -160,16 +160,16 @@
     NSInteger fetchCount = [fetchedObjects count];
     GHAssertEquals(fetchCount, 1, nil);
     
-    for (GPPost *post in fetchedObjects) {
+    for (Post *post in fetchedObjects) {
 
-        GHAssertTrue([post isMemberOfClass:[GPPost class]], nil);
+        GHAssertTrue([post isMemberOfClass:[Post class]], nil);
         GHAssertTrue([post.parentID isEqualToNumber:[NSNumber numberWithInt:PARENTID]], nil);
     }
 }
 
 - (void)testFetchSinglePost {
     NSInteger postID = CHILD_POSTID;
-    GPPost *fetchedPost = [dataController postWithId:[NSNumber numberWithInt:postID]];
+    Post *fetchedPost = [dataController postWithId:[NSNumber numberWithInt:postID]];
     NSNumber *outputPostID = fetchedPost.postID;
     
     GHAssertEquals(postID, [outputPostID intValue], nil);
@@ -290,8 +290,8 @@
 }
 
 -(void)testPathToNextUnreadPostUnderPost {
-    GPPost *parentPost = [dataController postWithId:[NSNumber numberWithInt:PARENTID]];
-    GPPost *childPost = [dataController postWithId:[NSNumber numberWithInt:CHILD_POSTID]];
+    Post *parentPost = [dataController postWithId:[NSNumber numberWithInt:PARENTID]];
+    Post *childPost = [dataController postWithId:[NSNumber numberWithInt:CHILD_POSTID]];
     NSArray *outputArray = [dataController pathToNextUnreadPostUnderPost:parentPost];
     
     NSUInteger expectedCount = 2;
@@ -309,7 +309,7 @@
 }
 
 -(void)testNextUnreadPostUnderPost {
-    GPPost *parentPost = [dataController postWithId:[NSNumber numberWithInt:PARENTID]];
+    Post *parentPost = [dataController postWithId:[NSNumber numberWithInt:PARENTID]];
     
     NSUInteger expectedPostID = CHILD_POSTID;
     NSUInteger actualPostID = [[dataController nextUnreadPostUnderPost:parentPost].postID intValue];
@@ -317,7 +317,7 @@
 }
 
 -(void)testPathToPost {
-    GPPost *childPost = [dataController postWithId:[NSNumber numberWithInt:CHILD_POSTID]];
+    Post *childPost = [dataController postWithId:[NSNumber numberWithInt:CHILD_POSTID]];
     
     NSArray *outputArray = [dataController pathToPost:childPost];
     

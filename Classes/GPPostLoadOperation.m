@@ -7,7 +7,7 @@
 //
 
 #import "GPPostLoadOperation.h"
-#import "GPPost.h"
+#import "Post.h"
 
 
 @implementation GPPostLoadOperation
@@ -47,9 +47,9 @@
             return [[obj postID] isEqualToNumber:postID];
         }];
         
-        GPPost *post;
+        Post *post;
         if (existingPostIndex == NSNotFound) {
-            post = [NSEntityDescription insertNewObjectForEntityForName:[GPPost entityName] inManagedObjectContext:context];
+            post = [NSEntityDescription insertNewObjectForEntityForName:[Post entityName] inManagedObjectContext:context];
             post.postID = postID;
         } else {
             post = [allPosts objectAtIndex:existingPostIndex];

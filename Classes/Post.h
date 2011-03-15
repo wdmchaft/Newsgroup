@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface GPPost : NSManagedObject {
+@interface Post : NSManagedObject {
 
 }
 

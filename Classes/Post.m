@@ -6,10 +6,10 @@
 //  Copyright 2011 jimkubicek.com. All rights reserved.
 //
 
-#import "GPPost.h"
+#import "Post.h"
 
 
-@implementation GPPost
+@implementation Post
 
 #pragma mark Class methods
 + (NSString *)entityName {

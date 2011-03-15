@@ -366,7 +366,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     return [fetchedResults autorelease];
 }
 
-- (GPPost *)postWithId:(NSNumber *)postID {
+- (Post *)postWithId:(NSNumber *)postID {
     
     // get the fetch request
     NSDictionary *dict = [NSDictionary dictionaryWithObject:postID forKey:@"postID"];
@@ -399,7 +399,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
 }
 
 - (NSArray *)pathToNextUnreadPost {
-    GPPost *post = [self nextUnreadPost];
+    Post *post = [self nextUnreadPost];
     if (post) {
         return [self pathToPost:post];
     } else {
@@ -407,8 +407,8 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     }
 }
 
-- (NSArray *)pathToNextUnreadPostUnderPost:(GPPost *)post {
-    GPPost *nextUnreadPost = [self nextUnreadPostUnderPost:post];
+- (NSArray *)pathToNextUnreadPostUnderPost:(Post *)post {
+    Post *nextUnreadPost = [self nextUnreadPostUnderPost:post];
     if (nextUnreadPost) {
         return [self pathToPost:nextUnreadPost];
     } else {
@@ -417,7 +417,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     
 }
 
-- (GPPost *)nextUnreadPost {
+- (Post *)nextUnreadPost {
     NSFetchRequest *fetchRequest = [self.model fetchRequestTemplateForName:@"allUnread"];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sd]];
@@ -435,7 +435,7 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     }
 }
 
-- (GPPost *)nextUnreadPostUnderPost:(GPPost *)post {
+- (Post *)nextUnreadPostUnderPost:(Post *)post {
     NSDictionary *dict = [NSDictionary dictionaryWithObject:post.postID forKey:@"parentID"];
     NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
@@ -452,13 +452,13 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     }
     
     // Iterate over the posts
-    for (GPPost *childPost in results) {
+    for (Post *childPost in results) {
         // if the child is unread, return it
         if ([childPost.isRead boolValue] == NO) {
             return childPost;
         } else {
             // Get the unread post for the children
-            GPPost *grandchildPost = [self nextUnreadPostUnderPost:childPost];
+            Post *grandchildPost = [self nextUnreadPostUnderPost:childPost];
             if (grandchildPost) {
                 return grandchildPost;
             }
@@ -468,12 +468,12 @@ NSString *const GPDataControllerNoPostIDException = @"GPDataControllerNoPostIDEx
     return nil;
 }
 
-- (NSArray *)pathToPost:(GPPost *)post {
+- (NSArray *)pathToPost:(Post *)post {
     // If we are a top level post, return an array with only us in it
     if ([post.parentID isEqualToNumber:post.postID]) {
         return [NSArray arrayWithObject:post];
     } else {
-        GPPost *parentPost = [self postWithId:post.parentID];
+        Post *parentPost = [self postWithId:post.parentID];
         return [[self pathToPost:parentPost] arrayByAddingObject:post];
     }
 }

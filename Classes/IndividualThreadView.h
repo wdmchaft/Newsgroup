@@ -11,15 +11,15 @@
 #import "FetchedResultsViewController.h"
 
 
-@class GPPost;
+@class Post;
 
 @interface IndividualThreadView : FetchedResultsViewController <UIWebViewDelegate> {
 
     @private
-    GPPost *post_;
+    Post *post_;
 }
 
-@property (nonatomic, retain) GPPost *post;
+@property (nonatomic, retain) Post *post;
 
 // IBOutlets
 @property (nonatomic, retain) IBOutlet UIView *headerView;

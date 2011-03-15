@@ -22,7 +22,7 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
 
-    GPPost *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Post *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = thread.subject;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterName, [NSDate stringForDisplayFromDate:thread.postdate]];
     
@@ -122,7 +122,7 @@
 #pragma mark UITableViewDataSource
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    GPPost *selectedPost = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Post *selectedPost = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     // Mark the current post as read
     if ([selectedPost.isRead boolValue] == NO) {
