@@ -87,7 +87,7 @@
     if (subject == nil) subject = @"";
     if (body == nil) body = @"";
     
-    NSString *urlString = [NSString stringWithFormat:@"%@PostAdd?UserName=%@&Password%@&Subject=%@&Description=%@&ReplyToID=%i&%@",
+    NSString *urlString = [NSString stringWithFormat:@"%@PostAdd?UserName=%@&Password=%@&Subject=%@&Description=%@&ReplyToID=%i&%@",
                            BASE_URL_STRING,
                            username,
                            [DataController hashString:password],
