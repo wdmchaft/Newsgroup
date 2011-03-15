@@ -14,7 +14,7 @@
 
 @class ToolbarProgressView;
 
-@interface NewsgroupAppDelegate : NSObject <UIApplicationDelegate, GPDataControllerDelegate> {
+@interface NewsgroupAppDelegate : NSObject <UIApplicationDelegate, DataControllerDelegate> {
     
     UIWindow *window;
     UINavigationController *navigationController;

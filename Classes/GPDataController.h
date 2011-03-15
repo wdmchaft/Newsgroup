@@ -43,7 +43,7 @@ extern NSString *const GPDataControllerNoPostIDException;
 
 @class GPDataController;
 
-@protocol GPDataControllerDelegate
+@protocol DataControllerDelegate
 
 /**
  * Fetch did fail with error.
@@ -70,7 +70,7 @@ extern NSString *const GPDataControllerNoPostIDException;
 
     @private
     NSManagedObjectContext *context_;
-    id <GPDataControllerDelegate> delegate_;
+    id <DataControllerDelegate> delegate_;
     BOOL isFetching_;
     NSString *login_;
     NSManagedObjectModel *model_;
@@ -81,7 +81,7 @@ extern NSString *const GPDataControllerNoPostIDException;
 
 // Properties
 @property (retain, nonatomic) NSManagedObjectContext *context;
-@property (assign) id <GPDataControllerDelegate> delegate;
+@property (assign) id <DataControllerDelegate> delegate;
 @property (readonly, retain) NSDate *lastFetchTime;
 @property (copy) NSString *login;
 @property (readonly) BOOL isFetching;

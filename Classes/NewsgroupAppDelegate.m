@@ -154,7 +154,7 @@
 }
 
 #pragma mark -
-#pragma mark GPDataControllerDelegate Methods
+#pragma mark DataControllerDelegate Methods
 
 - (void)fetchFailed:(GPDataController *)dataController withError:(NSError *)error {
     

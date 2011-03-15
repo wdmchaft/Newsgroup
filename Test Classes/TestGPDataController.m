@@ -195,7 +195,7 @@
     
     NSError *error = nil;
     
-    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];    
+    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(DataControllerDelegate)];    
     dataController.delegate = dataControllerDelegate;
 
     GHAssertFalse([dataController fetchAllPostsWithError:&error], nil);
@@ -209,7 +209,7 @@
     
     NSError *error = nil;
     
-    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(GPDataControllerDelegate)];
+    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(DataControllerDelegate)];
     dataController.delegate = dataControllerDelegate;
     dataController.login = @"login";
     
@@ -227,7 +227,7 @@
     [[NSNotificationCenter defaultCenter] addMockObserver:mock name:GPDataControllerFetchDidBegin object:nil];
     [[mock expect] notificationWithName:GPDataControllerFetchDidBegin object:[OCMArg any]];
     
-    id mockDelegate = [OCMockObject niceMockForProtocol:@protocol(GPDataControllerDelegate)];
+    id mockDelegate = [OCMockObject niceMockForProtocol:@protocol(DataControllerDelegate)];
     
     dataController.delegate = mockDelegate;
     dataController.login = @"login";
