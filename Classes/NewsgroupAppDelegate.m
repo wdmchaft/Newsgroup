@@ -22,6 +22,7 @@
 @synthesize progressView = progressView_;
 @synthesize window;
 @synthesize refreshButton = refreshButton_;
+@synthesize newPostButton = newPostButton_;
 
 
 #pragma mark -
@@ -79,6 +80,7 @@
     self.toolbarItems = buttonArray;
     self.progressView = progView;
     self.refreshButton = refreshButton;
+    self.newPostButton = newPost;
     
     [progView release];
     [refreshButton release];

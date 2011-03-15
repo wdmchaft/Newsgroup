@@ -19,4 +19,6 @@
 
 }
 
+- (void)newPost:(id)sender;
+
 @end

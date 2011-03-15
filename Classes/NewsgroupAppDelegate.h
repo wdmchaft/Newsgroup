@@ -22,6 +22,7 @@
     GPDataController *dataController_;
     ToolbarProgressView *progressView_;
     UIBarButtonItem *refreshButton_;
+    UIBarButtonItem *newPostButton_;
     
 }
 
@@ -32,6 +33,7 @@
 @property (nonatomic, retain) NSArray *toolbarItems;
 @property (nonatomic, retain) ToolbarProgressView *progressView;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) UIBarButtonItem *newPostButton;
 
 // Utility Methods
 - (NSURL *)applicationDocumentsDirectory;

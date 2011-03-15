@@ -27,6 +27,10 @@
     [super configureCell:cell atIndexPath:indexPath];
 }
 
+- (void)newPost:(id)sender {
+    [super newPost:sender];
+    NSLog(@"newPost in MainThreadView");
+}
 
 #pragma mark View lifecycle
 

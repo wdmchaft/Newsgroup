@@ -33,6 +33,11 @@
     [super configureCell:cell atIndexPath:indexPath];
 }
 
+- (void)newPost:(id)sender {
+    [super newPost:sender];
+    NSLog(@"newPost in Individual thread view");
+}
+
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {

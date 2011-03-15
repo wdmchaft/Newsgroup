@@ -33,11 +33,17 @@
 
 }    
 
+- (void)newPost:(id)sender {
+    NSLog(@"newPost in FetchedResultsController");
+}
+
 #pragma mark View Lifecycle
 
 - (void)viewDidLoad {
     // Setup the toolbar
     self.toolbarItems = APP_DELEGATE.toolbarItems;
+    APP_DELEGATE.newPostButton.target = self;
+    APP_DELEGATE.newPostButton.action = @selector(newPost:);
 }
 
 - (void)dealloc {
