@@ -12,14 +12,22 @@
 #import "PostLoadOperation.h"
 #import "RequestGenerator.h"
 
+// Notification Strings
 NSString *const DataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const DataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
+
+// Data Controller Error Domain
 NSString *const DataControllerErrorDomain = @"DataControllerErrorDomain";
+
+// User Default keys
 NSString *const DataControllerLastFetchTime = @"DataControllerLastFetchTime";
+
+// Exception Strings
 NSString *const DataControllerNoUsernameException = @"DataControllerNoUsernameException";
 NSString *const DataControllerNoPasswordException = @"DataControllerNoPasswordException";
 NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDException";
 
+// Helper macros
 #define ASSERT_NOT_NIL(object,error) NSAssert(object != nil, @"%@", error)
 
 @interface DataController()
@@ -35,6 +43,27 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 
 
 @implementation DataController
+
+#pragma mark -
+#pragma mark Properties
+
+@synthesize context = context_;
+@synthesize delegate = delegate_;
+@synthesize login = login_;
+@synthesize model = model_;
+@synthesize password = password_;
+
+- (void)setLastFetchTime:(NSDate *)lastFetchTime {
+    [[NSUserDefaults standardUserDefaults] setObject:lastFetchTime forKey:DataControllerLastFetchTime];
+}
+
+- (NSDate *)lastFetchTime {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:DataControllerLastFetchTime];
+}
+
+- (BOOL)isFetching {
+    return NO;
+}
 
 #pragma mark -
 #pragma mark Class Methods
@@ -61,7 +90,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 
 
 #pragma mark -
-#pragma mark Object lifecycle
+#pragma mark Init/Dealloc methods
 
 - (id)init {
     
@@ -72,6 +101,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     return [self initWithModelURL:modelURL andStoreURL:storeURL];
 }
 
+// Designated Initializer
 - (id)initWithModelURL:(NSURL *)modelURL andStoreURL:(NSURL *)storeURL {
     if ((self = [super init])) {
         
@@ -117,24 +147,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 #pragma mark -
-#pragma mark Properties
-
-@synthesize context = context_;
-@synthesize delegate = delegate_;
-@synthesize login = login_;
-@synthesize model = model_;
-@synthesize password = password_;
-
-- (void)setLastFetchTime:(NSDate *)lastFetchTime {
-    [[NSUserDefaults standardUserDefaults] setObject:lastFetchTime forKey:DataControllerLastFetchTime];
-}
-
-- (NSDate *)lastFetchTime {
-    return [[NSUserDefaults standardUserDefaults] objectForKey:DataControllerLastFetchTime];
-}
-
-#pragma mark -
-#pragma mark Instance Methods
+#pragma mark Web Methods
 
 - (BOOL)markPostAsRead:(NSNumber *)postID {
     ASIHTTPRequest *request = [RequestGenerator markPostAsRead:postID username:self.login password:self.password];
@@ -142,13 +155,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     
     [operationQueue_ addOperation:request];
     return YES;
-}
-
-#pragma mark Begin and End Fetching
-
-- (BOOL)isFetching {
-    // Since we're loading data from a plist synchronously, we're never actually "fetching"
-    return NO;
 }
 
 - (BOOL)fetchAllPostsWithError:(NSError **)error {
@@ -170,78 +176,11 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     return [self startFetchWithHTTPRequest:request andError:error];
 }
 
-- (NSUInteger)error:(NSError **)error withErrorCode:(DataControllerErrorCode)code {
-    if (error != NULL) {
-        
-        NSDictionary *userInfo;
-        NSString *description;
-        NSString *failureReason;
-        
-        switch (code) {
-                
-            case DataControllerErrorNoDelegate:
-                description = NSLocalizedString(@"No Delegate", nil);
-                failureReason = NSLocalizedString(@"DataController must have a delegate set", nil);
-                userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
-                break;
-                
-            case DataControllerErrorNoLogin:
-                description = NSLocalizedString(@"No Username", nil);
-                failureReason = NSLocalizedString(@"DataController must have a username set before attempting a fetch", nil);
-                userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
-                break;
-                
-            case DataControllerErrorNoPassword:
-                description = NSLocalizedString(@"No Password", nil);
-                failureReason = NSLocalizedString(@"DataController must have a password set before attempting a fetch", nil);
-                userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
-                break;
-        }
-        
-        *error = [[[NSError alloc] initWithDomain:DataControllerErrorDomain code:code userInfo:userInfo] autorelease];
-    }
-    return 0;
-}
-
-- (void)loadNewPosts:(NSArray *)posts intoContext:(NSManagedObjectContext *)context {
-    PostLoadOperation *postLoad = [[PostLoadOperation alloc] init];
-    if ( [postLoad addPostsFromArray:posts toContext:context] ) {
-        // Update the last fetch time
-        self.lastFetchTime = [NSDate date];
-        
-        // send notification that we're finished
-        [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerFetchDidEnd object:self];
-        
-        // let delegate know
-        [self.delegate fetchSucceded:self];
-    } else {
-        NSAssert(YES, @"Construct some sort of error here");
-    }
-    [postLoad release];
-}
-
-- (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error {
-    
-    // Assure that we have got a delegate
-    if (!self.delegate) {
-        [self error:error withErrorCode:DataControllerErrorNoDelegate];
-        return NO;
-    }    
-    
-    // Post notification
-    [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerFetchDidBegin object:self];
-    
-    // Add to queue
-    [operationQueue_ addOperation:request];
-    
-    return YES;
-}
-
 - (void)stopFetching {
     
 }
 
-#pragma mark FetchedResultsControllers
+#pragma mark Fetch posts from the data store
 
 - (NSFetchedResultsController *)allThreads {
     
@@ -256,23 +195,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
         
     return [aFetchedResultsController autorelease];
-}
-
-- (BOOL)postHasChildren:(NSNumber *)postID {
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:postID forKey:@"parentID"];
-    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
-    
-    NSError *error = nil;
-    NSArray *results = [self.context executeFetchRequest:fetchRequest error:&error];
-    
-    if (!results) {
-        NSLog(@"%@", error);
-        return NO;
-    } else if ([results count] == 0) {
-        return NO;
-    } else {
-        return YES;
-    }
 }
 
 - (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID {
@@ -329,7 +251,24 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     }
 }
 
-#pragma mark Unread Posts
+- (BOOL)postHasChildren:(NSNumber *)postID {
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:postID forKey:@"parentID"];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
+    
+    NSError *error = nil;
+    NSArray *results = [self.context executeFetchRequest:fetchRequest error:&error];
+    
+    if (!results) {
+        NSLog(@"%@", error);
+        return NO;
+    } else if ([results count] == 0) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+#pragma mark Unread Post Methods
 
 - (NSInteger)countOfUnreadPosts {
     NSFetchRequest *fetchRequest = [self.model fetchRequestTemplateForName:@"allUnread"];
@@ -419,6 +358,77 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         Post *parentPost = [self postWithId:post.parentID];
         return [[self pathToPost:parentPost] arrayByAddingObject:post];
     }
+}
+
+#pragma -
+#pragma Private internal methods
+
+
+- (NSUInteger)error:(NSError **)error withErrorCode:(DataControllerErrorCode)code {
+    if (error != NULL) {
+        
+        NSDictionary *userInfo;
+        NSString *description;
+        NSString *failureReason;
+        
+        switch (code) {
+                
+            case DataControllerErrorNoDelegate:
+                description = NSLocalizedString(@"No Delegate", nil);
+                failureReason = NSLocalizedString(@"DataController must have a delegate set", nil);
+                userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
+                break;
+                
+            case DataControllerErrorNoLogin:
+                description = NSLocalizedString(@"No Username", nil);
+                failureReason = NSLocalizedString(@"DataController must have a username set before attempting a fetch", nil);
+                userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
+                break;
+                
+            case DataControllerErrorNoPassword:
+                description = NSLocalizedString(@"No Password", nil);
+                failureReason = NSLocalizedString(@"DataController must have a password set before attempting a fetch", nil);
+                userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
+                break;
+        }
+        
+        *error = [[[NSError alloc] initWithDomain:DataControllerErrorDomain code:code userInfo:userInfo] autorelease];
+    }
+    return 0;
+}
+
+- (void)loadNewPosts:(NSArray *)posts intoContext:(NSManagedObjectContext *)context {
+    PostLoadOperation *postLoad = [[PostLoadOperation alloc] init];
+    if ( [postLoad addPostsFromArray:posts toContext:context] ) {
+        // Update the last fetch time
+        self.lastFetchTime = [NSDate date];
+        
+        // send notification that we're finished
+        [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerFetchDidEnd object:self];
+        
+        // let delegate know
+        [self.delegate fetchSucceded:self];
+    } else {
+        NSAssert(YES, @"Construct some sort of error here");
+    }
+    [postLoad release];
+}
+
+- (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error {
+    
+    // Assure that we have got a delegate
+    if (!self.delegate) {
+        [self error:error withErrorCode:DataControllerErrorNoDelegate];
+        return NO;
+    }    
+    
+    // Post notification
+    [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerFetchDidBegin object:self];
+    
+    // Add to queue
+    [operationQueue_ addOperation:request];
+    
+    return YES;
 }
 
 #pragma mark -
