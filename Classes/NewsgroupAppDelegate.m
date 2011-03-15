@@ -158,6 +158,8 @@
     
     self.refreshButton.enabled = YES;
     
+    NSLog(@"Fetch failed: %@", error);
+    
 }
 
 - (void)fetchSucceded:(GPDataController *)dataController {
