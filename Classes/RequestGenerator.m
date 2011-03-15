@@ -72,7 +72,23 @@
 
 + (ASIHTTPRequest *)addPostForUser:(NSString *)username password:(NSString *)password subject:(NSString *)subject body:(NSString *)body inReplyTo:(NSNumber *)postID {
     
+    NSException *e = nil;
+    
+    if (username == nil) {
+        e = [NSException exceptionWithName:DataControllerNoUsernameException reason:@"This method must take a username as input" userInfo:nil];
+    } else if (password == nil) {
+        e = [NSException exceptionWithName:DataControllerNoPasswordException reason:@"This method must take a password as input" userInfo:nil];
+    }
+    
+    if (e) {
+        @throw e;
+    }
+    
+    if (subject == nil) subject = @"";
+    if (body == nil) body = @"";
+    
     NSString *urlString = [NSString stringWithFormat:@"%@PostAdd?UserName=%@&Password%@&Subject=%@&Description=%@&ReplyToID=%i&%@",
+                           BASE_URL_STRING,
                            username,
                            [DataController hashString:password],
                            [subject stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],

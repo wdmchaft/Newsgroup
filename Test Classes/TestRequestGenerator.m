@@ -70,14 +70,14 @@
     // Just the username and password
     request = [RequestGenerator addPostForUser:username password:password subject:nil body:nil inReplyTo:nil];
     GHAssertNotNil(request, nil);
-    urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostAdd?UserName=%@&Password=%@&Subject=%@&Description=%@&ReplyToID=%i&format=json", username, hashedPassword, nil, nil, 0];
+    urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostAdd?UserName=%@&Password=%@&Subject=%@&Description=%@&ReplyToID=%i&format=json", username, hashedPassword, @"", @"", 0];
     targetURL = [NSURL URLWithString:urlString];
     GHAssertEqualObjects(targetURL, [request url], nil);
     
     // Username, password and subject
     request = [RequestGenerator addPostForUser:username password:password subject:subject body:nil inReplyTo:nil];
     GHAssertNotNil(request, nil);
-    urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostAdd?UserName=%@&Password=%@&Subject=%@&Description=%@&ReplyToID=%i&format=json", username, hashedPassword, subject, nil, 0];
+    urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostAdd?UserName=%@&Password=%@&Subject=%@&Description=%@&ReplyToID=%i&format=json", username, hashedPassword, subject, @"", 0];
     targetURL = [NSURL URLWithString:urlString];
     GHAssertEqualObjects(targetURL, [request url], nil);
     
