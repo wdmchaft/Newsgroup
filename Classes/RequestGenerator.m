@@ -70,5 +70,18 @@
     return [ASIHTTPRequest requestWithURL:url];
 }
 
++ (ASIHTTPRequest *)addPostForUser:(NSString *)username password:(NSString *)password subject:(NSString *)subject body:(NSString *)body inReplyTo:(NSNumber *)postID {
+    
+    NSString *urlString = [NSString stringWithFormat:@"%@PostAdd?UserName=%@&Password%@&Subject=%@&Description=%@&ReplyToID=%i&%@",
+                           username,
+                           [DataController hashString:password],
+                           [subject stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
+                           [body stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding],
+                           [postID intValue],
+                           REPLY_FORMAT];
+    
+    NSURL *url = [NSURL URLWithString:urlString];
+    return [ASIHTTPRequest requestWithURL:url];
+}
 
 @end

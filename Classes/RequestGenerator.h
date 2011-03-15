@@ -18,6 +18,7 @@
 + (ASIHTTPRequest *)markPostAsRead:(NSNumber *)postID username:(NSString *)username password:(NSString *)password;
 + (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password;
 + (ASIHTTPRequest *)postsWithUsername:(NSString *)username password:(NSString *)password threadID:(NSInteger)threadID postID:(NSInteger)postID threadLimit:(NSInteger)threadLimit;
++ (ASIHTTPRequest *)addPostForUser:(NSString *)username password:(NSString *)password subject:(NSString *)subject body:(NSString *)body inReplyTo:(NSNumber *)postID;
 
 
 @end
