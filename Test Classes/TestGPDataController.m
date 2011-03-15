@@ -221,6 +221,7 @@
     
 }
 
+/*
 - (void)testStartNotifications {
     id mock = [OCMockObject observerMock];
     [[NSNotificationCenter defaultCenter] addMockObserver:mock name:GPDataControllerFetchDidBegin object:nil];
@@ -236,6 +237,7 @@
     [mock verify];
     [mockDelegate verify];
 }
+ */
 
 - (void)testRequestSuccess {
     id mockRequest = [OCMockObject mockForClass:[ASIHTTPRequest class]];
