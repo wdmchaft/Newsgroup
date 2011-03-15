@@ -248,26 +248,6 @@
     [mockRequest verify];
 }
 
-- (void)testGenerateMarkPostAsReadRequest {
-    NSNumber *postID = [NSNumber numberWithInt:1234];
-    NSString *username = @"username";
-    NSString *password = @"password";
-    
-    ASIHTTPRequest *request;
-    
-    GHAssertThrows([DataController markPostAsRead:nil username:nil password:nil], nil);
-    GHAssertThrows([DataController markPostAsRead:postID username:nil password:nil], nil);
-    GHAssertThrows([DataController markPostAsRead:postID username:username password:nil], nil);
-    GHAssertNoThrow(request = [DataController markPostAsRead:postID username:username password:password], nil);
-    GHAssertNotNil(request, nil);
-    
-    NSString *urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostMarkAs?UserName=%@&Password=%@&Read=True&PostID=%@&format=json", username, [DataController hashString:password], postID];
-    NSURL *targetURL = [NSURL URLWithString:urlString];
-    NSURL *testURL = [request url];
-    
-    GHAssertEqualObjects(targetURL, testURL, nil);
-}
-
 -(void)testCountOfUnreadPosts {
     NSInteger expectedValue = 1;
     NSInteger actualValue = [dataController countOfUnreadPosts];

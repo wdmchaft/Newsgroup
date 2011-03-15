@@ -91,10 +91,6 @@ extern NSString *const DataControllerNoPostIDException;
 + (NSURL *)defaultManagedObjectModelURL;
 + (NSString *)hashString:(NSString *)password;
 + (NSString *)addBodyToHTMLTemplate:(NSString *)body;
-+ (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode;
-+ (ASIHTTPRequest *)markPostAsRead:(NSNumber *)postID username:(NSString *)username password:(NSString *)password;
-+ (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password;
-+ (ASIHTTPRequest *)postsWithUsername:(NSString *)username password:(NSString *)password threadID:(NSInteger)threadID postID:(NSInteger)postID threadLimit:(NSInteger)threadLimit;
 
 // Init methods
 - (id)initWithModelURL:(NSURL *)modelURL andStoreURL:(NSURL *)storeURL;

@@ -22,6 +22,9 @@
 		4D41B3A6131F29410044171F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B3A5131F29410044171F /* Settings.bundle */; };
 		4D41B3AA131F36BD0044171F /* DDAlertPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */; };
 		4D41B402132004730044171F /* newsgroup_posts_cleaned.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */; };
+		4D4CEC67132FC4E8009FDA84 /* RequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */; };
+		4D4CEC68132FC4E8009FDA84 /* RequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */; };
+		4D4CEC6A132FC600009FDA84 /* TestRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CEC69132FC600009FDA84 /* TestRequestGenerator.m */; };
 		4D54C9321327A9BA001D70C1 /* isRead.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D54C9311327A9BA001D70C1 /* isRead.png */; };
 		4D562015130847090008C9B5 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D562014130847090008C9B5 /* libOCMock.a */; };
 		4D72F97A13167AFA0027E478 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D72F96913167AFA0027E478 /* NSObject+JSON.m */; };
@@ -124,6 +127,9 @@
 		4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAlertPrompt.m; path = DDAlertPrompt/DDAlertPrompt.m; sourceTree = "<group>"; };
 		4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = newsgroup_posts_cleaned.plist; path = "Test Classes/newsgroup_posts_cleaned.plist"; sourceTree = "<group>"; };
 		4D4CEC64132F7FFD009FDA84 /* BrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowserViewController.h; sourceTree = "<group>"; };
+		4D4CEC65132FC4E6009FDA84 /* RequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestGenerator.h; sourceTree = "<group>"; };
+		4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestGenerator.m; sourceTree = "<group>"; };
+		4D4CEC69132FC600009FDA84 /* TestRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestRequestGenerator.m; path = "Test Classes/TestRequestGenerator.m"; sourceTree = "<group>"; };
 		4D54C9311327A9BA001D70C1 /* isRead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = isRead.png; sourceTree = "<group>"; };
 		4D562014130847090008C9B5 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = Frameworks/OCMock/libOCMock.a; sourceTree = "<group>"; };
 		4D72F96713167AFA0027E478 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "json-framework/Classes/JSON.h"; sourceTree = "<group>"; };
@@ -145,10 +151,10 @@
 		4D72F97713167AFA0027E478 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonTokeniser.m; path = "json-framework/Classes/SBJsonTokeniser.m"; sourceTree = "<group>"; };
 		4D72F97813167AFA0027E478 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = "json-framework/Classes/SBJsonWriter.h"; sourceTree = "<group>"; };
 		4D72F97913167AFA0027E478 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = "json-framework/Classes/SBJsonWriter.m"; sourceTree = "<group>"; };
-		4D72F98C13167E180027E478 /* PostLoadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PostLoadOperation.h; sourceTree = "<group>"; };
+		4D72F98C13167E180027E478 /* PostLoadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostLoadOperation.h; sourceTree = "<group>"; };
 		4D72F98D13167E180027E478 /* PostLoadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostLoadOperation.m; sourceTree = "<group>"; };
 		4D72F99013167EF90027E478 /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIHTTPRequest.h; path = "asi-http-request/Classes/ASIHTTPRequest.h"; sourceTree = "<group>"; };
-		4D8D4069130455490033E9E7 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lineEnding = 0; path = DataController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		4D8D4069130455490033E9E7 /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DataController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		4D8D406A130455490033E9E7 /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DataController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		4D9D4C78130B5C6100A34E8F /* FetchedResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FetchedResultsViewController.h; sourceTree = "<group>"; };
 		4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsViewController.m; sourceTree = "<group>"; };
@@ -406,6 +412,8 @@
 				4DB0B6B71306026600B24E54 /* Post.m */,
 				4D72F98C13167E180027E478 /* PostLoadOperation.h */,
 				4D72F98D13167E180027E478 /* PostLoadOperation.m */,
+				4D4CEC65132FC4E6009FDA84 /* RequestGenerator.h */,
+				4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */,
 			);
 			name = "Data Classes";
 			sourceTree = "<group>";
@@ -499,6 +507,7 @@
 		4DF2D28213083E2F00C8AB3A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4D4CEC69132FC600009FDA84 /* TestRequestGenerator.m */,
 				4DE98E87131C67A70060B34F /* TestAPI.m */,
 				4DC10CEA130879A000944A20 /* TestDataController.m */,
 				4DE98DFE1316C4780060B34F /* TestPostLoadOperation.m */,
@@ -651,6 +660,7 @@
 				4D72F98E13167E190027E478 /* PostLoadOperation.m in Sources */,
 				4DE98E8C131D00220060B34F /* GTMBase64.m in Sources */,
 				4D41B3AA131F36BD0044171F /* DDAlertPrompt.m in Sources */,
+				4D4CEC67132FC4E8009FDA84 /* RequestGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +696,8 @@
 				4DE98DFF1316C4780060B34F /* TestPostLoadOperation.m in Sources */,
 				4DE98E88131C67A70060B34F /* TestAPI.m in Sources */,
 				4DE98E8D131D00220060B34F /* GTMBase64.m in Sources */,
+				4D4CEC68132FC4E8009FDA84 /* RequestGenerator.m in Sources */,
+				4D4CEC6A132FC600009FDA84 /* TestRequestGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

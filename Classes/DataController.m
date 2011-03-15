@@ -10,6 +10,7 @@
 #import "JSON.h"
 #import "NSString+Digest.h"
 #import "PostLoadOperation.h"
+#import "RequestGenerator.h"
 
 NSString *const DataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const DataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
@@ -18,9 +19,6 @@ NSString *const DataControllerLastFetchTime = @"DataControllerLastFetchTime";
 NSString *const DataControllerNoUsernameException = @"DataControllerNoUsernameException";
 NSString *const DataControllerNoPasswordException = @"DataControllerNoPasswordException";
 NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDException";
-
-#define BASE_URL_STRING @"https://api.greenpride.com/Service.svc/"
-#define REPLY_FORMAT @"format=json"
 
 #define ASSERT_NOT_NIL(object,error) NSAssert(object != nil, @"%@", error)
 
@@ -61,61 +59,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     return [template stringByReplacingOccurrencesOfString:@"<%body_text%>" withString:body];
 }
 
-+ (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode {
-    // Build the URL
-    NSString *urlPath = [NSString stringWithFormat:@"%@Hash?Value=%@&URLEncode=%@&%@", BASE_URL_STRING, value, shouldEncode ? @"True" : @"False", REPLY_FORMAT];
-    urlPath = [urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    return [ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlPath]];
-}
-
-+ (ASIHTTPRequest *)markPostAsRead:(NSNumber *)postID username:(NSString *)username password:(NSString *)password {
-    NSException *e = nil;
-    
-    if (postID == nil) {
-        e = [NSException exceptionWithName:DataControllerNoPostIDException reason:@"This method must take a postID as input" userInfo:nil];
-    } else if (username == nil) {
-        e = [NSException exceptionWithName:DataControllerNoUsernameException reason:@"This method must take a username as input" userInfo:nil];
-    } else if (password == nil) {
-        e = [NSException exceptionWithName:DataControllerNoPasswordException reason:@"This method must take a password as input" userInfo:nil];
-    }
-    
-    if (e) {
-        @throw e;
-    }
-    
-    NSString *urlString = [NSString stringWithFormat:@"https://api.greenpride.com/Service.svc/PostMarkAs?UserName=%@&Password=%@&Read=True&PostID=%@&format=json", username, [DataController hashString:password], postID];
-    NSURL *url = [NSURL URLWithString:urlString];
-    
-    return [ASIHTTPRequest requestWithURL:url];
-}
-
-+ (ASIHTTPRequest *)userWithUsername:(NSString *)username andPassword:(NSString *)password {
-
-    NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@UserGet?UserName=%@", BASE_URL_STRING, username];
-    if (password) {
-        [urlPath appendFormat:@"&Password=%@", [DataController hashString:password]];
-    }
-    [urlPath appendFormat:@"&%@", REPLY_FORMAT];
-    
-    NSURL *url = [NSURL URLWithString:[urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    return [ASIHTTPRequest requestWithURL:url];
-    
-}
-
-+ (ASIHTTPRequest *)postsWithUsername:(NSString *)username password:(NSString *)password threadID:(NSInteger)threadID postID:(NSInteger)postID threadLimit:(NSInteger)threadLimit {
-
-    NSMutableString *urlPath = [NSMutableString stringWithFormat:@"%@Posts?UserName=%@&Password=%@", BASE_URL_STRING, username, [DataController hashString:password]];
-    
-    // If you pass a '0' for any of these values then that value is ignored.
-    //  i.e. '0' for the thread ID pulls in all threads
-    [urlPath appendFormat:@"&ThreadID=%i", threadID];
-    [urlPath appendFormat:@"&PostID=%i", postID];
-    [urlPath appendFormat:@"&ThreadLimit=%i", threadLimit];
-    [urlPath appendFormat:@"&%@", REPLY_FORMAT];
-
-    NSURL *url = [NSURL URLWithString:[urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-    return [ASIHTTPRequest requestWithURL:url];
-}
 
 #pragma mark -
 #pragma mark Object lifecycle
@@ -194,7 +137,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 #pragma mark Instance Methods
 
 - (BOOL)markPostAsRead:(NSNumber *)postID {
-    ASIHTTPRequest *request = [DataController markPostAsRead:postID username:self.login password:self.password];
+    ASIHTTPRequest *request = [RequestGenerator markPostAsRead:postID username:self.login password:self.password];
     [request setDelegate:self];
     
     [operationQueue_ addOperation:request];
@@ -220,7 +163,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         return NO;
     }
     
-    ASIHTTPRequest *request = [DataController postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
+    ASIHTTPRequest *request = [RequestGenerator postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
     [request setDelegate:self];
     [request setDownloadProgressDelegate:self];
     
