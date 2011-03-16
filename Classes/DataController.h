@@ -50,6 +50,8 @@ extern NSString *const DataControllerNoPostIDException;
     NSString *password_;
     NSOperationQueue *operationQueue_;
     
+    NSMutableDictionary *postAddRequests_;
+    
 }
 
 // Properties
@@ -59,6 +61,7 @@ extern NSString *const DataControllerNoPostIDException;
 @property (copy) NSString *login;
 @property (readonly) BOOL isFetching;
 @property (copy) NSString *password;
+@property (retain) NSMutableDictionary *postAddRequests;
 
 // Class methods
 + (NSURL *)defaultManagedObjectModelURL;
@@ -79,6 +82,10 @@ extern NSString *const DataControllerNoPostIDException;
 - (NSFetchedResultsController *)postsWithParentID:(NSNumber *)parentID;
 - (Post *)postWithId:(NSNumber *)postID;
 - (BOOL)postHasChildren:(NSNumber *)postID;
+
+// Make a new post
+- (void)addPostWithSubject:(NSString *)subject body:(NSString *)body inReplyTo:(NSNumber *)postID;
+- (void)addPost:(Post *)post withRequest:(ASIHTTPRequest *)request;
 
 // Unread Post Methods
 - (NSInteger)countOfUnreadPosts;

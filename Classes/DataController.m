@@ -52,6 +52,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 @synthesize login = login_;
 @synthesize model = model_;
 @synthesize password = password_;
+@synthesize postAddRequests = postAddRequests_;
 
 - (void)setLastFetchTime:(NSDate *)lastFetchTime {
     [[NSUserDefaults standardUserDefaults] setObject:lastFetchTime forKey:DataControllerLastFetchTime];
@@ -125,6 +126,9 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         [managedObjectContext release];
         [persistentStoreCoordinator release];
         
+        // Setup postAddRequests
+        self.postAddRequests = [NSMutableDictionary dictionary];
+        
         // Setup the Operation Queue
         operationQueue_ = [[NSOperationQueue alloc] init];
         [operationQueue_ setName:@"DataController queue"];
@@ -142,6 +146,8 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     [operationQueue_ cancelAllOperations];
     [operationQueue_ waitUntilAllOperationsAreFinished];
     [operationQueue_ release];
+    
+    [postAddRequests_ release];
     
     [super dealloc];
 }
@@ -267,6 +273,26 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         return YES;
     }
 }
+
+#pragma mark Make a new post
+- (void)addPostWithSubject:(NSString *)subject body:(NSString *)body inReplyTo:(NSNumber *)postID {
+    ASIHTTPRequest *request = [RequestGenerator addPostForUser:self.login password:self.password subject:subject body:body inReplyTo:postID];
+    
+    Post *post = [NSEntityDescription insertNewObjectForEntityForName:[Post entityName] inManagedObjectContext:self.context];
+    
+    post.parentID = postID;
+    post.postdate = [NSDate date];
+    post.isRead = [NSNumber numberWithBool:YES];
+    
+    [self addPost:post withRequest:request];
+}
+
+- (void)addPost:(Post *)post withRequest:(ASIHTTPRequest *)request {
+    [self.postAddRequests setObject:post forKey:request];
+    [request setDelegate:self];
+    [self startFetchWithHTTPRequest:request andError:nil];
+}
+
 
 #pragma mark Unread Post Methods
 
