@@ -11,6 +11,9 @@
 
 @interface NewPostViewController : UIViewController {
     
+    UITextView *textView;
 }
+
+@property (nonatomic, retain) IBOutlet UITextView *textView;
 
 @end
