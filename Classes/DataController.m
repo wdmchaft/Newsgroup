@@ -465,11 +465,22 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
-    // Get the response string out of the request
-    NSString *response = [request responseString];
-    NSArray *posts = [response JSONValue];
     
-    [self loadNewPosts:posts intoContext:self.context];
+    Post *newPost = [self.postAddRequests objectForKey:request];
+    NSString *response = [request responseString];
+    
+    if (newPost) {
+        NSNumber *postID = [response JSONValue];
+        newPost.postID = postID;
+    } else {
+        // Get the response string out of the request
+        NSArray *posts = [response JSONValue];
+        
+        [self loadNewPosts:posts intoContext:self.context];
+    }
+    
+    
+    
 }
 
 - (void)requestFailed:(ASIHTTPRequest *)request {
@@ -480,6 +491,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 #pragma ASIProgressDelegate
 
 - (void)setProgress:(float)newProgress {
+    
     [self.delegate setProgress:newProgress dataController:self];
 }
 

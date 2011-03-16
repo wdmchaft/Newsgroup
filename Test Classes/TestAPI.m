@@ -8,6 +8,7 @@
 
 #import <GHUnitIOS/GHUnit.h>
 #import "DataController.h"
+#import "RequestGenerator.h"
 #import "ASIHTTPRequest.h"
 #import "JSON.h"
 
@@ -73,6 +74,18 @@
 }
 
 #if 0
+
+- (void)testPostNewThread {
+    NSString *subject = @"Testing posting";
+    NSString *body = @"I'll need to delete this";
+    
+    ASIHTTPRequest *request = [RequestGenerator addPostForUser:login password:password subject:subject body:body inReplyTo:nil];
+
+    NSString *response = [self runASIRequest:request];
+    NSInteger newPostID = [response integerValue];
+    
+    GHAssertNotEquals(newPostID, 0, nil);
+}
 
 - (void)testHash {
     NSString *inputPassword = @"password";
