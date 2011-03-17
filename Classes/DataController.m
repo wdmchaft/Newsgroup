@@ -227,7 +227,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
     
     // Set the sort key
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
     NSArray *sortArray = [NSArray arrayWithObject:sortDescriptor];
     [sortDescriptor release];
     [fetchRequest setSortDescriptors:sortArray];
