@@ -23,7 +23,7 @@
     ToolbarProgressView *progressView_;
     UIBarButtonItem *refreshButton_;
     UIBarButtonItem *newPostButton_;
-    
+    UIBarButtonItem *nextUnreadButton_;
 }
 
 // Properties
@@ -34,6 +34,7 @@
 @property (nonatomic, retain) ToolbarProgressView *progressView;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) UIBarButtonItem *newPostButton;
+@property (nonatomic, retain) UIBarButtonItem *nextUnreadButton;
 
 // Utility Methods
 - (NSURL *)applicationDocumentsDirectory;

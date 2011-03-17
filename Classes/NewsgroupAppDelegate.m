@@ -23,6 +23,7 @@
 @synthesize window;
 @synthesize refreshButton = refreshButton_;
 @synthesize newPostButton = newPostButton_;
+@synthesize nextUnreadButton = nextUnreadButton_;
 
 
 #pragma mark -
@@ -57,6 +58,7 @@
     [toolbarItems release];
     [window release];
     [refreshButton_ release];
+    [nextUnreadButton_ release];
     [super dealloc];
 }
 
@@ -166,11 +168,11 @@
 #pragma mark Notification methods
 
 - (void)noUnreadPosts:(NSNotification *)notification {
-    self.newPostButton.enabled = NO;
+    self.nextUnreadButton.enabled = NO;
 }
 
 - (void)newUnreadPosts:(NSNotification *)notification {
-    self.newPostButton.enabled = YES;
+    self.nextUnreadButton.enabled = YES;
 }
 
 #pragma mark -
