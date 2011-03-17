@@ -7,10 +7,12 @@
 //
 
 #import "NewPostViewController.h"
+#import "NewsgroupAppDelegate.h"
 
 
 @implementation NewPostViewController
 @synthesize textView;
+@synthesize titleView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -24,6 +26,7 @@
 - (void)dealloc
 {
     [textView release];
+    [titleView release];
     [super dealloc];
 }
 
@@ -37,24 +40,26 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Set Title
+    self.title = NSLocalizedString(@"New Post", @"New Post screen title");
+    
+    // Create send button
+    UIBarButtonItem *sendButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(send:)];
+    self.navigationItem.rightBarButtonItem = sendButton;
+    [sendButton release];
+    
+    // Make text area the first responder
+    [self.titleView becomeFirstResponder];
 }
-*/
 
 - (void)viewDidUnload
 {
     [self setTextView:nil];
+    [self setTitleView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -64,6 +69,14 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark -
+#pragma mark Instance Methods
+
+- (void)send:(id)sender {
+    [APP_DELEGATE.dataController addPostWithSubject:self.titleView.text body:self.textView.text inReplyTo:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
