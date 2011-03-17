@@ -7,6 +7,7 @@
 //
 
 #import "IndividualThreadView.h"
+#import "NewPostViewController.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
 #import "NSDate+Helper.h"
 
@@ -35,7 +36,11 @@
 
 - (void)newPost:(id)sender {
     [super newPost:sender];
-    NSLog(@"newPost in Individual thread view");
+    
+    NewPostViewController *newPostController = [[NewPostViewController alloc] initWithNibName:@"NewPostView" bundle:nil];
+    newPostController.parentPostID = self.post.postID;
+    [self.navigationController pushViewController:newPostController animated:YES];
+    [newPostController release];
 }
 
 #pragma mark View lifecycle

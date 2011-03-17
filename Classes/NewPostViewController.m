@@ -11,6 +11,8 @@
 
 
 @implementation NewPostViewController
+
+@synthesize parentPostID;
 @synthesize textView;
 @synthesize titleView;
 
@@ -25,6 +27,7 @@
 
 - (void)dealloc
 {
+    [parentPostID release];
     [textView release];
     [titleView release];
     [super dealloc];
@@ -75,7 +78,7 @@
 #pragma mark Instance Methods
 
 - (void)send:(id)sender {
-    [APP_DELEGATE.dataController addPostWithSubject:self.titleView.text body:self.textView.text inReplyTo:nil];
+    [APP_DELEGATE.dataController addPostWithSubject:self.titleView.text body:self.textView.text inReplyTo:parentPostID];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
