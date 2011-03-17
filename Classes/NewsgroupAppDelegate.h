@@ -43,5 +43,9 @@
 - (void)refreshData:(id)sender;
 - (void)nextUnread:(id)sender;
 
+// Notification methods
+- (void)noUnreadPosts:(NSNotification *)notification;
+- (void)newUnreadPosts:(NSNotification *)notification;
+
 @end
 

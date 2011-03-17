@@ -30,18 +30,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
+    // Register for notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noUnreadPosts:) name:DataControllerNoUnreadPosts object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newUnreadPosts:) name:DataControllerNewUnreadPosts object:nil];
+    
+    // Configure the toolbar buttons
     [self configureToolbarButtons];
     
     // Add the navigation controller's view to the window and display.
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
     
+    // Setup the data controller
     [self setupDataController];
     
     return YES;
 }
 
 - (void)dealloc {
+    
+    // Unregister for notifications
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [dataController_ release];
     [navigationController release];
@@ -151,6 +160,17 @@
     }
     
     self.navigationController.viewControllers = controllerArray;
+}
+
+
+#pragma mark Notification methods
+
+- (void)noUnreadPosts:(NSNotification *)notification {
+    self.newPostButton.enabled = NO;
+}
+
+- (void)newUnreadPosts:(NSNotification *)notification {
+    self.newPostButton.enabled = YES;
 }
 
 #pragma mark -

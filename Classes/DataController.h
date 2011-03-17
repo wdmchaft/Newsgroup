@@ -13,6 +13,8 @@
 // Notification Strings
 extern NSString *const DataControllerFetchDidBegin;
 extern NSString *const DataControllerFetchDidEnd;
+extern NSString *const DataControllerNoUnreadPosts;
+extern NSString *const DataControllerNewUnreadPosts;
 
 // Data Controller Error Domain
 extern NSString *const DataControllerErrorDomain;

@@ -15,6 +15,8 @@
 // Notification Strings
 NSString *const DataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
 NSString *const DataControllerFetchDidEnd = @"GPHTTPRequestDidEnd";
+NSString *const DataControllerNoUnreadPosts = @"DataControllerNoUnreadPosts";
+NSString *const DataControllerNewUnreadPosts = @"DataControllerNewUnreadPosts";
 
 // Data Controller Error Domain
 NSString *const DataControllerErrorDomain = @"DataControllerErrorDomain";
@@ -156,6 +158,14 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 #pragma mark Web Methods
 
 - (BOOL)markPostAsRead:(NSNumber *)postID {
+    // Check to see if this is the last unread post, if so, disable the next unread button
+    NSInteger unreadCount = [self countOfUnreadPosts];
+    if (unreadCount == 0) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerNoUnreadPosts object:self];
+    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerNewUnreadPosts object:self];
+    }
+    
     ASIHTTPRequest *request = [RequestGenerator markPostAsRead:postID username:self.login password:self.password];
     [request setDelegate:self];
     
@@ -438,6 +448,11 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         NSAssert(YES, @"Construct some sort of error here");
     }
     [postLoad release];
+    
+    NSInteger unreadCount = [self countOfUnreadPosts];
+    if (unreadCount != 0) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerNewUnreadPosts object:self];
+    }
 }
 
 - (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error {
