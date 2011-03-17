@@ -452,6 +452,8 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     NSInteger unreadCount = [self countOfUnreadPosts];
     if (unreadCount != 0) {
         [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerNewUnreadPosts object:self];
+    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName:DataControllerNoUnreadPosts object:self];
     }
 }
 

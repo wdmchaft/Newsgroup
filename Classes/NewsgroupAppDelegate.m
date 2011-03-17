@@ -92,6 +92,7 @@
     self.progressView = progView;
     self.refreshButton = refreshButton;
     self.newPostButton = newPost;
+    self.nextUnreadButton = nextUnreadButton;
     
     [progView release];
     [refreshButton release];
