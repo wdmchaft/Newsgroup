@@ -9,6 +9,7 @@
 #import "MainThreadView.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
 #import "IndividualThreadView.h"
+#import "NewPostViewController.h"
 #import "NSDate+Helper.h"
 
 @interface MainThreadView ()
@@ -29,7 +30,10 @@
 
 - (void)newPost:(id)sender {
     [super newPost:sender];
-    NSLog(@"newPost in MainThreadView");
+    
+    NewPostViewController *newPostController = [[NewPostViewController alloc] initWithNibName:@"NewPostView" bundle:nil];
+    [self.navigationController pushViewController:newPostController animated:YES];
+    [newPostController release];
 }
 
 #pragma mark View lifecycle
