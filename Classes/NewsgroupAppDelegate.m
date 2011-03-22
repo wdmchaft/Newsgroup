@@ -87,6 +87,9 @@
     
     // Add the buttons to an array
     NSArray *buttonArray = [NSArray arrayWithObjects:refreshButton, nextUnreadButton, flexibleSpace, progressView, flexibleSpace, newPost, nil];
+    
+    // Next Unread is disabled by default
+    nextUnreadButton.enabled = NO;
 
     self.toolbarItems = buttonArray;
     self.progressView = progView;
