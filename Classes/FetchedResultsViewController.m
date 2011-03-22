@@ -133,14 +133,10 @@
     // Get rid of the unread indicator
     [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
     
-    // If the post has body, don't go any further.
-    NSString *body = selectedPost.body;
-    if (body != nil && [body isEqualToString:@""] == NO) {
-        IndividualThreadView *viewController = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
-        viewController.post = selectedPost;
-        [self.navigationController pushViewController:viewController animated:YES];
-        [viewController release];
-    }
+    IndividualThreadView *viewController = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
+    viewController.post = selectedPost;
+    [self.navigationController pushViewController:viewController animated:YES];
+    [viewController release];
 }
 
 #pragma mark -
