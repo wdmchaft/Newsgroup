@@ -13,8 +13,8 @@
 @implementation NewPostViewController
 
 @synthesize parentPostID;
-@synthesize textView;
-@synthesize titleView;
+@synthesize bodyView = bodyView_;
+@synthesize subjectView = subjectView_;
 @synthesize subject = subject_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,8 +29,8 @@
 - (void)dealloc
 {
     [parentPostID release];
-    [textView release];
-    [titleView release];
+    [bodyView_ release];
+    [subjectView_ release];
     [subject_ release];
     [super dealloc];
 }
@@ -57,17 +57,23 @@
     self.navigationItem.rightBarButtonItem = sendButton;
     [sendButton release];
     
-    // Set the subject text
-    self.titleView.text = self.subject;
+    // If we don't have a subject, make the subject field the first responder, else make the text area the first responder.
+    if (self.subject == nil) {
+        // Make text area the first responder
+        [self.subjectView becomeFirstResponder];
+    } else {
+        self.subjectView.text = self.subject;
+        [self.bodyView becomeFirstResponder];
+    }
     
-    // Make text area the first responder
-    [self.titleView becomeFirstResponder];
+    
+    
 }
 
 - (void)viewDidUnload
 {
-    [self setTextView:nil];
-    [self setTitleView:nil];
+    [self setBodyView:nil];
+    [self setSubjectView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -83,7 +89,7 @@
 #pragma mark Instance Methods
 
 - (void)send:(id)sender {
-    [APP_DELEGATE.dataController addPostWithSubject:self.titleView.text body:self.textView.text inReplyTo:parentPostID];
+    [APP_DELEGATE.dataController addPostWithSubject:self.subjectView.text body:self.bodyView.text inReplyTo:parentPostID];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

@@ -11,15 +11,13 @@
 
 @interface NewPostViewController : UIViewController {
     
-    UITextView *textView;
-    UITextField *titleView;
 }
 
 // Properties
 @property (nonatomic, retain) NSNumber *parentPostID;
 @property (nonatomic, copy) NSString *subject;
-@property (nonatomic, retain) IBOutlet UITextView *textView;
-@property (nonatomic, retain) IBOutlet UITextField *titleView;
+@property (nonatomic, retain) IBOutlet UITextView *bodyView;
+@property (nonatomic, retain) IBOutlet UITextField *subjectView;
 
 // Instance Methods
 - (void)send:(id)sender;
