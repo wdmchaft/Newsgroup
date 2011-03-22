@@ -105,6 +105,7 @@
     if ([[[request URL] description] isEqualToString:@"about:blank"]) {
         return YES;
     } else {
+        [[UIApplication sharedApplication] openURL:[request URL]];
         return NO;
     }
 }
