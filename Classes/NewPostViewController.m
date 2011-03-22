@@ -15,6 +15,7 @@
 @synthesize parentPostID;
 @synthesize textView;
 @synthesize titleView;
+@synthesize subject = subject_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +31,7 @@
     [parentPostID release];
     [textView release];
     [titleView release];
+    [subject_ release];
     [super dealloc];
 }
 
@@ -54,6 +56,9 @@
     UIBarButtonItem *sendButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(send:)];
     self.navigationItem.rightBarButtonItem = sendButton;
     [sendButton release];
+    
+    // Set the subject text
+    self.titleView.text = self.subject;
     
     // Make text area the first responder
     [self.titleView becomeFirstResponder];

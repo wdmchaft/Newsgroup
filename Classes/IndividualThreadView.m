@@ -39,6 +39,7 @@
     
     NewPostViewController *newPostController = [[NewPostViewController alloc] initWithNibName:@"NewPostView" bundle:nil];
     newPostController.parentPostID = self.post.postID;
+    newPostController.subject = self.post.subject;
     [self.navigationController pushViewController:newPostController animated:YES];
     [newPostController release];
 }

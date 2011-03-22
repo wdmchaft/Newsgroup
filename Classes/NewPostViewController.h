@@ -17,6 +17,7 @@
 
 // Properties
 @property (nonatomic, retain) NSNumber *parentPostID;
+@property (nonatomic, copy) NSString *subject;
 @property (nonatomic, retain) IBOutlet UITextView *textView;
 @property (nonatomic, retain) IBOutlet UITextField *titleView;
 
