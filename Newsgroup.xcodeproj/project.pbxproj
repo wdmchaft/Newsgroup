@@ -110,7 +110,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* NewsgroupAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsgroupAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* NewsgroupAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NewsgroupAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D6058910D05DD3D006BFB54 /* Newsgroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsgroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* newsgroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsgroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28860B760F44E54D00985440 /* Newsgroup.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = Newsgroup.xcdatamodel; sourceTree = "<group>"; };
 		28860BE40F44EE6400985440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -277,7 +277,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* Newsgroup.app */,
+				1D6058910D05DD3D006BFB54 /* newsgroup.app */,
 				4DF2D25413083D3300C8AB3A /* Tests.app */,
 			);
 			name = Products;
@@ -301,6 +301,7 @@
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				4DE9D7E51339F5CB00475E8C /* Scripts */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -431,9 +432,9 @@
 				28C286E00D94DF7D0034E888 /* MainThreadView.m */,
 				4DC10FC0130B430900944A20 /* IndividualThreadView.h */,
 				4DC10FC1130B430900944A20 /* IndividualThreadView.m */,
+				4D9D4C7D130B5D6800A34E8F /* FetchedResultsViewController+PrivateHeader.h */,
 				4D9D4C78130B5C6100A34E8F /* FetchedResultsViewController.h */,
 				4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */,
-				4D9D4C7D130B5D6800A34E8F /* FetchedResultsViewController+PrivateHeader.h */,
 				4D4CEC64132F7FFD009FDA84 /* BrowserViewController.h */,
 				4D9D4F2F130F38EC00A34E8F /* BrowserViewController.m */,
 				4DE9D7D713311C2400475E8C /* NewPostViewController.h */,
@@ -472,6 +473,13 @@
 				4DE98E8B131D00220060B34F /* GTMBase64.m */,
 			);
 			name = Base64;
+			sourceTree = "<group>";
+		};
+		4DE9D7E51339F5CB00475E8C /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Scripts;
 			sourceTree = "<group>";
 		};
 		4DEC6AC2131579810021EAAA /* ASIHTTPRequest */ = {
@@ -554,7 +562,7 @@
 			);
 			name = Newsgroup;
 			productName = Newsgroup;
-			productReference = 1D6058910D05DD3D006BFB54 /* Newsgroup.app */;
+			productReference = 1D6058910D05DD3D006BFB54 /* newsgroup.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4DF2D25313083D3300C8AB3A /* Tests */ = {
@@ -732,7 +740,8 @@
 					"DEBUG_REQUEST_STATUS=1",
 				);
 				INFOPLIST_FILE = "Newsgroup-Info.plist";
-				PRODUCT_NAME = Newsgroup;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = newsgroup;
 			};
 			name = Debug;
 		};
@@ -740,6 +749,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -748,7 +758,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Newsgroup_Prefix.pch;
 				INFOPLIST_FILE = "Newsgroup-Info.plist";
-				PRODUCT_NAME = Newsgroup;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = newsgroup;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -846,7 +858,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
@@ -874,7 +886,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VALUE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PREBINDING = NO;
 				RUN_CLANG_STATIC_ANALYZER = YES;
