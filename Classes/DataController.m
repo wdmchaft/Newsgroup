@@ -30,7 +30,7 @@ NSString *const DataControllerNoPasswordException = @"DataControllerNoPasswordEx
 NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDException";
 
 // Helper macros
-#define ASSERT_NOT_NIL(object,error) NSAssert(object != nil, @"%@", error)
+#define ASSERT_NOT_NIL(object,error) NSAssert1(object != nil, @"%@", error)
 
 @interface DataController()
 
@@ -86,7 +86,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     NSError *error = nil;
     NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"post_body" ofType:@"html"];
     NSString *template = [NSString stringWithContentsOfFile:templatePath encoding:NSUTF8StringEncoding error:&error];
-    NSAssert(template != nil, @"%@", error);
+    NSAssert1(template != nil, @"%@", error);
     
     return [template stringByReplacingOccurrencesOfString:@"<%body_text%>" withString:body];
 }

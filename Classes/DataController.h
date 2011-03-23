@@ -46,7 +46,6 @@ extern NSString *const DataControllerNoPostIDException;
     @private
     NSManagedObjectContext *context_;
     id <DataControllerDelegate> delegate_;
-    BOOL isFetching_;
     NSString *login_;
     NSManagedObjectModel *model_;
     NSString *password_;

@@ -16,8 +16,6 @@
     NSURL *url_;
     UILabel *urlLabel_;
     UIWebView *webView_;
-
-    UIBarButtonItem *refreshingButton;
 }
 
 // Properties
