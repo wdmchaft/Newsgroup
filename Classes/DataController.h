@@ -41,7 +41,7 @@ extern NSString *const DataControllerNoPostIDException;
 
 @end
 
-@interface DataController : NSObject <ASIHTTPRequestDelegate, ASIHTTPRequestDelegate> {
+@interface DataController : NSObject {
 
     @private
     NSManagedObjectContext *context_;

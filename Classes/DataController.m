@@ -481,40 +481,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     return YES;
 }
 
-#pragma mark -
-#pragma mark ASIHTTPRequestDelegate
-
-- (void)requestStarted:(ASIHTTPRequest *)request {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-}
-
-- (void)requestFinished:(ASIHTTPRequest *)request {
-    
-    NSString *response = [request responseString];
-    
-    NSUInteger locOfRequest = [self.postAddRequests indexOfObject:request];
-    
-    if (locOfRequest != NSNotFound) {
-        [self.postAddRequests removeObjectAtIndex:locOfRequest];
-        Post *newPost = [self.postAddPosts objectAtIndex:locOfRequest];
-        [self.postAddPosts removeObjectAtIndex:locOfRequest];
-        NSInteger postID = [response integerValue];
-        newPost.postID = [NSNumber numberWithInteger:postID];
-    } else {
-        // Get the response string out of the request
-        NSArray *posts = [response JSONValue];
-        
-        [self loadNewPosts:posts intoContext:self.context];
-    }
-    
-    
-    
-}
-
-- (void)requestFailed:(ASIHTTPRequest *)request {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
-    NSLog(@"%@", [request error]);
-}
 
 #pragma ASIProgressDelegate
 
