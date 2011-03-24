@@ -62,8 +62,10 @@
     [self.webView loadHTMLString:[DataController addBodyToHTMLTemplate:self.post.body] baseURL:nil];
     
     // Set the current post as read
-    self.post.isRead = [NSNumber numberWithBool:YES];
-    [APP_DELEGATE.dataController markPostAsRead:self.post.postID];
+    if ([self.post.isRead boolValue] == NO) {
+        self.post.isRead = [NSNumber numberWithBool:YES];
+        [APP_DELEGATE.dataController markPostAsRead:self.post.postID];
+    }
     
     // Fetch all our threads
     NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithParentID:self.post.postID];

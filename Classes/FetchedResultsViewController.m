@@ -29,6 +29,8 @@
     if ([thread.isRead boolValue] == NO) {
         UIImage *isReadIndicator = [UIImage imageNamed:@"isRead.png"];
         cell.imageView.image = isReadIndicator;
+    } else {
+        cell.imageView.image = nil;
     }
 
 }    

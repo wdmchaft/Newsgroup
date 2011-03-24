@@ -496,10 +496,10 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     
     if (locOfRequest != NSNotFound) {
         [self.postAddRequests removeObjectAtIndex:locOfRequest];
-        Post *newPost = [self.postAddRequests objectAtIndex:locOfRequest];
-        [self.postAddRequests removeObjectAtIndex:locOfRequest];
-        NSNumber *postID = [response JSONValue];
-        newPost.postID = postID;
+        Post *newPost = [self.postAddPosts objectAtIndex:locOfRequest];
+        [self.postAddPosts removeObjectAtIndex:locOfRequest];
+        NSInteger postID = [response integerValue];
+        newPost.postID = [NSNumber numberWithInteger:postID];
     } else {
         // Get the response string out of the request
         NSArray *posts = [response JSONValue];
