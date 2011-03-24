@@ -55,6 +55,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 @synthesize model = model_;
 @synthesize password = password_;
 @synthesize postAddRequests = postAddRequests_;
+@synthesize postAddPosts = postAddPosts_;
 
 - (void)setLastFetchTime:(NSDate *)lastFetchTime {
     [[NSUserDefaults standardUserDefaults] setObject:lastFetchTime forKey:DataControllerLastFetchTime];
@@ -128,8 +129,9 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         [managedObjectContext release];
         [persistentStoreCoordinator release];
         
-        // Setup postAddRequests
-        self.postAddRequests = [NSMutableDictionary dictionary];
+        // Setup postAdd Requests and posts
+        self.postAddRequests = [NSMutableArray array];
+        self.postAddPosts = [NSMutableArray array];
         
         // Setup the Operation Queue
         operationQueue_ = [[NSOperationQueue alloc] init];
@@ -150,6 +152,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     [operationQueue_ release];
     
     [postAddRequests_ release];
+    [postAddPosts_ release];
     
     [super dealloc];
 }
@@ -293,12 +296,16 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     post.parentID = postID;
     post.postdate = [NSDate date];
     post.isRead = [NSNumber numberWithBool:YES];
+    post.subject = subject;
+    post.body = body;
     
     [self addPost:post withRequest:request];
 }
 
 - (void)addPost:(Post *)post withRequest:(ASIHTTPRequest *)request {
-    [self.postAddRequests setObject:post forKey:request];
+    [self.postAddRequests addObject:request];
+    [self.postAddPosts addObject:post];
+    
     [request setDelegate:self];
     [self startFetchWithHTTPRequest:request andError:nil];
 }
@@ -483,10 +490,14 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 
 - (void)requestFinished:(ASIHTTPRequest *)request {
     
-    Post *newPost = [self.postAddRequests objectForKey:request];
     NSString *response = [request responseString];
     
-    if (newPost) {
+    NSUInteger locOfRequest = [self.postAddRequests indexOfObject:request];
+    
+    if (locOfRequest != NSNotFound) {
+        [self.postAddRequests removeObjectAtIndex:locOfRequest];
+        Post *newPost = [self.postAddRequests objectAtIndex:locOfRequest];
+        [self.postAddRequests removeObjectAtIndex:locOfRequest];
         NSNumber *postID = [response JSONValue];
         newPost.postID = postID;
     } else {

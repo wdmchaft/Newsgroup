@@ -50,9 +50,6 @@ extern NSString *const DataControllerNoPostIDException;
     NSManagedObjectModel *model_;
     NSString *password_;
     NSOperationQueue *operationQueue_;
-    
-    NSMutableDictionary *postAddRequests_;
-    
 }
 
 // Properties
@@ -62,7 +59,8 @@ extern NSString *const DataControllerNoPostIDException;
 @property (copy) NSString *login;
 @property (readonly) BOOL isFetching;
 @property (copy) NSString *password;
-@property (retain) NSMutableDictionary *postAddRequests;
+@property (retain) NSMutableArray *postAddRequests;
+@property (retain) NSMutableArray *postAddPosts;
 
 // Class methods
 + (NSURL *)defaultManagedObjectModelURL;

@@ -27,6 +27,8 @@
     
     NSInteger countOfTestPosts;
     NSInteger countOfThreads;
+    
+    Post *aParentPost;
 }
 
 @end
@@ -54,18 +56,19 @@
     // Load some dummy data
     DataController *dc = [[DataController alloc] initWithModelURL:modelURL andStoreURL:testStoreURL];
     
-    Post *parentPost = [NSEntityDescription insertNewObjectForEntityForName:[Post entityName] inManagedObjectContext:dc.context];
+    aParentPost = [NSEntityDescription insertNewObjectForEntityForName:[Post entityName] inManagedObjectContext:dc.context];
+    [aParentPost retain];
     
-    parentPost.body = BODY;
-    parentPost.isRead = [NSNumber numberWithBool:YES];
-    parentPost.memberID = [NSNumber numberWithInt:MEMBERID];
-    parentPost.postID = [NSNumber numberWithInt:PARENTID];
-    parentPost.posterName = POSTER_NAME;
-    parentPost.subject = SUBJECT;
-    parentPost.threadID = [NSNumber numberWithInt:THREADID];
-    parentPost.postdate = [NSDate date];
-    parentPost.postLevel = [NSNumber numberWithInt:1];
-    parentPost.parentID = [NSNumber numberWithInt:PARENTID];
+    aParentPost.body = BODY;
+    aParentPost.isRead = [NSNumber numberWithBool:YES];
+    aParentPost.memberID = [NSNumber numberWithInt:MEMBERID];
+    aParentPost.postID = [NSNumber numberWithInt:PARENTID];
+    aParentPost.posterName = POSTER_NAME;
+    aParentPost.subject = SUBJECT;
+    aParentPost.threadID = [NSNumber numberWithInt:THREADID];
+    aParentPost.postdate = [NSDate date];
+    aParentPost.postLevel = [NSNumber numberWithInt:1];
+    aParentPost.parentID = [NSNumber numberWithInt:PARENTID];
     
     Post *childPost = [NSEntityDescription insertNewObjectForEntityForName:[Post entityName] inManagedObjectContext:dc.context];
     
@@ -77,7 +80,7 @@
     childPost.subject = SUBJECT;
     childPost.threadID = [NSNumber numberWithInt:THREADID];
     childPost.postdate = [NSDate date];
-    childPost.parentID = parentPost.postID;
+    childPost.parentID = aParentPost.postID;
     childPost.postLevel = [NSNumber numberWithInt:2];
     
     countOfTestPosts = 2;
@@ -96,6 +99,8 @@
         
     [testStoreURL release];
     [modelURL release];
+    
+    [aParentPost release];
 }
 
 - (void)setUp {
@@ -314,6 +319,21 @@
     NSUInteger expectedSecondPostID = CHILD_POSTID;
     NSUInteger actualSecondPostID = [[[outputArray objectAtIndex:1] postID] intValue];
     GHAssertEquals(expectedSecondPostID, actualSecondPostID, nil);
+}
+
+- (void)testMakeNewPost {
+    id request = [OCMockObject niceMockForClass:[ASIHTTPRequest class]];
+    [[request expect] setDelegate:dataController];
+    
+    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(DataControllerDelegate)];
+    dataController.delegate = dataControllerDelegate;
+    
+    [dataController addPost:aParentPost withRequest:request];
+    
+    
+    
+    [request verify];
+    [dataControllerDelegate verify];
 }
  
 @end
