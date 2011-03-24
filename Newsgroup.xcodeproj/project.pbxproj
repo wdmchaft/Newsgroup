@@ -69,6 +69,8 @@
 		4DE98E90131D0B670060B34F /* login.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DE98E8F131D0B670060B34F /* login.plist */; };
 		4DE9D7D913311C2400475E8C /* NewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9D7D813311C2400475E8C /* NewPostViewController.m */; };
 		4DE9D7DB13311C3D00475E8C /* NewPostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE9D7DA13311C3D00475E8C /* NewPostView.xib */; };
+		4DE9D855133C061300475E8C /* LoginPasswordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DE9D854133C061200475E8C /* LoginPasswordView.xib */; };
+		4DE9D858133C064D00475E8C /* LoginPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE9D857133C064600475E8C /* LoginPasswordViewController.m */; };
 		4DEC6AD7131579C30021EAAA /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6AC4131579C30021EAAA /* ASIAuthenticationDialog.m */; };
 		4DEC6AD8131579C30021EAAA /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6AC4131579C30021EAAA /* ASIAuthenticationDialog.m */; };
 		4DEC6AD9131579C30021EAAA /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DEC6AC7131579C30021EAAA /* ASIDataCompressor.m */; };
@@ -179,6 +181,9 @@
 		4DE9D7D713311C2400475E8C /* NewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewPostViewController.h; sourceTree = "<group>"; };
 		4DE9D7D813311C2400475E8C /* NewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewPostViewController.m; sourceTree = "<group>"; };
 		4DE9D7DA13311C3D00475E8C /* NewPostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NewPostView.xib; path = Resources/NewPostView.xib; sourceTree = "<group>"; };
+		4DE9D854133C061200475E8C /* LoginPasswordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginPasswordView.xib; path = Resources/LoginPasswordView.xib; sourceTree = "<group>"; };
+		4DE9D856133C064300475E8C /* LoginPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPasswordViewController.h; sourceTree = "<group>"; };
+		4DE9D857133C064600475E8C /* LoginPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPasswordViewController.m; sourceTree = "<group>"; };
 		4DEC6AC3131579C30021EAAA /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASIAuthenticationDialog.h; path = "asi-http-request/Classes/ASIAuthenticationDialog.h"; sourceTree = "<group>"; };
 		4DEC6AC4131579C30021EAAA /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASIAuthenticationDialog.m; path = "asi-http-request/Classes/ASIAuthenticationDialog.m"; sourceTree = "<group>"; };
 		4DEC6AC5131579C30021EAAA /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASICacheDelegate.h; path = "asi-http-request/Classes/ASICacheDelegate.h"; sourceTree = "<group>"; };
@@ -328,6 +333,7 @@
 				4D9D4D26130CAA2600A34E8F /* HeaderView.xib */,
 				4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */,
 				4DE9D7DA13311C3D00475E8C /* NewPostView.xib */,
+				4DE9D854133C061200475E8C /* LoginPasswordView.xib */,
 				28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */,
 				8D1107310486CEB800E47090 /* Newsgroup-Info.plist */,
 				4D41B3A5131F29410044171F /* Settings.bundle */,
@@ -431,6 +437,8 @@
 				4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */,
 				4DE9D7D713311C2400475E8C /* NewPostViewController.h */,
 				4DE9D7D813311C2400475E8C /* NewPostViewController.m */,
+				4DE9D856133C064300475E8C /* LoginPasswordViewController.h */,
+				4DE9D857133C064600475E8C /* LoginPasswordViewController.m */,
 			);
 			name = "View Controller Classes";
 			sourceTree = "<group>";
@@ -615,6 +623,7 @@
 				4D0B8E651329C26C0081E772 /* post_body.html in Resources */,
 				4DF83DB5132C42D400F30E73 /* Icon.png in Resources */,
 				4DE9D7DB13311C3D00475E8C /* NewPostView.xib in Resources */,
+				4DE9D855133C061300475E8C /* LoginPasswordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,6 +678,7 @@
 				4D41B3AA131F36BD0044171F /* DDAlertPrompt.m in Sources */,
 				4D4CEC67132FC4E8009FDA84 /* RequestGenerator.m in Sources */,
 				4DE9D7D913311C2400475E8C /* NewPostViewController.m in Sources */,
+				4DE9D858133C064D00475E8C /* LoginPasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
