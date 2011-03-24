@@ -320,20 +320,5 @@
     NSUInteger actualSecondPostID = [[[outputArray objectAtIndex:1] postID] intValue];
     GHAssertEquals(expectedSecondPostID, actualSecondPostID, nil);
 }
-
-- (void)testMakeNewPost {
-    id request = [OCMockObject niceMockForClass:[ASIHTTPRequest class]];
-    [[request expect] setDelegate:dataController];
-    
-    id dataControllerDelegate = [OCMockObject mockForProtocol:@protocol(DataControllerDelegate)];
-    dataController.delegate = dataControllerDelegate;
-    
-    [dataController addPost:aParentPost withRequest:request];
-    
-    
-    
-    [request verify];
-    [dataControllerDelegate verify];
-}
  
 @end
