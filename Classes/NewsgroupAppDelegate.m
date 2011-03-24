@@ -74,11 +74,9 @@
     progView.viewType = GPProgressDeterminiteView;
     progView.progress = 0.0f;
     
-    // Create the bar buttons
+    // Create the toolbar bar buttons
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshData:)];
-   
-    UIBarButtonItem *nextUnreadButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(nextUnread:)];
-    
+       
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     UIBarButtonItem *progressView = [[UIBarButtonItem alloc] initWithCustomView:progView];
@@ -86,7 +84,9 @@
     UIBarButtonItem *newPost = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(newPost:)];
     
     // Add the buttons to an array
-    NSArray *buttonArray = [NSArray arrayWithObjects:refreshButton, nextUnreadButton, flexibleSpace, progressView, flexibleSpace, newPost, nil];
+    NSArray *buttonArray = [NSArray arrayWithObjects:refreshButton, flexibleSpace, progressView, flexibleSpace, newPost, nil];
+    
+    UIBarButtonItem *nextUnreadButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Next", @"Next button title") style:UIBarButtonItemStyleBordered target:self action:@selector(nextUnread:)];
     
     // Next Unread is disabled by default
     nextUnreadButton.enabled = NO;

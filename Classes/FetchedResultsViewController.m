@@ -44,6 +44,8 @@
 - (void)viewDidLoad {
     // Setup the toolbar
     self.toolbarItems = APP_DELEGATE.toolbarItems;
+    
+    self.navigationItem.rightBarButtonItem = APP_DELEGATE.nextUnreadButton;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
