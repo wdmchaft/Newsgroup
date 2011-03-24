@@ -23,7 +23,10 @@ extern NSString *const DataControllerErrorDomain;
 typedef enum {
     DataControllerErrorNoDelegate,
     DataControllerErrorNoLogin,
-    DataControllerErrorNoPassword
+    DataControllerErrorNoPassword,
+    DataControllerErrorConnectionFailure,
+    DataControllerErrorRequestTimedOut,
+    DataControllerErrorUnknownNetworkFailure
 } DataControllerErrorCode;
 
 // Exception strings

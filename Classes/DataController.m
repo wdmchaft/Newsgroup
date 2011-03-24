@@ -198,6 +198,46 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         [self loadNewPosts:posts intoContext:self.context];
     }];
     
+    [request setFailedBlock:^(void) {
+        if (self.delegate) {
+            NSError *inputError = [request error];
+            NSInteger code;
+            NSDictionary *userInfo;
+            
+            NSString *localizedDescription = [[inputError userInfo] objectForKey:NSLocalizedDescriptionKey];
+            NSURL *url = [[inputError userInfo] objectForKey:NSURLErrorKey];
+            
+            switch ([inputError code]) {
+                case ASIConnectionFailureErrorType:
+                    code = DataControllerErrorConnectionFailure;
+                    userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                                localizedDescription, NSLocalizedDescriptionKey,
+                                inputError, NSUnderlyingErrorKey,
+                                url, NSURLErrorKey, nil];
+                    break;
+                    
+                case ASIRequestTimedOutErrorType:
+                    code = DataControllerErrorRequestTimedOut;
+                    userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                                localizedDescription, NSLocalizedDescriptionKey,
+                                inputError, NSUnderlyingErrorKey,
+                                url, NSURLErrorKey, nil];
+                    
+                default:
+                    code = DataControllerErrorUnknownNetworkFailure;
+                    userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                                NSLocalizedString(@"Unknown network error occured", nil), NSLocalizedDescriptionKey,
+                                inputError, NSUnderlyingErrorKey,
+                                url, NSURLErrorKey, nil];
+                    break;
+            }
+            
+            NSError *outputError = [NSError errorWithDomain:DataControllerErrorDomain code:code userInfo:userInfo];
+            
+            [self.delegate fetchFailed:self withError:outputError];
+        }
+    }];
+    
     return [self startFetchWithHTTPRequest:request andError:error];
 }
 
@@ -415,9 +455,8 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     }
 }
 
-#pragma -
-#pragma Private internal methods
-
+#pragma mark -
+#pragma mark Private internal methods
 
 - (NSUInteger)error:(NSError **)error withErrorCode:(DataControllerErrorCode)code {
     if (error != NULL) {
@@ -445,6 +484,9 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
                 failureReason = NSLocalizedString(@"DataController must have a password set before attempting a fetch", nil);
                 userInfo = [NSDictionary dictionaryWithObjectsAndKeys:description, NSLocalizedDescriptionKey, failureReason, NSLocalizedFailureReasonErrorKey, nil];
                 break;
+                
+            default:
+                NSAssert1(NO, @"Unhandled DataControllerErrorCode %i", code);
         }
         
         *error = [[[NSError alloc] initWithDomain:DataControllerErrorDomain code:code userInfo:userInfo] autorelease];
