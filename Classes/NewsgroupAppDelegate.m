@@ -184,9 +184,10 @@
 
 - (void)fetchFailed:(DataController *)dataController withError:(NSError *)error {
     
-    self.refreshButton.enabled = YES;
-    
     NSLog(@"Fetch failed: %@", error);
+    
+    self.refreshButton.enabled = YES;
+    self.progressView.viewType = GPProgressTimestampView;
     
 }
 
