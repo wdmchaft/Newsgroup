@@ -188,9 +188,15 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         return NO;
     }
     
-    ASIHTTPRequest *request = [RequestGenerator postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
-    [request setDelegate:self];
+    __block ASIHTTPRequest *request = [RequestGenerator postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
     [request setDownloadProgressDelegate:self];
+    
+    [request setCompletionBlock:^(void) {
+        // Get the response string out of the request
+        NSArray *posts = [[request responseString] JSONValue];
+        
+        [self loadNewPosts:posts intoContext:self.context];
+    }];
     
     return [self startFetchWithHTTPRequest:request andError:error];
 }
@@ -306,7 +312,13 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     [self.postAddRequests addObject:request];
     [self.postAddPosts addObject:post];
     
-    [request setDelegate:self];
+    __block ASIHTTPRequest *bRequest = request;
+    
+    [bRequest setCompletionBlock:^(void) {
+        NSInteger postID = [[bRequest responseString] integerValue];
+        post.postID = [NSNumber numberWithInteger:postID];
+    }];
+    
     [self startFetchWithHTTPRequest:request andError:nil];
 }
 
