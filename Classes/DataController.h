@@ -34,11 +34,6 @@ extern NSString *const DataControllerNoUsernameException;
 extern NSString *const DataControllerNoPasswordException;
 extern NSString *const DataControllerNoPostIDException;
 
-// User Default keys
-extern NSString *const DataControllerFullName;
-extern NSString *const DataControllerNickName;
-extern NSString *const DataControllerUserID;
-
 @class DataController;
 
 @protocol DataControllerDelegate

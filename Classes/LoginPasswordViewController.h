@@ -11,6 +11,12 @@
 
 @interface LoginPasswordViewController : UIViewController {
     
+    UITextField *usernameTextField;
+    UITextField *passwordTextField;
 }
+@property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
+@property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
+
+- (IBAction)submitLoginPassword:(id)sender;
 
 @end

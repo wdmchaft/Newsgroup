@@ -7,9 +7,12 @@
 //
 
 #import "LoginPasswordViewController.h"
+#import "JKConstants.h"
 
 
 @implementation LoginPasswordViewController
+@synthesize usernameTextField = usernameTextField_;
+@synthesize passwordTextField = passwordTextField_;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,6 +25,8 @@
 
 - (void)dealloc
 {
+    [usernameTextField_ release];
+    [passwordTextField_ release];
     [super dealloc];
 }
 
@@ -35,23 +40,17 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = NSLocalizedString(@"Username/Password", @"login password title");
 }
-*/
 
 - (void)viewDidUnload
 {
+    [self setUsernameTextField:nil];
+    [self setPasswordTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -63,4 +62,24 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)submitLoginPassword:(id)sender {
+    
+    NSString *username = self.usernameTextField.text;
+    NSString *password = self.passwordTextField.text;
+    
+    if ([username length] == 0 || [password length] == 0) {
+        UIAlertView *alertView = [[UIAlertView alloc] 
+                                  initWithTitle:NSLocalizedString(@"You need to enter a login and password", @"No login or password alert title") 
+                                  message:NSLocalizedString(@"This app doesn't work without them, buddy", @"no login or password message") 
+                                  delegate:nil 
+                                  cancelButtonTitle:nil 
+                                  otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];                                                                                                                                                     
+    } else {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:username forKey:JKDefaultsUsernameKey];
+        [defaults setObject:password forKey:JKDefaultsPasswordKey];
+    }
+}
 @end
