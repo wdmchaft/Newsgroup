@@ -12,6 +12,8 @@
 #define NewsgroupDefaultsFullNameKey @"NewsgroupDefaultsFullNameKey"
 #define NewsgroupDefaultsNickNameKey @"NewsgroupDefaultsNickNameKey"
 
+#define DataControllerLastFetchTime @"DataControllerLastFetchTime"
+
 #define MAKE_ERROR NSError *error = nil
 #define LOG_ERROR_FROM_METHOD(x) if(!x){ NSLog(@"%@", error) }
 

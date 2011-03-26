@@ -59,9 +59,9 @@ extern NSString *const DataControllerNoPostIDException;
 @property (retain, nonatomic) NSManagedObjectContext *context;
 @property (assign) id <DataControllerDelegate> delegate;
 @property (readonly, retain) NSDate *lastFetchTime;
-@property (copy) NSString *login;
+@property (readonly) NSString *login;
 @property (readonly) BOOL isFetching;
-@property (copy) NSString *password;
+@property (readonly) NSString *password;
 @property (retain) NSMutableArray *postAddRequests;
 @property (retain) NSMutableArray *postAddPosts;
 

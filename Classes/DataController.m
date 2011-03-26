@@ -22,9 +22,6 @@ NSString *const DataControllerNewUnreadPosts = @"DataControllerNewUnreadPosts";
 // Data Controller Error Domain
 NSString *const DataControllerErrorDomain = @"DataControllerErrorDomain";
 
-// User Default keys
-NSString *const DataControllerLastFetchTime = @"DataControllerLastFetchTime";
-
 // Exception Strings
 NSString *const DataControllerNoUsernameException = @"DataControllerNoUsernameException";
 NSString *const DataControllerNoPasswordException = @"DataControllerNoPasswordException";

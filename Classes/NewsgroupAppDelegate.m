@@ -72,8 +72,8 @@
 
 - (void)configureToolbarButtons {
     ToolbarProgressView *progView = [[ToolbarProgressView alloc] initWithFrame:PROGRESS_VIEW_FRAME];
-    progView.viewType = GPProgressDeterminiteView;
-    progView.progress = 0.0f;
+    progView.viewType = GPProgressTimestampView;
+    progView.timestamp = [[NSUserDefaults standardUserDefaults] objectForKey:DataControllerLastFetchTime];
     
     // Create the toolbar bar buttons
     UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refreshData:)];
@@ -123,8 +123,6 @@
         [self.navigationController.topViewController presentModalViewController:logPass animated:YES];
         [logPass release];
     } else {
-        dc.login = username;
-        dc.password = password;
         [self refreshData:self];
     }
 
