@@ -27,5 +27,6 @@
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *progressIndicator;
 
 - (IBAction)submitLoginPassword:(id)sender;
+- (IBAction)done:(id)sender;
 
 @end
