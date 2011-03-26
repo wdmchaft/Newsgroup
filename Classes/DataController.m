@@ -23,9 +23,6 @@ NSString *const DataControllerErrorDomain = @"DataControllerErrorDomain";
 
 // User Default keys
 NSString *const DataControllerLastFetchTime = @"DataControllerLastFetchTime";
-NSString *const DataControllerFullName = @"DataControllerFullName";
-NSString *const DataControllerNickName = @"DataControllerNickName";
-NSString *const DataControllerUserID = @"DataControllerUserID";
 
 // Exception Strings
 NSString *const DataControllerNoUsernameException = @"DataControllerNoUsernameException";

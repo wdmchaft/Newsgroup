@@ -8,6 +8,9 @@
 
 #import "LoginPasswordViewController.h"
 #import "JKConstants.h"
+#import "RequestGenerator.h"
+#import "ASIHTTPRequest.h"
+#import "JSON.h"
 
 
 @implementation LoginPasswordViewController
@@ -20,13 +23,15 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        operationQueue_ = [[NSOperationQueue alloc] init];
     }
     return self;
 }
 
 - (void)dealloc
 {
+    [operationQueue_ release];
+    
     [usernameTextField_ release];
     [passwordTextField_ release];
     [statusLabel release];
@@ -90,9 +95,38 @@
         
     // Success!
     } else {
+        [(UIButton *)sender setEnabled:NO];
+        
+        self.statusLabel.hidden = NO;
+        self.statusLabel.text = NSLocalizedString(@"Validating Password", nil);
+        self.progressIndicator.hidden = NO;
+        [self.progressIndicator startAnimating];
+        
+        
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:username forKey:JKDefaultsUsernameKey];
         [defaults setObject:password forKey:JKDefaultsPasswordKey];
+        
+        __block ASIHTTPRequest *request = [RequestGenerator userWithUsername:username andPassword:password];
+        
+        // Success
+        [request setCompletionBlock:^(void) {
+            NSDictionary *response = [[request responseString] JSONValue];
+            
+            if (response == nil) {
+                NSLog(@"Cannot parse response string: %@", [request responseString]);
+            }
+            
+            BOOL isAuthenticated = [[response objectForKey:@"Authenticated"] boolValue];
+            if (isAuthenticated == NO) {
+                self.statusLabel.text = [NSString stringWithFormat:@"Cannot authenticate username \"%@\"", username];
+                self.progressIndicator.hidden = YES;
+            } else {
+                
+            }
+        }];
+        
+        [operationQueue_ addOperation:request];
     }
 }
 @end

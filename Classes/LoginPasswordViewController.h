@@ -11,11 +11,16 @@
 
 @interface LoginPasswordViewController : UIViewController {
     
+    NSOperationQueue *operationQueue_;
+    
     UITextField *usernameTextField;
     UITextField *passwordTextField;
     UILabel *statusLabel;
     UIActivityIndicatorView *progressIndicator;
 }
+
+
+// Nib properies
 @property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
 @property (nonatomic, retain) IBOutlet UILabel *statusLabel;

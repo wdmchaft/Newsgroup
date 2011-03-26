@@ -9,6 +9,14 @@
 #define JKDefaultsUsernameKey @"JKDefaultsUsernameKey"
 #define JKDefaultsPasswordKey @"JKDefaultsPasswordKey"
 
+#define NewsgroupDefaultsFullNameKey @"NewsgroupDefaultsFullNameKey"
+#define NewsgroupDefaultsNickNameKey @"NewsgroupDefaultsNickNameKey"
+#define NewsgroupDefaultsUserIDKey @"NewsgroupDefaultsUserIDKey"
+
+NSString *const DataControllerFullName = @"DataControllerFullName";
+NSString *const DataControllerNickName = @"DataControllerNickName";
+NSString *const DataControllerUserID = @"DataControllerUserID";
+
 #define MAKE_ERROR NSError *error = nil
 #define LOG_ERROR_FROM_METHOD(x) if(!x){ NSLog(@"%@", error) }
 
