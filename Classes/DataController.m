@@ -356,6 +356,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     post.isRead = [NSNumber numberWithBool:YES];
     post.subject = subject;
     post.body = body;
+    post.posterName = [[NSUserDefaults standardUserDefaults] stringForKey:NewsgroupDefaultsFullNameKey];
     
     [self addPost:post withRequest:request];
 }
