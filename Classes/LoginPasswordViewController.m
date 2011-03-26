@@ -120,10 +120,14 @@
             BOOL isAuthenticated = [[response objectForKey:@"Authenticated"] boolValue];
             if (isAuthenticated == NO) {
                 self.statusLabel.text = [NSString stringWithFormat:@"Cannot authenticate username \"%@\"", username];
-                self.progressIndicator.hidden = YES;
             } else {
-                
+                [defaults setObject:[response objectForKey:@"FullName"] forKey:NewsgroupDefaultsFullNameKey];
+                [defaults setObject:[response objectForKey:@"NickName"] forKey:NewsgroupDefaultsNickNameKey];
+                self.statusLabel.text = [NSString stringWithFormat:@"Welcome %@!", [response objectForKey:@"FullName"]];
             }
+            
+            self.progressIndicator.hidden = YES;
+            [(UIButton *)sender setEnabled:YES];
         }];
         
         [operationQueue_ addOperation:request];
