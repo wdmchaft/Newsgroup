@@ -44,7 +44,11 @@
 {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"Username/Password", @"login password title");
+    self.title = NSLocalizedString(@"Login", @"login password title");
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.usernameTextField.text = [defaults objectForKey:JKDefaultsUsernameKey];
+    self.passwordTextField.text = [defaults objectForKey:JKDefaultsPasswordKey];
 }
 
 - (void)viewDidUnload
@@ -67,15 +71,18 @@
     NSString *username = self.usernameTextField.text;
     NSString *password = self.passwordTextField.text;
     
+    // No username or password
     if ([username length] == 0 || [password length] == 0) {
         UIAlertView *alertView = [[UIAlertView alloc] 
                                   initWithTitle:NSLocalizedString(@"You need to enter a login and password", @"No login or password alert title") 
                                   message:NSLocalizedString(@"This app doesn't work without them, buddy", @"no login or password message") 
                                   delegate:nil 
-                                  cancelButtonTitle:nil 
+                                  cancelButtonTitle:NSLocalizedString(@"OK", @"Cancel button title") 
                                   otherButtonTitles:nil];
         [alertView show];
-        [alertView release];                                                                                                                                                     
+        [alertView release];  
+        
+    // Success!
     } else {
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         [defaults setObject:username forKey:JKDefaultsUsernameKey];

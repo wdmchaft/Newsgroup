@@ -11,6 +11,7 @@
 #import "IndividualThreadView.h"
 #import "ToolbarProgressView.h"
 #import "JKConstants.h"
+#import "LoginPasswordViewController.h"
 
 #define PROGRESS_VIEW_FRAME CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)
 
@@ -110,21 +111,24 @@
     NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsUsernameKey];
     NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsPasswordKey];
     
-    // If they don't exist, pop up an alert
-    if (!username || !password) {
-        NSAssert(YES, @"You need to add a pop-up for checking on the status of the username/password");
-    }
-    
     // Setup the data controller
     DataController *dc = [[DataController alloc] init];
-    dc.login = username;
-    dc.password = password;
     dc.delegate = self;
-    
     self.dataController = dc;
-    [self refreshData:self];
-    [dc release];
+    
+    
+    // If they don't exist, pop up an alert
+    if ([username length] == 0 || [password length] == 0) {
+        LoginPasswordViewController *logPass = [[LoginPasswordViewController alloc] initWithNibName:@"LoginPasswordView" bundle:nil];
+        [self.navigationController.topViewController presentModalViewController:logPass animated:YES];
+        [logPass release];
+    } else {
+        dc.login = username;
+        dc.password = password;
+        [self refreshData:self];
+    }
 
+    [dc release];
 }
 
 - (void)newPost:(id)sender {
