@@ -19,6 +19,8 @@
     UIActivityIndicatorView *progressIndicator;
 }
 
+// Instance Methods
+- (void)saveUsername:(NSString *)username password:(NSString *)password;
 
 // Nib properies
 @property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
@@ -26,6 +28,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *statusLabel;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *progressIndicator;
 
+// IBActions
 - (IBAction)submitLoginPassword:(id)sender;
 - (IBAction)done:(id)sender;
 

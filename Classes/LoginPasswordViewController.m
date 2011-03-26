@@ -77,10 +77,18 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)saveUsername:(NSString *)username password:(NSString *)password {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:username forKey:JKDefaultsUsernameKey];
+    [defaults setObject:password forKey:JKDefaultsPasswordKey];
+}
+
 - (IBAction)submitLoginPassword:(id)sender {
     
     NSString *username = self.usernameTextField.text;
     NSString *password = self.passwordTextField.text;
+    
+    [self saveUsername:username password:password];
     
     // No username or password
     if ([username length] == 0 || [password length] == 0) {
@@ -102,11 +110,6 @@
         self.progressIndicator.hidden = NO;
         [self.progressIndicator startAnimating];
         
-        
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        [defaults setObject:username forKey:JKDefaultsUsernameKey];
-        [defaults setObject:password forKey:JKDefaultsPasswordKey];
-        
         __block ASIHTTPRequest *request = [RequestGenerator userWithUsername:username andPassword:password];
         
         // Success
@@ -121,6 +124,7 @@
             if (isAuthenticated == NO) {
                 self.statusLabel.text = [NSString stringWithFormat:@"Cannot authenticate username \"%@\"", username];
             } else {
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
                 [defaults setObject:[response objectForKey:@"FullName"] forKey:NewsgroupDefaultsFullNameKey];
                 [defaults setObject:[response objectForKey:@"NickName"] forKey:NewsgroupDefaultsNickNameKey];
                 self.statusLabel.text = [NSString stringWithFormat:@"Welcome %@!", [response objectForKey:@"FullName"]];
@@ -135,5 +139,7 @@
 }
 
 - (IBAction)done:(id)sender {
+    [self saveUsername:self.usernameTextField.text password:self.passwordTextField.text];
+    [self.parentViewController dismissModalViewControllerAnimated:YES];
 }
 @end

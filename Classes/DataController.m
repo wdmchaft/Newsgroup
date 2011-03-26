@@ -11,6 +11,7 @@
 #import "NSString+Digest.h"
 #import "PostLoadOperation.h"
 #import "RequestGenerator.h"
+#import "JKConstants.h"
 
 // Notification Strings
 NSString *const DataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
@@ -51,11 +52,25 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 
 @synthesize context = context_;
 @synthesize delegate = delegate_;
-@synthesize login = login_;
 @synthesize model = model_;
-@synthesize password = password_;
 @synthesize postAddRequests = postAddRequests_;
 @synthesize postAddPosts = postAddPosts_;
+
+- (void)setLogin:(NSString *)login {
+    [[NSUserDefaults standardUserDefaults] setObject:login forKey:JKDefaultsUsernameKey];
+}
+
+- (NSString *)login {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsUsernameKey];
+}
+
+- (void)setPassword:(NSString *)password {
+    [[NSUserDefaults standardUserDefaults] setObject:password forKey:JKDefaultsPasswordKey];
+}
+
+- (NSString *)password {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsPasswordKey];
+}
 
 - (void)setLastFetchTime:(NSDate *)lastFetchTime {
     [[NSUserDefaults standardUserDefaults] setObject:lastFetchTime forKey:DataControllerLastFetchTime];
