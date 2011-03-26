@@ -13,9 +13,13 @@
     
     UITextField *usernameTextField;
     UITextField *passwordTextField;
+    UILabel *statusLabel;
+    UIActivityIndicatorView *progressIndicator;
 }
 @property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
+@property (nonatomic, retain) IBOutlet UILabel *statusLabel;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *progressIndicator;
 
 - (IBAction)submitLoginPassword:(id)sender;
 

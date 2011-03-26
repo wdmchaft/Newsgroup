@@ -13,6 +13,8 @@
 @implementation LoginPasswordViewController
 @synthesize usernameTextField = usernameTextField_;
 @synthesize passwordTextField = passwordTextField_;
+@synthesize statusLabel;
+@synthesize progressIndicator;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +29,8 @@
 {
     [usernameTextField_ release];
     [passwordTextField_ release];
+    [statusLabel release];
+    [progressIndicator release];
     [super dealloc];
 }
 
@@ -55,6 +59,8 @@
 {
     [self setUsernameTextField:nil];
     [self setPasswordTextField:nil];
+    [self setStatusLabel:nil];
+    [self setProgressIndicator:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
