@@ -92,19 +92,16 @@
     
     NSString *testHash = @"sQnzu7wkTrgkQZF+0G1hi5AI3Qmzvv0bXgc5THBqi7mAsdd4Xll27ASbRt9fEyavWi6m0QP9B8lThf+rDKy8hg==";
     NSString *actualHash = [DataController hashString:inputPassword];
-    
     GHAssertEqualStrings(testHash, actualHash, nil);
     
     inputPassword = @"woah!";
     testHash = @"b3WWq1HOp7UOvKdB5Dvt7dBTV1ktmJMKi3sZSp52cciSH9VttPCNmExll2j+0oAWrqDVBnvnbBYs+/f37w0WUA==";
     actualHash = [DataController hashString:inputPassword];
-    
     GHAssertEqualStrings(testHash, actualHash, nil);
     
-    inputPassword = @"This is A S8P$R S#4U&RE P455+WO)(RD";
-    testHash = @"5CZ3nBaCHt+YJhzvbjfnt8vm1tQOhu8KevqfpV5FWKZidZREEae5DvJmJs8AwKbqxmliBu4v/9hEYZg5650iMw==";
+    inputPassword = @"cohen420";
+    testHash = @"FAEFCiTA9kIKK3Lv4ukax325T45aGzRohIN3hRa8VNRa1NWGpjn4gIsyQioMQ7ScB3xtpZ1XWMod4uWPJ91u3w==";
     actualHash = [DataController hashString:inputPassword];
-    
     GHAssertEqualStrings(testHash, actualHash, nil);
 
 }
