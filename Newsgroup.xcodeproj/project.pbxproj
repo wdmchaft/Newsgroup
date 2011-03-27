@@ -19,10 +19,10 @@
 		28D3F202112F7DC200FD0661 /* Newsgroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */; };
 		296BEB67131048C20026BF42 /* NSString+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BEB66131048C20026BF42 /* NSString+Digest.m */; };
 		4D0B8E651329C26C0081E772 /* post_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B8E641329C26C0081E772 /* post_body.html */; };
+		4D1DD4C0133FA61300A61679 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1DD4BF133FA61300A61679 /* Icon.png */; };
 		4D41B3A6131F29410044171F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B3A5131F29410044171F /* Settings.bundle */; };
 		4D41B3AA131F36BD0044171F /* DDAlertPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */; };
 		4D41B402132004730044171F /* newsgroup_posts_cleaned.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */; };
-		4D4C23E7133ED81E0055628A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4C23E6133ED81E0055628A /* Icon.png */; };
 		4D4CEC67132FC4E8009FDA84 /* RequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */; };
 		4D4CEC68132FC4E8009FDA84 /* RequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */; };
 		4D4CEC6A132FC600009FDA84 /* TestRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CEC69132FC600009FDA84 /* TestRequestGenerator.m */; };
@@ -124,11 +124,12 @@
 		296BEB66131048C20026BF42 /* NSString+Digest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Digest.m"; path = "NSString_Digest/NSString+Digest.m"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D0B8E641329C26C0081E772 /* post_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = post_body.html; path = Resources/post_body.html; sourceTree = "<group>"; };
+		4D1DD4B9133F7F2800A61679 /* DataControllerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataControllerPrivate.h; sourceTree = "<group>"; };
+		4D1DD4BF133FA61300A61679 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		4D41B3A5131F29410044171F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
 		4D41B3A8131F36BD0044171F /* DDAlertPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAlertPrompt.h; path = DDAlertPrompt/DDAlertPrompt.h; sourceTree = "<group>"; };
 		4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAlertPrompt.m; path = DDAlertPrompt/DDAlertPrompt.m; sourceTree = "<group>"; };
 		4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = newsgroup_posts_cleaned.plist; path = "Test Classes/newsgroup_posts_cleaned.plist"; sourceTree = "<group>"; };
-		4D4C23E6133ED81E0055628A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		4D4CEC65132FC4E6009FDA84 /* RequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestGenerator.h; sourceTree = "<group>"; };
 		4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestGenerator.m; sourceTree = "<group>"; };
 		4D4CEC69132FC600009FDA84 /* TestRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestRequestGenerator.m; path = "Test Classes/TestRequestGenerator.m"; sourceTree = "<group>"; };
@@ -223,7 +224,6 @@
 		4DF2D2BD130846DF00C8AB3A /* OCMockRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OCMockRecorder.h; path = Frameworks/OCMock/Headers/OCMock/OCMockRecorder.h; sourceTree = "<group>"; };
 		4DF61C46131DB00600B378E4 /* TestUser.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TestUser.plist; path = "Test Classes/TestUser.plist"; sourceTree = "<group>"; };
 		4DF61C48131F228D00B378E4 /* JKConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKConstants.h; sourceTree = "<group>"; };
-		4DF83DB4132C42D400F30E73 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Newsgroup-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Newsgroup-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,7 +297,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				4D4C23E6133ED81E0055628A /* Icon.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				4DF2D28213083E2F00C8AB3A /* Tests */,
@@ -328,7 +327,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4DF83DB4132C42D400F30E73 /* Icon.png */,
+				4D1DD4BF133FA61300A61679 /* Icon.png */,
 				4D0B8E641329C26C0081E772 /* post_body.html */,
 				4D54C9301327A9BA001D70C1 /* Image Resources */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
@@ -418,6 +417,7 @@
 			children = (
 				4D8D4069130455490033E9E7 /* DataController.h */,
 				4D8D406A130455490033E9E7 /* DataController.m */,
+				4D1DD4B9133F7F2800A61679 /* DataControllerPrivate.h */,
 				4DB0B6B61306026600B24E54 /* Post.h */,
 				4DB0B6B71306026600B24E54 /* Post.m */,
 				4D72F98C13167E180027E478 /* PostLoadOperation.h */,
@@ -626,7 +626,7 @@
 				4D0B8E651329C26C0081E772 /* post_body.html in Resources */,
 				4DE9D7DB13311C3D00475E8C /* NewPostView.xib in Resources */,
 				4DE9D855133C061300475E8C /* LoginPasswordView.xib in Resources */,
-				4D4C23E7133ED81E0055628A /* Icon.png in Resources */,
+				4D1DD4C0133FA61300A61679 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

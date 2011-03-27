@@ -13,6 +13,8 @@
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>Icon.png</string>
+		<string>Icon.png</string>
+		<string>Icon.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
 	<string>com.jimkubicek.${PRODUCT_NAME:rfc1034identifier}</string>
