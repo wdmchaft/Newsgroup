@@ -11,6 +11,7 @@
 
 #define NewsgroupDefaultsFullNameKey @"NewsgroupDefaultsFullNameKey"
 #define NewsgroupDefaultsNickNameKey @"NewsgroupDefaultsNickNameKey"
+#define JKDefaultsShouldShowNicknames @"JKDefaultsShouldShowNicknames"
 
 #define DataControllerLastFetchTime @"DataControllerLastFetchTime"
 

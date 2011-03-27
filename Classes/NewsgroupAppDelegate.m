@@ -32,6 +32,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 
+    // Set the default preferences
+    NSDictionary *defaults = [NSDictionary dictionaryWithObjectsAndKeys:
+                              [NSNumber numberWithBool:NO], JKDefaultsShouldShowNicknames,
+                              nil];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
+    
     // Register for notifications
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(noUnreadPosts:) name:DataControllerNoUnreadPosts object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newUnreadPosts:) name:DataControllerNewUnreadPosts object:nil];
