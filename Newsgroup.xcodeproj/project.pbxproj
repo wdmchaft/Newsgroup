@@ -104,7 +104,6 @@
 		4DF2D27E13083DB600C8AB3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		4DF2D29313083EF600C8AB3A /* GHUnitIOSTestMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF2D29213083EF600C8AB3A /* GHUnitIOSTestMain.m */; };
 		4DF61C47131DB00600B378E4 /* TestUser.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DF61C46131DB00600B378E4 /* TestUser.plist */; };
-		4DF83DB5132C42D400F30E73 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF83DB4132C42D400F30E73 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -625,7 +624,6 @@
 				4D41B3A6131F29410044171F /* Settings.bundle in Resources */,
 				4D54C9321327A9BA001D70C1 /* isRead.png in Resources */,
 				4D0B8E651329C26C0081E772 /* post_body.html in Resources */,
-				4DF83DB5132C42D400F30E73 /* Icon.png in Resources */,
 				4DE9D7DB13311C3D00475E8C /* NewPostView.xib in Resources */,
 				4DE9D855133C061300475E8C /* LoginPasswordView.xib in Resources */,
 				4D4C23E7133ED81E0055628A /* Icon.png in Resources */,
