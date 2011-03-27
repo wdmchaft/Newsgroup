@@ -49,11 +49,8 @@
 {
     [super viewDidLoad];
     
-    // Set Title
-    self.title = NSLocalizedString(@"New Post", @"New Post screen title");
-    
     // Create send button
-    UIBarButtonItem *sendButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(send:)];
+    UIBarButtonItem *sendButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Send", @"Send button") style:UIBarButtonItemStyleDone target:self action:@selector(send:)];
     self.navigationItem.rightBarButtonItem = sendButton;
     [sendButton release];
     
