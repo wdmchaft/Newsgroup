@@ -18,6 +18,7 @@
 @synthesize passwordTextField = passwordTextField_;
 @synthesize statusLabel;
 @synthesize progressIndicator;
+@synthesize doneButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,6 +37,7 @@
     [passwordTextField_ release];
     [statusLabel release];
     [progressIndicator release];
+    [doneButton release];
     [super dealloc];
 }
 
@@ -66,6 +68,7 @@
     [self setPasswordTextField:nil];
     [self setStatusLabel:nil];
     [self setProgressIndicator:nil];
+    [self setDoneButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;

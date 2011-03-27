@@ -17,6 +17,7 @@
     UITextField *passwordTextField;
     UILabel *statusLabel;
     UIActivityIndicatorView *progressIndicator;
+    UIBarButtonItem *doneButton;
 }
 
 // Instance Methods
@@ -27,6 +28,7 @@
 @property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
 @property (nonatomic, retain) IBOutlet UILabel *statusLabel;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *progressIndicator;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
 
 // IBActions
 - (IBAction)submitLoginPassword:(id)sender;
