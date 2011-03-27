@@ -237,6 +237,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
                                 localizedDescription, NSLocalizedDescriptionKey,
                                 inputError, NSUnderlyingErrorKey,
                                 url, NSURLErrorKey, nil];
+                    break;
                     
                 default:
                     code = DataControllerErrorUnknownNetworkFailure;
@@ -477,9 +478,9 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 - (NSUInteger)error:(NSError **)error withErrorCode:(DataControllerErrorCode)code {
     if (error != NULL) {
         
-        NSDictionary *userInfo;
-        NSString *description;
-        NSString *failureReason;
+        NSDictionary *userInfo = nil;
+        NSString *description = nil;
+        NSString *failureReason = nil;
         
         switch (code) {
                 
