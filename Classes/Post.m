@@ -23,6 +23,7 @@
 @dynamic memberID;
 @dynamic postdate;
 @dynamic posterName;
+@dynamic posterNickname;
 @dynamic postID;
 @dynamic subject;
 @dynamic threadID;

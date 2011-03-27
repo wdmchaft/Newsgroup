@@ -59,6 +59,7 @@
         post.isRead = [postDict objectForKey:@"Read"];
         post.memberID = [postDict objectForKey:@"AuthorID"];
         post.posterName = [postDict objectForKey:@"AuthorName"];
+        post.posterNickname = [postDict objectForKey:@"AuthorNickname"];
         post.subject = [postDict objectForKey:@"Subject"];
         post.threadID = [postDict objectForKey:@"ThreadID"];
         post.parentID = [postDict objectForKey:@"ParentID"];
