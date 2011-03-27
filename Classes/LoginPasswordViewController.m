@@ -131,6 +131,7 @@
                 [defaults setObject:[response objectForKey:@"FullName"] forKey:NewsgroupDefaultsFullNameKey];
                 [defaults setObject:[response objectForKey:@"NickName"] forKey:NewsgroupDefaultsNickNameKey];
                 self.statusLabel.text = [NSString stringWithFormat:@"Welcome %@!", [response objectForKey:@"FullName"]];
+                self.doneButton.enabled = YES;
             }
             
             self.progressIndicator.hidden = YES;
