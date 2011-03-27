@@ -73,19 +73,19 @@
     dataController = nil;
 }
 
-#if 0
+#if 1
 
-- (void)testPostNewThread {
-    NSString *subject = @"Testing posting";
-    NSString *body = @"I'll need to delete this";
-    
-    ASIHTTPRequest *request = [RequestGenerator addPostForUser:login password:password subject:subject body:body inReplyTo:nil];
-
-    NSString *response = [self runASIRequest:request];
-    NSInteger newPostID = [response integerValue];
-    
-    GHAssertNotEquals(newPostID, 0, nil);
-}
+//- (void)testPostNewThread {
+//    NSString *subject = @"Testing posting";
+//    NSString *body = @"I'll need to delete this";
+//    
+//    ASIHTTPRequest *request = [RequestGenerator addPostForUser:login password:password subject:subject body:body inReplyTo:nil];
+//
+//    NSString *response = [self runASIRequest:request];
+//    NSInteger newPostID = [response integerValue];
+//    
+//    GHAssertNotEquals(newPostID, 0, nil);
+//}
 
 - (void)testHash {
     NSString *inputPassword = @"password";
@@ -94,12 +94,25 @@
     NSString *actualHash = [DataController hashString:inputPassword];
     
     GHAssertEqualStrings(testHash, actualHash, nil);
+    
+    inputPassword = @"woah!";
+    testHash = @"b3WWq1HOp7UOvKdB5Dvt7dBTV1ktmJMKi3sZSp52cciSH9VttPCNmExll2j+0oAWrqDVBnvnbBYs+/f37w0WUA==";
+    actualHash = [DataController hashString:inputPassword];
+    
+    GHAssertEqualStrings(testHash, actualHash, nil);
+    
+    inputPassword = @"This is A S8P$R S#4U&RE P455+WO)(RD";
+    testHash = @"5CZ3nBaCHt+YJhzvbjfnt8vm1tQOhu8KevqfpV5FWKZidZREEae5DvJmJs8AwKbqxmliBu4v/9hEYZg5650iMw==";
+    actualHash = [DataController hashString:inputPassword];
+    
+    GHAssertEqualStrings(testHash, actualHash, nil);
+
 }
 
 - (void)testGetHash {
     NSString *inputValue = @"test string";
     
-    ASIHTTPRequest *request = [DataController hashRequestWithValue:inputValue urlEncode:NO];
+    ASIHTTPRequest *request = [RequestGenerator hashRequestWithValue:inputValue urlEncode:NO];
     
     NSString *response = [self runASIRequest:request];
 
@@ -115,7 +128,7 @@
 
 - (void)testUserGet {
     
-    ASIHTTPRequest *request = [DataController userWithUsername:login andPassword:password];
+    ASIHTTPRequest *request = [RequestGenerator userWithUsername:login andPassword:password];
 
     NSString *response = [self runASIRequest:request];
     
@@ -131,40 +144,40 @@
     GHAssertTrue([[jsonResponse objectForKey:@"UserID"] isEqualToNumber:[testUser objectForKey:@"UserID"]], nil);
 }
 
-- (void)testPosts {
-    
-    ASIHTTPRequest *request = [DataController postsWithUsername:login password:password threadID:0 postID:0 threadLimit:0];
-    
-    // Test pulling in all threads
-    NSString *response = [self runASIRequest:request];
-    NSArray *allThreads = (NSArray *)[response JSONValue];
-    NSInteger allThreadCount = [allThreads count];
-    GHAssertNotNULL((void *)allThreadCount, nil);
-    
-    // Test pulling in a single thread
-    NSNumber *threadId = [[allThreads objectAtIndex:0] objectForKey:@"ThreadID"];
-    GHAssertNotNULL(threadId, nil);
-    
-    request = [DataController postsWithUsername:login password:password threadID:[threadId intValue] postID:0 threadLimit:0];
-    response = [self runASIRequest:request];
-    
-    NSArray *postsInThread = [response JSONValue];
-    GHAssertNotNULL(postsInThread, nil);
-    
-    NSInteger postsInThreadCount = [postsInThread count];
-    GHAssertLessThan(postsInThreadCount, allThreadCount, nil);
-    
-    // Test pulling in a single post
-    NSNumber *postId = [[postsInThread objectAtIndex:0] objectForKey:@"PostID"];
-    GHAssertNotNULL(postId, nil);
-    
-    request = [DataController postsWithUsername:login password:password threadID:0 postID:[postId intValue] threadLimit:0];
-    response = [self runASIRequest:request];
-    
-    NSArray *singlePost = [response JSONValue];
-    GHAssertNotNULL(singlePost, nil);
-    GHAssertTrue(1 == [singlePost count], nil);
-}
+//- (void)testPosts {
+//    
+//    ASIHTTPRequest *request = [DataController postsWithUsername:login password:password threadID:0 postID:0 threadLimit:0];
+//    
+//    // Test pulling in all threads
+//    NSString *response = [self runASIRequest:request];
+//    NSArray *allThreads = (NSArray *)[response JSONValue];
+//    NSInteger allThreadCount = [allThreads count];
+//    GHAssertNotNULL((void *)allThreadCount, nil);
+//    
+//    // Test pulling in a single thread
+//    NSNumber *threadId = [[allThreads objectAtIndex:0] objectForKey:@"ThreadID"];
+//    GHAssertNotNULL(threadId, nil);
+//    
+//    request = [DataController postsWithUsername:login password:password threadID:[threadId intValue] postID:0 threadLimit:0];
+//    response = [self runASIRequest:request];
+//    
+//    NSArray *postsInThread = [response JSONValue];
+//    GHAssertNotNULL(postsInThread, nil);
+//    
+//    NSInteger postsInThreadCount = [postsInThread count];
+//    GHAssertLessThan(postsInThreadCount, allThreadCount, nil);
+//    
+//    // Test pulling in a single post
+//    NSNumber *postId = [[postsInThread objectAtIndex:0] objectForKey:@"PostID"];
+//    GHAssertNotNULL(postId, nil);
+//    
+//    request = [DataController postsWithUsername:login password:password threadID:0 postID:[postId intValue] threadLimit:0];
+//    response = [self runASIRequest:request];
+//    
+//    NSArray *singlePost = [response JSONValue];
+//    GHAssertNotNULL(singlePost, nil);
+//    GHAssertTrue(1 == [singlePost count], nil);
+//}
 
 #endif
 
