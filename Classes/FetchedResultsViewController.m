@@ -11,6 +11,7 @@
 #import "NewsgroupAppDelegate.h"
 #import "NSDate+Helper.h"
 #import "IndividualThreadView.h"
+#import "JKConstants.h"
 
 #pragma mark -
 @implementation FetchedResultsViewController
@@ -21,10 +22,19 @@
 #pragma mark Instance Methods
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-
     Post *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    // Get the poster name
+    bool shouldShowNicknames = [[[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsShouldShowNicknames] boolValue];
+    NSString *name;
+    if (shouldShowNicknames) {
+        name = thread.posterNickname;
+    } else {
+        name = thread.posterName;
+    }
+
     cell.textLabel.text = thread.subject;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", thread.posterNickname, [NSDate stringForDisplayFromDate:thread.postdate]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", name, [NSDate stringForDisplayFromDate:thread.postdate]];
     
     if ([thread.isRead boolValue] == NO) {
         UIImage *isReadIndicator = [UIImage imageNamed:@"isRead.png"];
