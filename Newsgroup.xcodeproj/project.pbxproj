@@ -22,6 +22,7 @@
 		4D41B3A6131F29410044171F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B3A5131F29410044171F /* Settings.bundle */; };
 		4D41B3AA131F36BD0044171F /* DDAlertPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */; };
 		4D41B402132004730044171F /* newsgroup_posts_cleaned.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */; };
+		4D4C23E7133ED81E0055628A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D4C23E6133ED81E0055628A /* Icon.png */; };
 		4D4CEC67132FC4E8009FDA84 /* RequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */; };
 		4D4CEC68132FC4E8009FDA84 /* RequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */; };
 		4D4CEC6A132FC600009FDA84 /* TestRequestGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CEC69132FC600009FDA84 /* TestRequestGenerator.m */; };
@@ -128,6 +129,7 @@
 		4D41B3A8131F36BD0044171F /* DDAlertPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAlertPrompt.h; path = DDAlertPrompt/DDAlertPrompt.h; sourceTree = "<group>"; };
 		4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAlertPrompt.m; path = DDAlertPrompt/DDAlertPrompt.m; sourceTree = "<group>"; };
 		4D41B401132004730044171F /* newsgroup_posts_cleaned.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = newsgroup_posts_cleaned.plist; path = "Test Classes/newsgroup_posts_cleaned.plist"; sourceTree = "<group>"; };
+		4D4C23E6133ED81E0055628A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		4D4CEC65132FC4E6009FDA84 /* RequestGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestGenerator.h; sourceTree = "<group>"; };
 		4D4CEC66132FC4E7009FDA84 /* RequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestGenerator.m; sourceTree = "<group>"; };
 		4D4CEC69132FC600009FDA84 /* TestRequestGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestRequestGenerator.m; path = "Test Classes/TestRequestGenerator.m"; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4D4C23E6133ED81E0055628A /* Icon.png */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				4DF2D28213083E2F00C8AB3A /* Tests */,
@@ -625,6 +628,7 @@
 				4DF83DB5132C42D400F30E73 /* Icon.png in Resources */,
 				4DE9D7DB13311C3D00475E8C /* NewPostView.xib in Resources */,
 				4DE9D855133C061300475E8C /* LoginPasswordView.xib in Resources */,
+				4D4C23E7133ED81E0055628A /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +746,7 @@
 					"DEBUG_REQUEST_STATUS=1",
 				);
 				INFOPLIST_FILE = "Newsgroup-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0.1;
 				PRODUCT_NAME = newsgroup;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -762,7 +766,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Newsgroup_Prefix.pch;
 				INFOPLIST_FILE = "Newsgroup-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0.1;
 				PRODUCT_NAME = newsgroup;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				VALIDATE_PRODUCT = YES;
