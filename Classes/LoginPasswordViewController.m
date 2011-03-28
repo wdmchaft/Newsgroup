@@ -15,11 +15,21 @@
 
 
 @implementation LoginPasswordViewController
+
+@synthesize displayString = displayString_;
 @synthesize usernameTextField = usernameTextField_;
 @synthesize passwordTextField = passwordTextField_;
 @synthesize statusLabel;
 @synthesize progressIndicator;
 @synthesize doneButton;
+
+- (void)setDisplayString:(NSString *)displayString {
+    // Since this is a copy property, we don't need to worry about being passed the same string as the iVar
+    [displayString_ release];
+    displayString_ = [displayString copy];
+    
+    self.statusLabel.text = displayString_;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +43,8 @@
 - (void)dealloc
 {
     [operationQueue_ release];
+    
+    [displayString_ release];
     
     [usernameTextField_ release];
     [passwordTextField_ release];
@@ -61,6 +73,8 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     self.usernameTextField.text = [defaults objectForKey:JKDefaultsUsernameKey];
     self.passwordTextField.text = [defaults objectForKey:JKDefaultsPasswordKey];
+    
+    self.statusLabel.text = self.displayString;
 }
 
 - (void)viewDidUnload

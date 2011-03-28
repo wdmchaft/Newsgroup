@@ -23,6 +23,9 @@
 // Instance Methods
 - (void)saveUsername:(NSString *)username password:(NSString *)password;
 
+// Properties
+@property (nonatomic, copy) NSString *displayString;
+
 // Nib properies
 @property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
 @property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
