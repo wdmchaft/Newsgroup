@@ -14,6 +14,7 @@
 #import "LoginPasswordViewController.h"
 
 #define PROGRESS_VIEW_FRAME CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)
+#define REFRESH_INTERVAL 120.0
 
 @implementation NewsgroupAppDelegate
 
@@ -25,6 +26,7 @@
 @synthesize refreshButton = refreshButton_;
 @synthesize newPostButton = newPostButton_;
 @synthesize nextUnreadButton = nextUnreadButton_;
+@synthesize refreshTimer = refreshTimer_;
 
 
 #pragma mark -
@@ -53,6 +55,19 @@
     [self setupDataController];
     
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [self refreshData:nil];
+    
+    NSTimer *refreshTimer = [NSTimer timerWithTimeInterval:REFRESH_INTERVAL target:self selector:@selector(refreshData:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:refreshTimer forMode:NSDefaultRunLoopMode];
+    self.refreshTimer = refreshTimer;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [self.refreshTimer invalidate];
+    self.refreshTimer = nil;
 }
 
 - (void)dealloc {
@@ -128,8 +143,6 @@
         LoginPasswordViewController *logPass = [[LoginPasswordViewController alloc] initWithNibName:@"LoginPasswordView" bundle:nil];
         [self.navigationController.topViewController presentModalViewController:logPass animated:YES];
         [logPass release];
-    } else {
-        [self refreshData:self];
     }
 
     [dc release];

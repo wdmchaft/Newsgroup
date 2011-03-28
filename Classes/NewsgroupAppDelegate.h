@@ -35,6 +35,7 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) UIBarButtonItem *newPostButton;
 @property (nonatomic, retain) UIBarButtonItem *nextUnreadButton;
+@property (nonatomic, retain) NSTimer *refreshTimer;
 
 // Utility Methods
 - (NSURL *)applicationDocumentsDirectory;
