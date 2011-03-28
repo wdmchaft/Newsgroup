@@ -206,6 +206,13 @@
     
     NSLog(@"Fetch failed: %@", error);
     
+    if ([error code] == DataControllerErrorAuthenticationFailed) {
+        LoginPasswordViewController *loginController = [[LoginPasswordViewController alloc] initWithNibName:@"LoginPasswordView" bundle:nil];
+        loginController.displayString = NSLocalizedString(@"Login failed", @"String to display when the login fails");
+        [self.navigationController pushViewController:loginController animated:YES];
+        [loginController release];
+    }
+    
     self.refreshButton.enabled = YES;
     self.progressView.viewType = GPProgressTimestampView;
     

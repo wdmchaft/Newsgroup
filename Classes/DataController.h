@@ -26,6 +26,7 @@ typedef enum {
     DataControllerErrorNoPassword,
     DataControllerErrorConnectionFailure,
     DataControllerErrorRequestTimedOut,
+    DataControllerErrorAuthenticationFailed,
     DataControllerErrorUnknownNetworkFailure
 } DataControllerErrorCode;
 

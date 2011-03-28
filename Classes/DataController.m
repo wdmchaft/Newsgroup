@@ -179,7 +179,18 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 #pragma mark Authentication Methods
 
 - (void)authenticateUser {
+    __block ASIHTTPRequest *request = [RequestGenerator userWithUsername:self.login andPassword:self.password];
     
+    // Success
+    [request setCompletionBlock:^(void) {
+        BOOL isAuthenticated = [self saveResponseStringFromAuthenticationRequest:[request responseString]];
+        
+        if (isAuthenticated == NO) {
+            NSLog(@"Cannot authenticate username/password");
+        }
+    }];
+    
+    [operationQueue_ addOperation:request];
 }
 
 - (BOOL)saveResponseStringFromAuthenticationRequest:(NSString *)responseString {
@@ -259,6 +270,14 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
                     
                 case ASIRequestTimedOutErrorType:
                     code = DataControllerErrorRequestTimedOut;
+                    userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                                localizedDescription, NSLocalizedDescriptionKey,
+                                inputError, NSUnderlyingErrorKey,
+                                url, NSURLErrorKey, nil];
+                    break;
+                    
+                case ASIAuthenticationErrorType:
+                    code = DataControllerErrorAuthenticationFailed;
                     userInfo = [NSDictionary dictionaryWithObjectsAndKeys:
                                 localizedDescription, NSLocalizedDescriptionKey,
                                 inputError, NSUnderlyingErrorKey,

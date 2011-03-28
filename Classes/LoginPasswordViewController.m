@@ -28,7 +28,10 @@
     [displayString_ release];
     displayString_ = [displayString copy];
     
-    self.statusLabel.text = displayString_;
+    if ([displayString_ length] != 0) {
+        self.statusLabel.text = displayString_;
+        self.statusLabel.hidden = NO;
+    }
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -74,7 +77,11 @@
     self.usernameTextField.text = [defaults objectForKey:JKDefaultsUsernameKey];
     self.passwordTextField.text = [defaults objectForKey:JKDefaultsPasswordKey];
     
-    self.statusLabel.text = self.displayString;
+    if ([self.displayString length] != 0) {
+        self.statusLabel.text = self.displayString;
+        self.statusLabel.hidden = NO;
+    }
+    
 }
 
 - (void)viewDidUnload
