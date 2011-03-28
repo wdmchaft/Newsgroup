@@ -73,6 +73,10 @@ extern NSString *const DataControllerNoPostIDException;
 // Designated Initializer
 - (id)initWithModelURL:(NSURL *)modelURL andStoreURL:(NSURL *)storeURL;
 
+// Authentication Methods
+- (void)authenticateUser;
+- (BOOL)saveResponseStringFromAuthenticationRequest:(NSString *)responseString;
+
 // Web Methods
 - (BOOL)markPostAsRead:(NSNumber *)postID;
 - (BOOL)fetchAllPostsWithError:(NSError **)error;
@@ -96,9 +100,5 @@ extern NSString *const DataControllerNoPostIDException;
 - (Post *)nextUnreadPost;
 - (Post *)nextUnreadPostUnderPost:(Post *)post;
 - (NSArray *)pathToPost:(Post *)post;
-
-// Private Methods (internal use only)
-- (void)loadNewPosts:(NSArray *)postDict intoContext:(NSManagedObjectContext *)context;
-- (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error;
 
 @end

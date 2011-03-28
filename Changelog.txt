@@ -1,3 +1,4 @@
 Next
 
+ * Added 2 minute automatic refresh
  * 

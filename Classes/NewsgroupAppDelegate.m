@@ -153,16 +153,15 @@
 }
 
 - (void)refreshData:(id)sender {
-    
-    self.refreshButton.enabled = NO;
-    
-    self.progressView.viewType = GPProgressDeterminiteView;
-    self.progressView.progress = 0.0f;
-    
     NSError *error = nil;
-    if (![self.dataController fetchAllPostsWithError:&error]) {
+    if ([self.dataController fetchAllPostsWithError:&error]) {
+        
+        self.refreshButton.enabled = NO;
+        self.progressView.viewType = GPProgressDeterminiteView;
+        self.progressView.progress = 0.0f;
+        
+    } else {
         NSLog(@"%@", error);
-        NSAssert(NO, nil);
     }
     
 }

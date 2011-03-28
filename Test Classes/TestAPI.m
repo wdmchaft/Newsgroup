@@ -73,7 +73,7 @@
     dataController = nil;
 }
 
-#if 1
+#if 0
 
 //- (void)testPostNewThread {
 //    NSString *subject = @"Testing posting";

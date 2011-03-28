@@ -7,6 +7,7 @@
 //
 
 #import "DataController.h"
+#import "DataControllerPrivate.h"
 #import "JSON.h"
 #import "NSString+Digest.h"
 #import "PostLoadOperation.h"
@@ -173,6 +174,31 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 #pragma mark -
+
+
+#pragma mark Authentication Methods
+
+- (void)authenticateUser {
+    
+}
+
+- (BOOL)saveResponseStringFromAuthenticationRequest:(NSString *)responseString {
+    NSDictionary *response = [responseString JSONValue];
+    
+    if (response == nil) {
+        NSLog(@"Cannot parse response string: %@", responseString);
+    }
+    
+    if ([[response objectForKey:@"Authenticated"] boolValue] == YES) {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[response objectForKey:@"FullName"] forKey:NewsgroupDefaultsFullNameKey];
+        [defaults setObject:[response objectForKey:@"NickName"] forKey:NewsgroupDefaultsNickNameKey];
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 #pragma mark Web Methods
 
 - (BOOL)markPostAsRead:(NSNumber *)postID {

@@ -14,4 +14,7 @@
 @property (readwrite, copy) NSString *login;
 @property (readwrite, copy) NSString *password;
 
+- (void)loadNewPosts:(NSArray *)postDict intoContext:(NSManagedObjectContext *)context;
+- (BOOL)startFetchWithHTTPRequest:(ASIHTTPRequest *)request andError:(NSError **)error;
+
 @end

@@ -11,6 +11,7 @@
 #import "RequestGenerator.h"
 #import "ASIHTTPRequest.h"
 #import "JSON.h"
+#import "NewsgroupAppDelegate.h"
 
 
 @implementation LoginPasswordViewController
@@ -117,20 +118,12 @@
         
         // Success
         [request setCompletionBlock:^(void) {
-            NSDictionary *response = [[request responseString] JSONValue];
+            BOOL isAuthenticated = [APP_DELEGATE.dataController saveResponseStringFromAuthenticationRequest:[request responseString]];
             
-            if (response == nil) {
-                NSLog(@"Cannot parse response string: %@", [request responseString]);
-            }
-            
-            BOOL isAuthenticated = [[response objectForKey:@"Authenticated"] boolValue];
             if (isAuthenticated == NO) {
                 self.statusLabel.text = [NSString stringWithFormat:@"Cannot authenticate username \"%@\"", username];
             } else {
-                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-                [defaults setObject:[response objectForKey:@"FullName"] forKey:NewsgroupDefaultsFullNameKey];
-                [defaults setObject:[response objectForKey:@"NickName"] forKey:NewsgroupDefaultsNickNameKey];
-                self.statusLabel.text = [NSString stringWithFormat:@"Welcome %@!", [response objectForKey:@"FullName"]];
+                self.statusLabel.text = [NSString stringWithFormat:@"Welcome %@!", [[NSUserDefaults standardUserDefaults] objectForKey:NewsgroupDefaultsFullNameKey]];
                 self.doneButton.enabled = YES;
             }
             
