@@ -78,7 +78,10 @@
     }
     
     self.fetchedResultsController = fetchedResults;
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)dealloc {

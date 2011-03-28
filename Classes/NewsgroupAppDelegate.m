@@ -54,6 +54,9 @@
     // Setup the data controller
     [self setupDataController];
     
+    // Configure the nav controller
+    self.navigationController.delegate = self;
+    
     return YES;
 }
 
@@ -188,6 +191,9 @@
     self.navigationController.viewControllers = controllerArray;
 }
 
+- (void)longPressOnBackButton:(UIGestureRecognizer *)gestureRecognizer {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 #pragma mark Notification methods
 
@@ -227,6 +233,16 @@
 
 - (void)setProgress:(float)newProgress dataController:(DataController *)dataController {
     self.progressView.progress = newProgress;
+}
+
+#pragma mark UINavigationControllerDelegate methods
+
+- (void)navigationController:(UINavigationController *)locNavigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressOnBackButton:)];
+    
+    [locNavigationController.navigationBar addGestureRecognizer:longPress];
+    
 }
 
 @end
