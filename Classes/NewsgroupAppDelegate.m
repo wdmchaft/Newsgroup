@@ -192,7 +192,12 @@
 }
 
 - (void)longPressOnBackButton:(UIGestureRecognizer *)gestureRecognizer {
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    CGPoint touchPoint = [gestureRecognizer locationInView:self.navigationController.navigationBar];
+    CGFloat backButtonWidth = 2.0f * self.navigationController.navigationBar.frame.size.height;
+    
+    if (touchPoint.x <= backButtonWidth) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 #pragma mark Notification methods

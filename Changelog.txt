@@ -1,4 +1,4 @@
 Next
 
  * Added 2 minute automatic refresh
- * 
+ * A long press on the "back" button returns to the main thread view.
