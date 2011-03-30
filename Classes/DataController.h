@@ -63,8 +63,6 @@ extern NSString *const DataControllerNoPostIDException;
 @property (readonly, copy) NSString *login;
 @property (readonly) BOOL isFetching;
 @property (readonly, copy) NSString *password;
-@property (retain) NSMutableArray *postAddRequests;
-@property (retain) NSMutableArray *postAddPosts;
 
 // Class methods
 + (NSURL *)defaultManagedObjectModelURL;

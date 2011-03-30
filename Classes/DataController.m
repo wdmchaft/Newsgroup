@@ -51,9 +51,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 @synthesize context = context_;
 @synthesize delegate = delegate_;
 @synthesize model = model_;
-@synthesize postAddRequests = postAddRequests_;
-@synthesize postAddPosts = postAddPosts_;
-
 - (void)setLogin:(NSString *)login {
     [[NSUserDefaults standardUserDefaults] setObject:login forKey:JKDefaultsUsernameKey];
 }
@@ -145,10 +142,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         [managedObjectContext release];
         [persistentStoreCoordinator release];
         
-        // Setup postAdd Requests and posts
-        self.postAddRequests = [NSMutableArray array];
-        self.postAddPosts = [NSMutableArray array];
-        
         // Setup the Operation Queue
         operationQueue_ = [[NSOperationQueue alloc] init];
         [operationQueue_ setName:@"DataController queue"];
@@ -166,9 +159,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     [operationQueue_ cancelAllOperations];
     [operationQueue_ waitUntilAllOperationsAreFinished];
     [operationQueue_ release];
-    
-    [postAddRequests_ release];
-    [postAddPosts_ release];
     
     [super dealloc];
 }
@@ -411,9 +401,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 - (void)addPost:(Post *)post withRequest:(ASIHTTPRequest *)request {
-    [self.postAddRequests addObject:request];
-    [self.postAddPosts addObject:post];
-    
     __block ASIHTTPRequest *bRequest = request;
     
     [bRequest setCompletionBlock:^(void) {
