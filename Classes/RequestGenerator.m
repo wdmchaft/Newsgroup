@@ -50,7 +50,7 @@
     }
     [urlPath appendFormat:@"&%@", REPLY_FORMAT];
     
-    NSURL *url = [NSURL URLWithString:[urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL *url = [NSURL URLWithString:urlPath];
     return [ASIHTTPRequest requestWithURL:url];
     
 }
