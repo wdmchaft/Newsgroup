@@ -17,7 +17,6 @@
 + (ASIHTTPRequest *)hashRequestWithValue:(NSString *)value urlEncode:(BOOL)shouldEncode {
     // Build the URL
     NSString *urlPath = [NSString stringWithFormat:@"%@Hash?Value=%@&URLEncode=%@&%@", BASE_URL_STRING, value, shouldEncode ? @"True" : @"False", REPLY_FORMAT];
-    urlPath = [urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     return [ASIHTTPRequest requestWithURL:[NSURL URLWithString:urlPath]];
 }
 
@@ -66,7 +65,7 @@
     [urlPath appendFormat:@"&ThreadLimit=%i", threadLimit];
     [urlPath appendFormat:@"&%@", REPLY_FORMAT];
     
-    NSURL *url = [NSURL URLWithString:[urlPath stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL *url = [NSURL URLWithString:urlPath];
     return [ASIHTTPRequest requestWithURL:url];
 }
 
