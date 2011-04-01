@@ -169,6 +169,7 @@
 		4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgressView.xib; path = Resources/ProgressView.xib; sourceTree = "<group>"; };
 		4D9D4ECD130E993D00A34E8F /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "nsdate-helper/NSDate+Helper.h"; sourceTree = "<group>"; };
 		4D9D4ECE130E993D00A34E8F /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "nsdate-helper/NSDate+Helper.m"; sourceTree = "<group>"; };
+		4DAE828E13463ABD00DCC159 /* AdHocDeployment.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = AdHocDeployment.sh; sourceTree = "<group>"; };
 		4DB0B61E1305C14600B24E54 /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		4DB0B6B61306026600B24E54 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		4DB0B6B71306026600B24E54 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
@@ -298,6 +299,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4DAE828E13463ABD00DCC159 /* AdHocDeployment.sh */,
 				4D1DD4C1133FB28700A61679 /* Changelog.txt */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
