@@ -62,6 +62,7 @@
 		4DC10D2713089CFF00944A20 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB0B6B71306026600B24E54 /* Post.m */; };
 		4DC10D5113093EA700944A20 /* Newsgroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */; };
 		4DC10FC3130B430900944A20 /* IndividualThreadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10FC1130B430900944A20 /* IndividualThreadView.m */; };
+		4DC2D97F134683F400EDB177 /* PostHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2D97E134683F400EDB177 /* PostHistory.m */; };
 		4DE98DFF1316C4780060B34F /* TestPostLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE98DFE1316C4780060B34F /* TestPostLoadOperation.m */; };
 		4DE98E88131C67A70060B34F /* TestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE98E87131C67A70060B34F /* TestAPI.m */; };
 		4DE98E89131C7BEC0060B34F /* NSString+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BEB66131048C20026BF42 /* NSString+Digest.m */; };
@@ -178,6 +179,8 @@
 		4DC10FC0130B430900944A20 /* IndividualThreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndividualThreadView.h; sourceTree = "<group>"; };
 		4DC10FC1130B430900944A20 /* IndividualThreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndividualThreadView.m; sourceTree = "<group>"; };
 		4DC2D97613467E2500EDB177 /* Newsgroup 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Newsgroup 3.xcdatamodel"; sourceTree = "<group>"; };
+		4DC2D97D134683F400EDB177 /* PostHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHistory.h; sourceTree = "<group>"; };
+		4DC2D97E134683F400EDB177 /* PostHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHistory.m; sourceTree = "<group>"; };
 		4DE98DFE1316C4780060B34F /* TestPostLoadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestPostLoadOperation.m; path = "Test Classes/TestPostLoadOperation.m"; sourceTree = "<group>"; };
 		4DE98E87131C67A70060B34F /* TestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestAPI.m; path = "Test Classes/TestAPI.m"; sourceTree = "<group>"; };
 		4DE98E8A131D00210060B34F /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = GTMBase64/GTMBase64.h; sourceTree = "<group>"; };
@@ -425,6 +428,8 @@
 				4D1DD4B9133F7F2800A61679 /* DataControllerPrivate.h */,
 				4DB0B6B61306026600B24E54 /* Post.h */,
 				4DB0B6B71306026600B24E54 /* Post.m */,
+				4DC2D97D134683F400EDB177 /* PostHistory.h */,
+				4DC2D97E134683F400EDB177 /* PostHistory.m */,
 				4D72F98C13167E180027E478 /* PostLoadOperation.h */,
 				4D72F98D13167E180027E478 /* PostLoadOperation.m */,
 				4D4CEC65132FC4E6009FDA84 /* RequestGenerator.h */,
@@ -687,6 +692,7 @@
 				4D4CEC67132FC4E8009FDA84 /* RequestGenerator.m in Sources */,
 				4DE9D7D913311C2400475E8C /* NewPostViewController.m in Sources */,
 				4DE9D858133C064D00475E8C /* LoginPasswordViewController.m in Sources */,
+				4DC2D97F134683F400EDB177 /* PostHistory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
