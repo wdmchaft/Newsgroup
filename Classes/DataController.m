@@ -397,6 +397,10 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     post.body = body;
     post.posterName = [[NSUserDefaults standardUserDefaults] stringForKey:NewsgroupDefaultsFullNameKey];
     
+    if (postID == nil) {
+        post.postLevel = [NSNumber numberWithInteger:1];
+    }
+    
     [self addPost:post withRequest:request];
 }
 
