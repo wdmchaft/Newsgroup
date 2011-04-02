@@ -21,22 +21,20 @@
 
 #pragma mark Instance Methods
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    Post *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
+- (void)configureCell:(UITableViewCell *)cell withPost:(Post *)post {
     // Get the poster name
     bool shouldShowNicknames = [[[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsShouldShowNicknames] boolValue];
     NSString *name;
     if (shouldShowNicknames) {
-        name = thread.posterNickname;
+        name = post.posterNickname;
     } else {
-        name = thread.posterName;
+        name = post.posterName;
     }
 
-    cell.textLabel.text = thread.subject;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", name, [NSDate stringForDisplayFromDate:thread.postdate]];
+    cell.textLabel.text = post.subject;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", name, [NSDate stringForDisplayFromDate:post.postdate]];
     
-    if ([thread.isRead boolValue] == NO) {
+    if ([post.isRead boolValue] == NO) {
         UIImage *isReadIndicator = [UIImage imageNamed:@"isRead.png"];
         cell.imageView.image = isReadIndicator;
     } else {
@@ -50,6 +48,15 @@
 }
 
 #pragma mark View Lifecycle
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // nothing special
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     // Setup the toolbar
@@ -91,13 +98,11 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSAssert(NO, @"tableView:cellForRowAtIndexPath: must be implimented in the FetchedResultsViewController subclasses");
     return nil;
 }
 
 #pragma mark Fetched results controller delegate
-
-
-
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView reloadData];

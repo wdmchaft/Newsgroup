@@ -177,11 +177,20 @@
         return;
     }
     
+    [self createNavigationStackWithPostArray:pathToPost];
+}
+
+- (void)navigateToPost:(Post *)post {
+    NSArray *pathToPost = [self.dataController pathToPost:post];
+    [self createNavigationStackWithPostArray:pathToPost];
+}
+
+- (void)createNavigationStackWithPostArray:(NSArray *)postArray {
     MainThreadView *mainThreadView = [[MainThreadView alloc] initWithNibName:@"MainThreadView" bundle:nil];
     NSMutableArray *controllerArray = [NSMutableArray arrayWithObject:mainThreadView];
     [mainThreadView release];
     
-    for (Post *post in pathToPost) {
+    for (Post *post in postArray) {
         IndividualThreadView *threadView = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
         threadView.post = post;
         [controllerArray addObject:threadView];

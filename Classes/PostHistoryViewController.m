@@ -9,6 +9,7 @@
 #import "PostHistoryViewController.h"
 #import "DataController.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
+#import "PostHistory.h"
 
 
 @implementation PostHistoryViewController
@@ -28,12 +29,22 @@
 
 #pragma mark - View lifecycle
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
     // Set title
     self.title = NSLocalizedString(@"History", @"History view title");
+    
+    // We aren't calling the super-class `viewDidLoad` so we need to add the 'next' button manually
+    self.navigationItem.rightBarButtonItem = APP_DELEGATE.nextUnreadButton;
     
     // Fetch all our posts
     NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postHistory];
@@ -60,6 +71,28 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"PostHistory";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    }
+    
+    // Configure the cell.
+    PostHistory *postHistory = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self configureCell:cell withPost:postHistory.post];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    PostHistory *postHistory = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Post *post = postHistory.post;
+    [APP_DELEGATE navigateToPost:post];
 }
 
 @end

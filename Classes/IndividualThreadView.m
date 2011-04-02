@@ -29,11 +29,6 @@
 
 #pragma mark Instance Methods
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    
-    [super configureCell:cell atIndexPath:indexPath];
-}
-
 - (void)newPost:(id)sender {
     [super newPost:sender];
     
@@ -68,6 +63,7 @@
     }
     
     // Add the current post to the history table
+    [APP_DELEGATE.dataController addPostToHistory:self.post];
     
     // Fetch all our threads
     NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithParentID:self.post.postID];
@@ -102,7 +98,7 @@
     }
     
     // Configure the cell.
-    [self configureCell:cell atIndexPath:indexPath];
+    [self configureCell:cell withPost:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     
     return cell;
 }

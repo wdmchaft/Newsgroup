@@ -44,6 +44,8 @@
 - (void)newPost:(id)sender;
 - (void)refreshData:(id)sender;
 - (void)nextUnread:(id)sender;
+- (void)navigateToPost:(Post *)post;
+- (void)createNavigationStackWithPostArray:(NSArray *)postArray;
 
 // Notification methods
 - (void)noUnreadPosts:(NSNotification *)notification;
