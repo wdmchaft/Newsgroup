@@ -13,7 +13,7 @@
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
 // Private Methods
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)configureCell:(UITableViewCell *)cell withPost:(Post *)post;
 
 
 @end

@@ -21,22 +21,20 @@
 
 #pragma mark Instance Methods
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    Post *thread = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
+- (void)configureCell:(UITableViewCell *)cell withPost:(Post *)post {
     // Get the poster name
     bool shouldShowNicknames = [[[NSUserDefaults standardUserDefaults] objectForKey:JKDefaultsShouldShowNicknames] boolValue];
     NSString *name;
     if (shouldShowNicknames) {
-        name = thread.posterNickname;
+        name = post.posterNickname;
     } else {
-        name = thread.posterName;
+        name = post.posterName;
     }
 
-    cell.textLabel.text = thread.subject;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", name, [NSDate stringForDisplayFromDate:thread.postdate]];
+    cell.textLabel.text = post.subject;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", name, [NSDate stringForDisplayFromDate:post.postdate]];
     
-    if ([thread.isRead boolValue] == NO) {
+    if ([post.isRead boolValue] == NO) {
         UIImage *isReadIndicator = [UIImage imageNamed:@"isRead.png"];
         cell.imageView.image = isReadIndicator;
     } else {

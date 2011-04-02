@@ -9,6 +9,7 @@
 #import "PostHistoryViewController.h"
 #import "DataController.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
+#import "PostHistory.h"
 
 
 @implementation PostHistoryViewController
@@ -72,7 +73,8 @@
     }
     
     // Configure the cell.
-    [self configureCell:cell atIndexPath:indexPath];
+    PostHistory *postHistory = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self configureCell:cell withPost:postHistory.post];
     
     return cell;
 }

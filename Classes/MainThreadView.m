@@ -25,11 +25,6 @@
 
 #pragma mark Instance Methods
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    
-    [super configureCell:cell atIndexPath:indexPath];
-}
-
 - (void)newPost:(id)sender {
     [super newPost:sender];
     
@@ -86,7 +81,7 @@
     }
     
     // Configure the cell.
-    [self configureCell:cell atIndexPath:indexPath];
+    [self configureCell:cell withPost:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     
     return cell;
 }
