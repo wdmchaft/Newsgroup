@@ -49,6 +49,15 @@
 
 #pragma mark View Lifecycle
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // nothing special
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     // Setup the toolbar
     self.toolbarItems = APP_DELEGATE.toolbarItems;

@@ -29,12 +29,22 @@
 
 #pragma mark - View lifecycle
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.hidesBottomBarWhenPushed = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    
     // Set title
     self.title = NSLocalizedString(@"History", @"History view title");
+    
+    // We aren't calling the super-class `viewDidLoad` so we need to add the 'next' button manually
+    self.navigationItem.rightBarButtonItem = APP_DELEGATE.nextUnreadButton;
     
     // Fetch all our posts
     NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postHistory];
