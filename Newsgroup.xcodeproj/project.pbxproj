@@ -64,6 +64,7 @@
 		4DC10FC3130B430900944A20 /* IndividualThreadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC10FC1130B430900944A20 /* IndividualThreadView.m */; };
 		4DC2D97F134683F400EDB177 /* PostHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2D97E134683F400EDB177 /* PostHistory.m */; };
 		4DC2D9821346B3E200EDB177 /* PostHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2D9811346B3E200EDB177 /* PostHistoryViewController.m */; };
+		4DC2D9841346B5AB00EDB177 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2D9831346B5AB00EDB177 /* history.png */; };
 		4DE98DFF1316C4780060B34F /* TestPostLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE98DFE1316C4780060B34F /* TestPostLoadOperation.m */; };
 		4DE98E88131C67A70060B34F /* TestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE98E87131C67A70060B34F /* TestAPI.m */; };
 		4DE98E89131C7BEC0060B34F /* NSString+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BEB66131048C20026BF42 /* NSString+Digest.m */; };
@@ -184,6 +185,7 @@
 		4DC2D97E134683F400EDB177 /* PostHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHistory.m; sourceTree = "<group>"; };
 		4DC2D9801346B3E100EDB177 /* PostHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostHistoryViewController.h; sourceTree = "<group>"; };
 		4DC2D9811346B3E200EDB177 /* PostHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostHistoryViewController.m; sourceTree = "<group>"; };
+		4DC2D9831346B5AB00EDB177 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
 		4DE98DFE1316C4780060B34F /* TestPostLoadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestPostLoadOperation.m; path = "Test Classes/TestPostLoadOperation.m"; sourceTree = "<group>"; };
 		4DE98E87131C67A70060B34F /* TestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TestAPI.m; path = "Test Classes/TestAPI.m"; sourceTree = "<group>"; };
 		4DE98E8A131D00210060B34F /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMBase64.h; path = GTMBase64/GTMBase64.h; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 		4D54C9301327A9BA001D70C1 /* Image Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4DC2D9831346B5AB00EDB177 /* history.png */,
 				4D54C9311327A9BA001D70C1 /* isRead.png */,
 			);
 			path = "Image Resources";
@@ -642,6 +645,7 @@
 				4DE9D7DB13311C3D00475E8C /* NewPostView.xib in Resources */,
 				4DE9D855133C061300475E8C /* LoginPasswordView.xib in Resources */,
 				4D1DD4C0133FA61300A61679 /* Icon.png in Resources */,
+				4DC2D9841346B5AB00EDB177 /* history.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

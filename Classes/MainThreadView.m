@@ -14,6 +14,7 @@
 
 @interface MainThreadView ()
 
+- (void)showHistory:(id)sender;
 
 @end
 
@@ -36,6 +37,11 @@
     [newPostController release];
 }
 
+
+- (void)showHistory:(id)sender {
+    NSLog(@"show history");
+}
+
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
@@ -43,6 +49,11 @@
     
     // Set the view title
     self.title = @"Newsgroup";
+    
+    // Create the history button
+    UIBarButtonItem *historyButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"history"] style:UIBarButtonItemStyleBordered target:self action:@selector(showHistory:)];
+    self.navigationItem.leftBarButtonItem = historyButton;
+    [historyButton release];
     
     // Fetch all our threads
     NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController allThreads];
