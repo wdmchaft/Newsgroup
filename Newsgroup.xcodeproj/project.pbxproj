@@ -130,7 +130,7 @@
 		4D0B8E641329C26C0081E772 /* post_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = post_body.html; path = Resources/post_body.html; sourceTree = "<group>"; };
 		4D1DD4B9133F7F2800A61679 /* DataControllerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataControllerPrivate.h; sourceTree = "<group>"; };
 		4D1DD4BF133FA61300A61679 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		4D1DD4C1133FB28700A61679 /* Changelog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
+		4D1DD4C1133FB28700A61679 /* readme.markdown */ = {isa = PBXFileReference; path = readme.markdown; sourceTree = "<group>"; };
 		4D41B3A5131F29410044171F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
 		4D41B3A8131F36BD0044171F /* DDAlertPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAlertPrompt.h; path = DDAlertPrompt/DDAlertPrompt.h; sourceTree = "<group>"; };
 		4D41B3A9131F36BD0044171F /* DDAlertPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDAlertPrompt.m; path = DDAlertPrompt/DDAlertPrompt.m; sourceTree = "<group>"; };
@@ -310,7 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAE828E13463ABD00DCC159 /* AdHocDeployment.sh */,
-				4D1DD4C1133FB28700A61679 /* Changelog.txt */,
+				4D1DD4C1133FB28700A61679 /* readme.markdown */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				4DF2D28213083E2F00C8AB3A /* Tests */,
