@@ -1,5 +1,6 @@
 Next Release
 ============
+ * Added a history view
 
 1.0.2
 =====
