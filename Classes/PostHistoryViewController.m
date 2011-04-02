@@ -7,18 +7,11 @@
 //
 
 #import "PostHistoryViewController.h"
+#import "DataController.h"
+#import "FetchedResultsViewController+PrivateHeader.h"
 
 
 @implementation PostHistoryViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)dealloc
 {
@@ -35,20 +28,26 @@
 
 #pragma mark - View lifecycle
 
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // Set title
+    self.title = NSLocalizedString(@"History", @"History view title");
+    
+    // Fetch all our posts
+    NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postHistory];
+    fetchedResults.delegate = self;
+    
+    NSError *error = nil;
+    if (![fetchedResults performFetch:&error]) {
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    
+    self.fetchedResultsController = fetchedResults;
+    
 }
-*/
 
 - (void)viewDidUnload
 {

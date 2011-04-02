@@ -11,6 +11,7 @@
 #import "IndividualThreadView.h"
 #import "NewPostViewController.h"
 #import "NSDate+Helper.h"
+#import "PostHistoryViewController.h"
 
 @interface MainThreadView ()
 
@@ -39,7 +40,9 @@
 
 
 - (void)showHistory:(id)sender {
-    NSLog(@"show history");
+    PostHistoryViewController *historyView = [[PostHistoryViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:historyView animated:YES];
+    [historyView release];
 }
 
 #pragma mark View lifecycle
