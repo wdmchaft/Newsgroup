@@ -79,4 +79,10 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    PostHistory *postHistory = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Post *post = postHistory.post;
+    [APP_DELEGATE navigateToPost:post];
+}
+
 @end
