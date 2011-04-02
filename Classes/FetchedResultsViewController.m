@@ -91,13 +91,11 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSAssert(NO, @"tableView:cellForRowAtIndexPath: must be implimented in the FetchedResultsViewController subclasses");
     return nil;
 }
 
 #pragma mark Fetched results controller delegate
-
-
-
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView reloadData];

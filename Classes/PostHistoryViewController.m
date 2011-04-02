@@ -62,4 +62,19 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"PostHistory";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+    }
+    
+    // Configure the cell.
+    [self configureCell:cell atIndexPath:indexPath];
+    
+    return cell;
+}
+
 @end
