@@ -67,6 +67,8 @@
         [APP_DELEGATE.dataController markPostAsRead:self.post.postID];
     }
     
+    // Add the current post to the history table
+    
     // Fetch all our threads
     NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController postsWithParentID:self.post.postID];
     fetchedResults.delegate = self;

@@ -90,6 +90,8 @@ extern NSString *const DataControllerNoPostIDException;
 
 // Post history
 - (NSFetchedResultsController *)postHistory;
+- (void)addPostToHistory:(Post *)post;
+- (void)addPostToHistory:(Post *)post withDate:(NSDate *)date;
 
 // Make a new post
 - (void)addPostWithSubject:(NSString *)subject body:(NSString *)body inReplyTo:(NSNumber *)postID;

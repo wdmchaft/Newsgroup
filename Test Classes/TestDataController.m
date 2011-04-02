@@ -12,6 +12,7 @@
 #import "DataController.h"
 #import "DataControllerPrivate.h"
 #import "Post.h"
+#import "PostHistory.h"
 
 #define CHILD_POSTID 9876 
 #define THREADID 9875
@@ -229,33 +230,6 @@
     
 }
 
-/*
-- (void)testStartNotifications {
-    id mock = [OCMockObject observerMock];
-    [[NSNotificationCenter defaultCenter] addMockObserver:mock name:DataControllerFetchDidBegin object:nil];
-    [[mock expect] notificationWithName:DataControllerFetchDidBegin object:[OCMArg any]];
-    
-    id mockDelegate = [OCMockObject niceMockForProtocol:@protocol(DataControllerDelegate)];
-    
-    dataController.delegate = mockDelegate;
-    dataController.login = @"login";
-    dataController.password = @"password";
-    [dataController fetchAllPostsWithError:nil];
-    
-    [mock verify];
-    [mockDelegate verify];
-}
- */
-
-//- (void)testRequestSuccess {
-//    id mockRequest = [OCMockObject mockForClass:[ASIHTTPRequest class]];
-//    [[mockRequest expect] responseString];
-//    
-//    [dataController requestFinished:mockRequest];
-//    
-//    [mockRequest verify];
-//}
-
 -(void)testCountOfUnreadPosts {
     NSInteger expectedValue = 1;
     NSInteger actualValue = [dataController countOfUnreadPosts];
@@ -322,6 +296,56 @@
     NSUInteger expectedSecondPostID = CHILD_POSTID;
     NSUInteger actualSecondPostID = [[[outputArray objectAtIndex:1] postID] intValue];
     GHAssertEquals(expectedSecondPostID, actualSecondPostID, nil);
+}
+
+- (void)testAddPostToHistory {
+    Post *post = [dataController postWithId:[NSNumber numberWithInt:PARENTID]];
+
+    NSDate *historyDate = [NSDate date];
+    [dataController addPostToHistory:post withDate:historyDate];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    [fetchRequest setEntity:[NSEntityDescription entityForName:[PostHistory entityName] inManagedObjectContext:dataController.context]];
+    
+    NSError *error = nil;
+    NSArray *historyObjects = [dataController.context executeFetchRequest:fetchRequest error:&error];
+    
+    GHAssertNil(error, nil);
+    GHAssertNotNil(historyObjects, nil);
+    GHAssertTrue([historyObjects count] == 1, nil);
+    
+    PostHistory *postHistory = [historyObjects objectAtIndex:0];
+    GHAssertNotNil(postHistory, nil);
+    
+    GHAssertEquals(postHistory.postViewTime, historyDate, nil);
+}
+
+- (void)testPostHistory {
+    Post *parentPost = [dataController postWithId:[NSNumber numberWithInt:PARENTID]];
+    Post *childPost = [dataController postWithId:[NSNumber numberWithInt:CHILD_POSTID]];
+    
+    NSDate *childDate = [NSDate date];
+    NSDate *parentDate = [NSDate dateWithTimeIntervalSinceNow:-30];
+    
+    [dataController addPostToHistory:parentPost withDate:parentDate];
+    [dataController addPostToHistory:childPost withDate:childDate];
+    
+    NSFetchedResultsController *fr = [dataController postHistory];
+    
+    BOOL fetchDidComplete = [fr performFetch:nil];
+    GHAssertTrue(fetchDidComplete, nil);
+    
+    NSArray *fetchedObjects = [fr fetchedObjects];
+    GHAssertNotNil(fetchedObjects, nil);
+    
+    NSInteger fetchCount = [fetchedObjects count];
+    GHAssertEquals(fetchCount, 2, nil);
+    
+    PostHistory *childHistory = [fetchedObjects objectAtIndex:0];
+    PostHistory *parentHistory = [fetchedObjects objectAtIndex:1];
+    
+    GHAssertEquals(childHistory.postViewTime, childDate, nil);
+    GHAssertEquals(parentHistory.postViewTime, parentDate, nil);
 }
  
 @end

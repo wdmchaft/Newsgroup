@@ -65,6 +65,7 @@
 		4DC2D97F134683F400EDB177 /* PostHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2D97E134683F400EDB177 /* PostHistory.m */; };
 		4DC2D9821346B3E200EDB177 /* PostHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2D9811346B3E200EDB177 /* PostHistoryViewController.m */; };
 		4DC2D9841346B5AB00EDB177 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC2D9831346B5AB00EDB177 /* history.png */; };
+		4DC2D9851346BE1600EDB177 /* PostHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC2D97E134683F400EDB177 /* PostHistory.m */; };
 		4DE98DFF1316C4780060B34F /* TestPostLoadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE98DFE1316C4780060B34F /* TestPostLoadOperation.m */; };
 		4DE98E88131C67A70060B34F /* TestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE98E87131C67A70060B34F /* TestAPI.m */; };
 		4DE98E89131C7BEC0060B34F /* NSString+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BEB66131048C20026BF42 /* NSString+Digest.m */; };
@@ -721,6 +722,7 @@
 				4DEC6ADC131579C30021EAAA /* ASIDataDecompressor.m in Sources */,
 				4DEC6ADE131579C30021EAAA /* ASIDownloadCache.m in Sources */,
 				4DEC6AE0131579C30021EAAA /* ASIFormDataRequest.m in Sources */,
+				4DC2D9851346BE1600EDB177 /* PostHistory.m in Sources */,
 				4DEC6AE2131579C30021EAAA /* ASIHTTPRequest.m in Sources */,
 				4DEC6AE4131579C30021EAAA /* ASIInputStream.m in Sources */,
 				4DEC6AE6131579C30021EAAA /* ASINetworkQueue.m in Sources */,

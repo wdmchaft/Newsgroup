@@ -13,6 +13,7 @@
 #import "PostLoadOperation.h"
 #import "RequestGenerator.h"
 #import "JKConstants.h"
+#import "PostHistory.h"
 
 // Notification Strings
 NSString *const DataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
@@ -396,6 +397,17 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
     
     return [fetchedResults autorelease];
+}
+
+- (void)addPostToHistory:(Post *)post {
+    [self addPostToHistory:post withDate:[NSDate date]];
+}
+
+- (void)addPostToHistory:(Post *)post withDate:(NSDate *)date {
+    PostHistory *postHistory = [NSEntityDescription insertNewObjectForEntityForName:[PostHistory entityName] inManagedObjectContext:self.context];
+    
+    postHistory.post = post;
+    postHistory.postViewTime = date;
 }
 
 #pragma mark Make a new post
