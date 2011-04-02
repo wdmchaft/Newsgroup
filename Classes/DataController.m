@@ -384,6 +384,20 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     }
 }
 
+#pragma mark Post history
+
+- (NSFetchedResultsController *)postHistory {
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postHistory" substitutionVariables:nil];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postViewTime" ascending:NO];
+    
+    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
+    [sortDescriptor release];
+    
+    NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
+    
+    return [fetchedResults autorelease];
+}
+
 #pragma mark Make a new post
 - (void)addPostWithSubject:(NSString *)subject body:(NSString *)body inReplyTo:(NSNumber *)postID {
     ASIHTTPRequest *request = [RequestGenerator addPostForUser:self.login password:self.password subject:subject body:body inReplyTo:postID];
