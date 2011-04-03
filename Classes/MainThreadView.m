@@ -42,16 +42,28 @@
 
 #pragma mark View lifecycle
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Set the view title
+        self.title = @"Newsgroup";
+    }
+    return self;
+}
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Set the view title
-    self.title = @"Newsgroup";
     
     // Create the history button
     UIBarButtonItem *historyButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"history"] style:UIBarButtonItemStyleBordered target:self action:@selector(showHistory:)];
     self.navigationItem.leftBarButtonItem = historyButton;
     [historyButton release];
+    
+    // Set the view title
+    self.title = @"Newsgroup";
     
     // Fetch all our threads
     NSFetchedResultsController *fetchedResults = [APP_DELEGATE.dataController allThreads];
