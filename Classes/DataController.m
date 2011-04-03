@@ -231,6 +231,8 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         return NO;
     }
     
+    UIBackgroundTaskIdentifier taskIdent = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
+    
     __block ASIHTTPRequest *request = [RequestGenerator postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
     [request setDownloadProgressDelegate:self];
     
@@ -239,6 +241,8 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         NSArray *posts = [[request responseString] JSONValue];
         
         [self loadNewPosts:posts intoContext:self.context];
+        
+        [[UIApplication sharedApplication] endBackgroundTask:taskIdent];
     }];
     
     [request setFailedBlock:^(void) {
@@ -287,6 +291,8 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
             NSError *outputError = [NSError errorWithDomain:DataControllerErrorDomain code:code userInfo:userInfo];
             
             [self.delegate fetchFailed:self withError:outputError];
+            
+            [[UIApplication sharedApplication] endBackgroundTask:taskIdent];
         }
     }];
     
@@ -431,11 +437,18 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 - (void)addPost:(Post *)post withRequest:(ASIHTTPRequest *)request {
+    UIBackgroundTaskIdentifier taskIdent = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
+    
     __block ASIHTTPRequest *bRequest = request;
     
     [bRequest setCompletionBlock:^(void) {
         NSInteger postID = [[bRequest responseString] integerValue];
         post.postID = [NSNumber numberWithInteger:postID];
+        [[UIApplication sharedApplication] endBackgroundTask:taskIdent];
+    }];
+    
+    [bRequest setFailedBlock:^(void) {
+        [[UIApplication sharedApplication] endBackgroundTask:taskIdent];
     }];
     
     [self startFetchWithHTTPRequest:request andError:nil];
