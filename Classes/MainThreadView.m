@@ -85,7 +85,13 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Thread";
+    static NSString *CellIdentifier;
+    
+    if (tableView == self.tableView) {
+        CellIdentifier = @"Thread";
+    } else {
+        CellIdentifier = @"SearchCell";
+    }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -93,10 +99,55 @@
     }
     
     // Configure the cell.
-    [self configureCell:cell withPost:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+    if (tableView == self.tableView) {
+        [self configureCell:cell withPost:[self.fetchedResultsController objectAtIndexPath:indexPath]];
+    } else {
+        NSLog(@"about to configure a cell for the search table view");
+        [self configureCell:cell withPost:nil];
+    }
+    
     
     return cell;
 }
+
+#pragma mark Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    if (tableView == self.tableView) {
+        return [super numberOfSectionsInTableView:tableView];
+    } else {
+        NSLog(@"search results table view number of sections");
+        return 0;
+    }
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (tableView == self.tableView) {
+        return [super tableView:tableView numberOfRowsInSection:section];
+    } else {
+        NSLog(@"search results table view number rows in section");
+        return 0;
+    }
+}
+
+#pragma mark UITableViewDataSource
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == self.tableView) {
+        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+    } else {
+        NSLog(@"Search table view selected a row");
+    }
+}
+
+#pragma mark UISearchDisplayDelegate
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView {
+    // I don't actually need this method, just putting a log here to make sure it's getting called.
+    NSLog(@"searchDisplayController did load search results");
+}
+
+
 
 @end
 
