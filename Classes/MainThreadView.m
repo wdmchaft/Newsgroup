@@ -132,6 +132,8 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
     CGRect searchFrame = self.searchDisplayController.searchBar.frame;
     CGPoint topOfTable = CGPointMake(0.0f, searchFrame.size.height);
     self.tableView.contentOffset = topOfTable;
