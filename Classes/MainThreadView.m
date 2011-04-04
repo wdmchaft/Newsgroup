@@ -131,6 +131,12 @@
     self.fetchedResultsController = fetchedResults;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    CGRect searchFrame = self.searchDisplayController.searchBar.frame;
+    CGPoint topOfTable = CGPointMake(0.0f, searchFrame.size.height);
+    self.tableView.contentOffset = topOfTable;
+}
+
 - (void)dealloc {
     [allPosts_ release];
     [searchResults_ release];
