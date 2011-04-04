@@ -186,7 +186,7 @@
     if (tableView == self.tableView) {
         [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     } else {
-        NSLog(@"Search table view selected a row");
+        [APP_DELEGATE navigateToPost:[self.searchResults objectAtIndex:indexPath.row]];
     }
 }
 
