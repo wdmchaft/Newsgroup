@@ -15,6 +15,7 @@
 
 @interface MainThreadView ()
 
+- (NSArray *)filterInputArray:(NSArray *)input searchString:(NSString *)searchString scopeIndex:(NSInteger)scopeIndex;
 - (void)showHistory:(id)sender;
 
 @end
@@ -37,6 +38,52 @@
     [newPostController release];
 }
 
+- (NSArray *)filterInputArray:(NSArray *)input searchString:(NSString *)searchString scopeIndex:(NSInteger)scopeIndex {
+    NSMutableArray *outputResults = [NSMutableArray array];
+    
+    BOOL shouldSearchSubject = NO;
+    BOOL shouldSearchPoster = NO;
+    BOOL shouldSearchBody = NO;
+    
+    if (scopeIndex == 0) {
+        shouldSearchSubject = YES;
+        shouldSearchPoster = YES;
+        shouldSearchBody = YES;
+    } else if (scopeIndex == 1) {
+        shouldSearchSubject = YES;
+    } else if (scopeIndex == 2) {
+        shouldSearchPoster = YES;
+    } else if (scopeIndex == 3) {
+        shouldSearchBody = YES;
+    } else {
+        NSAssert(NO, @"Something has gone horribly wrong... ");
+    }
+    
+    for (Post *post in self.allPosts) {
+        
+        // Search Subject
+        if (shouldSearchSubject && [post.subject rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            [outputResults addObject:post];
+        }
+        
+        // Search Poster Name
+        if (shouldSearchPoster && [post.posterName rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            [outputResults addObject:post];
+        }
+        
+        // Search Poster Nickname
+        if (shouldSearchPoster && [post.posterNickname rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            [outputResults addObject:post];
+        }
+        
+        // Search Body
+        if (shouldSearchBody && [post.body rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            [outputResults addObject:post];
+        }
+    }
+    
+    return [[outputResults copy] autorelease];
+}
 
 - (void)showHistory:(id)sender {
     PostHistoryViewController *historyView = [[PostHistoryViewController alloc] initWithNibName:nil bundle:nil];
@@ -147,35 +194,16 @@
 #pragma mark UISearchDisplayDelegate
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    
-    NSMutableArray *outputResults = [NSMutableArray array];
-    
-    for (Post *post in self.allPosts) {
-        
-        // Search Subject
-        if ([post.subject rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
-            [outputResults addObject:post];
-        }
-        
-        // Search Poster Name
-        if ([post.posterName rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
-            [outputResults addObject:post];
-        }
-        
-        // Search Poster Nickname
-        if ([post.posterNickname rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
-            [outputResults addObject:post];
-        }
-        
-        // Search Body
-        if ([post.body rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
-            [outputResults addObject:post];
-        }
-    }
-    
-    self.searchResults = outputResults;
+       
+    self.searchResults = [self filterInputArray:self.allPosts searchString:searchString scopeIndex:controller.searchBar.selectedScopeButtonIndex];
     
     return YES;
+}
+
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    NSLog(@"Reload table for scope: %i", searchOption);
+    return NO;
 }
 
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {

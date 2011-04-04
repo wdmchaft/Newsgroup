@@ -46,7 +46,7 @@
 					<object class="IBUISearchBar" id="848458877">
 						<reference key="NSNextResponder" ref="709618507"/>
 						<int key="NSvFlags">290</int>
-						<string key="NSFrameSize">{320, 88}</string>
+						<string key="NSFrameSize">{320, 44}</string>
 						<reference key="NSSuperview" ref="709618507"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -62,7 +62,6 @@
 							<string>Author</string>
 							<string>Body</string>
 						</object>
-						<bool key="IBShowsScopeBar">YES</bool>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 247}</string>
