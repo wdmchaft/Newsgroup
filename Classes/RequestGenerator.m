@@ -98,6 +98,9 @@
                            [postID intValue],
                            REPLY_FORMAT];
     
+    [subject release];
+    [body release];
+    
     NSURL *url = [NSURL URLWithString:urlString];
     return [ASIHTTPRequest requestWithURL:url];
 }

@@ -282,6 +282,7 @@
     
     [locNavigationController.navigationBar addGestureRecognizer:longPress];
     
+    [longPress release];
 }
 
 @end
