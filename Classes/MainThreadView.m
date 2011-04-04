@@ -142,12 +142,20 @@
 
 #pragma mark UISearchDisplayDelegate
 
-- (void)searchDisplayController:(UISearchDisplayController *)controller didLoadSearchResultsTableView:(UITableView *)tableView {
-    // I don't actually need this method, just putting a log here to make sure it's getting called.
-    NSLog(@"searchDisplayController did load search results");
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    NSLog(@"start search for %@", searchString);
+    return YES;
 }
 
+- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
+    NSLog(@"purge the posts from our cache");
+}
 
+#pragma mark UISearchBarDelegate
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    NSLog(@"go get all posts");
+}
 
 @end
 
