@@ -1,6 +1,10 @@
 Next Release
 ============
+
+1.1
+===
  * Added a history view
+ * Added a post search
 
 1.0.2
 =====
