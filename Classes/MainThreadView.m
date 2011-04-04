@@ -107,7 +107,7 @@
         [self configureCell:cell withPost:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     } else {
         NSLog(@"about to configure a cell for the search table view");
-        [self configureCell:cell withPost:nil];
+        [self configureCell:cell withPost:[self.searchResults objectAtIndex:indexPath.row]];
     }
     
     
@@ -120,8 +120,7 @@
     if (tableView == self.tableView) {
         return [super numberOfSectionsInTableView:tableView];
     } else {
-        NSLog(@"search results table view number of sections");
-        return 0;
+        return 1;
     }
 }
 
@@ -129,8 +128,7 @@
     if (tableView == self.tableView) {
         return [super tableView:tableView numberOfRowsInSection:section];
     } else {
-        NSLog(@"search results table view number rows in section");
-        return 0;
+        return [self.searchResults count];
     }
 }
 
@@ -147,12 +145,24 @@
 #pragma mark UISearchDisplayDelegate
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    NSLog(@"start search for %@", searchString);
+    
+    NSMutableArray *outputResults = [NSMutableArray array];
+    
+    for (Post *post in self.searchResults) {
+        if ([post.subject rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            NSLog(@"Found string %@ in post %@", searchString, post.subject);
+            [outputResults addObject:post];
+        }
+    }
+    
+    self.searchResults = outputResults;
+    
     return YES;
 }
 
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
-    NSLog(@"purge the posts from our cache");
+    NSLog(@"Purging search results");
+    self.searchResults = nil;
 }
 
 #pragma mark UISearchBarDelegate
