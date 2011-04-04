@@ -24,6 +24,7 @@
 
 #pragma mark Properties
 
+@synthesize allPosts = allPosts_;
 @synthesize searchResults = searchResults_;
 
 #pragma mark Instance Methods
@@ -82,6 +83,7 @@
 }
 
 - (void)dealloc {
+    [allPosts_ release];
     [searchResults_ release];
     [super dealloc];
 }
@@ -148,9 +150,25 @@
     
     NSMutableArray *outputResults = [NSMutableArray array];
     
-    for (Post *post in self.searchResults) {
+    for (Post *post in self.allPosts) {
+        
+        // Search Subject
         if ([post.subject rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
-            NSLog(@"Found string %@ in post %@", searchString, post.subject);
+            [outputResults addObject:post];
+        }
+        
+        // Search Poster Name
+        if ([post.posterName rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            [outputResults addObject:post];
+        }
+        
+        // Search Poster Nickname
+        if ([post.posterNickname rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            [outputResults addObject:post];
+        }
+        
+        // Search Body
+        if ([post.body rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
             [outputResults addObject:post];
         }
     }
@@ -162,6 +180,7 @@
 
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
     NSLog(@"Purging search results");
+    self.allPosts = nil;
     self.searchResults = nil;
 }
 
@@ -170,7 +189,7 @@
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     NSLog(@"go get all posts");
     
-    self.searchResults = [APP_DELEGATE.dataController allPosts];
+    self.allPosts = [APP_DELEGATE.dataController allPosts];
 }
 
 @end
