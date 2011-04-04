@@ -227,12 +227,21 @@
 
 - (void)noUnreadPosts:(NSNotification *)notification {
     self.nextUnreadButton.enabled = NO;
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
 - (void)newUnreadPosts:(NSNotification *)notification {
     self.nextUnreadButton.enabled = YES;
     AudioServicesPlaySystemSound (self.alertSound);
-    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[self.dataController countOfUnreadPosts]];
+    
+    BOOL showIconBadge = [[NSUserDefaults standardUserDefaults] boolForKey:JKDefaultsShouldShowIconBadge];
+    if (showIconBadge) {
+        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[self.dataController countOfUnreadPosts]];
+    } else {
+        [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    }
+    
+    
 }
 
 #pragma mark -
