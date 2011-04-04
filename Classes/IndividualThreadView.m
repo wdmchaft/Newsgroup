@@ -20,6 +20,14 @@
 
 @synthesize post = post_;
 
+- (void)setPost:(Post *)post {
+    [post retain];
+    [post_ release];
+    post_ = post;
+    
+    self.title = post_.subject;
+}
+
 // IBOutlets
 @synthesize headerView;
 @synthesize subjectLabel;
@@ -43,9 +51,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Set the view title
-    self.title = self.post.subject;
     
     // Setup the headerview
     UINib *headerNib = [UINib nibWithNibName:@"HeaderView" bundle:nil];

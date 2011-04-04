@@ -547,6 +547,18 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     }
 }
 
+#pragma mark Search Methods
+
+- (NSArray *)allPosts {
+    NSFetchRequest *fetchRequest = [self.model fetchRequestTemplateForName:@"allPosts"];
+    
+    NSError *error = nil;
+    NSArray *allPosts = [self.context executeFetchRequest:fetchRequest error:&error];
+    ASSERT_NOT_NIL(allPosts, error);
+    
+    return allPosts;
+}
+
 #pragma mark -
 #pragma mark Private internal methods
 
