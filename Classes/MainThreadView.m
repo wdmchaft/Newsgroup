@@ -22,6 +22,9 @@
 #pragma mark -
 @implementation MainThreadView
 
+#pragma mark Properties
+
+@synthesize searchResults = searchResults_;
 
 #pragma mark Instance Methods
 
@@ -79,6 +82,7 @@
 }
 
 - (void)dealloc {
+    [searchResults_ release];
     [super dealloc];
 }
 
@@ -155,6 +159,8 @@
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     NSLog(@"go get all posts");
+    
+    self.searchResults = [APP_DELEGATE.dataController allPosts];
 }
 
 @end
