@@ -106,7 +106,6 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView reloadData];
-    NSLog(@"controller did change content");
 }
 
 #pragma mark UITableViewDataSource

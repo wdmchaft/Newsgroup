@@ -155,7 +155,6 @@
     if (tableView == self.tableView) {
         [self configureCell:cell withPost:[self.fetchedResultsController objectAtIndexPath:indexPath]];
     } else {
-        NSLog(@"about to configure a cell for the search table view");
         [self configureCell:cell withPost:[self.searchResults objectAtIndex:indexPath.row]];
     }
     
@@ -202,8 +201,10 @@
 
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
-    NSLog(@"Reload table for scope: %i", searchOption);
-    return NO;
+
+    self.searchResults = [self filterInputArray:self.allPosts searchString:controller.searchBar.text scopeIndex:searchOption];
+    
+    return YES;
 }
 
 - (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
