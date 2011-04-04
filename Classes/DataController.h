@@ -105,4 +105,7 @@ extern NSString *const DataControllerNoPostIDException;
 - (Post *)nextUnreadPostUnderPost:(Post *)post;
 - (NSArray *)pathToPost:(Post *)post;
 
+// Search Methods
+- (NSArray *)allPosts;
+
 @end

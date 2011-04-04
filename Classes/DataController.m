@@ -534,6 +534,12 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     }
 }
 
+#pragma mark Search Methods
+
+- (NSArray *)allPosts {
+    return nil;
+}
+
 #pragma mark -
 #pragma mark Private internal methods
 
