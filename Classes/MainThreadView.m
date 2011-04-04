@@ -13,6 +13,8 @@
 #import "NSDate+Helper.h"
 #import "PostHistoryViewController.h"
 
+#define POST_SEARCH_SCOPE_INDEX @"POST_SEARCH_SCOPE_INDEX"
+
 @interface MainThreadView ()
 
 - (NSArray *)filterInputArray:(NSArray *)input searchString:(NSString *)searchString scopeIndex:(NSInteger)scopeIndex;
@@ -59,7 +61,7 @@
         NSAssert(NO, @"Something has gone horribly wrong... ");
     }
     
-    for (Post *post in self.allPosts) {
+    for (Post *post in input) {
         
         // Search Subject
         if (shouldSearchSubject && [post.subject rangeOfString:searchString options:NSCaseInsensitiveSearch].location != NSNotFound) {
@@ -82,7 +84,7 @@
         }
     }
     
-    return [[outputResults copy] autorelease];
+    return outputResults;
 }
 
 - (void)showHistory:(id)sender {
@@ -207,18 +209,28 @@
     return YES;
 }
 
-- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller {
-    NSLog(@"Purging search results");
-    self.allPosts = nil;
-    self.searchResults = nil;
+- (void)searchDisplayController:(UISearchDisplayController *)controller willUnloadSearchResultsTableView:(UITableView *)tableView {
+
+    // This method is called *after* [MainThreadView dealloc]
+    //   don't try and set any properties.
+    
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInteger:controller.searchBar.selectedScopeButtonIndex] forKey:POST_SEARCH_SCOPE_INDEX];
 }
 
 #pragma mark UISearchBarDelegate
 
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    NSLog(@"go get all posts");
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
     
+    searchBar.selectedScopeButtonIndex = [[[NSUserDefaults standardUserDefaults] objectForKey:POST_SEARCH_SCOPE_INDEX] integerValue];
     self.allPosts = [APP_DELEGATE.dataController allPosts];
+    
+    return YES;
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar {
+    // Purge all search results here
+    self.allPosts = nil;
+    self.searchResults = nil;
 }
 
 @end
