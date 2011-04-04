@@ -229,6 +229,7 @@
 - (void)newUnreadPosts:(NSNotification *)notification {
     self.nextUnreadButton.enabled = YES;
     AudioServicesPlaySystemSound (self.alertSound);
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[self.dataController countOfUnreadPosts]];
 }
 
 #pragma mark -
