@@ -5,6 +5,9 @@ Next Release
 ===
  * Added a history view
  * Added a post search
+ * Fixed bug that prevented creation of a new thread
+ * Added alert sound for new posts
+ * Added unread count to app icon
 
 1.0.2
 =====
