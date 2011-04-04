@@ -16,6 +16,8 @@
 #define PROGRESS_VIEW_FRAME CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)
 #define REFRESH_INTERVAL 120.0
 
+#define JKDefaultsShouldShowIconBadge @"JKDefaultsShouldShowIconBadge"
+
 @implementation NewsgroupAppDelegate
 
 @synthesize dataController = dataController_;
@@ -38,6 +40,7 @@
     // Set the default preferences
     NSDictionary *defaults = [NSDictionary dictionaryWithObjectsAndKeys:
                               [NSNumber numberWithBool:NO], JKDefaultsShouldShowNicknames,
+                              [NSNumber numberWithBool:YES], JKDefaultsShouldShowIconBadge,
                               nil];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
     
