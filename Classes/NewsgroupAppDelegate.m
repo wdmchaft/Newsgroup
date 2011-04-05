@@ -29,7 +29,6 @@
 @synthesize newPostButton = newPostButton_;
 @synthesize nextUnreadButton = nextUnreadButton_;
 @synthesize refreshTimer = refreshTimer_;
-@synthesize alertSound = alertSound_;
 
 
 #pragma mark -
@@ -61,13 +60,6 @@
     // Configure the nav controller
     self.navigationController.delegate = self;
     
-    // Load the new post alert sounds
-    CFBundleRef mainBundle = CFBundleGetMainBundle();
-    
-    CFURLRef soundFileURLRef = CFBundleCopyResourceURL (mainBundle, CFSTR ("new post alert sound"), CFSTR ("aif"), NULL);
-    
-    AudioServicesCreateSystemSoundID (soundFileURLRef, &alertSound_);
-    
     return YES;
 }
 
@@ -88,9 +80,6 @@
     
     // Unregister for notifications
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
-    // Dispose of alert sound
-    AudioServicesDisposeSystemSoundID(self.alertSound);
     
     [dataController_ release];
     [navigationController release];
@@ -231,9 +220,7 @@
 }
 
 - (void)newUnreadPosts:(NSNotification *)notification {
-    self.nextUnreadButton.enabled = YES;
-    AudioServicesPlaySystemSound (self.alertSound);
-    
+    self.nextUnreadButton.enabled = YES;   
     BOOL showIconBadge = [[NSUserDefaults standardUserDefaults] boolForKey:JKDefaultsShouldShowIconBadge];
     if (showIconBadge) {
         [[UIApplication sharedApplication] setApplicationIconBadgeNumber:[self.dataController countOfUnreadPosts]];

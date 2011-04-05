@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "DataController.h"
-#import <AudioToolbox/AudioToolbox.h>
 
 
 #define APP_DELEGATE ((NewsgroupAppDelegate *)[UIApplication sharedApplication].delegate)
@@ -37,7 +36,6 @@
 @property (nonatomic, retain) UIBarButtonItem *newPostButton;
 @property (nonatomic, retain) UIBarButtonItem *nextUnreadButton;
 @property (nonatomic, retain) NSTimer *refreshTimer;
-@property (readonly) SystemSoundID alertSound;
 
 // Utility Methods
 - (NSURL *)applicationDocumentsDirectory;
