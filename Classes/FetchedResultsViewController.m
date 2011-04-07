@@ -108,8 +108,17 @@ typedef enum _CustomCellViewTags {
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSAssert(NO, @"tableView:cellForRowAtIndexPath: must be implimented in the FetchedResultsViewController subclasses");
-    return nil;
+    
+    static NSString *CellIdentifier = @"PostCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        [[NSBundle mainBundle] loadNibNamed:@"PostCell" owner:self options:nil];
+        cell = self.cell;
+        self.cell = nil;
+    }
+    
+    return cell;
 }
 
 #pragma mark Fetched results controller delegate

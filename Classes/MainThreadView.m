@@ -148,14 +148,7 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"PostCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        [[NSBundle mainBundle] loadNibNamed:@"PostCell" owner:self options:nil];
-        cell = self.cell;
-        self.cell = nil;
-    }
+    UITableViewCell *cell = [super tableView:tableView cellForRowAtIndexPath:indexPath];
     
     // Configure the cell.
     if (tableView == self.tableView) {
@@ -163,7 +156,6 @@
     } else {
         [self configureCell:cell withPost:[self.searchResults objectAtIndex:indexPath.row]];
     }
-    
     
     return cell;
 }
