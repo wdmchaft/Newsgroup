@@ -18,6 +18,7 @@
 		28C286E10D94DF7D0034E888 /* MainThreadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* MainThreadView.m */; };
 		28D3F202112F7DC200FD0661 /* Newsgroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */; };
 		292B99C713480A6800393669 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 292B99C613480A6800393669 /* Default.png */; };
+		294E4396134D3A7B00BFE43B /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4395134D3A7B00BFE43B /* PostCell.xib */; };
 		296BEB67131048C20026BF42 /* NSString+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BEB66131048C20026BF42 /* NSString+Digest.m */; };
 		4D0B8E651329C26C0081E772 /* post_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B8E641329C26C0081E772 /* post_body.html */; };
 		4D1DD4C0133FA61300A61679 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1DD4BF133FA61300A61679 /* Icon.png */; };
@@ -126,6 +127,7 @@
 		28C286DF0D94DF7D0034E888 /* MainThreadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainThreadView.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* MainThreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainThreadView.m; sourceTree = "<group>"; };
 		292B99C613480A6800393669 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		294E4395134D3A7B00BFE43B /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostCell.xib; path = Resources/PostCell.xib; sourceTree = "<group>"; };
 		296BEB65131048C20026BF42 /* NSString+Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Digest.h"; path = "NSString_Digest/NSString+Digest.h"; sourceTree = "<group>"; };
 		296BEB66131048C20026BF42 /* NSString+Digest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Digest.m"; path = "NSString_Digest/NSString+Digest.m"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 				28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */,
 				8D1107310486CEB800E47090 /* Newsgroup-Info.plist */,
 				4D41B3A5131F29410044171F /* Settings.bundle */,
+				294E4395134D3A7B00BFE43B /* PostCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				4D1DD4C0133FA61300A61679 /* Icon.png in Resources */,
 				4DC2D9841346B5AB00EDB177 /* history.png in Resources */,
 				292B99C713480A6800393669 /* Default.png in Resources */,
+				294E4396134D3A7B00BFE43B /* PostCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
