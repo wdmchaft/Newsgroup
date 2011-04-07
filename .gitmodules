@@ -13,3 +13,6 @@
 [submodule "DDAlertPrompt"]
 	path = DDAlertPrompt
 	url = git@github.com:jkubicek/DDAlertPrompt.git
+[submodule "TDBadgedCell"]
+	path = TDBadgedCell
+	url = https://github.com/tmdvs/TDBadgedCell.git
