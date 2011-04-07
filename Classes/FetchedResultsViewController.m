@@ -12,6 +12,7 @@
 #import "NSDate+Helper.h"
 #import "IndividualThreadView.h"
 #import "JKConstants.h"
+#import "TDBadgedCell.h"
 
 typedef enum _CustomCellViewTags {
     CustomCellSubjectLabelTag = 1,
@@ -48,6 +49,9 @@ typedef enum _CustomCellViewTags {
     } else {
         [(UIImageView *)[cell viewWithTag:CustomCellUnreadImageViewTag] setHidden:YES];
     }
+    
+    // Add the cell badge
+    ((TDBadgedCell *)cell).badgeString = @"20";
 
 }    
 
