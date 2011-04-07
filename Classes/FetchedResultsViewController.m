@@ -13,6 +13,13 @@
 #import "IndividualThreadView.h"
 #import "JKConstants.h"
 
+typedef enum _CustomCellViewTags {
+    CustomCellSubjectLabelTag = 1,
+    CustomCellPosterLabelTag = 2,
+    CustomCellTimeLabelTag = 3,
+    CustomCellUnreadImageViewTag = 4
+} CustomCellViewTags;
+
 #pragma mark -
 @implementation FetchedResultsViewController
 
