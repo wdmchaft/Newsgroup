@@ -45,7 +45,9 @@ typedef enum _CustomCellViewTags {
     
     if ([post.isRead boolValue] == NO) {
         [(UIImageView *)[cell viewWithTag:CustomCellUnreadImageViewTag] setHidden:NO];
-    } 
+    } else {
+        [(UIImageView *)[cell viewWithTag:CustomCellUnreadImageViewTag] setHidden:YES];
+    }
 
 }    
 
