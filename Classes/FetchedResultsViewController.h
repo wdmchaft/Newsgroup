@@ -19,6 +19,8 @@
 
 }
 
+@property (nonatomic, retain) IBOutlet UITableViewCell *cell;
+
 - (void)newPost:(id)sender;
 
 @end

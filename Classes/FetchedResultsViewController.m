@@ -24,6 +24,7 @@ typedef enum _CustomCellViewTags {
 @implementation FetchedResultsViewController
 
 @synthesize fetchedResultsController=fetchedResultsController_;
+@synthesize cell = cell_;
 
 
 #pragma mark Instance Methods
@@ -38,15 +39,13 @@ typedef enum _CustomCellViewTags {
         name = post.posterName;
     }
 
-    cell.textLabel.text = post.subject;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@", name, [NSDate stringForDisplayFromDate:post.postdate]];
+    [(UILabel *)[cell viewWithTag:CustomCellSubjectLabelTag] setText:post.subject];
+    [(UILabel *)[cell viewWithTag:CustomCellPosterLabelTag] setText:name];
+    [(UILabel *)[cell viewWithTag:CustomCellTimeLabelTag] setText:[NSDate stringForDisplayFromDate:post.postdate]];
     
     if ([post.isRead boolValue] == NO) {
-        UIImage *isReadIndicator = [UIImage imageNamed:@"isRead.png"];
-        cell.imageView.image = isReadIndicator;
-    } else {
-        cell.imageView.image = nil;
-    }
+        [(UIImageView *)[cell viewWithTag:CustomCellUnreadImageViewTag] setHidden:NO];
+    } 
 
 }    
 
@@ -84,6 +83,10 @@ typedef enum _CustomCellViewTags {
     
     APP_DELEGATE.newPostButton.target = nil;
     APP_DELEGATE.newPostButton.action = nil;
+}
+
+- (void)viewDidUnload {
+    self.cell = nil;
 }
 
 - (void)dealloc {

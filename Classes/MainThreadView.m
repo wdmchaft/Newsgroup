@@ -148,17 +148,12 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier;
-    
-    if (tableView == self.tableView) {
-        CellIdentifier = @"Thread";
-    } else {
-        CellIdentifier = @"SearchCell";
-    }
+    static NSString *CellIdentifier = @"PostCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        [[NSBundle mainBundle] loadNibNamed:@"PostCell" owner:self options:nil];
+        cell = self.cell;
     }
     
     // Configure the cell.
