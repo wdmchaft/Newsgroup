@@ -354,10 +354,10 @@
 				4D9D4E5C130E12BD00A34E8F /* ProgressView.xib */,
 				4DE9D7DA13311C3D00475E8C /* NewPostView.xib */,
 				4DE9D854133C061200475E8C /* LoginPasswordView.xib */,
+				294E4395134D3A7B00BFE43B /* PostCell.xib */,
 				28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */,
 				8D1107310486CEB800E47090 /* Newsgroup-Info.plist */,
 				4D41B3A5131F29410044171F /* Settings.bundle */,
-				294E4395134D3A7B00BFE43B /* PostCell.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
