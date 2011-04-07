@@ -1,6 +1,7 @@
 Next Release
 ============
  * Removed new post sound because it was annoying
+ * Updated the formatting of the post rows
 
 1.1
 ===
