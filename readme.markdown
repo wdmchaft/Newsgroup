@@ -1,5 +1,6 @@
 Next Release
 ============
+ * Removed new post sound because it was annoying
 
 1.1
 ===
