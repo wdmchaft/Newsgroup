@@ -154,6 +154,7 @@
     if (cell == nil) {
         [[NSBundle mainBundle] loadNibNamed:@"PostCell" owner:self options:nil];
         cell = self.cell;
+        self.cell = nil;
     }
     
     // Configure the cell.
