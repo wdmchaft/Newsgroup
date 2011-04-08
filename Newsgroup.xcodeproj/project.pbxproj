@@ -20,6 +20,7 @@
 		292B99C713480A6800393669 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 292B99C613480A6800393669 /* Default.png */; };
 		294E4396134D3A7B00BFE43B /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4395134D3A7B00BFE43B /* PostCell.xib */; };
 		294E439B134DCBFE00BFE43B /* TDBadgedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 294E439A134DCBFE00BFE43B /* TDBadgedCell.m */; };
+		294E439D134E9DF900BFE43B /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 294E439C134E9DF900BFE43B /* history@2x.png */; };
 		296BEB67131048C20026BF42 /* NSString+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BEB66131048C20026BF42 /* NSString+Digest.m */; };
 		4D0B8E651329C26C0081E772 /* post_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B8E641329C26C0081E772 /* post_body.html */; };
 		4D1DD4C0133FA61300A61679 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1DD4BF133FA61300A61679 /* Icon.png */; };
@@ -131,6 +132,7 @@
 		294E4395134D3A7B00BFE43B /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostCell.xib; path = Resources/PostCell.xib; sourceTree = "<group>"; };
 		294E4399134DCBFE00BFE43B /* TDBadgedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDBadgedCell.h; path = "TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.h"; sourceTree = "<group>"; };
 		294E439A134DCBFE00BFE43B /* TDBadgedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDBadgedCell.m; path = "TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.m"; sourceTree = "<group>"; };
+		294E439C134E9DF900BFE43B /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history@2x.png"; sourceTree = "<group>"; };
 		296BEB65131048C20026BF42 /* NSString+Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Digest.h"; path = "NSString_Digest/NSString+Digest.h"; sourceTree = "<group>"; };
 		296BEB66131048C20026BF42 /* NSString+Digest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Digest.m"; path = "NSString_Digest/NSString+Digest.m"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 			children = (
 				292B99C613480A6800393669 /* Default.png */,
 				4DC2D9831346B5AB00EDB177 /* history.png */,
+				294E439C134E9DF900BFE43B /* history@2x.png */,
 				4D54C9311327A9BA001D70C1 /* isRead.png */,
 			);
 			path = "Image Resources";
@@ -668,6 +671,7 @@
 				4DC2D9841346B5AB00EDB177 /* history.png in Resources */,
 				292B99C713480A6800393669 /* Default.png in Resources */,
 				294E4396134D3A7B00BFE43B /* PostCell.xib in Resources */,
+				294E439D134E9DF900BFE43B /* history@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
