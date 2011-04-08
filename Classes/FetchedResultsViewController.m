@@ -46,13 +46,15 @@ typedef enum _CustomCellViewTags {
     
     if ([post.isRead boolValue] == NO) {
         [(UIImageView *)[cell viewWithTag:CustomCellUnreadImageViewTag] setHidden:NO];
+        ((TDBadgedCell *)cell).badgeColor = [UIColor blueColor];
     } else {
         [(UIImageView *)[cell viewWithTag:CustomCellUnreadImageViewTag] setHidden:YES];
+        ((TDBadgedCell *)cell).badgeColor = [UIColor grayColor];
     }
     
     // Add the cell badge
     ((TDBadgedCell *)cell).badgeString = @"20";
-    ((TDBadgedCell *)cell).badgeColor = [UIColor blueColor];
+    
 
 }    
 

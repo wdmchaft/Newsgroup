@@ -547,6 +547,38 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     }
 }
 
+- (NSInteger)countOfUnreadPostsUnderPost:(Post *)post {
+    NSDictionary *dict = [NSDictionary dictionaryWithObject:post.postID forKey:@"parentID"];
+    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
+    
+    NSError *error = nil;
+    NSArray *results = [self.context executeFetchRequest:fetchRequest error:&error];
+    ASSERT_NOT_NIL(results, error);
+    
+    // TODO: If any children are unread, return the count of those unread children plus a recursive count of their children's unread count.
+    
+    // If this post has no children, return nil
+    if ([results count] == 0) {
+        return nil;
+    }
+    
+    // Iterate over the posts
+    for (Post *childPost in results) {
+        // if the child is unread, return it
+        if ([childPost.isRead boolValue] == NO) {
+            return childPost;
+        } else {
+            // Get the unread post for the children
+            Post *grandchildPost = [self nextUnreadPostUnderPost:childPost];
+            if (grandchildPost) {
+                return grandchildPost;
+            }
+        }
+    }
+    
+    return nil;
+}
+
 #pragma mark Search Methods
 
 - (NSArray *)allPosts {

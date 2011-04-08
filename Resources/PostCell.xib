@@ -51,7 +51,7 @@
 							<object class="IBUILabel" id="567217548">
 								<reference key="NSNextResponder" ref="154691401"/>
 								<int key="NSvFlags">302</int>
-								<string key="NSFrame">{{20, 4}, {280, 22}}</string>
+								<string key="NSFrame">{{20, 4}, {238, 22}}</string>
 								<reference key="NSSuperview" ref="154691401"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="904662293"/>
@@ -93,7 +93,7 @@
 							<object class="IBUILabel" id="904662293">
 								<reference key="NSNextResponder" ref="154691401"/>
 								<int key="NSvFlags">302</int>
-								<string key="NSFrame">{{20, 28}, {140, 13}}</string>
+								<string key="NSFrame">{{20, 28}, {113, 13}}</string>
 								<reference key="NSSuperview" ref="154691401"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="420986614"/>
@@ -120,10 +120,9 @@
 							<object class="IBUILabel" id="420986614">
 								<reference key="NSNextResponder" ref="154691401"/>
 								<int key="NSvFlags">302</int>
-								<string key="NSFrame">{{201, 28}, {99, 13}}</string>
+								<string key="NSFrame">{{185, 28}, {73, 13}}</string>
 								<reference key="NSSuperview" ref="154691401"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">7</int>
@@ -285,13 +284,13 @@
 					<string key="superclassName">UITableViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">cell</string>
-						<string key="NS.object.0">UITableViewCell</string>
+						<string key="NS.object.0">TDBadgedCell</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<string key="NS.key.0">cell</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
 							<string key="name">cell</string>
-							<string key="candidateClassName">UITableViewCell</string>
+							<string key="candidateClassName">TDBadgedCell</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
