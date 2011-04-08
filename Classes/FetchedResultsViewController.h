@@ -12,6 +12,8 @@
 #import "DataController.h"
 #import "NewsgroupAppDelegate.h"
 
+@class TDBadgedCell;
+
 @interface FetchedResultsViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
     
 @private
@@ -19,7 +21,7 @@
 
 }
 
-@property (nonatomic, retain) IBOutlet UITableViewCell *cell;
+@property (nonatomic, retain) IBOutlet TDBadgedCell *cell;
 
 - (void)newPost:(id)sender;
 

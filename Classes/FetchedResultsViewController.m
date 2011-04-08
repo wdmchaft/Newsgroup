@@ -52,6 +52,7 @@ typedef enum _CustomCellViewTags {
     
     // Add the cell badge
     ((TDBadgedCell *)cell).badgeString = @"20";
+    ((TDBadgedCell *)cell).badgeColor = [UIColor blueColor];
 
 }    
 
@@ -117,7 +118,7 @@ typedef enum _CustomCellViewTags {
     
     static NSString *CellIdentifier = @"PostCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    TDBadgedCell *cell = (TDBadgedCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         [[NSBundle mainBundle] loadNibNamed:@"PostCell" owner:self options:nil];
         cell = self.cell;
