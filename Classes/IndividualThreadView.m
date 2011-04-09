@@ -24,8 +24,6 @@
     [post retain];
     [post_ release];
     post_ = post;
-    
-    self.title = post_.subject;
 }
 
 // IBOutlets
