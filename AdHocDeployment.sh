@@ -16,6 +16,9 @@ MVERS=`agvtool what-marketing-version -terse1`
 TAG="v$MVERS-$VERS"
 COMMIT_MSG="Update version to v$MVERS ($VERS)"
 
+# Update settings.bundle
+/usr/libexec/PlistBuddy -c "Set :PreferenceSpecifiers:3:DefaultValue 'v$MVERS ($VERS)'" Resources/Settings.bundle/Root.plist
+
 git add .
 git commit -m "$COMMIT_MSG"
 

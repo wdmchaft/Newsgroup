@@ -15,14 +15,32 @@
 			<string>PSToggleSwitchSpecifier</string>
 		</dict>
 		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Show Icon Badge</string>
-			<key>Key</key>
-			<string>JKDefaultsShouldShowIconBadge</string>
 			<key>DefaultValue</key>
 			<true/>
+			<key>Key</key>
+			<string>JKDefaultsShouldShowIconBadge</string>
+			<key>Title</key>
+			<string>Show Icon Badge</string>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string></string>
+			<key>Title</key>
+			<string>About</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<string>v1.1.1 (6)</string>
+			<key>Key</key>
+			<string>version</string>
+			<key>Title</key>
+			<string>Version</string>
+			<key>Type</key>
+			<string>PSTitleValueSpecifier</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>
