@@ -8,12 +8,12 @@
 
 #  Update version number
 agvtool next-version -all
-agvtool new-marketing-version 1.1
+agvtool new-marketing-version 1.1.1
 
 #  Update commit
 VERS=`agvtool vers -terse`
 MVERS=`agvtool what-marketing-version -terse1`
-TAG="v$MVERS.$VERS"
+TAG="v$MVERS ($VERS)"
 COMMIT_MSG="Update version to $TAG"
 
 git add .
