@@ -35,6 +35,13 @@ extern NSString *const DataControllerNoUsernameException;
 extern NSString *const DataControllerNoPasswordException;
 extern NSString *const DataControllerNoPostIDException;
 
+// Read/Unread counts
+struct ReadUnread {
+    NSInteger children;
+    NSInteger unreadChildren;
+};
+typedef struct ReadUnread ReadUnread;
+
 @class DataController;
 
 @protocol DataControllerDelegate
@@ -104,7 +111,7 @@ extern NSString *const DataControllerNoPostIDException;
 - (Post *)nextUnreadPost;
 - (Post *)nextUnreadPostUnderPost:(Post *)post;
 - (NSArray *)pathToPost:(Post *)post;
-- (NSInteger)countOfUnreadPostsUnderPost:(Post *)post;
+- (ReadUnread)countOfUnreadPostsUnderPost:(Post *)post;
 
 // Search Methods
 - (NSArray *)allPosts;
