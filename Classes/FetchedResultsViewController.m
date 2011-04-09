@@ -44,18 +44,31 @@ typedef enum _CustomCellViewTags {
     [(UILabel *)[cell viewWithTag:CustomCellPosterLabelTag] setText:name];
     [(UILabel *)[cell viewWithTag:CustomCellTimeLabelTag] setText:[NSDate stringForDisplayFromDate:post.postdate]];
     
+    UIColor *unreadColor = [UIColor blueColor];
+    UIColor *readColor = [UIColor grayColor];
+    
     if ([post.isRead boolValue] == NO) {
         [(UIImageView *)[cell viewWithTag:CustomCellUnreadImageViewTag] setHidden:NO];
-        ((TDBadgedCell *)cell).badgeColor = [UIColor blueColor];
+        ((TDBadgedCell *)cell).badgeColor = unreadColor;
     } else {
         [(UIImageView *)[cell viewWithTag:CustomCellUnreadImageViewTag] setHidden:YES];
-        ((TDBadgedCell *)cell).badgeColor = [UIColor grayColor];
+        ((TDBadgedCell *)cell).badgeColor = readColor;
     }
     
-    // Add the cell badge
-    ((TDBadgedCell *)cell).badgeString = @"20";
+    // Set the cell badge
+    ReadUnread ru = [APP_DELEGATE.dataController countOfUnreadPostsUnderPost:post];
     
-
+    NSString *badgeString;
+    if (ru.children > 0 && ru.unreadChildren > 0) {
+        ((TDBadgedCell *)cell).badgeColor = unreadColor;
+        badgeString = [NSString stringWithFormat:@"%i/%i", ru.unreadChildren, ru.children];
+    } else if (ru.children > 0 && ru.unreadChildren == 0) {
+        badgeString = [NSString stringWithFormat:@"%i", ru.children];
+    } else {
+        badgeString = nil;
+    }
+    
+    ((TDBadgedCell *)cell).badgeString = badgeString;
 }    
 
 - (void)newPost:(id)sender {

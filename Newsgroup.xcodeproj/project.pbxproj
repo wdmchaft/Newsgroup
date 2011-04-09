@@ -470,13 +470,13 @@
 		4D9D4F12130EA05E00A34E8F /* View Controller Classes */ = {
 			isa = PBXGroup;
 			children = (
+				4D9D4C7D130B5D6800A34E8F /* FetchedResultsViewController+PrivateHeader.h */,
+				4D9D4C78130B5C6100A34E8F /* FetchedResultsViewController.h */,
+				4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */,
 				28C286DF0D94DF7D0034E888 /* MainThreadView.h */,
 				28C286E00D94DF7D0034E888 /* MainThreadView.m */,
 				4DC10FC0130B430900944A20 /* IndividualThreadView.h */,
 				4DC10FC1130B430900944A20 /* IndividualThreadView.m */,
-				4D9D4C7D130B5D6800A34E8F /* FetchedResultsViewController+PrivateHeader.h */,
-				4D9D4C78130B5C6100A34E8F /* FetchedResultsViewController.h */,
-				4D9D4C79130B5C6100A34E8F /* FetchedResultsViewController.m */,
 				4DC2D9801346B3E100EDB177 /* PostHistoryViewController.h */,
 				4DC2D9811346B3E200EDB177 /* PostHistoryViewController.m */,
 				4DE9D7D713311C2400475E8C /* NewPostViewController.h */,
