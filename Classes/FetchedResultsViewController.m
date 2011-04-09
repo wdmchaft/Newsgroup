@@ -14,13 +14,6 @@
 #import "JKConstants.h"
 #import "TDBadgedCell.h"
 
-typedef enum _CustomCellViewTags {
-    CustomCellSubjectLabelTag = 1,
-    CustomCellPosterLabelTag = 2,
-    CustomCellTimeLabelTag = 3,
-    CustomCellUnreadImageViewTag = 4
-} CustomCellViewTags;
-
 #pragma mark -
 @implementation FetchedResultsViewController
 
@@ -58,7 +51,7 @@ typedef enum _CustomCellViewTags {
     [self configureReadUnreadBadge:(TDBadgedCell *)cell withPost:post readColor:readColor unreadColor:unreadColor];
 }    
 
-- (void)configureReadUnreadBadge:(TDBadgedCell *)cell withPost:(Post *)post readColor:(UIColor *)readColor unreadColor:(UIColor *)unreadColor{
+- (void)configureReadUnreadBadge:(TDBadgedCell *)cell withPost:(Post *)post readColor:(UIColor *)readColor unreadColor:(UIColor *)unreadColor {
     // Set the cell badge
     ReadUnread ru = [APP_DELEGATE.dataController countOfUnreadPostsUnderPost:post];
     

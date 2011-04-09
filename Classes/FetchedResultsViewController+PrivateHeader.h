@@ -9,6 +9,14 @@
 
 @class TDBadgedCell;
 
+// UIView tags for our custom cell
+typedef enum _CustomCellViewTags {
+    CustomCellSubjectLabelTag = 1,
+    CustomCellPosterLabelTag = 2,
+    CustomCellTimeLabelTag = 3,
+    CustomCellUnreadImageViewTag = 4
+} CustomCellViewTags;
+
 @interface FetchedResultsViewController()
 
 // Private Properties

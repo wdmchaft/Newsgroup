@@ -27,6 +27,26 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma mark Superclass methods
+
+- (void)configureReadUnreadBadge:(TDBadgedCell *)cell withPost:(Post *)post readColor:(UIColor *)readColor unreadColor:(UIColor *)unreadColor {
+    // We override this method so that the history view has no badges, 'cause it don't need to stinkin' badges.
+    
+    UILabel *subject = ((UILabel *)[cell viewWithTag:CustomCellSubjectLabelTag]);
+    UILabel *timeLabel = ((UILabel *)[cell viewWithTag:CustomCellTimeLabelTag]);
+    
+    CGRect subjectFrame = subject.frame;
+    CGRect timeFrame = timeLabel.frame;
+    
+    CGFloat moveRight = 30.0f;
+    
+    subjectFrame.size.width += moveRight;
+    timeFrame.size.width += moveRight;
+    
+    subject.frame = subjectFrame;
+    timeLabel.frame = timeFrame;
+}
+
 #pragma mark - View lifecycle
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
