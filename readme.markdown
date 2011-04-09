@@ -2,6 +2,7 @@ Next Release
 ============
  * Removed new post sound because it was annoying
  * Updated the formatting of the post rows
+ * Added read/unread indicator the the individual rows
 
 1.1
 ===
