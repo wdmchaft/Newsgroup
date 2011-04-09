@@ -53,10 +53,36 @@
 #pragma mark Keyboard notifications
          
 - (void)keyboardDidShow:(NSNotification *)notification {
+    if (self.keyboardIsVisible) return;
+    
+    NSDictionary* info = [notification userInfo];
+    
+    // Get the size of the keyboard.
+	NSValue* aValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];    
+    CGSize keyboardSize = [aValue CGRectValue].size;
+    
+    // Resize our view
+    CGRect viewFrame = self.view.frame;
+    viewFrame.size.height -= keyboardSize.height;
+    self.view.frame = viewFrame;
+    
     self.keyboardIsVisible = YES;
 }
 
 - (void)keyboardDidHide:(NSNotification *)notification {
+    if (self.keyboardIsVisible == NO) return;
+    
+    NSDictionary* info = [notification userInfo];
+    
+    // Get the size of the keyboard.
+	NSValue* aValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];    
+    CGSize keyboardSize = [aValue CGRectValue].size;
+    
+    // Resize our view
+    CGRect viewFrame = self.view.frame;
+    viewFrame.size.height += keyboardSize.height;
+    self.view.frame = viewFrame;
+    
     self.keyboardIsVisible = NO;
 }
 
