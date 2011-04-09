@@ -49,6 +49,7 @@
 						<string key="NSFrame">{{20, 4}, {280, 21}}</string>
 						<reference key="NSSuperview" ref="180685317"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="291865598"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -70,6 +71,7 @@
 						</object>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
+						<int key="IBUITextAlignment">1</int>
 					</object>
 					<object class="IBUILabel" id="291865598">
 						<reference key="NSNextResponder" ref="180685317"/>
@@ -77,6 +79,7 @@
 						<string key="NSFrame">{{20, 26}, {152, 13}}</string>
 						<reference key="NSSuperview" ref="180685317"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="755857316"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -102,6 +105,7 @@
 						<string key="NSFrame">{{180, 26}, {120, 13}}</string>
 						<reference key="NSSuperview" ref="180685317"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="476775826"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -124,6 +128,7 @@
 						<string key="NSFrame">{{0, 47}, {320, 231}}</string>
 						<reference key="NSSuperview" ref="180685317"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MSAxIDEAA</bytes>
@@ -137,6 +142,7 @@
 				<string key="NSFrameSize">{320, 278}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView" ref="519619836"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -313,13 +319,13 @@
 					<string key="superclassName">UITableViewController</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">cell</string>
-						<string key="NS.object.0">UITableViewCell</string>
+						<string key="NS.object.0">TDBadgedCell</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<string key="NS.key.0">cell</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
 							<string key="name">cell</string>
-							<string key="candidateClassName">UITableViewCell</string>
+							<string key="candidateClassName">TDBadgedCell</string>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -386,6 +392,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/IndividualThreadView.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">TDBadgedCell</string>
+					<string key="superclassName">UITableViewCell</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/TDBadgedCell.h</string>
 					</object>
 				</object>
 			</object>
