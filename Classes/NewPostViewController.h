@@ -18,8 +18,11 @@
 @property (nonatomic, copy) NSString *subject;
 @property (nonatomic, retain) IBOutlet UITextView *bodyView;
 @property (nonatomic, retain) IBOutlet UITextField *subjectView;
+@property (assign) BOOL keyboardIsVisible;
 
 // Instance Methods
 - (void)send:(id)sender;
+- (void)keyboardDidShow:(NSNotification *)notification;
+- (void)keyboardDidHide:(NSNotification *)notification;
 
 @end
