@@ -55,12 +55,16 @@ typedef enum _CustomCellViewTags {
         ((TDBadgedCell *)cell).badgeColor = readColor;
     }
     
+    [self configureReadUnreadBadge:(TDBadgedCell *)cell withPost:post readColor:readColor unreadColor:unreadColor];
+}    
+
+- (void)configureReadUnreadBadge:(TDBadgedCell *)cell withPost:(Post *)post readColor:(UIColor *)readColor unreadColor:(UIColor *)unreadColor{
     // Set the cell badge
     ReadUnread ru = [APP_DELEGATE.dataController countOfUnreadPostsUnderPost:post];
     
     NSString *badgeString;
     if (ru.children > 0 && ru.unreadChildren > 0) {
-        ((TDBadgedCell *)cell).badgeColor = unreadColor;
+        cell.badgeColor = unreadColor;
         badgeString = [NSString stringWithFormat:@"%i/%i", ru.unreadChildren, ru.children];
     } else if (ru.children > 0 && ru.unreadChildren == 0) {
         badgeString = [NSString stringWithFormat:@"%i", ru.children];
@@ -68,8 +72,8 @@ typedef enum _CustomCellViewTags {
         badgeString = nil;
     }
     
-    ((TDBadgedCell *)cell).badgeString = badgeString;
-}    
+    cell.badgeString = badgeString;    
+}
 
 - (void)newPost:(id)sender {
     NSLog(@"newPost in FetchedResultsController");

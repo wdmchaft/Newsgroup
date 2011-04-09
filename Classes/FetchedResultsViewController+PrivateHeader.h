@@ -7,6 +7,8 @@
  *
  */
 
+@class TDBadgedCell;
+
 @interface FetchedResultsViewController()
 
 // Private Properties
@@ -14,6 +16,7 @@
 
 // Private Methods
 - (void)configureCell:(UITableViewCell *)cell withPost:(Post *)post;
+- (void)configureReadUnreadBadge:(TDBadgedCell *)cell withPost:(Post *)post readColor:(UIColor *)readColor unreadColor:(UIColor *)unreadColor;
 
 
 @end
