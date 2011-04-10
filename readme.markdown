@@ -3,6 +3,7 @@ Next Release
  * Removed new post sound because it was annoying
  * Updated the formatting of the post rows
  * Added read/unread indicator the the individual rows
+ * Added landscape orientation to the new post view
 
 1.1
 ===

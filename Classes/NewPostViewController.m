@@ -58,13 +58,15 @@
     NSDictionary* info = [notification userInfo];
     
     // Get the size of the keyboard.
-	NSValue* aValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];    
-    CGSize keyboardSize = [aValue CGRectValue].size;
+	NSValue* aValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardRect = [self.view convertRect:[aValue CGRectValue] fromView:nil];
+    NSLog(@"Keyboard rect = %@", NSStringFromCGRect(keyboardRect));
     
     // Resize our view
-    CGRect viewFrame = self.view.frame;
-    viewFrame.size.height -= keyboardSize.height;
-    self.view.frame = viewFrame;
+    CGRect bodyRect = self.bodyView.frame;
+    bodyRect.size.height -= keyboardRect.size.height;
+    self.bodyView.frame = bodyRect;
+    
     
     self.keyboardIsVisible = YES;
 }
@@ -75,13 +77,15 @@
     NSDictionary* info = [notification userInfo];
     
     // Get the size of the keyboard.
-	NSValue* aValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];    
-    CGSize keyboardSize = [aValue CGRectValue].size;
+	NSValue* aValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardRect = [self.view convertRect:[aValue CGRectValue] fromView:nil];
+    NSLog(@"Keyboard rect = %@", NSStringFromCGRect(keyboardRect));
     
     // Resize our view
-    CGRect viewFrame = self.view.frame;
-    viewFrame.size.height += keyboardSize.height;
-    self.view.frame = viewFrame;
+    CGRect bodyRect = self.bodyView.frame;
+    bodyRect.size.height += keyboardRect.size.height;
+    self.bodyView.frame = bodyRect;
+
     
     self.keyboardIsVisible = NO;
 }
@@ -105,13 +109,24 @@
         self.subjectView.text = self.subject;
         [self.bodyView becomeFirstResponder];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
+    // Get rid of the toolbar
+    callingControllerHidesToolbar = self.navigationController.toolbarHidden;
+    self.navigationController.toolbarHidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    self.navigationController.toolbarHidden = callingControllerHidesToolbar;
     
-    
+    [super viewWillDisappear:animated];
 }
 
 - (void)viewDidUnload
-{
+{    
     [self setBodyView:nil];
     [self setSubjectView:nil];
     [super viewDidUnload];
@@ -120,6 +135,7 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    NSLog(@"View frame before rotation: %@", NSStringFromCGRect(self.view.frame));
     return YES;
 }
 

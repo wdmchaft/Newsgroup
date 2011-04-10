@@ -10,7 +10,7 @@
 
 
 @interface NewPostViewController : UIViewController {
-    
+    BOOL callingControllerHidesToolbar;
 }
 
 // Properties
