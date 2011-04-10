@@ -15,6 +15,7 @@
 @synthesize parentPostID;
 @synthesize bodyView = bodyView_;
 @synthesize subjectView = subjectView_;
+@synthesize bodyLabel;
 @synthesize subject = subject_;
 @synthesize keyboardIsVisible = keyboardIsVisible_;
 
@@ -39,6 +40,7 @@
     [bodyView_ release];
     [subjectView_ release];
     [subject_ release];
+    [bodyLabel release];
     [super dealloc];
 }
 
@@ -129,6 +131,7 @@
 {    
     [self setBodyView:nil];
     [self setSubjectView:nil];
+    [self setBodyLabel:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -137,6 +140,20 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     NSLog(@"View frame before rotation: %@", NSStringFromCGRect(self.view.frame));
     return YES;
+}
+
+#pragma mark UITextViewDelegate
+
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    self.bodyLabel.hidden = YES;
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    NSString *bodyText = textView.text;
+    
+    if (bodyText == nil || [bodyText isEqualToString:@""]) {
+        self.bodyLabel.hidden = NO;
+    }
 }
 
 #pragma mark -

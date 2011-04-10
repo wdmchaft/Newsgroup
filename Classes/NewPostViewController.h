@@ -11,6 +11,7 @@
 
 @interface NewPostViewController : UIViewController {
     BOOL callingControllerHidesToolbar;
+    UILabel *bodyLabel;
 }
 
 // Properties
@@ -18,6 +19,7 @@
 @property (nonatomic, copy) NSString *subject;
 @property (nonatomic, retain) IBOutlet UITextView *bodyView;
 @property (nonatomic, retain) IBOutlet UITextField *subjectView;
+@property (nonatomic, retain) IBOutlet UILabel *bodyLabel;
 @property (assign) BOOL keyboardIsVisible;
 
 // Instance Methods
