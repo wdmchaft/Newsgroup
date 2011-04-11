@@ -62,7 +62,6 @@
     // Get the size of the keyboard.
 	NSValue* aValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect keyboardRect = [self.view convertRect:[aValue CGRectValue] fromView:nil];
-    NSLog(@"Keyboard rect = %@", NSStringFromCGRect(keyboardRect));
     
     // Resize our view
     CGRect bodyRect = self.bodyView.frame;
@@ -81,7 +80,6 @@
     // Get the size of the keyboard.
 	NSValue* aValue = [info objectForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect keyboardRect = [self.view convertRect:[aValue CGRectValue] fromView:nil];
-    NSLog(@"Keyboard rect = %@", NSStringFromCGRect(keyboardRect));
     
     // Resize our view
     CGRect bodyRect = self.bodyView.frame;
@@ -138,7 +136,6 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    NSLog(@"View frame before rotation: %@", NSStringFromCGRect(self.view.frame));
     return YES;
 }
 
