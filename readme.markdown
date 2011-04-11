@@ -1,9 +1,13 @@
-Next Release
+1.1.2
 ============
  * Removed new post sound because it was annoying
  * Updated the formatting of the post rows
  * Added read/unread indicator the the individual rows
  * Added landscape orientation to the new post view
+ * Various interface improvements
+
+*Notes*
+There is a known issue with huge threads about politics causing that thread to load slow. It will be fixed in the next update.
 
 1.1
 ===

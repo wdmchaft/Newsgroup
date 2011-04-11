@@ -38,10 +38,10 @@
     CGRect subjectFrame = subject.frame;
     CGRect timeFrame = timeLabel.frame;
     
-    CGFloat moveRight = 30.0f;
-    
-    subjectFrame.size.width += moveRight;
-    timeFrame.size.width += moveRight;
+    // Both frames should end 20px from the right side of the cell
+    CGRect cellFrame = ((UITableViewCell *)cell).frame;
+    subjectFrame.size.width = cellFrame.size.width - 20.0f - subjectFrame.origin.x;
+    timeFrame.size.width = cellFrame.size.width - 20.0f - timeFrame.origin.x;
     
     subject.frame = subjectFrame;
     timeLabel.frame = timeFrame;
