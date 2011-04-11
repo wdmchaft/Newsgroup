@@ -19,6 +19,8 @@
 		28D3F202112F7DC200FD0661 /* Newsgroup.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */; };
 		292B99C713480A6800393669 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 292B99C613480A6800393669 /* Default.png */; };
 		2930AC67135062D8008AEFC3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2930AC66135062D8008AEFC3 /* Default@2x.png */; };
+		294741FA135284730079480B /* horizontal-line.png in Resources */ = {isa = PBXBuildFile; fileRef = 294741F8135284730079480B /* horizontal-line.png */; };
+		294741FB135284730079480B /* horizontal-line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 294741F9135284730079480B /* horizontal-line@2x.png */; };
 		294E4396134D3A7B00BFE43B /* PostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 294E4395134D3A7B00BFE43B /* PostCell.xib */; };
 		294E439B134DCBFE00BFE43B /* TDBadgedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 294E439A134DCBFE00BFE43B /* TDBadgedCell.m */; };
 		294E439D134E9DF900BFE43B /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 294E439C134E9DF900BFE43B /* history@2x.png */; };
@@ -131,6 +133,8 @@
 		28C286E00D94DF7D0034E888 /* MainThreadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainThreadView.m; sourceTree = "<group>"; };
 		292B99C613480A6800393669 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		2930AC66135062D8008AEFC3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		294741F8135284730079480B /* horizontal-line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal-line.png"; sourceTree = "<group>"; };
+		294741F9135284730079480B /* horizontal-line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "horizontal-line@2x.png"; sourceTree = "<group>"; };
 		294E4395134D3A7B00BFE43B /* PostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostCell.xib; path = Resources/PostCell.xib; sourceTree = "<group>"; };
 		294E4399134DCBFE00BFE43B /* TDBadgedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TDBadgedCell.h; path = "TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.h"; sourceTree = "<group>"; };
 		294E439A134DCBFE00BFE43B /* TDBadgedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TDBadgedCell.m; path = "TDBadgedCell/TDBadgedCell (xcode project)/TDBadgedCell.m"; sourceTree = "<group>"; };
@@ -413,6 +417,8 @@
 				4DC2D9831346B5AB00EDB177 /* history.png */,
 				294E439C134E9DF900BFE43B /* history@2x.png */,
 				4D54C9311327A9BA001D70C1 /* isRead.png */,
+				294741F8135284730079480B /* horizontal-line.png */,
+				294741F9135284730079480B /* horizontal-line@2x.png */,
 			);
 			path = "Image Resources";
 			sourceTree = "<group>";
@@ -676,6 +682,8 @@
 				294E4396134D3A7B00BFE43B /* PostCell.xib in Resources */,
 				294E439D134E9DF900BFE43B /* history@2x.png in Resources */,
 				2930AC67135062D8008AEFC3 /* Default@2x.png in Resources */,
+				294741FA135284730079480B /* horizontal-line.png in Resources */,
+				294741FB135284730079480B /* horizontal-line@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
