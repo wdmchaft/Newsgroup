@@ -156,6 +156,13 @@
     }
 }
 
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.bodyView becomeFirstResponder];
+    return YES;
+}
+
 #pragma mark -
 #pragma mark Instance Methods
 
