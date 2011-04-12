@@ -8,7 +8,7 @@
 
 #  Update version number
 agvtool next-version -all
-agvtool new-marketing-version 1.1.2
+agvtool new-marketing-version 1.1.3
 
 #  Update commit
 VERS=`agvtool vers -terse`
