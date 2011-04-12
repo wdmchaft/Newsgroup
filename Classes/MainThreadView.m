@@ -10,7 +10,6 @@
 #import "FetchedResultsViewController+PrivateHeader.h"
 #import "IndividualThreadView.h"
 #import "NewPostViewController.h"
-#import "NSDate+Helper.h"
 #import "PostHistoryViewController.h"
 
 #define POST_SEARCH_SCOPE_INDEX @"POST_SEARCH_SCOPE_INDEX"

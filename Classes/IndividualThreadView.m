@@ -9,7 +9,6 @@
 #import "IndividualThreadView.h"
 #import "NewPostViewController.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
-#import "NSDate+Helper.h"
 
 @interface IndividualThreadView()
 
@@ -56,7 +55,7 @@
     self.tableView.tableHeaderView = self.headerView;
     self.authorLabel.text = self.post.posterName;
     self.subjectLabel.text = self.post.subject;
-    self.postTimeLabel.text = [NSDate stringForDisplayFromDate:self.post.postdate];
+    self.postTimeLabel.text = self.post.displayDate;
     [self.webView loadHTMLString:[DataController addBodyToHTMLTemplate:self.post.body] baseURL:nil];
     
     // Set the current post as read
