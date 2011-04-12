@@ -30,5 +30,7 @@
 @dynamic parentID;
 @dynamic postLevel;
 
+@dynamic parentPost;
+@dynamic childPosts;
 
 @end

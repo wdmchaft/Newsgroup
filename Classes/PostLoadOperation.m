@@ -38,6 +38,9 @@
         NSLog(@"%@", error);
     }
     
+    NSMutableArray *newPosts = [NSMutableArray array];
+    NSMutableArray *oldAndNewPosts = [NSMutableArray arrayWithArray:allPosts];
+    
     for (NSDictionary *postDict in posts) {
         
         // If the postID exists, update, else insert
@@ -51,9 +54,11 @@
         if (existingPostIndex == NSNotFound) {
             post = [NSEntityDescription insertNewObjectForEntityForName:[Post entityName] inManagedObjectContext:context];
             post.postID = postID;
+            [newPosts addObject:post];
         } else {
             post = [allPosts objectAtIndex:existingPostIndex];
         }
+        [oldAndNewPosts addObject:post];
         
         post.body = [postDict objectForKey:@"Description"];
         post.isRead = [postDict objectForKey:@"Read"];
@@ -66,6 +71,14 @@
         post.postLevel = [postDict objectForKey:@"Level"];
         post.postdate = [PostLoadOperation convertToDate:[postDict objectForKey:@"Date"]];
         
+    }
+    
+    // Set up the parent/child relationship
+    for (Post *post in newPosts) {
+        NSUInteger parentPostIndex = [oldAndNewPosts indexOfObjectPassingTest:^(id obj, NSUInteger idx, BOOL *stop) {
+            return [[obj postID] isEqualToNumber:post.parentID];
+        }];
+        post.parentPost = [oldAndNewPosts objectAtIndex:parentPostIndex];
     }
     
     return YES;

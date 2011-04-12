@@ -29,6 +29,7 @@
 @property (nonatomic, retain) NSNumber * parentID;
 @property (nonatomic, retain) NSNumber * postLevel;
 
-
+@property (nonatomic, retain) Post *parentPost;
+@property (nonatomic, retain) NSSet *childPosts;
 
 @end
