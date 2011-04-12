@@ -183,6 +183,11 @@
     [self createNavigationStackWithPostArray:pathToPost];
 }
 
+- (void)navigateToPostID:(NSNumber *)postID {
+    Post *post = [self.dataController postWithId:postID];
+    [self navigateToPost:post];
+}
+
 - (void)navigateToPost:(Post *)post {
     NSArray *pathToPost = [self.dataController pathToPost:post];
     [self createNavigationStackWithPostArray:pathToPost];

@@ -10,6 +10,8 @@
 #import "NewPostViewController.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
 
+#define POST_LINK_PREFIX @"http://newsgroup.greenpride.com/ViewPost.aspx?PostID="
+
 @interface IndividualThreadView()
 
 @end
@@ -103,12 +105,20 @@
 #pragma mark UIWebViewDelegate methods
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    if ([[[request URL] description] isEqualToString:@"about:blank"]) {
+    NSString *urlDescription = [[request URL] description];
+    if ([urlDescription isEqualToString:@"about:blank"]) {
         return YES;
-    } else {
-        [[UIApplication sharedApplication] openURL:[request URL]];
-        return NO;
+    } else if ([urlDescription rangeOfString:POST_LINK_PREFIX].location != NSNotFound) {
+        NSString *postIDString = [urlDescription stringByReplacingOccurrencesOfString:POST_LINK_PREFIX withString:@""];
+        NSInteger postID = [postIDString integerValue];
+        if (postID != 0) {
+            [APP_DELEGATE navigateToPostID:[NSNumber numberWithInteger:postID]];
+             return NO;
+        }
     }
+        
+    [[UIApplication sharedApplication] openURL:[request URL]];
+    return NO;
 }
 
 @end
