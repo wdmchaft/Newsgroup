@@ -111,6 +111,13 @@
     
     [postLoad release];
 
+    
+    // Test the parent/child relationship
+    Post *parentPost = [dataController postWithId:[NSNumber numberWithInt:29333]];
+    
+    GHAssertNil(parentPost.parentPost, nil);
+    NSUInteger childCount = [parentPost.childPosts count];
+    GHAssertTrue(childCount == 2, nil);
 }
 
 

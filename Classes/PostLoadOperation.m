@@ -75,10 +75,12 @@
     
     // Set up the parent/child relationship
     for (Post *post in newPosts) {
-        NSUInteger parentPostIndex = [oldAndNewPosts indexOfObjectPassingTest:^(id obj, NSUInteger idx, BOOL *stop) {
-            return [[obj postID] isEqualToNumber:post.parentID];
-        }];
-        post.parentPost = [oldAndNewPosts objectAtIndex:parentPostIndex];
+        if (![post.parentID isEqualToNumber:post.postID]) {
+            NSUInteger parentPostIndex = [oldAndNewPosts indexOfObjectPassingTest:^(id obj, NSUInteger idx, BOOL *stop) {
+                return [[obj postID] isEqualToNumber:post.parentID];
+            }];
+            post.parentPost = [oldAndNewPosts objectAtIndex:parentPostIndex];
+        }
     }
     
     return YES;
