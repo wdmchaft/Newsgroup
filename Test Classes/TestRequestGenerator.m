@@ -19,8 +19,8 @@
     username = [@"username" retain];
     password = [@"password" retain];
     postID = [[NSNumber numberWithInt:1235] retain];
-    subject = [@"subject has some spaces and <> crap" retain];
-    body = [@"body \n ?&2@**23 woah!\n\t\r" retain];
+    subject = [(NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)@"subject has some spaces and <> crap", NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8) retain];
+    body = [(NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)@"body \n ?&2@**23 woah!\n\t\r", NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8) retain];
 }
 
 - (void)tearDown {
