@@ -10,13 +10,16 @@
 
 
 @interface Post : NSManagedObject {
-
+    NSString *displayDate_;
 }
 
 // Class methods
 + (NSString *)entityName;
 
-// Properties
+// Custom Properties
+@property (nonatomic, readonly) NSString *displayDate;
+
+// Managed Object Properties
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic, retain) NSNumber * isRead;
 @property (nonatomic, retain) NSNumber * memberID;

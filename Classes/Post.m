@@ -7,7 +7,7 @@
 //
 
 #import "Post.h"
-
+#import "NSDate+Helper.h"
 
 @implementation Post
 
@@ -16,7 +16,24 @@
     return @"Post";
 }
 
-#pragma mark Properties
+#pragma mark Instance Methods
+
+- (void)didTurnIntoFault {
+    [displayDate_ release];
+    displayDate_ = nil;
+}
+
+#pragma mark Custom Properties
+
+- (NSString *)displayDate {
+    if (displayDate_ == nil) {
+        displayDate_ = [NSDate stringForDisplayFromDate:self.postdate];
+        [displayDate_ retain];
+    }
+    return displayDate_;
+}
+
+#pragma mark Managed Object Properties
 
 @dynamic body;
 @dynamic isRead;
