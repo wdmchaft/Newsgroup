@@ -1,3 +1,7 @@
+1.1.3
+=====
+ * Performance improvements
+
 1.1.2
 ============
  * Removed new post sound because it was annoying
