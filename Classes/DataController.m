@@ -548,15 +548,11 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 - (ReadUnread)countOfUnreadPostsUnderPost:(Post *)post {
-    NSDictionary *dict = [NSDictionary dictionaryWithObject:post.postID forKey:@"parentID"];
-    NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
     
-    NSError *error = nil;
-    NSArray *results = [self.context executeFetchRequest:fetchRequest error:&error];
-    ASSERT_NOT_NIL(results, error);
+    NSSet *childPosts = post.childPosts;
     
     // If this post has no children, return nil
-    if ([results count] == 0) {
+    if ([childPosts count] == 0) {
         return (ReadUnread){0,0};
     }
     
@@ -564,7 +560,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     NSInteger unreadChildren = 0;
     
     // Iterate over the posts
-    for (Post *childPost in results) {
+    for (Post *childPost in childPosts) {
         
         children++;
         
