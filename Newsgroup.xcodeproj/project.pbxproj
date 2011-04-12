@@ -141,6 +141,7 @@
 		294E439C134E9DF900BFE43B /* history@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "history@2x.png"; sourceTree = "<group>"; };
 		296BEB65131048C20026BF42 /* NSString+Digest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Digest.h"; path = "NSString_Digest/NSString+Digest.h"; sourceTree = "<group>"; };
 		296BEB66131048C20026BF42 /* NSString+Digest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Digest.m"; path = "NSString_Digest/NSString+Digest.m"; sourceTree = "<group>"; };
+		298A54D81353CB100062CA29 /* Newsgroup 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Newsgroup 4.xcdatamodel"; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D0B8E641329C26C0081E772 /* post_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = post_body.html; path = Resources/post_body.html; sourceTree = "<group>"; };
 		4D1DD4B9133F7F2800A61679 /* DataControllerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataControllerPrivate.h; sourceTree = "<group>"; };
@@ -1000,11 +1001,12 @@
 		28D3F201112F7DC200FD0661 /* Newsgroup.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				298A54D81353CB100062CA29 /* Newsgroup 4.xcdatamodel */,
 				4DC2D97613467E2500EDB177 /* Newsgroup 3.xcdatamodel */,
 				4DE9D868133EC2D000475E8C /* Newsgroup 2.xcdatamodel */,
 				28860B760F44E54D00985440 /* Newsgroup.xcdatamodel */,
 			);
-			currentVersion = 4DC2D97613467E2500EDB177 /* Newsgroup 3.xcdatamodel */;
+			currentVersion = 298A54D81353CB100062CA29 /* Newsgroup 4.xcdatamodel */;
 			name = Newsgroup.xcdatamodeld;
 			path = Resources/Newsgroup.xcdatamodeld;
 			sourceTree = "<group>";
