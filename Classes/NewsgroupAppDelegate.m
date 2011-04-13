@@ -183,9 +183,15 @@
     [self createNavigationStackWithPostArray:pathToPost];
 }
 
-- (void)navigateToPostID:(NSNumber *)postID {
+- (BOOL)navigateToPostID:(NSNumber *)postID {
     Post *post = [self.dataController postWithId:postID];
-    [self navigateToPost:post];
+    if (post) {
+        [self navigateToPost:post];
+        return YES;
+    } else {
+        return NO;
+    }
+    
 }
 
 - (void)navigateToPost:(Post *)post {

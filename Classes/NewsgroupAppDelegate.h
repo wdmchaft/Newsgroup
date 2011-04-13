@@ -44,7 +44,7 @@
 - (void)newPost:(id)sender;
 - (void)refreshData:(id)sender;
 - (void)nextUnread:(id)sender;
-- (void)navigateToPostID:(NSNumber *)postID;
+- (BOOL)navigateToPostID:(NSNumber *)postID;
 - (void)navigateToPost:(Post *)post;
 - (void)createNavigationStackWithPostArray:(NSArray *)postArray;
 

@@ -111,9 +111,9 @@
     } else if ([urlDescription rangeOfString:POST_LINK_PREFIX].location != NSNotFound) {
         NSString *postIDString = [urlDescription stringByReplacingOccurrencesOfString:POST_LINK_PREFIX withString:@""];
         NSInteger postID = [postIDString integerValue];
+        
         if (postID != 0) {
-            [APP_DELEGATE navigateToPostID:[NSNumber numberWithInteger:postID]];
-             return NO;
+            if ([APP_DELEGATE navigateToPostID:[NSNumber numberWithInteger:postID]]) return NO;
         }
     }
         
