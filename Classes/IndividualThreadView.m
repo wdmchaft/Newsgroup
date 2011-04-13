@@ -49,7 +49,7 @@
 }
 
 - (void)pressAndHoldOnSubject:(UILongPressGestureRecognizer *)gesture {
-    NSLog(@"long press");
+    
 }
 
 #pragma mark View lifecycle
