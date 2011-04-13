@@ -3,3 +3,4 @@ build/
 *.pbxuser
 *.mode2v3
 xcuserdata
+version.txt
