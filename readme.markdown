@@ -1,3 +1,8 @@
+1.1.4
+=====
+ * Newsgroup links open directly in app, not in Safari
+ * Press and hold on a posts's subject to copy HTML to the clipboard. Paste to link back to the original post.
+
 1.1.3
 =====
  * Performance improvements
