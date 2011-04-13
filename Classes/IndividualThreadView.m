@@ -14,6 +14,8 @@
 
 @interface IndividualThreadView()
 
+- (void)pressAndHoldOnSubject:(UILongPressGestureRecognizer *)gesture;
+
 @end
 
 #pragma mark -
@@ -46,6 +48,10 @@
     [newPostController release];
 }
 
+- (void)pressAndHoldOnSubject:(UILongPressGestureRecognizer *)gesture {
+    NSLog(@"long press");
+}
+
 #pragma mark View lifecycle
 
 - (void)viewDidLoad {
@@ -59,6 +65,11 @@
     self.subjectLabel.text = self.post.subject;
     self.postTimeLabel.text = self.post.displayDate;
     [self.webView loadHTMLString:[DataController addBodyToHTMLTemplate:self.post.body] baseURL:nil];
+    
+    // Set up the gesture recognizer on the subject
+    UILongPressGestureRecognizer *pressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressAndHoldOnSubject:)];
+    [self.subjectLabel addGestureRecognizer:pressGesture];
+    [pressGesture release];
     
     // Set the current post as read
     if ([self.post.isRead boolValue] == NO) {
