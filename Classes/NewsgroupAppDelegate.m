@@ -60,6 +60,11 @@
     // Configure the nav controller
     self.navigationController.delegate = self;
     
+    // Set the version string
+    NSString *versionFilePath = [[NSBundle mainBundle] pathForResource:@"version" ofType:@"txt"];
+    NSString *versionString = [NSString stringWithContentsOfFile:versionFilePath encoding:NSUTF8StringEncoding error:nil];
+    [[NSUserDefaults standardUserDefaults] setValue:versionString forKey:@"JKVersion"];
+    
     return YES;
 }
 

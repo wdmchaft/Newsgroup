@@ -34,9 +34,9 @@
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
-			<string>v1.1.3 (8)</string>
+			<string>v1.1.3 (9)</string>
 			<key>Key</key>
-			<string>version</string>
+			<string>JKVersion</string>
 			<key>Title</key>
 			<string>Version</string>
 			<key>Type</key>
