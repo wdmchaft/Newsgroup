@@ -49,7 +49,27 @@
 }
 
 - (void)pressAndHoldOnSubject:(UILongPressGestureRecognizer *)gesture {
-    
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        // Copy URL string to clipboard
+        NSString *urlString = [NSString stringWithFormat:@"<a href=\"http://newsgroup.greenpride.com/ViewPost.aspx?PostID=%@\"></a>", self.post.postID];
+        [UIPasteboard generalPasteboard].string = urlString;
+        
+        // Flash the subject
+        NSTimeInterval flashLength = 0.1;
+        [UIView animateWithDuration:flashLength animations:^(void) {
+            self.subjectLabel.alpha = 0.0f;
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:flashLength animations:^(void) {
+                self.subjectLabel.alpha = 1.0f;
+            } completion:^(BOOL finished1) {
+                [UIView animateWithDuration:flashLength animations:^(void) {
+                    self.subjectLabel.alpha = 0.0f;
+                } completion:^(BOOL finished2) {
+                    self.subjectLabel.alpha = 1.0f;
+                }];
+            }];
+        }];
+    }
 }
 
 #pragma mark View lifecycle
