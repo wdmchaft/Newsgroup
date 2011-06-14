@@ -307,7 +307,8 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 
 - (NSFetchedResultsController *)allThreads {
     
-    NSFetchRequest *fetchRequest = [self.model fetchRequestTemplateForName:@"allThreads"];
+    // Copying the request allows it to be modified and prevents "Can't modify a named fetch request in an immutable model." exception.
+    NSFetchRequest *fetchRequest = [[self.model fetchRequestTemplateForName:@"allThreads"] copy];
 
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:NO];
@@ -317,6 +318,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
         
+    [fetchRequest release];
     return [aFetchedResultsController autorelease];
 }
 

@@ -26,6 +26,7 @@
 		294E439D134E9DF900BFE43B /* history@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 294E439C134E9DF900BFE43B /* history@2x.png */; };
 		296BEB67131048C20026BF42 /* NSString+Digest.m in Sources */ = {isa = PBXBuildFile; fileRef = 296BEB66131048C20026BF42 /* NSString+Digest.m */; };
 		2995EF0513553E040048BFB6 /* version.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2995EF0413553E040048BFB6 /* version.txt */; };
+		299A206713A6DB8400759E44 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 299A206613A6DB8400759E44 /* libz.1.2.5.dylib */; settings = {ATTRIBUTES = (Required, ); }; };
 		4D0B8E651329C26C0081E772 /* post_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B8E641329C26C0081E772 /* post_body.html */; };
 		4D1DD4C0133FA61300A61679 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1DD4BF133FA61300A61679 /* Icon.png */; };
 		4D41B3A6131F29410044171F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B3A5131F29410044171F /* Settings.bundle */; };
@@ -105,8 +106,6 @@
 		4DEC6AEE1315E6A60021EAAA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AED1315E6A60021EAAA /* CFNetwork.framework */; };
 		4DEC6AF01315E6B10021EAAA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AEF1315E6B10021EAAA /* SystemConfiguration.framework */; };
 		4DEC6AF21315E6BB0021EAAA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AF11315E6BB0021EAAA /* MobileCoreServices.framework */; };
-		4DEC6AF51315E6D40021EAAA /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AF41315E6D40021EAAA /* libz.1.2.3.dylib */; };
-		4DEC6AF61315E9660021EAAA /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AF41315E6D40021EAAA /* libz.1.2.3.dylib */; };
 		4DEC6AF71315E96C0021EAAA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AF11315E6BB0021EAAA /* MobileCoreServices.framework */; };
 		4DEC6AF81315E96E0021EAAA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AEF1315E6B10021EAAA /* SystemConfiguration.framework */; };
 		4DEC6AF91315E9710021EAAA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEC6AED1315E6A60021EAAA /* CFNetwork.framework */; };
@@ -144,6 +143,7 @@
 		296BEB66131048C20026BF42 /* NSString+Digest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Digest.m"; path = "NSString_Digest/NSString+Digest.m"; sourceTree = "<group>"; };
 		298A54D81353CB100062CA29 /* Newsgroup 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Newsgroup 4.xcdatamodel"; sourceTree = "<group>"; };
 		2995EF0413553E040048BFB6 /* version.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = version.txt; sourceTree = "<group>"; };
+		299A206613A6DB8400759E44 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = /DeveloperBeta/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/usr/lib/libz.1.2.5.dylib; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D0B8E641329C26C0081E772 /* post_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = post_body.html; path = Resources/post_body.html; sourceTree = "<group>"; };
 		4D1DD4B9133F7F2800A61679 /* DataControllerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataControllerPrivate.h; sourceTree = "<group>"; };
@@ -241,7 +241,6 @@
 		4DEC6AED1315E6A60021EAAA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4DEC6AEF1315E6B10021EAAA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4DEC6AF11315E6BB0021EAAA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		4DEC6AF41315E6D40021EAAA /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		4DF2D25413083D3300C8AB3A /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF2D25B13083D7100C8AB3A /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = Frameworks/GHUnitIOS.framework; sourceTree = "<group>"; };
 		4DF2D29013083E9D00C8AB3A /* Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Tests-Info.plist"; path = "Test Classes/Tests-Info.plist"; sourceTree = "<group>"; };
@@ -262,7 +261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DEC6AF51315E6D40021EAAA /* libz.1.2.3.dylib in Frameworks */,
+				299A206713A6DB8400759E44 /* libz.1.2.5.dylib in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				4DEC6AF21315E6BB0021EAAA /* MobileCoreServices.framework in Frameworks */,
 				4DEC6AF01315E6B10021EAAA /* SystemConfiguration.framework in Frameworks */,
@@ -281,7 +280,6 @@
 				4DF2D27B13083D9500C8AB3A /* GHUnitIOS.framework in Frameworks */,
 				4DF2D27D13083DB600C8AB3A /* Foundation.framework in Frameworks */,
 				4DF2D27C13083DB600C8AB3A /* CoreGraphics.framework in Frameworks */,
-				4DEC6AF61315E9660021EAAA /* libz.1.2.3.dylib in Frameworks */,
 				4DEC6AF91315E9710021EAAA /* CFNetwork.framework in Frameworks */,
 				4DEC6AF81315E96E0021EAAA /* SystemConfiguration.framework in Frameworks */,
 				4DEC6AF71315E96C0021EAAA /* MobileCoreServices.framework in Frameworks */,
@@ -390,7 +388,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4DEC6AF41315E6D40021EAAA /* libz.1.2.3.dylib */,
+				299A206613A6DB8400759E44 /* libz.1.2.5.dylib */,
 				4DEC6AF11315E6BB0021EAAA /* MobileCoreServices.framework */,
 				4DEC6AEF1315E6B10021EAAA /* SystemConfiguration.framework */,
 				4DEC6AED1315E6A60021EAAA /* CFNetwork.framework */,
