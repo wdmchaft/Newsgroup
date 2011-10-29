@@ -93,15 +93,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    APP_DELEGATE.newPostButton.target = self;
-    APP_DELEGATE.newPostButton.action = @selector(newPost:);
+    APP_DELEGATE.makeNewPostButton.target = self;
+    APP_DELEGATE.makeNewPostButton.action = @selector(newPost:);
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    APP_DELEGATE.newPostButton.target = nil;
-    APP_DELEGATE.newPostButton.action = nil;
+    APP_DELEGATE.makeNewPostButton.target = nil;
+    APP_DELEGATE.makeNewPostButton.action = nil;
 }
 
 - (void)viewDidUnload {

@@ -26,7 +26,7 @@
 @synthesize progressView = progressView_;
 @synthesize window;
 @synthesize refreshButton = refreshButton_;
-@synthesize newPostButton = newPostButton_;
+@synthesize makeNewPostButton = newPostButton_;
 @synthesize nextUnreadButton = nextUnreadButton_;
 @synthesize refreshTimer = refreshTimer_;
 
@@ -127,7 +127,7 @@
     self.toolbarItems = buttonArray;
     self.progressView = progView;
     self.refreshButton = refreshButton;
-    self.newPostButton = newPost;
+    self.makeNewPostButton = newPost;
     self.nextUnreadButton = nextUnreadButton;
     
     [progView release];

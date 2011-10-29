@@ -33,7 +33,7 @@
 @property (nonatomic, retain) NSArray *toolbarItems;
 @property (nonatomic, retain) ToolbarProgressView *progressView;
 @property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) UIBarButtonItem *newPostButton;
+@property (nonatomic, retain) UIBarButtonItem *makeNewPostButton;
 @property (nonatomic, retain) UIBarButtonItem *nextUnreadButton;
 @property (nonatomic, retain) NSTimer *refreshTimer;
 
