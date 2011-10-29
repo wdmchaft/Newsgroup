@@ -489,7 +489,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 - (Post *)nextUnreadPost {
-    NSFetchRequest *fetchRequest = [self.model fetchRequestTemplateForName:@"allUnread"];
+    NSFetchRequest *fetchRequest = [[self.model fetchRequestTemplateForName:@"allUnread"] copy];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sd]];
     [sd release];
