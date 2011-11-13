@@ -8,7 +8,7 @@
 
 #import "DataController.h"
 #import "DataControllerPrivate.h"
-#import "JSON.h"
+#import "SBJson.h"
 #import "NSString+Digest.h"
 #import "PostLoadOperation.h"
 #import "RequestGenerator.h"
@@ -38,7 +38,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 - (NSUInteger)error:(NSError **)error withErrorCode:(DataControllerErrorCode)code;
 
 // Private properties
-@property (readwrite, retain) NSDate *lastFetchTime;
+@property (readwrite, strong) NSDate *lastFetchTime;
 @property (strong, nonatomic) NSManagedObjectModel *model;
 
 @end
