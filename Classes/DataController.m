@@ -170,7 +170,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 #pragma mark Authentication Methods
 
 - (void)authenticateUser {
-    __block ASIHTTPRequest *request = [RequestGenerator userWithUsername:self.login andPassword:self.password];
+    __unsafe_unretained ASIHTTPRequest *request = [RequestGenerator userWithUsername:self.login andPassword:self.password];
     
     // Success
     [request setCompletionBlock:^(void) {
@@ -233,7 +233,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     
     UIBackgroundTaskIdentifier taskIdent = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
     
-    __block ASIHTTPRequest *request = [RequestGenerator postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
+    __unsafe_unretained ASIHTTPRequest *request = [RequestGenerator postsWithUsername:self.login password:self.password threadID:0 postID:0 threadLimit:0];
     [request setDownloadProgressDelegate:self];
     
     [request setCompletionBlock:^(void) {
@@ -441,7 +441,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 - (void)addPost:(Post *)post withRequest:(ASIHTTPRequest *)request {
     UIBackgroundTaskIdentifier taskIdent = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:nil];
     
-    __block ASIHTTPRequest *bRequest = request;
+    __unsafe_unretained ASIHTTPRequest *bRequest = request;
     
     [bRequest setCompletionBlock:^(void) {
         NSInteger postID = [[bRequest responseString] integerValue];

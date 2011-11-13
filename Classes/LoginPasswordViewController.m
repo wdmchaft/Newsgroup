@@ -135,7 +135,7 @@
         self.progressIndicator.hidden = NO;
         [self.progressIndicator startAnimating];
         
-        __block ASIHTTPRequest *request = [RequestGenerator userWithUsername:username andPassword:password];
+        __unsafe_unretained ASIHTTPRequest *request = [RequestGenerator userWithUsername:username andPassword:password];
         
         // Success
         [request setCompletionBlock:^(void) {

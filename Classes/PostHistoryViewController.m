@@ -10,7 +10,7 @@
 #import "DataController.h"
 #import "FetchedResultsViewController+PrivateHeader.h"
 #import "PostHistory.h"
-
+#import "TDBadgedCell.h"
 
 @implementation PostHistoryViewController
 

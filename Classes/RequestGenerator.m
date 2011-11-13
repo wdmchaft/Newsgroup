@@ -86,8 +86,8 @@
     if (subject == nil) subject = @"";
     if (body == nil) body = @"";
     
-    subject = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)subject, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8);
-    body = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)body, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8);
+    subject = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef)subject, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8);
+    body = (NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef)body, NULL, (CFStringRef)@"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8);
     
     NSString *urlString = [NSString stringWithFormat:@"%@PostAdd?UserName=%@&Password=%@&Subject=%@&Description=%@&ReplyToID=%i&%@",
                            BASE_URL_STRING,
