@@ -17,22 +17,22 @@
 + (NSString *)entityName;
 
 // Custom Properties
-@property (nonatomic, readonly) NSString *displayDate;
+@property (unsafe_unretained, nonatomic, readonly) NSString *displayDate;
 
 // Managed Object Properties
-@property (nonatomic, retain) NSString * body;
-@property (nonatomic, retain) NSNumber * isRead;
-@property (nonatomic, retain) NSNumber * memberID;
-@property (nonatomic, retain) NSDate * postdate;
-@property (nonatomic, retain) NSString * posterName;
-@property (nonatomic, retain) NSString * posterNickname;
-@property (nonatomic, retain) NSNumber * postID;
-@property (nonatomic, retain) NSString * subject;
-@property (nonatomic, retain) NSNumber * threadID;
-@property (nonatomic, retain) NSNumber * parentID;
-@property (nonatomic, retain) NSNumber * postLevel;
+@property (nonatomic, strong) NSString * body;
+@property (nonatomic, strong) NSNumber * isRead;
+@property (nonatomic, strong) NSNumber * memberID;
+@property (nonatomic, strong) NSDate * postdate;
+@property (nonatomic, strong) NSString * posterName;
+@property (nonatomic, strong) NSString * posterNickname;
+@property (nonatomic, strong) NSNumber * postID;
+@property (nonatomic, strong) NSString * subject;
+@property (nonatomic, strong) NSNumber * threadID;
+@property (nonatomic, strong) NSNumber * parentID;
+@property (nonatomic, strong) NSNumber * postLevel;
 
-@property (nonatomic, retain) Post *parentPost;
-@property (nonatomic, retain) NSSet *childPosts;
+@property (nonatomic, strong) Post *parentPost;
+@property (nonatomic, strong) NSSet *childPosts;
 
 @end

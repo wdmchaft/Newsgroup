@@ -27,15 +27,15 @@
 }
 
 // Properties
-@property (nonatomic, retain) DataController *dataController;
-@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
-@property (nonatomic, retain) UIBarButtonItem *refreshButton;
-@property (nonatomic, retain) NSArray *toolbarItems;
-@property (nonatomic, retain) ToolbarProgressView *progressView;
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) UIBarButtonItem *makeNewPostButton;
-@property (nonatomic, retain) UIBarButtonItem *nextUnreadButton;
-@property (nonatomic, retain) NSTimer *refreshTimer;
+@property (nonatomic, strong) DataController *dataController;
+@property (nonatomic, strong) IBOutlet UINavigationController *navigationController;
+@property (nonatomic, strong) UIBarButtonItem *refreshButton;
+@property (nonatomic, strong) NSArray *toolbarItems;
+@property (nonatomic, strong) ToolbarProgressView *progressView;
+@property (nonatomic, strong) IBOutlet UIWindow *window;
+@property (nonatomic, strong) UIBarButtonItem *makeNewPostButton;
+@property (nonatomic, strong) UIBarButtonItem *nextUnreadButton;
+@property (nonatomic, strong) NSTimer *refreshTimer;
 
 // Utility Methods
 - (NSURL *)applicationDocumentsDirectory;

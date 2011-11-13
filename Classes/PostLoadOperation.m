@@ -20,7 +20,6 @@
     [inputString replaceOccurrencesOfString:@"-0700)/" withString:@"" options:0 range:NSMakeRange(0, [inputString length])];
     
     NSDate *gmtDate = [NSDate dateWithTimeIntervalSince1970:[inputString doubleValue]/1000.0];
-    [inputString release];
     
     return gmtDate;
 }

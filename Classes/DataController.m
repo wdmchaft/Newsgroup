@@ -39,7 +39,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 
 // Private properties
 @property (readwrite, retain) NSDate *lastFetchTime;
-@property (retain, nonatomic) NSManagedObjectModel *model;
+@property (strong, nonatomic) NSManagedObjectModel *model;
 
 @end
 
@@ -139,9 +139,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         self.context = managedObjectContext;
         self.model = managedObjectModel;
         
-        [managedObjectModel release];
-        [managedObjectContext release];
-        [persistentStoreCoordinator release];
         
         // Setup the Operation Queue
         operationQueue_ = [[NSOperationQueue alloc] init];
@@ -152,16 +149,10 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 - (void)dealloc {
-    [context_ release];
-    [login_ release];
-    [model_ release];
-    [password_ release];
     
     [operationQueue_ cancelAllOperations];
     [operationQueue_ waitUntilAllOperationsAreFinished];
-    [operationQueue_ release];
     
-    [super dealloc];
 }
 
 #pragma mark -
@@ -313,13 +304,11 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:NO];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    [sortDescriptor release];
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
         
-    [fetchRequest release];
-    return [aFetchedResultsController autorelease];
+    return aFetchedResultsController;
 }
 
 - (NSFetchedResultsController *)postsWithThreadID:(NSNumber *)threadID {
@@ -331,12 +320,11 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     // Set the sort key
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:NO];
     NSArray *sortArray = [NSArray arrayWithObject:sortDescriptor];
-    [sortDescriptor release];
     [fetchRequest setSortDescriptors:sortArray];
     
     NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
     
-    return [fetchedResults autorelease];
+    return fetchedResults;
 }
 
 - (NSFetchedResultsController *)postsWithParentID:(NSNumber *)parentID {
@@ -348,12 +336,11 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     // Set the sort key
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
     NSArray *sortArray = [NSArray arrayWithObject:sortDescriptor];
-    [sortDescriptor release];
     [fetchRequest setSortDescriptors:sortArray];
     
     NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
     
-    return [fetchedResults autorelease];
+    return fetchedResults;
 }
 
 - (Post *)postWithId:(NSNumber *)postID {
@@ -400,11 +387,10 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"postViewTime" ascending:NO];
     
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-    [sortDescriptor release];
     
     NSFetchedResultsController *fetchedResults = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.context sectionNameKeyPath:nil cacheName:nil];
     
-    return [fetchedResults autorelease];
+    return fetchedResults;
 }
 
 - (void)addPostToHistory:(Post *)post {
@@ -492,7 +478,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     NSFetchRequest *fetchRequest = [[self.model fetchRequestTemplateForName:@"allUnread"] copy];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sd]];
-    [sd release];
     [fetchRequest setFetchLimit:1];
     
     NSError *error = nil;
@@ -511,7 +496,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     NSFetchRequest *fetchRequest = [self.model fetchRequestFromTemplateWithName:@"postsWithParentID" substitutionVariables:dict];
     NSSortDescriptor *sd = [[NSSortDescriptor alloc] initWithKey:@"postdate" ascending:YES];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sd]];
-    [sd release];
     
     NSError *error = nil;
     NSArray *results = [self.context executeFetchRequest:fetchRequest error:&error];
@@ -626,7 +610,7 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
                 NSAssert1(NO, @"Unhandled DataControllerErrorCode %i", code);
         }
         
-        *error = [[[NSError alloc] initWithDomain:DataControllerErrorDomain code:code userInfo:userInfo] autorelease];
+        *error = [[NSError alloc] initWithDomain:DataControllerErrorDomain code:code userInfo:userInfo];
     }
     return 0;
 }
@@ -645,7 +629,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     } else {
         NSAssert(YES, @"Construct some sort of error here");
     }
-    [postLoad release];
     
     NSInteger unreadCount = [self countOfUnreadPosts];
     if (unreadCount != 0) {

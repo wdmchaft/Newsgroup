@@ -108,10 +108,6 @@
     self.cell = nil;
 }
 
-- (void)dealloc {
-    [fetchedResultsController_ release];
-    [super dealloc];
-}
 
 #pragma mark Table view data source
 
@@ -163,7 +159,6 @@
     IndividualThreadView *viewController = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
     viewController.post = selectedPost;
     [self.navigationController pushViewController:viewController animated:YES];
-    [viewController release];
 }
 
 #pragma mark -

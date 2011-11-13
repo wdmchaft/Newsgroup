@@ -19,13 +19,13 @@
     Post *post_;
 }
 
-@property (nonatomic, retain) Post *post;
+@property (nonatomic, strong) Post *post;
 
 // IBOutlets
-@property (nonatomic, retain) IBOutlet UIView *headerView;
-@property (nonatomic, retain) IBOutlet UILabel *subjectLabel;
-@property (nonatomic, retain) IBOutlet UILabel *authorLabel;
-@property (nonatomic, retain) IBOutlet UILabel *postTimeLabel;
-@property (nonatomic, retain) IBOutlet UIWebView *webView;
+@property (nonatomic, strong) IBOutlet UIView *headerView;
+@property (nonatomic, strong) IBOutlet UILabel *subjectLabel;
+@property (nonatomic, strong) IBOutlet UILabel *authorLabel;
+@property (nonatomic, strong) IBOutlet UILabel *postTimeLabel;
+@property (nonatomic, strong) IBOutlet UIWebView *webView;
 
 @end

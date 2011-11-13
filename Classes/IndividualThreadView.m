@@ -24,8 +24,6 @@
 @synthesize post = post_;
 
 - (void)setPost:(Post *)post {
-    [post retain];
-    [post_ release];
     post_ = post;
 }
 
@@ -45,7 +43,6 @@
     newPostController.parentPostID = self.post.postID;
     newPostController.subject = self.post.subject;
     [self.navigationController pushViewController:newPostController animated:YES];
-    [newPostController release];
 }
 
 - (void)pressAndHoldOnSubject:(UILongPressGestureRecognizer *)gesture {
@@ -89,7 +86,6 @@
     // Set up the gesture recognizer on the subject
     UILongPressGestureRecognizer *pressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(pressAndHoldOnSubject:)];
     [self.subjectLabel addGestureRecognizer:pressGesture];
-    [pressGesture release];
     
     // Set the current post as read
     if ([self.post.isRead boolValue] == NO) {
@@ -117,10 +113,6 @@
     [super viewWillAppear:animated];
 }
 
-- (void)dealloc {
-    [post_ release];
-    [super dealloc];
-}
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

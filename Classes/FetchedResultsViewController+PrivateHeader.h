@@ -20,7 +20,7 @@ typedef enum _CustomCellViewTags {
 @interface FetchedResultsViewController()
 
 // Private Properties
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 // Private Methods
 - (void)configureCell:(UITableViewCell *)cell withPost:(Post *)post;

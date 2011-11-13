@@ -14,10 +14,6 @@
 
 @implementation PostHistoryViewController
 
-- (void)dealloc
-{
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {

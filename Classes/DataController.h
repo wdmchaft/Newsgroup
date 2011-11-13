@@ -56,7 +56,7 @@ typedef struct ReadUnread ReadUnread;
 
     @private
     NSManagedObjectContext *context_;
-    id <DataControllerDelegate> delegate_;
+    id <DataControllerDelegate> __unsafe_unretained delegate_;
     NSString *login_;
     NSManagedObjectModel *model_;
     NSString *password_;
@@ -64,9 +64,9 @@ typedef struct ReadUnread ReadUnread;
 }
 
 // Properties
-@property (retain, nonatomic) NSManagedObjectContext *context;
-@property (assign) id <DataControllerDelegate> delegate;
-@property (readonly, retain) NSDate *lastFetchTime;
+@property (strong, nonatomic) NSManagedObjectContext *context;
+@property (unsafe_unretained) id <DataControllerDelegate> delegate;
+@property (readonly, strong) NSDate *lastFetchTime;
 @property (readonly, copy) NSString *login;
 @property (readonly) BOOL isFetching;
 @property (readonly, copy) NSString *password;

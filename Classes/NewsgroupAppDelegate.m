@@ -86,13 +86,6 @@
     // Unregister for notifications
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    [dataController_ release];
-    [navigationController release];
-    [toolbarItems release];
-    [window release];
-    [refreshButton_ release];
-    [nextUnreadButton_ release];
-    [super dealloc];
 }
 
 #pragma mark -
@@ -130,12 +123,6 @@
     self.makeNewPostButton = newPost;
     self.nextUnreadButton = nextUnreadButton;
     
-    [progView release];
-    [refreshButton release];
-    [nextUnreadButton release];
-    [flexibleSpace release];
-    [progressView release];
-    [newPost release];
 }
 
 - (void)setupDataController {
@@ -153,10 +140,8 @@
     if ([username length] == 0 || [password length] == 0) {
         LoginPasswordViewController *logPass = [[LoginPasswordViewController alloc] initWithNibName:@"LoginPasswordView" bundle:nil];
         [self.navigationController.topViewController presentModalViewController:logPass animated:YES];
-        [logPass release];
     }
 
-    [dc release];
 }
 
 - (void)newPost:(id)sender {
@@ -207,13 +192,11 @@
 - (void)createNavigationStackWithPostArray:(NSArray *)postArray {
     MainThreadView *mainThreadView = [[MainThreadView alloc] initWithNibName:@"MainThreadView" bundle:nil];
     NSMutableArray *controllerArray = [NSMutableArray arrayWithObject:mainThreadView];
-    [mainThreadView release];
     
     for (Post *post in postArray) {
         IndividualThreadView *threadView = [[IndividualThreadView alloc] initWithNibName:nil bundle:nil];
         threadView.post = post;
         [controllerArray addObject:threadView];
-        [threadView release];
     }
     
     self.navigationController.viewControllers = controllerArray;
@@ -258,7 +241,6 @@
         LoginPasswordViewController *loginController = [[LoginPasswordViewController alloc] initWithNibName:@"LoginPasswordView" bundle:nil];
         loginController.displayString = NSLocalizedString(@"Login failed", @"String to display when the login fails");
         [self.navigationController pushViewController:loginController animated:YES];
-        [loginController release];
     }
     
     self.refreshButton.enabled = YES;
@@ -285,7 +267,6 @@
     
     [locNavigationController.navigationBar addGestureRecognizer:longPress];
     
-    [longPress release];
 }
 
 @end

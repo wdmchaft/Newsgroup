@@ -25,7 +25,6 @@
 
 - (void)setDisplayString:(NSString *)displayString {
     // Since this is a copy property, we don't need to worry about being passed the same string as the iVar
-    [displayString_ release];
     displayString_ = [displayString copy];
     
     if ([displayString_ length] != 0) {
@@ -43,19 +42,6 @@
     return self;
 }
 
-- (void)dealloc
-{
-    [operationQueue_ release];
-    
-    [displayString_ release];
-    
-    [usernameTextField_ release];
-    [passwordTextField_ release];
-    [statusLabel release];
-    [progressIndicator release];
-    [doneButton release];
-    [super dealloc];
-}
 
 - (void)didReceiveMemoryWarning
 {
@@ -124,7 +110,6 @@
                                   cancelButtonTitle:NSLocalizedString(@"OK", @"Cancel button title") 
                                   otherButtonTitles:nil];
         [alertView show];
-        [alertView release];  
         
     // Success!
     } else {

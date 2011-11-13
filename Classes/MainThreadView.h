@@ -14,7 +14,7 @@
 
 }
 
-@property (retain) NSArray *allPosts;
-@property (retain) NSArray *searchResults;
+@property (strong) NSArray *allPosts;
+@property (strong) NSArray *searchResults;
 
 @end

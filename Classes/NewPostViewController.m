@@ -36,12 +36,6 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-    [parentPostID release];
-    [bodyView_ release];
-    [subjectView_ release];
-    [subject_ release];
-    [bodyLabel release];
-    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,7 +93,6 @@
     // Create send button
     UIBarButtonItem *sendButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Send", @"Send button") style:UIBarButtonItemStyleDone target:self action:@selector(send:)];
     self.navigationItem.rightBarButtonItem = sendButton;
-    [sendButton release];
     
     // If we don't have a subject, make the subject field the first responder, else make the text area the first responder.
     if (self.subject == nil) {

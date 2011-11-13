@@ -19,7 +19,7 @@
 + (NSString *)entityName;
 
 // Properties
-@property (nonatomic, retain) NSDate * postViewTime;
-@property (nonatomic, retain) Post * post;
+@property (nonatomic, strong) NSDate * postViewTime;
+@property (nonatomic, strong) Post * post;
 
 @end

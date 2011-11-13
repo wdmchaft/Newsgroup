@@ -21,7 +21,7 @@
 
 }
 
-@property (nonatomic, retain) IBOutlet TDBadgedCell *cell;
+@property (nonatomic, strong) IBOutlet TDBadgedCell *cell;
 
 - (void)newPost:(id)sender;
 

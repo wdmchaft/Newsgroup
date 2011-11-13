@@ -15,11 +15,11 @@
 }
 
 // Properties
-@property (nonatomic, retain) NSNumber *parentPostID;
+@property (nonatomic, strong) NSNumber *parentPostID;
 @property (nonatomic, copy) NSString *subject;
-@property (nonatomic, retain) IBOutlet UITextView *bodyView;
-@property (nonatomic, retain) IBOutlet UITextField *subjectView;
-@property (nonatomic, retain) IBOutlet UILabel *bodyLabel;
+@property (nonatomic, strong) IBOutlet UITextView *bodyView;
+@property (nonatomic, strong) IBOutlet UITextField *subjectView;
+@property (nonatomic, strong) IBOutlet UILabel *bodyLabel;
 @property (assign) BOOL keyboardIsVisible;
 
 // Instance Methods

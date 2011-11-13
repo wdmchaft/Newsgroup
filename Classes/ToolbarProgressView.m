@@ -39,15 +39,10 @@ typedef enum {
     self = [super initWithFrame:frame];
     if (self) {
         views_ = [[UINib nibWithNibName:@"ProgressView" bundle:nil] instantiateWithOwner:nil options:nil];
-        [views_ retain];
     }
     return self;
 }
 
-- (void)dealloc {
-    [views_ release];
-    [super dealloc];
-}
 
 #pragma mark Properties
 
@@ -62,8 +57,6 @@ typedef enum {
 }
 
 - (void)setTimestamp:(NSDate *)date {
-    [date retain];
-    [timestamp_ release];
     timestamp_ = date;
     
     [self configureViews];

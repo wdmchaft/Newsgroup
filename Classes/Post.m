@@ -19,7 +19,6 @@
 #pragma mark Instance Methods
 
 - (void)didTurnIntoFault {
-    [displayDate_ release];
     displayDate_ = nil;
 }
 
@@ -28,7 +27,6 @@
 - (NSString *)displayDate {
     if (displayDate_ == nil) {
         displayDate_ = [NSDate stringForDisplayFromDate:self.postdate];
-        [displayDate_ retain];
     }
     return displayDate_;
 }

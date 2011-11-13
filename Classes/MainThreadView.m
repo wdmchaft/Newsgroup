@@ -36,7 +36,6 @@
     
     NewPostViewController *newPostController = [[NewPostViewController alloc] initWithNibName:@"NewPostView" bundle:nil];
     [self.navigationController pushViewController:newPostController animated:YES];
-    [newPostController release];
 }
 
 - (NSArray *)filterInputArray:(NSArray *)input searchString:(NSString *)searchString scopeIndex:(NSInteger)scopeIndex {
@@ -89,7 +88,6 @@
 - (void)showHistory:(id)sender {
     PostHistoryViewController *historyView = [[PostHistoryViewController alloc] initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:historyView animated:YES];
-    [historyView release];
 }
 
 #pragma mark View lifecycle
@@ -112,7 +110,6 @@
     // Create the history button
     UIBarButtonItem *historyButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"history"] style:UIBarButtonItemStyleBordered target:self action:@selector(showHistory:)];
     self.navigationItem.leftBarButtonItem = historyButton;
-    [historyButton release];
     
     // Set the view title
     self.title = @"Newsgroup";
@@ -138,11 +135,6 @@
     self.tableView.contentOffset = topOfTable;
 }
 
-- (void)dealloc {
-    [allPosts_ release];
-    [searchResults_ release];
-    [super dealloc];
-}
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

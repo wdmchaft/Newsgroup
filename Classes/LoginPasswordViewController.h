@@ -27,11 +27,11 @@
 @property (nonatomic, copy) NSString *displayString;
 
 // Nib properies
-@property (nonatomic, retain) IBOutlet UITextField *usernameTextField;
-@property (nonatomic, retain) IBOutlet UITextField *passwordTextField;
-@property (nonatomic, retain) IBOutlet UILabel *statusLabel;
-@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *progressIndicator;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *doneButton;
+@property (nonatomic, strong) IBOutlet UITextField *usernameTextField;
+@property (nonatomic, strong) IBOutlet UITextField *passwordTextField;
+@property (nonatomic, strong) IBOutlet UILabel *statusLabel;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *progressIndicator;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *doneButton;
 
 // IBActions
 - (IBAction)submitLoginPassword:(id)sender;

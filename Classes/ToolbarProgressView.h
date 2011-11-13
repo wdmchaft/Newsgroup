@@ -23,7 +23,7 @@ typedef enum {
 }
 
 @property (assign, nonatomic) float progress; 
-@property (retain, nonatomic) NSDate *timestamp;
+@property (strong, nonatomic) NSDate *timestamp;
 @property (assign, nonatomic) ViewType viewType;
 
 @end
