@@ -66,6 +66,13 @@
     NSString *versionString = [NSString stringWithContentsOfFile:versionFilePath encoding:NSUTF8StringEncoding error:nil];
     [[NSUserDefaults standardUserDefaults] setValue:versionString forKey:@"JKVersion"];
     
+    // Setup Parse
+    NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parse" ofType:@"txt"]];
+    NSString *appID = [dictionary objectForKey:@"JKParseApplicationIDKey"];
+    NSString *clientKey = [dictionary objectForKey:@"JKParseClientKey"];
+    
+    [Parse setApplicationId:appID clientKey:clientKey];
+    
     return YES;
 }
 

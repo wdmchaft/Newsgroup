@@ -43,6 +43,8 @@
 		3852BED0154F3A6800B8DC32 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852BECE154F3A5A00B8DC32 /* QuartzCore.framework */; };
 		3852BED1154F3A6800B8DC32 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852BECC154F3A5200B8DC32 /* Security.framework */; };
 		3852BED2154F3A6800B8DC32 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3852BECA154F3A3600B8DC32 /* AudioToolbox.framework */; };
+		3852BED4154F3CBC00B8DC32 /* parse.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3852BED3154F3CBC00B8DC32 /* parse.txt */; };
+		3852BED6154F3CD100B8DC32 /* parse - example.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3852BED5154F3CD100B8DC32 /* parse - example.txt */; };
 		4D0B8E651329C26C0081E772 /* post_body.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B8E641329C26C0081E772 /* post_body.html */; };
 		4D1DD4C0133FA61300A61679 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1DD4BF133FA61300A61679 /* Icon.png */; };
 		4D41B3A6131F29410044171F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D41B3A5131F29410044171F /* Settings.bundle */; };
@@ -173,6 +175,8 @@
 		3852BECA154F3A3600B8DC32 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		3852BECC154F3A5200B8DC32 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3852BECE154F3A5A00B8DC32 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3852BED3154F3CBC00B8DC32 /* parse.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parse.txt; sourceTree = "<group>"; };
+		3852BED5154F3CD100B8DC32 /* parse - example.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "parse - example.txt"; sourceTree = "<group>"; };
 		4D0B8E641329C26C0081E772 /* post_body.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = post_body.html; path = Resources/post_body.html; sourceTree = "<group>"; };
 		4D1DD4B9133F7F2800A61679 /* DataControllerPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataControllerPrivate.h; sourceTree = "<group>"; };
 		4D1DD4BF133FA61300A61679 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -362,6 +366,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3852BED3154F3CBC00B8DC32 /* parse.txt */,
+				3852BED5154F3CD100B8DC32 /* parse - example.txt */,
 				294E4398134DCB8E00BFE43B /* TDBadgedCell */,
 				4D41B3A7131F36A20044171F /* DDAlertPrompt */,
 				4D72F96613167AC70027E478 /* json-framework */,
@@ -712,6 +718,8 @@
 				294741FA135284730079480B /* horizontal-line.png in Resources */,
 				294741FB135284730079480B /* horizontal-line@2x.png in Resources */,
 				2995EF0513553E040048BFB6 /* version.txt in Resources */,
+				3852BED4154F3CBC00B8DC32 /* parse.txt in Resources */,
+				3852BED6154F3CD100B8DC32 /* parse - example.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
