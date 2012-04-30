@@ -12,6 +12,7 @@
 #import "ToolbarProgressView.h"
 #import "JKConstants.h"
 #import "LoginPasswordViewController.h"
+#import <Parse/Parse.h>
 
 #define PROGRESS_VIEW_FRAME CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)
 #define REFRESH_INTERVAL 120.0
