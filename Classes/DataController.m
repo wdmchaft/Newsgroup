@@ -8,7 +8,7 @@
 
 #import "DataController.h"
 #import "DataControllerPrivate.h"
-#import "SBJson.h"
+#import "JSON.h"
 #import "NSString+Digest.h"
 #import "PostLoadOperation.h"
 #import "RequestGenerator.h"
