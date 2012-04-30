@@ -152,7 +152,6 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     
     [operationQueue_ cancelAllOperations];
     [operationQueue_ waitUntilAllOperationsAreFinished];
-    
 }
 
 #pragma mark -

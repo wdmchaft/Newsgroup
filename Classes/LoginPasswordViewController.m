@@ -10,7 +10,7 @@
 #import "JKConstants.h"
 #import "RequestGenerator.h"
 #import "ASIHTTPRequest.h"
-#import "SBJson.h"
+#import "JSON.h"
 #import "NewsgroupAppDelegate.h"
 
 
