@@ -19,3 +19,6 @@
 #define LOG_ERROR_FROM_METHOD(x) if(!x){ NSLog(@"%@", error) }
 
 #define LOG(x) NSLog(@"%@", x)
+
+// Push notification constants
+#define kPushNotificationPostID @"kPushNotificationPostID"

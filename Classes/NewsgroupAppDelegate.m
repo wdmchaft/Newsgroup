@@ -70,10 +70,30 @@
     NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"parse" ofType:@"txt"]];
     NSString *appID = [dictionary objectForKey:@"JKParseApplicationIDKey"];
     NSString *clientKey = [dictionary objectForKey:@"JKParseClientKey"];
-    
     [Parse setApplicationId:appID clientKey:clientKey];
     
+    // Register for push notifications
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)newDeviceToken
+{
+    [PFPush storeDeviceToken:newDeviceToken]; // Send parse the device token
+                                              // Subscribe this user to the broadcast channel, "" 
+    [PFPush subscribeToChannelInBackground:@"" block:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            NSLog(@"Successfully subscribed to the broadcast channel.");
+        } else {
+            NSLog(@"Failed to subscribe to the broadcast channel.");
+        }
+    }];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    NSLog(@"%@", error);
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

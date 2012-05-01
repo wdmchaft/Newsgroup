@@ -14,6 +14,7 @@
 #import "RequestGenerator.h"
 #import "JKConstants.h"
 #import "PostHistory.h"
+#import <Parse/Parse.h>
 
 // Notification Strings
 NSString *const DataControllerFetchDidBegin = @"GPHTTPRequestDidBegin";
@@ -430,7 +431,16 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
     
     [bRequest setCompletionBlock:^(void) {
         NSInteger postID = [[bRequest responseString] integerValue];
-        post.postID = [NSNumber numberWithInteger:postID];
+        NSNumber *postNumber = [NSNumber numberWithInteger:postID];
+        post.postID = postNumber;
+        
+        // Send notification to Parse that we've created a new post
+        NSString *message = [NSString stringWithFormat:NSLocalizedString(@"New post from %@", nil), post.posterName];
+        NSDictionary *data = [NSDictionary dictionaryWithObjectsAndKeys:
+                              message, @"alert",
+                              postNumber, kPushNotificationPostID, nil];
+        [PFPush sendPushDataToChannelInBackground:@"" withData:data];
+        
         [[UIApplication sharedApplication] endBackgroundTask:taskIdent];
     }];
     
