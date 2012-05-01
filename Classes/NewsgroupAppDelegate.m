@@ -75,6 +75,11 @@
     // Register for push notifications
     [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound];
     
+    // If we were launched via a remote notification, handle it.
+    NSDictionary *dict = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+    if (dict)
+        [self handleRemoteNotification:dict];
+    
     return YES;
 }
 
@@ -93,7 +98,10 @@
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     NSLog(@"%@", error);
+}
 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [self handleRemoteNotification:userInfo];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -116,8 +124,7 @@
     
 }
 
-#pragma mark -
-#pragma mark Instance Methods
+#pragma mark - Instance Methods
 
 - (NSURL *)applicationDocumentsDirectory {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
@@ -256,6 +263,24 @@
     }
     
     
+}
+
+#pragma mark - Push notification methods
+- (void)handleRemoteNotification:(NSDictionary *)dict {
+    /* If we are in the foreground, just refresh our data
+     * If we are in the background, refresh the data, then load the new post
+     */
+    
+    NSNumber *postID = [dict objectForKey:kPushNotificationPostID];
+    
+    UIApplicationState state = [UIApplication sharedApplication].applicationState;
+    if (state == UIApplicationStateActive) {
+        [self.dataController fetchAllPostsWithError:nil];
+    } else {
+        [self.dataController fetchAllPostsWithError:nil completionBlock:^{
+            [self navigateToPostID:postID];
+        }];
+    }
 }
 
 #pragma mark -

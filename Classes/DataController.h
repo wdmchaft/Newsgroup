@@ -86,6 +86,7 @@ typedef struct ReadUnread ReadUnread;
 // Web Methods
 - (BOOL)markPostAsRead:(NSNumber *)postID;
 - (BOOL)fetchAllPostsWithError:(NSError **)error;
+- (BOOL)fetchAllPostsWithError:(NSError **)error completionBlock:(void (^)())block;
 - (void)stopFetching;
 
 // Fetch posts from the data store

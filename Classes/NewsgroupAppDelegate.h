@@ -52,5 +52,8 @@
 - (void)noUnreadPosts:(NSNotification *)notification;
 - (void)newUnreadPosts:(NSNotification *)notification;
 
+// Push notification methods
+- (void)handleRemoteNotification:(NSDictionary *)dict;
+
 @end
 

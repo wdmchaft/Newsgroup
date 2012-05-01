@@ -211,6 +211,10 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
 }
 
 - (BOOL)fetchAllPostsWithError:(NSError **)error {
+    return [self fetchAllPostsWithError:error completionBlock:nil];
+}
+
+- (BOOL)fetchAllPostsWithError:(NSError **)error completionBlock:(void (^)())block {
     
     // Check for a login and password
     if (!self.login) {
@@ -232,6 +236,9 @@ NSString *const DataControllerNoPostIDException = @"DataControllerNoPostIDExcept
         NSArray *posts = [[request responseString] JSONValue];
         
         [self loadNewPosts:posts intoContext:self.context];
+        
+        // Run the completion block
+        if (block) block();
         
         [[UIApplication sharedApplication] endBackgroundTask:taskIdent];
     }];
